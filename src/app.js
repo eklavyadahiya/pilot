@@ -10,6 +10,8 @@ const MAX_REFERENCE_RADIUS_KM = 50;
 const WIND_STORAGE_KEY = "pilot-training.wind-data.v1";
 const QUIZ_BANK_PATH = "./quiz/questions.json";
 const GUIDE_PATH = "./guide/dv20-guide.json";
+const KITTEN_TTS_MODEL_ID = "onnx-community/KittenTTS-Nano-v0.8-ONNX";
+const KITTEN_TTS_VOICE = "Luna";
 
 const map = L.map("map").setView(EHHV, 12);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -83,10 +85,18 @@ const flashcardStudyState = {
   questionToAnswerDelayMs: 2500,
   betweenQuestionsDelayMs: 2000,
   speechRate: 1,
-  currentAudioEl: null,
+  localTtsStatus: "idle",
+  localTtsError: "",
+  currentAudioContext: null,
+  currentAudioSource: null,
   currentAudioResolve: null,
+  kittenModulePromise: null,
+  kittenEnginePromise: null,
+  kittenEngine: null,
   runToken: 0,
-  ttsAvailable: typeof window !== "undefined" && typeof window.Audio !== "undefined"
+  ttsAvailable:
+    typeof window !== "undefined" &&
+    (typeof window.AudioContext !== "undefined" || typeof window.webkitAudioContext !== "undefined")
 };
 
 for (const button of toolNavButtons) {
@@ -967,12 +977,25 @@ function renderQuizCard() {
 
   if (quizState.mode === "flashcards") {
     const isStudyRunning = flashcardStudyState.running;
+    const isLocalTtsLoading = flashcardStudyState.localTtsStatus === "loading";
+    const localTtsFailed = flashcardStudyState.localTtsStatus === "error";
+    const localTtsHint = isLocalTtsLoading
+      ? "Loading local Kitten TTS model (first run downloads ~25MB)..."
+      : localTtsFailed
+        ? `Local TTS failed: ${escapeHtml(flashcardStudyState.localTtsError || "unknown error")}`
+        : "Study mode uses local Kitten TTS in your browser.";
     const questionAnswerDelaySeconds = (flashcardStudyState.questionToAnswerDelayMs / 1000).toFixed(1);
     const betweenQuestionsDelaySeconds = (flashcardStudyState.betweenQuestionsDelayMs / 1000).toFixed(1);
     const speechRate = clampSpeechRate(flashcardStudyState.speechRate);
     const speechRateLabel = speechRate.toFixed(2);
     const ttsDisabledAttr = flashcardStudyState.ttsAvailable ? "" : "disabled";
-    const studyToggleDisabledAttr = flashcardStudyState.ttsAvailable ? "" : "disabled";
+    const studyToggleDisabledAttr =
+      flashcardStudyState.ttsAvailable && !isLocalTtsLoading ? "" : "disabled";
+    const studyToggleLabel = isLocalTtsLoading
+      ? "Loading Study Mode..."
+      : isStudyRunning
+        ? "Stop Study Mode"
+        : "Start Study Mode";
     let answerHtml = "";
     if (quizState.reveal) {
       const correctText = getFlashcardAnswerText(question);
@@ -986,8 +1009,7 @@ function renderQuizCard() {
       <p class="quiz-question">${escapeHtml(question.question)}</p>
       <div class="flash-study-card">
         <div class="hint">
-          Study mode (flashcards only): auto-plays cards with CDN audio TTS.
-          ${flashcardStudyState.ttsAvailable ? "" : " TTS is not available in this browser."}
+          ${flashcardStudyState.ttsAvailable ? localTtsHint : "TTS is not available in this browser."}
         </div>
         <div class="flash-delay-row">
           <label for="flash-speech-rate">Speech speed: <span id="flash-speech-rate-value">${speechRateLabel}x</span></label>
@@ -1028,7 +1050,7 @@ function renderQuizCard() {
       <div class="control-row">
         <button id="flash-reveal-btn" type="button" ${isStudyRunning ? "disabled" : ""}>${quizState.reveal ? "Hide Answer" : "Show Answer"}</button>
         <button id="flash-next-btn" type="button" ${isStudyRunning ? "disabled" : ""}>${quizState.index + 1 >= quizState.questions.length ? "Restart Flashcards" : "Next Card"}</button>
-        <button id="flash-study-toggle-btn" type="button" ${studyToggleDisabledAttr}>${isStudyRunning ? "Stop Study Mode" : "Start Study Mode"}</button>
+        <button id="flash-study-toggle-btn" type="button" ${studyToggleDisabledAttr}>${studyToggleLabel}</button>
       </div>
     `;
 
@@ -1061,8 +1083,8 @@ function renderQuizCard() {
       const rate = clampSpeechRate(Number(speechRateInput.value));
       flashcardStudyState.speechRate = rate;
       speechRateValueEl.textContent = `${rate.toFixed(2)}x`;
-      if (flashcardStudyState.currentAudioEl) {
-        flashcardStudyState.currentAudioEl.playbackRate = rate;
+      if (flashcardStudyState.currentAudioSource) {
+        flashcardStudyState.currentAudioSource.playbackRate.value = rate;
       }
     });
     questionAnswerDelayInput.addEventListener("input", () => {
@@ -1215,12 +1237,17 @@ function updateQuizMeta() {
   quizMetaEl.textContent = `Loaded ${questionBank.length} questions from ${QUIZ_BANK_PATH}. Selected: ${categoryLabel} (${filteredCount}).`;
 }
 
-function toggleFlashcardStudyMode() {
+async function toggleFlashcardStudyMode() {
   if (!quizState || quizState.mode !== "flashcards") {
     return;
   }
   if (flashcardStudyState.running) {
     stopFlashcardStudyMode();
+    renderQuizCard();
+    return;
+  }
+  const ready = await ensureLocalKittenTtsReady();
+  if (!ready || !quizState || quizState.mode !== "flashcards") {
     renderQuizCard();
     return;
   }
@@ -1301,67 +1328,70 @@ async function speakFlashcardText(text, token) {
   if (!text || !text.trim()) {
     return;
   }
-  const chunks = splitTextForCdnTts(text);
-  for (const chunk of chunks) {
-    if (!isFlashcardStudyRunCurrent(token)) {
-      break;
-    }
-    await playCdnTtsChunk(chunk, token);
-  }
-}
-
-async function playCdnTtsChunk(text, token) {
-  if (!isFlashcardStudyRunCurrent(token)) {
+  const engine = await ensureLocalKittenTtsReady();
+  if (!engine || !isFlashcardStudyRunCurrent(token)) {
     return;
   }
-  const trimmed = String(text || "").trim();
+  const trimmed = String(text || "").replace(/\s+/g, " ").trim();
   if (!trimmed) {
     return;
   }
   stopCurrentFlashcardAudio();
-  await new Promise((resolve) => {
-    const audio = new Audio(buildCdnTtsUrl(trimmed));
+  await new Promise(async (resolve) => {
     let finished = false;
     const finalize = () => {
       if (finished) {
         return;
       }
       finished = true;
-      if (flashcardStudyState.currentAudioEl === audio) {
-        flashcardStudyState.currentAudioEl = null;
+      if (flashcardStudyState.currentAudioResolve === finalize) {
         flashcardStudyState.currentAudioResolve = null;
       }
-      audio.onended = null;
-      audio.onerror = null;
+      if (flashcardStudyState.currentAudioSource) {
+        flashcardStudyState.currentAudioSource.onended = null;
+        flashcardStudyState.currentAudioSource = null;
+      }
       resolve();
     };
-    flashcardStudyState.currentAudioEl = audio;
     flashcardStudyState.currentAudioResolve = finalize;
-    audio.preload = "auto";
-    audio.playbackRate = clampSpeechRate(flashcardStudyState.speechRate);
-    audio.onended = finalize;
-    audio.onerror = finalize;
-    const playPromise = audio.play();
-    if (playPromise && typeof playPromise.catch === "function") {
-      playPromise.catch(() => {
+    try {
+      const generated = await engine.generate(trimmed, { voice: KITTEN_TTS_VOICE });
+      if (!isFlashcardStudyRunCurrent(token)) {
         finalize();
-      });
+        return;
+      }
+      const audioContext = getFlashcardAudioContext();
+      if (audioContext.state === "suspended") {
+        await audioContext.resume();
+      }
+      const source = audioContext.createBufferSource();
+      source.buffer = generated.toAudioBuffer(audioContext);
+      source.playbackRate.value = clampSpeechRate(flashcardStudyState.speechRate);
+      source.connect(audioContext.destination);
+      source.onended = finalize;
+      flashcardStudyState.currentAudioSource = source;
+      source.start(0);
+    } catch (error) {
+      console.error("Local Kitten TTS playback failed:", error);
+      flashcardStudyState.localTtsStatus = "error";
+      flashcardStudyState.localTtsError = error?.message || "synthesis failed";
+      finalize();
+      if (quizState?.mode === "flashcards") {
+        renderQuizCard();
+      }
     }
   });
 }
 
 function stopCurrentFlashcardAudio() {
-  const audio = flashcardStudyState.currentAudioEl;
+  const source = flashcardStudyState.currentAudioSource;
   const resolvePlayback = flashcardStudyState.currentAudioResolve;
-  flashcardStudyState.currentAudioEl = null;
+  flashcardStudyState.currentAudioSource = null;
   flashcardStudyState.currentAudioResolve = null;
-  if (audio) {
-    audio.onended = null;
-    audio.onerror = null;
+  if (source) {
+    source.onended = null;
     try {
-      audio.pause();
-      audio.src = "";
-      audio.load();
+      source.stop(0);
     } catch {
       // ignore media teardown failures
     }
@@ -1371,54 +1401,82 @@ function stopCurrentFlashcardAudio() {
   }
 }
 
-function buildCdnTtsUrl(text) {
-  const lang = getCdnTtsLanguage();
-  const params = new URLSearchParams({
-    ie: "UTF-8",
-    client: "tw-ob",
-    tl: lang,
-    q: text
-  });
-  return `https://translate.googleapis.com/translate_tts?${params.toString()}`;
+function getFlashcardAudioContext() {
+  if (
+    flashcardStudyState.currentAudioContext &&
+    flashcardStudyState.currentAudioContext.state !== "closed"
+  ) {
+    return flashcardStudyState.currentAudioContext;
+  }
+  const AudioContextCtor = window.AudioContext || window.webkitAudioContext;
+  flashcardStudyState.currentAudioContext = new AudioContextCtor();
+  return flashcardStudyState.currentAudioContext;
 }
 
-function getCdnTtsLanguage() {
-  const raw = String(window.navigator?.language || "en-US").trim();
-  return raw || "en-US";
-}
+async function ensureLocalKittenTtsReady() {
+  if (!flashcardStudyState.ttsAvailable) {
+    return null;
+  }
+  if (flashcardStudyState.kittenEngine) {
+    flashcardStudyState.localTtsStatus = "ready";
+    return flashcardStudyState.kittenEngine;
+  }
+  if (flashcardStudyState.kittenEnginePromise) {
+    return flashcardStudyState.kittenEnginePromise;
+  }
 
-function splitTextForCdnTts(text, maxChunkLength = 180) {
-  const normalized = String(text || "").replace(/\s+/g, " ").trim();
-  if (!normalized) {
-    return [];
+  flashcardStudyState.localTtsStatus = "loading";
+  flashcardStudyState.localTtsError = "";
+  if (quizState?.mode === "flashcards") {
+    renderQuizCard();
   }
-  const chunks = [];
-  let remaining = normalized;
-  while (remaining.length > maxChunkLength) {
-    const slice = remaining.slice(0, maxChunkLength + 1);
-    const breakAt = findChunkBreakIndex(slice, maxChunkLength);
-    chunks.push(remaining.slice(0, breakAt).trim());
-    remaining = remaining.slice(breakAt).trim();
-  }
-  if (remaining) {
-    chunks.push(remaining);
-  }
-  return chunks.filter(Boolean);
-}
 
-function findChunkBreakIndex(text, maxChunkLength) {
-  const preferredBreakChars = [".", "?", "!", ",", ";", ":"];
-  for (const char of preferredBreakChars) {
-    const index = text.lastIndexOf(char, maxChunkLength);
-    if (index > Math.floor(maxChunkLength * 0.45)) {
-      return index + 1;
+  flashcardStudyState.kittenEnginePromise = (async () => {
+    try {
+      if (!flashcardStudyState.kittenModulePromise) {
+        flashcardStudyState.kittenModulePromise = import("https://esm.sh/kitten-tts-js");
+      }
+      const kittenModule = await flashcardStudyState.kittenModulePromise;
+      const KittenTTS = kittenModule?.KittenTTS;
+      if (!KittenTTS || typeof KittenTTS.from_pretrained !== "function") {
+        throw new Error("KittenTTS package did not load correctly.");
+      }
+
+      const preferredRuntime =
+        typeof navigator !== "undefined" && "gpu" in navigator ? "gpu" : "cpu";
+      let engine;
+      try {
+        engine = await KittenTTS.from_pretrained(KITTEN_TTS_MODEL_ID, {
+          runtime: preferredRuntime
+        });
+      } catch (runtimeError) {
+        if (preferredRuntime !== "cpu") {
+          engine = await KittenTTS.from_pretrained(KITTEN_TTS_MODEL_ID, {
+            runtime: "cpu"
+          });
+        } else {
+          throw runtimeError;
+        }
+      }
+
+      flashcardStudyState.kittenEngine = engine;
+      flashcardStudyState.localTtsStatus = "ready";
+      flashcardStudyState.localTtsError = "";
+      return engine;
+    } catch (error) {
+      console.error("Local Kitten TTS init failed:", error);
+      flashcardStudyState.localTtsStatus = "error";
+      flashcardStudyState.localTtsError = error?.message || "model load failed";
+      return null;
+    } finally {
+      flashcardStudyState.kittenEnginePromise = null;
+      if (quizState?.mode === "flashcards") {
+        renderQuizCard();
+      }
     }
-  }
-  const spaceIndex = text.lastIndexOf(" ", maxChunkLength);
-  if (spaceIndex > Math.floor(maxChunkLength * 0.45)) {
-    return spaceIndex;
-  }
-  return maxChunkLength;
+  })();
+
+  return flashcardStudyState.kittenEnginePromise;
 }
 
 function clampSpeechRate(rate) {
