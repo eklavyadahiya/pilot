@@ -1,0 +1,73 @@
+{
+  "cases": [
+    {
+      "id": "default_ph_mft",
+      "description": "Workbook defaults with PH-MFT / DV20",
+      "inputs": {
+        "aircraftId": "PH-MFT",
+        "pilotKg": 85,
+        "frontPassengerKg": 74,
+        "luggageArea1Kg": 5,
+        "climbMinutes": 15,
+        "cruiseMinutes": 30,
+        "descentMinutes": 20,
+        "holdingMinutes": 45,
+        "extraFuelKg": 5
+      },
+      "expected": [
+        { "path": "empty.weightKg", "value": 510.94, "kind": "weightKg" },
+        { "path": "zeroFuel.weightKg", "value": 674.94, "kind": "weightKg" },
+        { "path": "zeroFuel.armM", "value": 0.289905117491925, "kind": "armM" },
+        { "path": "takeoff.weightKg", "value": 700.5704, "kind": "weightKg" },
+        { "path": "takeoff.armM", "value": 0.309445003100331, "kind": "armM" },
+        { "path": "landing.weightKg", "value": 687.7304, "kind": "weightKg" },
+        { "path": "landing.armM", "value": 0.299838206366914, "kind": "armM" },
+        { "path": "fuel.maxKg", "value": 55.4, "kind": "fuelKg" },
+        { "path": "fullFuel.weightKg", "value": 730.34, "kind": "weightKg" },
+        { "path": "fuel.tripKg", "value": 12.84, "kind": "fuelKg" },
+        { "path": "fuel.rampKg", "value": 27.4304, "kind": "fuelKg" },
+        { "path": "fuel.takeoffKg", "value": 25.5304, "kind": "fuelKg" },
+        { "path": "fuel.remainingKg", "value": 11.92, "kind": "fuelKg" },
+        { "path": "zeroFuel.minArmM", "value": 0.2502494, "kind": "armM" },
+        { "path": "takeoff.minArmM", "value": 0.250505704, "kind": "armM" },
+        { "path": "landing.minArmM", "value": 0.250377304, "kind": "armM" },
+        { "path": "fullFuel.minArmM", "value": 0.2508034, "kind": "armM" },
+        { "path": "limits.maxTowKg", "value": 730, "kind": "weightKg" },
+        { "path": "limits.totalLuggageKg", "value": 5, "kind": "weightKg" }
+      ]
+    },
+    {
+      "id": "ph_skc_c172n",
+      "description": "C172N with heavier loading",
+      "inputs": {
+        "aircraftId": "PH-SKC",
+        "pilotKg": 90,
+        "frontPassengerKg": 80,
+        "leftRearPassengerKg": 70,
+        "rightRearPassengerKg": 65,
+        "luggageArea1Kg": 20,
+        "luggageArea2Kg": 10,
+        "climbMinutes": 10,
+        "cruiseMinutes": 45,
+        "descentMinutes": 15,
+        "holdingMinutes": 30,
+        "extraFuelKg": 0
+      },
+      "expected": [
+        { "path": "empty.weightKg", "value": 691.29, "kind": "weightKg" },
+        { "path": "limits.maxTowKg", "value": 1089, "kind": "weightKg" }
+      ]
+    },
+    {
+      "id": "ph_skm_rear_warning",
+      "description": "DV20 with rear passenger should trigger warning",
+      "inputs": {
+        "aircraftId": "PH-SKM",
+        "rightRearPassengerKg": 1
+      },
+      "expected": [
+        { "path": "rearPassengers.weightKg", "value": 1, "kind": "weightKg" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+# Local runtime/tooling artifacts
+.home/
+.runtime/
+.tmp_py/
+__pycache__/
+*.pyc
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# Binary documents and office files
+*.pdf
+*.xls
+*.xlsx
+*.xlsm
+*.xlsb
+*.ods
+*.doc
+*.docx
+*.ppt
+*.pptx
+
+# Keep data files needed by the app
+!*.json
+!*.kmz

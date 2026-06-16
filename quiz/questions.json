@@ -1,0 +1,1394 @@
+[
+  {
+    "id": "DV20-001",
+    "category": "Performance",
+    "question": "What is the best glide speed for the DV20 in normal configuration?",
+    "options": {
+      "A": "60 KIAS",
+      "B": "68 KIAS",
+      "C": "75 KIAS",
+      "D": "82 KIAS"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "DV20-002",
+    "category": "Performance",
+    "question": "A practical short-field takeoff briefing should include rotation near which speed?",
+    "options": {
+      "A": "49 KIAS",
+      "B": "59 KIAS",
+      "C": "65 KIAS",
+      "D": "72 KIAS"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-003",
+    "category": "Power Settings - Climb Turns",
+    "question": "During a normal climb after obstacle clearance, pilots typically target which speed band?",
+    "options": {
+      "A": "50-55 KIAS",
+      "B": "60-65 KIAS",
+      "C": "70-75 KIAS",
+      "D": "85-90 KIAS"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "DV20-004",
+    "category": "Power Settings - Cruise & Descent",
+    "question": "In cruise, which engine-management habit best protects engine health?",
+    "options": {
+      "A": "Operate continuously at maximum RPM",
+      "B": "Use abrupt throttle changes for every correction",
+      "C": "Set power smoothly and monitor temperatures/pressures",
+      "D": "Keep carb heat on permanently"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "DV20-005",
+    "category": "Emergency",
+    "question": "After engine failure in flight, what is the highest-priority immediate action?",
+    "options": {
+      "A": "Transmit position before aircraft control",
+      "B": "Establish best-glide attitude and speed",
+      "C": "Switch off all electrical systems first",
+      "D": "Attempt restart without selecting a landing area"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-006",
+    "category": "Emergency",
+    "question": "When forced landing becomes unavoidable, what should be done before touchdown when time permits?",
+    "options": {
+      "A": "Secure fuel and ignition as per checklist",
+      "B": "Increase speed by 20 kt for controllability",
+      "C": "Retract flaps fully regardless of approach profile",
+      "D": "Leave the cockpit canopy latched and locked"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-007",
+    "category": "Emergency",
+    "question": "For electrical smoke/fire indications in cockpit, a key early action is to:",
+    "options": {
+      "A": "Open side window fully and continue normally",
+      "B": "Isolate non-essential electrical loads",
+      "C": "Perform a steep descent immediately",
+      "D": "Shut off fuel selector first"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-008",
+    "category": "Operations",
+    "question": "Why should POH/AFM performance charts always be interpreted with current conditions?",
+    "options": {
+      "A": "Chart values are valid only at sea level ISA",
+      "B": "Performance is unaffected by weight and temperature",
+      "C": "Density altitude, runway and aircraft condition change outcomes",
+      "D": "Charts are advisory and can be ignored in training"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "DV20-009",
+    "category": "Power Settings - Circuit",
+    "question": "On downwind/base planning, descent management is usually done by:",
+    "options": {
+      "A": "Pitch only, while leaving fixed cruise power",
+      "B": "Power reduction plus trim and speed control",
+      "C": "Full flap deployment at circuit entry",
+      "D": "Using mixture control as primary descent tool"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-010",
+    "category": "Performance",
+    "question": "What does selecting a conservative approach speed margin help reduce?",
+    "options": {
+      "A": "Need for stabilized approach criteria",
+      "B": "Landing distance variation in gusty conditions",
+      "C": "Importance of runway slope checks",
+      "D": "Crosswind correction requirement"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-011",
+    "category": "Operations",
+    "question": "Before relying on memory items, what habit improves safety most?",
+    "options": {
+      "A": "Skip checklist cross-check when workload is high",
+      "B": "Use flows only and avoid written references",
+      "C": "Confirm actions against the AFM/POH checklist",
+      "D": "Delegate all checklist duties to passengers"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "DV20-012",
+    "category": "Emergency",
+    "question": "If an in-flight engine restart attempt fails and altitude is decreasing, next priority is:",
+    "options": {
+      "A": "Continue restart attempts until below 300 ft AGL",
+      "B": "Commit to selected landing area and brief touchdown",
+      "C": "Turn toward nearest airport regardless glide range",
+      "D": "Delay decision until ATC provides vectors"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-013",
+    "category": "Power Settings - Climb Turns",
+    "question": "During the takeoff roll, which cue best confirms power is correctly set?",
+    "options": {
+      "A": "Airspeed alive and engine indications in the expected green range",
+      "B": "Any RPM above idle is acceptable if acceleration feels normal",
+      "C": "Delay checks until after rotation",
+      "D": "Use partial throttle to protect the engine"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-014",
+    "category": "Power Settings - Climb Turns",
+    "question": "Immediately after liftoff in a normal climb, the best target is usually:",
+    "options": {
+      "A": "Idle power to avoid overspeed",
+      "B": "Full climb power with a stable climb speed in the AFM band",
+      "C": "Cruise power and level acceleration",
+      "D": "Maximum flap and minimum speed"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-015",
+    "category": "Power Settings - Climb Turns",
+    "question": "In a 30 degree right-bank climbing turn after departure, the best setup is:",
+    "options": {
+      "A": "Full power, coordinated turn, and roughly 72-78 KIAS",
+      "B": "Idle power and 60 KIAS to tighten radius",
+      "C": "Cruise power and 90 KIAS",
+      "D": "Full flap and 55 KIAS"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-016",
+    "category": "Power Settings - Climb Turns",
+    "question": "What is the main reason to avoid steep bank angles during low-altitude climb?",
+    "options": {
+      "A": "Steep banks reduce stall margin and increase workload",
+      "B": "Steep banks always improve climb performance",
+      "C": "Steep banks decrease drag significantly",
+      "D": "Steep banks are required for noise abatement"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-017",
+    "category": "Power Settings - Climb Turns",
+    "question": "Crosswind departure with a shallow climbing turn should generally keep:",
+    "options": {
+      "A": "Full climb power and normal climb speed discipline",
+      "B": "Idle power with aggressive rudder",
+      "C": "Cruise power at pattern altitude",
+      "D": "Power-off glide speed"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-018",
+    "category": "Power Settings - Cruise & Descent",
+    "question": "At level-off from climb into cruise, best power technique is:",
+    "options": {
+      "A": "Hold climb power indefinitely",
+      "B": "Reduce power smoothly as the aircraft accelerates to cruise",
+      "C": "Snap throttle fully closed then reopen",
+      "D": "Ignore trim and use pressure only"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-019",
+    "category": "Power Settings - Cruise & Descent",
+    "question": "Which habit gives the most stable cruise power control?",
+    "options": {
+      "A": "Large throttle movements every few seconds",
+      "B": "Small, smooth adjustments with instrument cross-check",
+      "C": "Always leave throttle at full forward",
+      "D": "Use flap position as the primary cruise control"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-020",
+    "category": "Power Settings - Cruise & Descent",
+    "question": "In light turbulence, power management should usually prioritize:",
+    "options": {
+      "A": "Stable moderate power and speed control within AFM guidance",
+      "B": "Maximum RPM to overpower turbulence",
+      "C": "Idle power to prevent overspeed",
+      "D": "Continuous climb/descent oscillations"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-021",
+    "category": "Power Settings - Cruise & Descent",
+    "question": "Starting a descent from cruise is best done by:",
+    "options": {
+      "A": "Closing throttle fully in one movement",
+      "B": "Reducing power progressively and maintaining target descent speed",
+      "C": "Keeping cruise power and forcing nose-down pitch",
+      "D": "Extending full flap immediately at cruise speed"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-022",
+    "category": "Power Settings - Cruise & Descent",
+    "question": "What helps avoid excessive engine cooling during descent?",
+    "options": {
+      "A": "Stepwise power reductions instead of abrupt chop-to-idle",
+      "B": "Immediate idle from cruise every time",
+      "C": "Switch magnetos off briefly",
+      "D": "Maintain full rich and full power in descent"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-023",
+    "category": "Power Settings - Circuit",
+    "question": "Abeam threshold on downwind, a typical pattern setup is:",
+    "options": {
+      "A": "Reduce power and pitch for approach speed trend",
+      "B": "Add full power to extend downwind",
+      "C": "Keep climb power and descend only with trim",
+      "D": "Set idle and hold level flight"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-024",
+    "category": "Power Settings - Circuit",
+    "question": "In the base turn, if speed is trending high, the best correction is usually:",
+    "options": {
+      "A": "Increase power and tighten bank",
+      "B": "Slight power reduction and re-trim for target speed",
+      "C": "Add full flap immediately regardless speed",
+      "D": "Push nose down and keep current power"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-025",
+    "category": "Power Settings - Circuit",
+    "question": "On final approach, which combination best supports a stabilized profile?",
+    "options": {
+      "A": "Target speed band with small power corrections",
+      "B": "Large throttle swings to chase glidepath",
+      "C": "Idle power from base to touchdown every landing",
+      "D": "Ignoring speed while centered on runway"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-026",
+    "category": "Power Settings - Circuit",
+    "question": "For a no-flap approach, compared to full flap you generally expect:",
+    "options": {
+      "A": "Slightly higher approach speed and different power picture",
+      "B": "Lower speed and shorter float in all cases",
+      "C": "No difference in attitude or power",
+      "D": "Power-off stall speed as target"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-027",
+    "category": "Power Settings - Circuit",
+    "question": "With gusty conditions, speed management on final should:",
+    "options": {
+      "A": "Add a conservative gust increment per SOP/AFM",
+      "B": "Use minimum possible speed regardless gusts",
+      "C": "Ignore speed and only track centerline",
+      "D": "Use climb speed on final"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-028",
+    "category": "Power Settings - Go Around",
+    "question": "On a go-around from short final, the first power action is:",
+    "options": {
+      "A": "Full power smoothly with directional control",
+      "B": "Hold idle until positive climb",
+      "C": "Reduce power and retract all flap immediately",
+      "D": "Turn crosswind before adding power"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-029",
+    "category": "Power Settings - Go Around",
+    "question": "During go-around flap cleanup, best practice is to:",
+    "options": {
+      "A": "Retract flap in stages per AFM while maintaining climb speed",
+      "B": "Retract all flap instantly at low speed",
+      "C": "Leave full flap until cruise altitude",
+      "D": "Pitch up aggressively before power"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-030",
+    "category": "Power Settings - Climb Turns",
+    "question": "Obstacle-limited departure profile typically emphasizes:",
+    "options": {
+      "A": "Best angle segment first, then transition to best rate climb",
+      "B": "Cruise climb immediately after liftoff",
+      "C": "No-pitch-change acceleration to 90 KIAS",
+      "D": "Idle power and ground effect float"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-031",
+    "category": "Power Settings - Climb Turns",
+    "question": "After obstacle clearance on climb-out, the next step is usually:",
+    "options": {
+      "A": "Transition to normal climb speed and continue climb power",
+      "B": "Set cruise power immediately at low altitude",
+      "C": "Reduce to idle and accelerate downhill",
+      "D": "Maintain Vx to traffic pattern altitude always"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-032",
+    "category": "Power Settings - Climb Turns",
+    "question": "If CHT/oil temperature trend high in climb, the safest likely adjustment is:",
+    "options": {
+      "A": "Increase cooling airflow and adjust climb profile per AFM",
+      "B": "Ignore indications until cruise",
+      "C": "Close cooling airflow and continue max climb angle",
+      "D": "Switch ignition off briefly"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-033",
+    "category": "Power Settings - Go Around",
+    "question": "During touch-and-go, power should be:",
+    "options": {
+      "A": "Applied smoothly to full while keeping runway alignment",
+      "B": "Snapped to full before directional control is checked",
+      "C": "Left at idle until rotation speed",
+      "D": "Set to cruise only"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-034",
+    "category": "Power Settings - Go Around",
+    "question": "In a balked landing from flare, priority sequence starts with:",
+    "options": {
+      "A": "Power, attitude, then configuration changes per checklist",
+      "B": "Configuration first, then power",
+      "C": "Trim first, then decide on power",
+      "D": "Immediate steep turn away from runway"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-035",
+    "category": "Power Settings - Circuit",
+    "question": "Why are small throttle inputs preferred in the traffic pattern?",
+    "options": {
+      "A": "They reduce oscillations and support stable approaches",
+      "B": "They make trim unnecessary",
+      "C": "They increase stall speed margin automatically",
+      "D": "They remove need for glidepath control"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-036",
+    "category": "Power Settings - Circuit",
+    "question": "If you are low on final but on speed, best first correction is usually:",
+    "options": {
+      "A": "Add a small amount of power and hold target pitch",
+      "B": "Lower nose and keep power unchanged",
+      "C": "Retract flap completely",
+      "D": "Turn away and rejoin downwind immediately"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-037",
+    "category": "Power Settings - Circuit",
+    "question": "If you are high on final but on speed, best first correction is usually:",
+    "options": {
+      "A": "Reduce power and reassess glidepath trend",
+      "B": "Add power and pitch up",
+      "C": "Increase speed to descend faster",
+      "D": "Ignore and continue unstable"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-038",
+    "category": "Power Settings - Circuit",
+    "question": "For a stabilized approach gate, which statement is most correct?",
+    "options": {
+      "A": "Speed and power should be within a small controlled window",
+      "B": "Any speed is acceptable if centerline is maintained",
+      "C": "Power should remain at idle from 500 ft AGL",
+      "D": "Flap and power can change continuously to touchdown"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-039",
+    "category": "Power Settings - Climb Turns",
+    "question": "During departure noise-abatement planning, power reduction should happen:",
+    "options": {
+      "A": "Only at the procedure altitude and as published/briefed",
+      "B": "Immediately after liftoff below safe climb speed",
+      "C": "Before obstacle clearance regardless procedure",
+      "D": "Never, even if procedure requires it"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-040",
+    "category": "Power Settings - Climb Turns",
+    "question": "Hot/high takeoff performance management should include:",
+    "options": {
+      "A": "Confirm full available power and use conservative accelerate-stop margins",
+      "B": "Use reduced power to preserve engine",
+      "C": "Rotate earlier to reduce runway use",
+      "D": "Ignore density altitude if winds are calm"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-041",
+    "category": "Power Settings - MP Equipped",
+    "question": "When a manifold pressure gauge is installed, climb power is typically:",
+    "options": {
+      "A": "Full available MP within limits, monitored with RPM/temps",
+      "B": "Set to a fixed low MP regardless altitude",
+      "C": "Ignored in favor of airspeed only",
+      "D": "Adjusted only on final approach"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-042",
+    "category": "Power Settings - MP Equipped",
+    "question": "When using MP + RPM references in cruise (if equipped), the correct source is:",
+    "options": {
+      "A": "AFM/POH cruise performance table for current altitude/temperature",
+      "B": "A fixed internet value for every day",
+      "C": "Maximum possible MP at all times",
+      "D": "Pattern power settings from circuit training"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-043",
+    "category": "Power Settings - Cruise & Descent",
+    "question": "In carb-icing conditions, carb heat use usually requires:",
+    "options": {
+      "A": "Power re-trim/re-adjustment because RPM may drop initially",
+      "B": "No change in power management ever",
+      "C": "Immediate full-flap descent",
+      "D": "Mixture cutoff"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-044",
+    "category": "Power Settings - Climb Turns",
+    "question": "In a climbing turn where speed decays below target, first correction is usually:",
+    "options": {
+      "A": "Lower pitch slightly while maintaining climb power",
+      "B": "Increase bank to hold track tighter",
+      "C": "Reduce power further",
+      "D": "Add full flap"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-045",
+    "category": "Power Settings - Cruise & Descent",
+    "question": "In a descent where speed rises above target, the best correction is usually:",
+    "options": {
+      "A": "Raise nose slightly and fine-tune power",
+      "B": "Push further nose-down",
+      "C": "Retract trim and ignore power",
+      "D": "Apply full throttle"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-046",
+    "category": "Power Settings - Fundamentals",
+    "question": "Why should trim be updated after each meaningful power change?",
+    "options": {
+      "A": "To reduce pilot workload and improve speed precision",
+      "B": "Because trim changes engine output",
+      "C": "To avoid using rudder",
+      "D": "Because trim replaces checklist use"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-047",
+    "category": "Power Settings - Climb Turns",
+    "question": "A good way to avoid chasing airspeed in climb is to:",
+    "options": {
+      "A": "Set attitude first, then verify power and trim",
+      "B": "Move throttle constantly and ignore attitude",
+      "C": "Use only rudder for speed control",
+      "D": "Climb at stall warning onset"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-048",
+    "category": "Power Settings - Circuit",
+    "question": "In circuit training, what does 'power for glidepath, pitch for speed' primarily help with?",
+    "options": {
+      "A": "Stable approach corrections with fewer coupled errors",
+      "B": "Eliminating need for throttle use",
+      "C": "Maximizing bank angle on final",
+      "D": "Keeping flaps retracted until touchdown"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-049",
+    "category": "Power Settings - Go Around",
+    "question": "If a go-around is initiated from a 20-30 degree banked base-to-final turn, the pilot should:",
+    "options": {
+      "A": "Apply full power, level wings progressively, then climb at target speed",
+      "B": "Hold bank and pitch steeply up immediately",
+      "C": "Close throttle and continue descent",
+      "D": "Retract all flap before adding power"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-050",
+    "category": "Power Settings - Cruise & Descent",
+    "question": "For prolonged cruise descent planning, the best method is:",
+    "options": {
+      "A": "Start early with moderate power reduction and stable descent profile",
+      "B": "Stay at cruise until overhead then dive idle",
+      "C": "Use alternating full power and idle segments",
+      "D": "Hold climb power and descend with slips only"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-051",
+    "category": "Power Settings - Cruise & Descent",
+    "question": "During level cruise turns, which setup is most appropriate?",
+    "options": {
+      "A": "Maintain cruise power and coordinated bank, then re-trim after rollout",
+      "B": "Reduce to idle in every turn",
+      "C": "Apply full climb power in every turn",
+      "D": "Ignore altitude control and prioritize heading only"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-052",
+    "category": "Power Settings - Fundamentals",
+    "question": "What is the best source for exact speed/power/manifold-pressure numbers for your aircraft tail number?",
+    "options": {
+      "A": "Your current AFM/POH revision and school SOP",
+      "B": "Any generic DV20 forum post",
+      "C": "Another aircraft type's checklist",
+      "D": "Last flight's remembered values only"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-053",
+    "category": "Power Settings - Circuit",
+    "question": "You join downwind high and fast. What is usually the best first action?",
+    "options": {
+      "A": "Early, moderate power reduction and re-trim to recover pattern speed",
+      "B": "Keep cruise power until base to avoid drag",
+      "C": "Dump full flap immediately above normal speeds",
+      "D": "Turn base early with increased bank"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-054",
+    "category": "Power Settings - Climb Turns",
+    "question": "During a 25-30 degree climbing departure turn, what should happen if speed trends low?",
+    "options": {
+      "A": "Lower pitch slightly, keep climb power, and reduce bank if needed",
+      "B": "Increase bank to maintain ground track exactly",
+      "C": "Reduce power to avoid overtorque",
+      "D": "Add flap before correcting attitude"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-055",
+    "category": "Power Settings - Circuit",
+    "question": "On final, you are on centerline but 5 kt slow. Most appropriate correction?",
+    "options": {
+      "A": "Add a small amount of power and hold approach attitude",
+      "B": "Push nose down without changing power",
+      "C": "Retract flap at once",
+      "D": "Continue and accept the low-speed trend"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-056",
+    "category": "Power Settings - Go Around",
+    "question": "During go-around, what is the key reason flap retraction is staged?",
+    "options": {
+      "A": "To prevent sudden sink and preserve climb performance",
+      "B": "To cool the engine faster",
+      "C": "To increase drag for runway alignment",
+      "D": "To avoid needing trim changes"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-057",
+    "category": "Power Settings - MP Equipped",
+    "question": "With MP gauge installed, what is true as altitude increases at full throttle?",
+    "options": {
+      "A": "Available manifold pressure generally decreases with altitude",
+      "B": "Manifold pressure remains constant at all altitudes",
+      "C": "Manifold pressure rises continuously with climb",
+      "D": "Manifold pressure is unrelated to throttle position"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-058",
+    "category": "Power Settings - MP Equipped",
+    "question": "Best practice for selecting MP/RPM in cruise (if equipped) is:",
+    "options": {
+      "A": "Use approved AFM combinations for current altitude and conditions",
+      "B": "Use any combination that sounds smooth",
+      "C": "Always select max MP and minimum RPM",
+      "D": "Use pattern settings at all phases"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-059",
+    "category": "Power Settings - Cruise & Descent",
+    "question": "In a long descent, what power technique helps avoid unstable speed swings?",
+    "options": {
+      "A": "Small, progressive power adjustments with trim updates",
+      "B": "Alternating full power and idle every minute",
+      "C": "Lock throttle and use only pitch",
+      "D": "Maintain climb power and descend by slip only"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-060",
+    "category": "Power Settings - Climb Turns",
+    "question": "After takeoff, when should you prioritize wings-level climb before turning?",
+    "options": {
+      "A": "When speed margin is tight or workload is high",
+      "B": "Never, always turn immediately",
+      "C": "Only after reaching cruise altitude",
+      "D": "Only if ATC requests"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-061",
+    "category": "Power Settings - Circuit",
+    "question": "If base-to-final turn is overshooting centerline, safest power-related choice is usually:",
+    "options": {
+      "A": "Initiate go-around instead of forcing steep low-speed correction",
+      "B": "Add power and increase bank aggressively",
+      "C": "Reduce to idle and skid onto final",
+      "D": "Hold current path regardless alignment"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-062",
+    "category": "Power Settings - Go Around",
+    "question": "In a bounce with runway remaining uncertain, preferred action is:",
+    "options": {
+      "A": "Commit to go-around with full power and positive climb setup",
+      "B": "Force aircraft onto runway with forward elevator",
+      "C": "Chop power and accept second touchdown",
+      "D": "Turn crosswind immediately"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-063",
+    "category": "Power Settings - Fundamentals",
+    "question": "Why should pilots avoid memorizing one fixed power number for all days?",
+    "options": {
+      "A": "Atmosphere, weight, and aircraft condition change required settings",
+      "B": "Power settings never matter if speed is watched",
+      "C": "Throttle response is identical in every condition",
+      "D": "Only runway slope affects power"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-064",
+    "category": "Power Settings - Climb Turns",
+    "question": "In a climbing turn near circuit altitude, primary cross-check should be:",
+    "options": {
+      "A": "Airspeed, coordination, and engine indications",
+      "B": "Heading only",
+      "C": "Vertical speed only",
+      "D": "Outside references only with no instruments"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-065",
+    "category": "Power Settings - Cruise & Descent",
+    "question": "If descent starts too late and profile is high, best energy response is:",
+    "options": {
+      "A": "Plan a controlled increased descent with speed limits respected",
+      "B": "Dive steeply with no speed monitoring",
+      "C": "Keep cruise power and slip continuously",
+      "D": "Ignore profile and continue unstable"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-066",
+    "category": "Power Settings - Circuit",
+    "question": "Short final in gusts: what supports the most stable result?",
+    "options": {
+      "A": "Small power corrections, target speed discipline, and timely go-around decision",
+      "B": "Idle power from threshold to touchdown no matter what",
+      "C": "Continuous flap changes on final",
+      "D": "Large alternating throttle movements"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-067",
+    "category": "Power Settings - MP Equipped",
+    "question": "If MP + RPM setting is outside AFM approved combinations, you should:",
+    "options": {
+      "A": "Re-set to an approved combination from the AFM table",
+      "B": "Keep it if the engine sounds fine",
+      "C": "Increase both to maximum immediately",
+      "D": "Ignore because only airspeed matters"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-068",
+    "category": "Power Settings - Go Around",
+    "question": "What is a common go-around error this category should prevent?",
+    "options": {
+      "A": "Retracting too much flap too early at low speed",
+      "B": "Using full power smoothly",
+      "C": "Verifying positive climb before cleanup",
+      "D": "Tracking centerline with rudder"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-069",
+    "category": "Power Settings - Climb Turns",
+    "question": "For an instructed climbing turnout with traffic conflict, best compromise is:",
+    "options": {
+      "A": "Maintain safe climb speed/power first, then refine track as able",
+      "B": "Prioritize exact track regardless speed decay",
+      "C": "Reduce power to tighten turn radius",
+      "D": "Use flap to increase turn performance"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-070",
+    "category": "Power Settings - Cruise & Descent",
+    "question": "In moderate turbulence cruise, power strategy should generally:",
+    "options": {
+      "A": "Favor stability and envelope protection over exact cruise speed",
+      "B": "Hold maximum speed at all costs",
+      "C": "Use repeated idle bursts to dampen bumps",
+      "D": "Ignore trim throughout turbulence"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-071",
+    "category": "Power Settings - Fundamentals",
+    "question": "A robust cockpit flow for any phase power change is:",
+    "options": {
+      "A": "Set power, set attitude, trim, then verify instruments",
+      "B": "Trim first, then decide if power is needed",
+      "C": "Change flap first, then attitude and power",
+      "D": "Use rudder only until speed stabilizes"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-072",
+    "category": "Power Settings - MP Equipped",
+    "question": "Manifold pressure values in this trainer app should be treated as:",
+    "options": {
+      "A": "Quick-reference prompts that must be confirmed in AFM/POH for your aircraft",
+      "B": "Dispatch-authoritative limits for all DV20 variants",
+      "C": "More reliable than aircraft instruments",
+      "D": "Independent from altitude and OAT"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-073",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "500 ft AGL after takeoff in a 30 degree climbing turn: speed is decaying, you are slightly left of track, and radio call arrives. First priority?",
+    "options": {
+      "A": "Answer radio immediately to reduce ATC workload",
+      "B": "Reduce pitch / bank as needed to recover speed margin while maintaining climb power",
+      "C": "Tighten bank to get back on track first",
+      "D": "Pull power slightly to prevent engine stress"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-074",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "Base-to-final overshoot with gusts and sink developing. Best decision if unstable by gate?",
+    "options": {
+      "A": "Force alignment with steeper bank and extra rudder",
+      "B": "Hold current path and accept drift",
+      "C": "Go around early with full power and standard cleanup sequence",
+      "D": "Retract flap first, then decide"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "DV20-075",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "On final, low and slightly slow in turbulence. Most robust correction?",
+    "options": {
+      "A": "Add power, hold target attitude/speed trend, reassess rapidly",
+      "B": "Lower nose only and keep power fixed",
+      "C": "Add bank to get visual glidepath back",
+      "D": "Freeze controls and wait for gust to pass"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-076",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "You are high and fast turning final with tailwind on base. Safest outcome-focused action?",
+    "options": {
+      "A": "Use aggressive slip and continue regardless",
+      "B": "Continue with idle and hope to recover",
+      "C": "Go around if stabilization cannot be achieved promptly",
+      "D": "Add power and steepen turn"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "DV20-077",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "Touch-and-go, bounce occurs, runway remaining uncertain. Power strategy?",
+    "options": {
+      "A": "Chop power to settle immediately",
+      "B": "Full power, go-around profile, directional control, staged config changes",
+      "C": "Hold half power and retry landing",
+      "D": "Retract flap fully before adding power"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-078",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "In a climbing turn, CHT trend rises and speed is near lower bound. Best tradeoff?",
+    "options": {
+      "A": "Increase pitch to improve climb rate further",
+      "B": "Maintain current condition until cruise altitude",
+      "C": "Improve cooling airflow / speed margin and reassess climb profile",
+      "D": "Close throttle briefly to shock-cool cylinders"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "DV20-079",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "MP-equipped aircraft: full-throttle climb at higher altitude feels weak. Correct interpretation?",
+    "options": {
+      "A": "Engine is failing unless MP is sea-level value",
+      "B": "Available manifold pressure decreases with altitude; fly AFM profile",
+      "C": "Add carb heat for more manifold pressure",
+      "D": "Lean aggressively without AFM guidance"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-080",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "Late descent setup: still high, near terminal area, speed trending up. Best energy management?",
+    "options": {
+      "A": "Controlled descent increase within limits with deliberate power management",
+      "B": "Dive with idle and ignore speed limits",
+      "C": "Maintain cruise power and slip continuously",
+      "D": "Delay action until base leg"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-081",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "Go-around initiated from 20-30 degree bank. What must be avoided most?",
+    "options": {
+      "A": "Applying full power smoothly",
+      "B": "Reducing bank while setting climb attitude",
+      "C": "Combining high bank + high pitch + low speed",
+      "D": "Positive climb confirmation"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "DV20-082",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "On short final in gusts, speed is in band but glidepath hunts. Best throttle technique?",
+    "options": {
+      "A": "Frequent large throttle swings",
+      "B": "Small, smooth corrections with tight cross-check",
+      "C": "Idle only from threshold",
+      "D": "Full power pulses"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-083",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "High workload departure: ATC asks for immediate tighter turn, speed near minimum climb band. Response?",
+    "options": {
+      "A": "Prioritize safe speed/energy first, then comply as able",
+      "B": "Tighten bank now and recover speed later",
+      "C": "Reduce power to make turn easier",
+      "D": "Ignore airspeed while correcting heading"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-084",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "Carb heat ON in suspected icing causes RPM drop on approach. Best interpretation?",
+    "options": {
+      "A": "Immediate engine failure, shut down",
+      "B": "Expected temporary power change; re-manage power and monitor",
+      "C": "Ignore and keep same pitch/power blindly",
+      "D": "Retract flap to recover RPM"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-085",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "After bounce, second touchdown zone is marginal. Best safe trigger?",
+    "options": {
+      "A": "Try one more landing attempt at reduced power",
+      "B": "Continue if runway looks 'probably enough'",
+      "C": "Immediate go-around decision with full power and alignment control",
+      "D": "Close throttle and brake hard in flare"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "DV20-086",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "Final approach, centered but +10 kt fast with sink alarm tendency. Best priority?",
+    "options": {
+      "A": "Hold speed and sink as-is to avoid changes",
+      "B": "Recover stable speed/glide profile quickly or go around",
+      "C": "Increase power and keep high speed",
+      "D": "Lower nose and land long"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-087",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "In turbulence, why is maximum cruise speed a trap?",
+    "options": {
+      "A": "It can erode structural/handling margins and destabilize control",
+      "B": "It always improves stability",
+      "C": "It reduces pilot workload",
+      "D": "It eliminates gust effects"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-088",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "Power reduction delayed until very late in circuit, now high on final. Best action if corrections become large?",
+    "options": {
+      "A": "Continue with aggressive last-second control inputs",
+      "B": "Use go-around and rebuild stable profile",
+      "C": "Increase bank and rudder to force centerline",
+      "D": "Ignore profile and aim touchdown zone visually"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-089",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "MP/RPM not in approved AFM pair but engine 'feels smooth.' Correct action?",
+    "options": {
+      "A": "Keep it if no vibration",
+      "B": "Adjust to approved AFM combination for conditions",
+      "C": "Increase both to max",
+      "D": "Ignore engine instruments"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-090",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "During go-around, what is the common sequence error that causes sink?",
+    "options": {
+      "A": "Applying full power first",
+      "B": "Retracting flap too much before climb is established",
+      "C": "Using rudder for directional control",
+      "D": "Confirming positive climb"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-091",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "Departure turn with slight skid develops while trying to correct track. Best fix?",
+    "options": {
+      "A": "Increase bank to tighten radius",
+      "B": "Re-coordinate and prioritize speed/attitude stability",
+      "C": "Reduce power sharply",
+      "D": "Extend flap to stabilize"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-092",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "On short final you are low, slow, and distracted by runway traffic call. Safe priority order?",
+    "options": {
+      "A": "Answer call first, then adjust profile",
+      "B": "Aviate: recover safe speed/energy, then communicate",
+      "C": "Ignore speed and land to clear runway",
+      "D": "Turn away immediately without power change"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-093",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "Descent with repeated oscillations (fast/slow cycles). Most likely fix?",
+    "options": {
+      "A": "Larger, faster throttle movements",
+      "B": "Smaller deliberate power inputs and trim stabilization",
+      "C": "Ignore oscillations until base",
+      "D": "Full flap early to dampen speed"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-094",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "Training trap: trying to save every unstable approach. Better philosophy?",
+    "options": {
+      "A": "Go-around is a normal maneuver when stability criteria are missed",
+      "B": "Only go around for engine failure",
+      "C": "Landing continuation is always preferred for confidence",
+      "D": "Delay go-around until flare"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-095",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "Complex situation: high DA, crosswind, short runway, and gusts. Most correct prep?",
+    "options": {
+      "A": "Use optimistic assumptions to maintain schedule",
+      "B": "Apply conservative AFM-based margins and brief early go-around trigger",
+      "C": "Use standard sea-level settings only",
+      "D": "Ignore wind corrections to simplify task load"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-096",
+    "category": "Power Settings - Nightmare Mode",
+    "question": "If uncertain between two power choices in a low-altitude unstable phase, safest principle is:",
+    "options": {
+      "A": "Choose the option that rebuilds airspeed/energy margin and stability earliest",
+      "B": "Choose whichever minimizes radio delay",
+      "C": "Choose the fastest path to touchdown regardless stability",
+      "D": "Choose no change to avoid workload"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-097",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "700 ft AGL in a climbing right turnout, speed trends from 76 to 71 KIAS while heading is 10 degrees wide. Best immediate correction?",
+    "options": {
+      "A": "Maintain bank/track and wait for speed to recover naturally",
+      "B": "Slightly reduce pitch and/or bank to restore speed margin, then refine heading",
+      "C": "Increase power beyond normal limits to hold both speed and heading",
+      "D": "Prioritize heading exactly and accept temporary speed erosion"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-098",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "Base-to-final in gusts: you are slightly high, slightly fast, but still on profile trend. Best strategy?",
+    "options": {
+      "A": "Small power reduction and active speed cross-check, ready to go around if trend worsens",
+      "B": "Immediate idle and steepen bank to force intercept",
+      "C": "Increase power slightly to avoid sink surprises",
+      "D": "Delay corrections until short final for better visual cues"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-099",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "Short final, centered, speed +6 kt, sink stable. Most defensible choice?",
+    "options": {
+      "A": "Hold current profile and bleed speed in flare regardless runway length",
+      "B": "Use modest speed correction now; if stabilization gate is missed, go around",
+      "C": "Increase power to avoid possible sink alarm",
+      "D": "Retract one stage flap immediately to increase drag control"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-100",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "Go-around from low-energy final with partial bank still on. First two priorities?",
+    "options": {
+      "A": "Flap cleanup first, then full power",
+      "B": "Full power with directional control, then bank reduction and climb attitude",
+      "C": "Pitch up first to arrest descent, then add power",
+      "D": "Keep bank and climb to avoid runway drift"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-101",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "MP-equipped cruise: chosen MP/RPM pair is close to table but not exact due turbulence. Best interpretation?",
+    "options": {
+      "A": "Approximate within safe/approved operating logic is acceptable if limits and engine trends are respected",
+      "B": "Any non-exact pair is immediately unsafe",
+      "C": "Ignore table entirely in turbulence",
+      "D": "Always select the highest MP available for smoother ride"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-102",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "Late descent, high energy, ATC requests expedited profile. Best safe compromise?",
+    "options": {
+      "A": "Acknowledge and execute controlled higher descent within aircraft/speed limits",
+      "B": "Comply by diving idle regardless speed trend",
+      "C": "Decline and maintain cruise power until pattern entry",
+      "D": "Use full slip immediately at cruise speed"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-103",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "Final with gust spread: approach speed is adjusted, but power corrections feel constant. What indicates instability?",
+    "options": {
+      "A": "Frequent small corrections while trend remains controlled",
+      "B": "Large oscillatory corrections with widening speed/path deviations",
+      "C": "Slight rudder input changes in crosswind",
+      "D": "Minor trim inputs after each power change"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-104",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "Climbing turn near terrain with slight skid indication. Most urgent fix?",
+    "options": {
+      "A": "Increase bank to keep turn inside terrain corridor",
+      "B": "Re-coordinate immediately while preserving speed/energy margin",
+      "C": "Reduce power to decrease yaw effects",
+      "D": "Ignore slip/skid because VSI is positive"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-105",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "After bounce, aircraft is airborne low with remaining runway borderline. What differentiates pro decision-making?",
+    "options": {
+      "A": "Attempt one more landing if alignment is good",
+      "B": "Immediate, committed go-around with full sequence discipline",
+      "C": "Half-power hold-off to feel runway response",
+      "D": "Touch down long and brake harder"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-106",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "Carb heat on approach causes moderate RPM drop and slight sink. Best response set?",
+    "options": {
+      "A": "Accept expected power change, adjust throttle/pitch to maintain stabilized profile",
+      "B": "Turn carb heat off immediately regardless conditions",
+      "C": "Continue unchanged and hope trend normalizes",
+      "D": "Retract flap to restore RPM first"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-107",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "On final, speed in band but descent angle steepens unexpectedly. Preferred first correction?",
+    "options": {
+      "A": "Slight power increase while maintaining speed attitude",
+      "B": "Lower nose and keep power fixed",
+      "C": "Immediate flap retraction to shallow path",
+      "D": "Bank away from runway centerline to stretch glide"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-108",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "If two answers are both plausible in a low-altitude scenario, tie-breaker should favor:",
+    "options": {
+      "A": "The one that minimizes radio/ATC workload",
+      "B": "The one that restores stability and margin sooner",
+      "C": "The one that preserves landing continuation",
+      "D": "The one requiring the least control movement"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-109",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "MP-equipped climb on hot day: full-throttle MP lower than expected from winter training. Correct read?",
+    "options": {
+      "A": "Likely normal performance variation with density effects; fly AFM profile",
+      "B": "Guaranteed intake system failure",
+      "C": "Indication can be ignored if RPM is stable",
+      "D": "Compensate by exceeding normal pitch limits"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-110",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "Pattern becomes compressed, downwind short, and you are still above target energy. Best move?",
+    "options": {
+      "A": "Force turn sequence with aggressive corrections",
+      "B": "Reset with spacing/go-around rather than salvage unstable geometry",
+      "C": "Maintain speed and accept long float",
+      "D": "Use rapid full-range throttle movements to catch profile"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-111",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "Go-around from near-threshold flare in crosswind: subtle risk to monitor most?",
+    "options": {
+      "A": "Yaw/roll coupling while power rises and configuration changes",
+      "B": "Temporary increase in climb performance",
+      "C": "Reduced rudder effectiveness at higher power",
+      "D": "Inability to maintain runway track with rudder"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-112",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "Descent oscillation persists despite corrections. Best stabilization sequence?",
+    "options": {
+      "A": "Pause, re-establish attitude target, apply small power set, then trim and monitor trend",
+      "B": "Increase correction amplitude to damp faster",
+      "C": "Switch focus entirely to heading",
+      "D": "Deploy more flap early to force stability"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-113",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "In marginal conditions, when is an early go-around usually better than continued correction?",
+    "options": {
+      "A": "Only when runway is blocked",
+      "B": "When stability trend is worsening and workload is rising near the ground",
+      "C": "Only after crossing threshold",
+      "D": "Never; correction is always preferred"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-114",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "Complex climb-out: traffic, turbulence, and slight speed decay. Which scan order is strongest?",
+    "options": {
+      "A": "Heading, radio, then airspeed",
+      "B": "Airspeed/attitude/coordination first, then track and comms",
+      "C": "Radio first to reduce cockpit pressure",
+      "D": "Engine gauges only until workload drops"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "DV20-115",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "Final approach with slight high trend and speed barely above target. Most nuanced action?",
+    "options": {
+      "A": "Small coordinated correction (slight power reduction and trend watch), avoid over-control",
+      "B": "Immediate idle and nose-down correction",
+      "C": "Add power because speed is near target",
+      "D": "Hold everything constant until flare"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "DV20-116",
+    "category": "Power Settings - Nightmare Mode 2",
+    "question": "What makes Nightmare Mode 2 harder than Nightmare Mode 1 by design?",
+    "options": {
+      "A": "Wrong answers are obviously unsafe and easy to discard",
+      "B": "Distractors are closer to plausible and require margin-based thinking",
+      "C": "Questions ignore AFM logic to increase difficulty",
+      "D": "Only memory of one numeric value is tested"
+    },
+    "correct": "B"
+  }
+]

@@ -1,0 +1,1377 @@
+{
+  "sheet_names": [
+    "Weight and Balance",
+    "EFIS",
+    "Hulp blad",
+    "Vliegtuiggegevens",
+    "Vliegtuigtypegegevens"
+  ],
+  "defined_names": [],
+  "sheets": {
+    "Weight and Balance": {
+      "dimensions": "A1:AM147",
+      "non_empty_cells": 222,
+      "bounds": {
+        "min_row": 1,
+        "min_col": 1,
+        "max_row": 50,
+        "max_col": 19
+      },
+      "formula_count": 127,
+      "constant_count": 95,
+      "number_cells": 12,
+      "text_cells": 83,
+      "bool_cells": 0,
+      "error_cells": 0,
+      "sample_formulas": [
+        {
+          "cell": "D8",
+          "formula": "=Vliegtuiggegevens!J12"
+        },
+        {
+          "cell": "F8",
+          "formula": "=G8/D8"
+        },
+        {
+          "cell": "G8",
+          "formula": "=Vliegtuiggegevens!M12"
+        },
+        {
+          "cell": "D9",
+          "formula": "=$C$9"
+        },
+        {
+          "cell": "F9",
+          "formula": "=Vliegtuigtypegegevens!AE18"
+        },
+        {
+          "cell": "G9",
+          "formula": "=F9*D9"
+        },
+        {
+          "cell": "D10",
+          "formula": "=$C$10"
+        },
+        {
+          "cell": "F10",
+          "formula": "=Vliegtuigtypegegevens!AE19"
+        },
+        {
+          "cell": "G10",
+          "formula": "=F10*D10"
+        },
+        {
+          "cell": "D12",
+          "formula": "=$C$12+$C$11"
+        },
+        {
+          "cell": "F12",
+          "formula": "=Vliegtuigtypegegevens!AH13"
+        },
+        {
+          "cell": "G12",
+          "formula": "=F12*D12"
+        },
+        {
+          "cell": "B13",
+          "formula": "=\"Lugg Area 1 (max \"&Vliegtuigtypegegevens!AJ13&\" kg)\""
+        },
+        {
+          "cell": "D13",
+          "formula": "=$C$13"
+        },
+        {
+          "cell": "F13",
+          "formula": "=Vliegtuigtypegegevens!AI13"
+        },
+        {
+          "cell": "G13",
+          "formula": "=F13*D13"
+        },
+        {
+          "cell": "B14",
+          "formula": "=\"Lugg Area 2 (max \"&Vliegtuigtypegegevens!AL13&\" kg)\""
+        },
+        {
+          "cell": "D14",
+          "formula": "=$C$14"
+        },
+        {
+          "cell": "F14",
+          "formula": "=Vliegtuigtypegegevens!AK13"
+        },
+        {
+          "cell": "G14",
+          "formula": "=F14*D14"
+        },
+        {
+          "cell": "D15",
+          "formula": "=SUM(D8:D14)"
+        },
+        {
+          "cell": "F15",
+          "formula": "=I15/D15"
+        },
+        {
+          "cell": "I15",
+          "formula": "=SUM(G8:G15)"
+        },
+        {
+          "cell": "D16",
+          "formula": "=D38"
+        },
+        {
+          "cell": "F16",
+          "formula": "=Vliegtuigtypegegevens!AN13"
+        },
+        {
+          "cell": "G16",
+          "formula": "=F16*D16"
+        },
+        {
+          "cell": "D17",
+          "formula": "=D16+D15"
+        },
+        {
+          "cell": "I17",
+          "formula": "=I15+G16"
+        },
+        {
+          "cell": "D18",
+          "formula": "=Vliegtuigtypegegevens!U13"
+        },
+        {
+          "cell": "F18",
+          "formula": "=Vliegtuigtypegegevens!AN13"
+        },
+        {
+          "cell": "G18",
+          "formula": "=F18*D18"
+        },
+        {
+          "cell": "B19",
+          "formula": "=\"TOW (max \"&Vliegtuigtypegegevens!D13&\" kg)\""
+        },
+        {
+          "cell": "D19",
+          "formula": "=D17-D18"
+        },
+        {
+          "cell": "F19",
+          "formula": "=I19/D19"
+        },
+        {
+          "cell": "I19",
+          "formula": "=I17-G18"
+        },
+        {
+          "cell": "D20",
+          "formula": "=D31"
+        },
+        {
+          "cell": "F20",
+          "formula": "=Vliegtuigtypegegevens!AN13"
+        },
+        {
+          "cell": "G20",
+          "formula": "=F20*D20"
+        },
+        {
+          "cell": "D21",
+          "formula": "=D19-D20"
+        },
+        {
+          "cell": "F21",
+          "formula": "=I21/D21"
+        },
+        {
+          "cell": "I21",
+          "formula": "=I19-G20"
+        },
+        {
+          "cell": "B23",
+          "formula": "=\"Max Fuel (\"&ROUND((D23/C25),1)&\" l, \"&ROUND(D23/C25/Vliegtuiggegevens!J2,1)&\" gallon)\""
+        },
+        {
+          "cell": "D23",
+          "formula": "=Vliegtuiggegevens!P12"
+        },
+        {
+          "cell": "F23",
+          "formula": "=Vliegtuigtypegegevens!AN13"
+        },
+        {
+          "cell": "G23",
+          "formula": "=F23*D23"
+        },
+        {
+          "cell": "B24",
+          "formula": "=\"Full Fuel weight (max ramp \"&(Vliegtuigtypegegevens!D13+D18)&\" kg)\""
+        },
+        {
+          "cell": "D24",
+          "formula": "=D15+D23"
+        },
+        {
+          "cell": "F24",
+          "formula": "=I24/D24"
+        },
+        {
+          "cell": "I24",
+          "formula": "=I15+G23"
+        },
+        {
+          "cell": "F25",
+          "formula": "=\"max. arm \"&FIXED(N44,3)"
+        },
+        {
+          "cell": "B28",
+          "formula": "=\"Climb \"&\"(\"&Vliegtuigtypegegevens!W13&\")\""
+        },
+        {
+          "cell": "C28",
+          "formula": "=Vliegtuigtypegegevens!V13"
+        },
+        {
+          "cell": "D28",
+          "formula": "=C28*($H$28*60+$I$28)"
+        },
+        {
+          "cell": "F28",
+          "formula": "=D28/$C$25"
+        },
+        {
+          "cell": "G28",
+          "formula": "=F28/3.78"
+        },
+        {
+          "cell": "B29",
+          "formula": "=\"Cruise \"&\"(\"&Vliegtuigtypegegevens!Y13&\")\""
+        },
+        {
+          "cell": "C29",
+          "formula": "=Vliegtuigtypegegevens!X13"
+        },
+        {
+          "cell": "D29",
+          "formula": "=C29*($H$29*60+$I$29)"
+        },
+        {
+          "cell": "F29",
+          "formula": "=D29/$C$25"
+        },
+        {
+          "cell": "G29",
+          "formula": "=F29/3.78"
+        },
+        {
+          "cell": "B30",
+          "formula": "=\"Descent \"&\"(\"&Vliegtuigtypegegevens!AA13&\")\""
+        },
+        {
+          "cell": "C30",
+          "formula": "=Vliegtuigtypegegevens!Z13"
+        },
+        {
+          "cell": "D30",
+          "formula": "=C30*($H$30*60+$I$30)"
+        },
+        {
+          "cell": "F30",
+          "formula": "=D30/$C$25"
+        },
+        {
+          "cell": "G30",
+          "formula": "=F30/3.78"
+        },
+        {
+          "cell": "D31",
+          "formula": "=SUM(D28:D30)"
+        },
+        {
+          "cell": "F31",
+          "formula": "=D31/$C$25"
+        },
+        {
+          "cell": "G31",
+          "formula": "=F31/3.78"
+        },
+        {
+          "cell": "H31",
+          "formula": "=SUM(H28:H30)+ROUND((SUM(I28:I30)-29.5)/60,0)"
+        },
+        {
+          "cell": "I31",
+          "formula": "=MOD(SUM(I28:I30),60)"
+        },
+        {
+          "cell": "D32",
+          "formula": "=D31*0.06"
+        },
+        {
+          "cell": "F32",
+          "formula": "=D32/$C$25"
+        },
+        {
+          "cell": "G32",
+          "formula": "=F32/3.78"
+        },
+        {
+          "cell": "B33",
+          "formula": "=\"Holding (\"&Vliegtuigtypegegevens!AA13&\")\""
+        },
+        {
+          "cell": "C33",
+          "formula": "=Vliegtuigtypegegevens!AB13"
+        },
+        {
+          "cell": "D33",
+          "formula": "=C33*($H$33*60+$I$33)"
+        },
+        {
+          "cell": "F33",
+          "formula": "=D33/$C$25"
+        },
+        {
+          "cell": "G33",
+          "formula": "=F33/3.78"
+        },
+        {
+          "cell": "O33",
+          "formula": "=Vliegtuiggegevens!G12"
+        },
+        {
+          "cell": "C34",
+          "formula": "=Vliegtuigtypegegevens!X13"
+        },
+        {
+          "cell": "D34",
+          "formula": "=C34*($H$34*60+$I$34)"
+        },
+        {
+          "cell": "F34",
+          "formula": "=D34/$C$25"
+        },
+        {
+          "cell": "G34",
+          "formula": "=F34/3.78"
+        },
+        {
+          "cell": "D35",
+          "formula": "=Vliegtuigtypegegevens!U13"
+        },
+        {
+          "cell": "F35",
+          "formula": "=D35/$C$25"
+        },
+        {
+          "cell": "G35",
+          "formula": "=F35/3.78"
+        },
+        {
+          "cell": "D36",
+          "formula": "=SUM(D31:D35)"
+        },
+        {
+          "cell": "F36",
+          "formula": "=D36/$C$25"
+        },
+        {
+          "cell": "G36",
+          "formula": "=F36/3.78"
+        },
+        {
+          "cell": "H36",
+          "formula": "=SUM(H31:H35)+ROUND((SUM(I31:I35)-29.5)/60,0)"
+        },
+        {
+          "cell": "I36",
+          "formula": "=MOD(SUM(I31:I35),60)"
+        },
+        {
+          "cell": "Q36",
+          "formula": "=Vliegtuiggegevens!Q12"
+        },
+        {
+          "cell": "C37",
+          "formula": "=Vliegtuigtypegegevens!X13"
+        },
+        {
+          "cell": "F37",
+          "formula": "=D37/$C$25"
+        },
+        {
+          "cell": "G37",
+          "formula": "=F37/3.78"
+        },
+        {
+          "cell": "H37",
+          "formula": "=ROUND((D37/$C$37-29.9)/60,0)"
+        },
+        {
+          "cell": "I37",
+          "formula": "=MOD((D37/$C$37),60)"
+        },
+        {
+          "cell": "Q37",
+          "formula": "=Vliegtuiggegevens!R12"
+        },
+        {
+          "cell": "D38",
+          "formula": "=SUM(D36:D37)"
+        },
+        {
+          "cell": "F38",
+          "formula": "=D38/$C$25"
+        },
+        {
+          "cell": "G38",
+          "formula": "=F38/3.78"
+        },
+        {
+          "cell": "P38",
+          "formula": "=\"Endurance \"&H36+H37+ROUND((SUM(I36,I37)-29.5)/60,0)&\" h, \"&ROUND(MOD(SUM(I36:I37),60),0)&\" m.\""
+        },
+        {
+          "cell": "S38",
+          "formula": "=Vliegtuigtypegegevens!D13"
+        },
+        {
+          "cell": "D39",
+          "formula": "=ROUND(12*C30,1)"
+        },
+        {
+          "cell": "F39",
+          "formula": "=D39/$C$25"
+        },
+        {
+          "cell": "G39",
+          "formula": "=F39/3.78"
+        },
+        {
+          "cell": "S39",
+          "formula": "=D13+D14"
+        },
+        {
+          "cell": "D40",
+          "formula": "=D38-D39"
+        },
+        {
+          "cell": "F40",
+          "formula": "=D40/$C$25"
+        },
+        {
+          "cell": "G40",
+          "formula": "=F40/3.78"
+        },
+        {
+          "cell": "D41",
+          "formula": "=D31+D32"
+        },
+        {
+          "cell": "F41",
+          "formula": "=D41/$C$25"
+        },
+        {
+          "cell": "G41",
+          "formula": "=F41/3.78"
+        },
+        {
+          "cell": "D42",
+          "formula": "=D40-D41"
+        },
+        {
+          "cell": "F42",
+          "formula": "=D42/$C$25"
+        },
+        {
+          "cell": "G42",
+          "formula": "=F42/3.78"
+        },
+        {
+          "cell": "L43",
+          "formula": "=IF($D$15<Vliegtuigtypegegevens!$J$13,Vliegtuigtypegegevens!$T$13,Vliegtuigtypegegevens!$T$13+('Weight and Balance'!$D$15-Vliegtuigtypegegevens!$J$13)*Vliegtuigtypegegevens!$S$13)"
+        },
+        {
+          "cell": "N43",
+          "formula": "=Vliegtuigtypegegevens!Q13"
+        },
+        {
+          "cell": "L44",
+          "formula": "=IF($D$19<Vliegtuigtypegegevens!$J$13,Vliegtuigtypegegevens!$T$13,Vliegtuigtypegegevens!$T$13+('Weight and Balance'!$D$19-Vliegtuigtypegegevens!$J$13)*Vliegtuigtypegegevens!$S$13)"
+        },
+        {
+          "cell": "N44",
+          "formula": "=Vliegtuigtypegegevens!R13"
+        },
+        {
+          "cell": "L45",
+          "formula": "=IF($D$21<Vliegtuigtypegegevens!$J$13,Vliegtuigtypegegevens!$T$13,Vliegtuigtypegegevens!$T$13+('Weight and Balance'!$D$21-Vliegtuigtypegegevens!$J$13)*Vliegtuigtypegegevens!$S$13)"
+        },
+        {
+          "cell": "N45",
+          "formula": "=Vliegtuigtypegegevens!AJ13"
+        },
+        {
+          "cell": "B46",
+          "formula": "=OR(B47=\"PH-MFT\",B47=\"PH-SKM\")"
+        },
+        {
+          "cell": "L46",
+          "formula": "=IF($D$24<Vliegtuigtypegegevens!$J$13,Vliegtuigtypegegevens!$T$13,Vliegtuigtypegegevens!$T$13+('Weight and Balance'!$D$24-Vliegtuigtypegegevens!$J$13)*Vliegtuigtypegegevens!$S$13)"
+        },
+        {
+          "cell": "N46",
+          "formula": "=Vliegtuigtypegegevens!AL13"
+        },
+        {
+          "cell": "B47",
+          "formula": "=Vliegtuiggegevens!B12"
+        },
+        {
+          "cell": "N47",
+          "formula": "=Vliegtuigtypegegevens!AM13"
+        }
+      ],
+      "cross_sheet_refs": {
+        "Vliegtuiggegevens": 8,
+        "Vliegtuigtypegegevens": 35,
+        "Weight and Balance": 4
+      },
+      "merged_cells": [
+        "C6:D6",
+        "B26:F26",
+        "G26:I26"
+      ],
+      "data_validations": 0,
+      "tables": []
+    },
+    "EFIS": {
+      "dimensions": "A1:D54",
+      "non_empty_cells": 92,
+      "bounds": {
+        "min_row": 3,
+        "min_col": 1,
+        "max_row": 54,
+        "max_col": 4
+      },
+      "formula_count": 33,
+      "constant_count": 59,
+      "number_cells": 5,
+      "text_cells": 54,
+      "bool_cells": 0,
+      "error_cells": 0,
+      "sample_formulas": [
+        {
+          "cell": "C5",
+          "formula": "=Vliegtuiggegevens!B12"
+        },
+        {
+          "cell": "C6",
+          "formula": "=Vliegtuiggegevens!D12"
+        },
+        {
+          "cell": "C8",
+          "formula": "=12*C19/60"
+        },
+        {
+          "cell": "C12",
+          "formula": "=Vliegtuigtypegegevens!AQ13"
+        },
+        {
+          "cell": "C13",
+          "formula": "=60*Vliegtuigtypegegevens!V13"
+        },
+        {
+          "cell": "C15",
+          "formula": "=Vliegtuigtypegegevens!AP13"
+        },
+        {
+          "cell": "C16",
+          "formula": "=60*Vliegtuigtypegegevens!X13"
+        },
+        {
+          "cell": "C18",
+          "formula": "=Vliegtuigtypegegevens!AR13"
+        },
+        {
+          "cell": "C19",
+          "formula": "=60*Vliegtuigtypegegevens!Z13"
+        },
+        {
+          "cell": "C24",
+          "formula": "=C25+C8"
+        },
+        {
+          "cell": "C25",
+          "formula": "=Vliegtuigtypegegevens!D13"
+        },
+        {
+          "cell": "C26",
+          "formula": "=C25"
+        },
+        {
+          "cell": "C27",
+          "formula": "=Vliegtuiggegevens!J12"
+        },
+        {
+          "cell": "C30",
+          "formula": "=100*Vliegtuiggegevens!M12/Vliegtuiggegevens!J12"
+        },
+        {
+          "cell": "C31",
+          "formula": "=100*Vliegtuigtypegegevens!AN13"
+        },
+        {
+          "cell": "C32",
+          "formula": "=100*Vliegtuigtypegegevens!AE13"
+        },
+        {
+          "cell": "C33",
+          "formula": "=100*Vliegtuigtypegegevens!AH13"
+        },
+        {
+          "cell": "C34",
+          "formula": "=100*Vliegtuigtypegegevens!AI13"
+        },
+        {
+          "cell": "C35",
+          "formula": "=100*Vliegtuigtypegegevens!AK13"
+        },
+        {
+          "cell": "C38",
+          "formula": "=ROUND(MIN(C45,C47,C49,C51,C53,Vliegtuiggegevens!C66)-10,-1)"
+        },
+        {
+          "cell": "C39",
+          "formula": "=ROUND((C49-C38+30)/5,-1)"
+        },
+        {
+          "cell": "C41",
+          "formula": "=(ROUND(MIN(C46,C48,C50,C52,C54,Vliegtuiggegevens!C67)-1,2))"
+        },
+        {
+          "cell": "C42",
+          "formula": "=ROUND((MAX(C46,C48,C50,C52,C54,Vliegtuiggegevens!C67)-C41)/5,0)"
+        },
+        {
+          "cell": "C45",
+          "formula": "=Vliegtuigtypegegevens!G13"
+        },
+        {
+          "cell": "C46",
+          "formula": "=100*Vliegtuigtypegegevens!H13/Vliegtuigtypegegevens!G13"
+        },
+        {
+          "cell": "C47",
+          "formula": "=Vliegtuigtypegegevens!J13"
+        },
+        {
+          "cell": "C48",
+          "formula": "=100*Vliegtuigtypegegevens!K13/Vliegtuigtypegegevens!J13"
+        },
+        {
+          "cell": "C49",
+          "formula": "=Vliegtuigtypegegevens!D13"
+        },
+        {
+          "cell": "C50",
+          "formula": "=100*Vliegtuigtypegegevens!E13/Vliegtuigtypegegevens!D13"
+        },
+        {
+          "cell": "C51",
+          "formula": "=C49"
+        },
+        {
+          "cell": "C52",
+          "formula": "=100*Vliegtuigtypegegevens!F13/Vliegtuigtypegegevens!D13"
+        },
+        {
+          "cell": "C53",
+          "formula": "=Vliegtuigtypegegevens!G13"
+        },
+        {
+          "cell": "C54",
+          "formula": "=100*Vliegtuigtypegegevens!I13/C53"
+        }
+      ],
+      "cross_sheet_refs": {
+        "Vliegtuiggegevens": 7,
+        "Vliegtuigtypegegevens": 21
+      },
+      "merged_cells": [],
+      "data_validations": 0,
+      "tables": []
+    },
+    "Hulp blad": {
+      "dimensions": "A1:I15",
+      "non_empty_cells": 36,
+      "bounds": {
+        "min_row": 3,
+        "min_col": 1,
+        "max_row": 15,
+        "max_col": 9
+      },
+      "formula_count": 28,
+      "constant_count": 8,
+      "number_cells": 0,
+      "text_cells": 8,
+      "bool_cells": 0,
+      "error_cells": 0,
+      "sample_formulas": [
+        {
+          "cell": "A4",
+          "formula": "=Vliegtuigtypegegevens!H13"
+        },
+        {
+          "cell": "B4",
+          "formula": "=Vliegtuigtypegegevens!G13"
+        },
+        {
+          "cell": "A5",
+          "formula": "=Vliegtuigtypegegevens!K13"
+        },
+        {
+          "cell": "B5",
+          "formula": "=Vliegtuigtypegegevens!J13"
+        },
+        {
+          "cell": "A6",
+          "formula": "=Vliegtuigtypegegevens!E13"
+        },
+        {
+          "cell": "B6",
+          "formula": "=Vliegtuigtypegegevens!D13"
+        },
+        {
+          "cell": "A7",
+          "formula": "=Vliegtuigtypegegevens!F13"
+        },
+        {
+          "cell": "B7",
+          "formula": "=Vliegtuigtypegegevens!D13"
+        },
+        {
+          "cell": "A8",
+          "formula": "=Vliegtuigtypegegevens!I13"
+        },
+        {
+          "cell": "B8",
+          "formula": "=Vliegtuigtypegegevens!G13"
+        },
+        {
+          "cell": "A9",
+          "formula": "=Vliegtuigtypegegevens!O13"
+        },
+        {
+          "cell": "C9",
+          "formula": "=Vliegtuigtypegegevens!G13"
+        },
+        {
+          "cell": "A10",
+          "formula": "=Vliegtuigtypegegevens!N13"
+        },
+        {
+          "cell": "C10",
+          "formula": "=Vliegtuigtypegegevens!L13"
+        },
+        {
+          "cell": "A11",
+          "formula": "=Vliegtuigtypegegevens!M13"
+        },
+        {
+          "cell": "C11",
+          "formula": "=Vliegtuigtypegegevens!L13"
+        },
+        {
+          "cell": "A12",
+          "formula": "='Weight and Balance'!I15"
+        },
+        {
+          "cell": "D12",
+          "formula": "='Weight and Balance'!D15"
+        },
+        {
+          "cell": "I12",
+          "formula": "='Weight and Balance'!D15"
+        },
+        {
+          "cell": "A13",
+          "formula": "='Weight and Balance'!I24"
+        },
+        {
+          "cell": "D13",
+          "formula": "='Weight and Balance'!D24"
+        },
+        {
+          "cell": "E13",
+          "formula": "='Weight and Balance'!D24"
+        },
+        {
+          "cell": "A14",
+          "formula": "='Weight and Balance'!I21"
+        },
+        {
+          "cell": "G14",
+          "formula": "='Weight and Balance'!D21"
+        },
+        {
+          "cell": "H14",
+          "formula": "='Weight and Balance'!D21"
+        },
+        {
+          "cell": "A15",
+          "formula": "='Weight and Balance'!I17"
+        },
+        {
+          "cell": "F15",
+          "formula": "='Weight and Balance'!D19"
+        },
+        {
+          "cell": "H15",
+          "formula": "='Weight and Balance'!D19"
+        }
+      ],
+      "cross_sheet_refs": {
+        "Vliegtuigtypegegevens": 16,
+        "Weight and Balance": 12
+      },
+      "merged_cells": [],
+      "data_validations": 0,
+      "tables": []
+    },
+    "Vliegtuiggegevens": {
+      "dimensions": "A1:T67",
+      "non_empty_cells": 164,
+      "bounds": {
+        "min_row": 1,
+        "min_col": 1,
+        "max_row": 26,
+        "max_col": 18
+      },
+      "formula_count": 46,
+      "constant_count": 118,
+      "number_cells": 47,
+      "text_cells": 64,
+      "bool_cells": 0,
+      "error_cells": 0,
+      "sample_formulas": [
+        {
+          "cell": "J1",
+          "formula": "=1000/455"
+        },
+        {
+          "cell": "Q1",
+          "formula": "=J1/0.0254"
+        },
+        {
+          "cell": "D2",
+          "formula": "='Weight and Balance'!S37"
+        },
+        {
+          "cell": "J5",
+          "formula": "=IF(H5=0,I5,H5/$J$1)"
+        },
+        {
+          "cell": "M5",
+          "formula": "=IF(K5=0,L5,K5/$Q$1)"
+        },
+        {
+          "cell": "O5",
+          "formula": "=N5*$J$2"
+        },
+        {
+          "cell": "P5",
+          "formula": "=ROUND(O5*'Weight and Balance'!$C$25,1)"
+        },
+        {
+          "cell": "J6",
+          "formula": "=IF(H6=0,I6,H6/$J$1)"
+        },
+        {
+          "cell": "M6",
+          "formula": "=IF(K6=0,L6,K6/$Q$1)"
+        },
+        {
+          "cell": "P6",
+          "formula": "=ROUND(O6*'Weight and Balance'!$C$25,1)"
+        },
+        {
+          "cell": "J7",
+          "formula": "=IF(H7=0,I7,H7/$J$1)"
+        },
+        {
+          "cell": "M7",
+          "formula": "=IF(K7=0,L7,K7/$Q$1)"
+        },
+        {
+          "cell": "P7",
+          "formula": "=ROUND(O7*'Weight and Balance'!$C$25,1)"
+        },
+        {
+          "cell": "J8",
+          "formula": "=IF(H8=0,I8,H8/$J$1)"
+        },
+        {
+          "cell": "M8",
+          "formula": "=IF(K8=0,L8,K8/$Q$1)"
+        },
+        {
+          "cell": "O8",
+          "formula": "=N8*$J$2"
+        },
+        {
+          "cell": "P8",
+          "formula": "=ROUND(O8*'Weight and Balance'!$C$25,1)"
+        },
+        {
+          "cell": "J9",
+          "formula": "=IF(H9=0,I9,H9/$J$1)"
+        },
+        {
+          "cell": "M9",
+          "formula": "=IF(K9=0,L9,K9/$Q$1)"
+        },
+        {
+          "cell": "O9",
+          "formula": "=N9*$J$2"
+        },
+        {
+          "cell": "P9",
+          "formula": "=ROUND(O9*'Weight and Balance'!$C$25,1)"
+        },
+        {
+          "cell": "B12",
+          "formula": "=CHOOSE($D$2,B5,B6,B7,B8,B9)"
+        },
+        {
+          "cell": "C12",
+          "formula": "=CHOOSE($D$2,C5,C6,C7,C8,C9)"
+        },
+        {
+          "cell": "D12",
+          "formula": "=CHOOSE($D$2,D5,D6,D7,D8,D9)"
+        },
+        {
+          "cell": "E12",
+          "formula": "=CHOOSE($D$2,E5,E6,E7,E8,E9)"
+        },
+        {
+          "cell": "F12",
+          "formula": "=CHOOSE($D$2,F5,F6,F7,F8,F9)"
+        },
+        {
+          "cell": "G12",
+          "formula": "=CHOOSE($D$2,G5,G6,G7,G8,G9)"
+        },
+        {
+          "cell": "H12",
+          "formula": "=CHOOSE($D$2,H5,H6,H7,H8,H9)"
+        },
+        {
+          "cell": "I12",
+          "formula": "=CHOOSE($D$2,I5,I6,I7,I8,I9)"
+        },
+        {
+          "cell": "J12",
+          "formula": "=CHOOSE($D$2,J5,J6,J7,J8,J9)"
+        },
+        {
+          "cell": "K12",
+          "formula": "=CHOOSE($D$2,K5,K6,K7,K8,K9)"
+        },
+        {
+          "cell": "L12",
+          "formula": "=CHOOSE($D$2,L5,L6,L7,L8,L9)"
+        },
+        {
+          "cell": "M12",
+          "formula": "=CHOOSE($D$2,M5,M6,M7,M8,M9)"
+        },
+        {
+          "cell": "N12",
+          "formula": "=CHOOSE($D$2,N5,N6,N7,N8,N9)"
+        },
+        {
+          "cell": "O12",
+          "formula": "=CHOOSE($D$2,O5,O6,O7,O8,O9)"
+        },
+        {
+          "cell": "P12",
+          "formula": "=CHOOSE($D$2,P5,P6,P7,P8,P9)"
+        },
+        {
+          "cell": "Q12",
+          "formula": "=CHOOSE($D$2,Q5,Q6,Q7,Q8,Q9)"
+        },
+        {
+          "cell": "R12",
+          "formula": "=CHOOSE($D$2,R5,R6,R7,R8,R9)"
+        },
+        {
+          "cell": "J25",
+          "formula": "=IF(H25=0,I25,H25/$J$1)"
+        },
+        {
+          "cell": "M25",
+          "formula": "=IF(K25=0,L25,K25/$Q$1)"
+        },
+        {
+          "cell": "O25",
+          "formula": "=N25*$J$2"
+        },
+        {
+          "cell": "P25",
+          "formula": "=ROUND(O25*'Weight and Balance'!$C$25,1)"
+        },
+        {
+          "cell": "J26",
+          "formula": "=IF(H26=0,I26,H26/$J$1)"
+        },
+        {
+          "cell": "M26",
+          "formula": "=IF(K26=0,L26,K26/$Q$1)"
+        },
+        {
+          "cell": "O26",
+          "formula": "=N26*$J$2"
+        },
+        {
+          "cell": "P26",
+          "formula": "=ROUND(O26*'Weight and Balance'!$C$25,1)"
+        }
+      ],
+      "cross_sheet_refs": {
+        "Weight and Balance": 8
+      },
+      "merged_cells": [],
+      "data_validations": 0,
+      "tables": []
+    },
+    "Vliegtuigtypegegevens": {
+      "dimensions": "A1:BF67",
+      "non_empty_cells": 411,
+      "bounds": {
+        "min_row": 1,
+        "min_col": 1,
+        "max_row": 34,
+        "max_col": 46
+      },
+      "formula_count": 75,
+      "constant_count": 336,
+      "number_cells": 229,
+      "text_cells": 107,
+      "bool_cells": 0,
+      "error_cells": 0,
+      "sample_formulas": [
+        {
+          "cell": "K1",
+          "formula": "=1000/455"
+        },
+        {
+          "cell": "P1",
+          "formula": "=K1/0.0254"
+        },
+        {
+          "cell": "E2",
+          "formula": "=Vliegtuiggegevens!E12"
+        },
+        {
+          "cell": "R5",
+          "formula": "=F5/D5"
+        },
+        {
+          "cell": "S5",
+          "formula": "=(E5/D5-K5/J5)/(D5-J5)"
+        },
+        {
+          "cell": "S6",
+          "formula": "=(E6/D6-K6/J6)/(D6-J6)"
+        },
+        {
+          "cell": "T6",
+          "formula": "=K6/J6"
+        },
+        {
+          "cell": "S7",
+          "formula": "=(E7/D7-K7/J7)/(D7-J7)"
+        },
+        {
+          "cell": "S8",
+          "formula": "=(E8/D8-K8/J8)/(D8-J8)"
+        },
+        {
+          "cell": "T8",
+          "formula": "=K8/J8"
+        },
+        {
+          "cell": "V8",
+          "formula": "=0.72*0.8"
+        },
+        {
+          "cell": "X8",
+          "formula": "=5.4*3.6*0.8/60"
+        },
+        {
+          "cell": "Z8",
+          "formula": "=3.9*3.6*0.8/60"
+        },
+        {
+          "cell": "AB8",
+          "formula": "=3.9*3.6*0.8/60"
+        },
+        {
+          "cell": "V9",
+          "formula": "=(22/60)*'Weight and Balance'!$C$25"
+        },
+        {
+          "cell": "R10",
+          "formula": "=F10/D10"
+        },
+        {
+          "cell": "S10",
+          "formula": "=(E10/D10-K10/J10)/(D10-J10)"
+        },
+        {
+          "cell": "B13",
+          "formula": "=CHOOSE($E$2,B5,B6,B7,B8,B9)"
+        },
+        {
+          "cell": "D13",
+          "formula": "=CHOOSE($E$2,D5,D6,D7,D8,D9,D10)"
+        },
+        {
+          "cell": "E13",
+          "formula": "=CHOOSE($E$2,E5,E6,E7,E8,E9,E10)"
+        },
+        {
+          "cell": "F13",
+          "formula": "=CHOOSE($E$2,F5,F6,F7,F8,F9,F10)"
+        },
+        {
+          "cell": "G13",
+          "formula": "=CHOOSE($E$2,G5,G6,G7,G8,G9,G10)"
+        },
+        {
+          "cell": "H13",
+          "formula": "=CHOOSE($E$2,H5,H6,H7,H8,H9,H10)"
+        },
+        {
+          "cell": "I13",
+          "formula": "=CHOOSE($E$2,I5,I6,I7,I8,I9,I10)"
+        },
+        {
+          "cell": "J13",
+          "formula": "=CHOOSE($E$2,J5,J6,J7,J8,J9,J10)"
+        },
+        {
+          "cell": "K13",
+          "formula": "=CHOOSE($E$2,K5,K6,K7,K8,K9,K10)"
+        },
+        {
+          "cell": "L13",
+          "formula": "=CHOOSE($E$2,L5,L6,L7,L8,L9,L10)"
+        },
+        {
+          "cell": "M13",
+          "formula": "=CHOOSE($E$2,M5,M6,M7,M8,M9,M10)"
+        },
+        {
+          "cell": "N13",
+          "formula": "=CHOOSE($E$2,N5,N6,N7,N8,N9,N10)"
+        },
+        {
+          "cell": "O13",
+          "formula": "=CHOOSE($E$2,O5,O6,O7,O8,O9,O10)"
+        },
+        {
+          "cell": "P13",
+          "formula": "=CHOOSE($E$2,P5,P6,P7,P8,P9,P10)"
+        },
+        {
+          "cell": "Q13",
+          "formula": "=CHOOSE($E$2,Q5,Q6,Q7,Q8,Q9,Q10)"
+        },
+        {
+          "cell": "R13",
+          "formula": "=CHOOSE($E$2,R5,R6,R7,R8,R9,R10)"
+        },
+        {
+          "cell": "S13",
+          "formula": "=CHOOSE($E$2,S5,S6,S7,S8,S9,S10)"
+        },
+        {
+          "cell": "T13",
+          "formula": "=CHOOSE($E$2,T5,T6,T7,T8,T9,T10)"
+        },
+        {
+          "cell": "U13",
+          "formula": "=CHOOSE($E$2,U5,U6,U7,U8,U9,U10)"
+        },
+        {
+          "cell": "V13",
+          "formula": "=CHOOSE($E$2,V5,V6,V7,V8,V9,V10)"
+        },
+        {
+          "cell": "W13",
+          "formula": "=CHOOSE($E$2,W5,W6,W7,W8,W9,W10)"
+        },
+        {
+          "cell": "X13",
+          "formula": "=CHOOSE($E$2,X5,X6,X7,X8,X9,X10)"
+        },
+        {
+          "cell": "Y13",
+          "formula": "=CHOOSE($E$2,Y5,Y6,Y7,Y8,Y9,Y10)"
+        },
+        {
+          "cell": "Z13",
+          "formula": "=CHOOSE($E$2,Z5,Z6,Z7,Z8,Z9,Z10)"
+        },
+        {
+          "cell": "AA13",
+          "formula": "=CHOOSE($E$2,AA5,AA6,AA7,AA8,AA9,AA10)"
+        },
+        {
+          "cell": "AB13",
+          "formula": "=CHOOSE($E$2,AB5,AB6,AB7,AB8,AB9,AB10)"
+        },
+        {
+          "cell": "AC13",
+          "formula": "=CHOOSE($E$2,AC5,AC6,AC7,AC8,AC9,AC10)"
+        },
+        {
+          "cell": "AD13",
+          "formula": "=CHOOSE($E$2,AD5,AD6,AD7,AD8,AD9,AD10)"
+        },
+        {
+          "cell": "AE13",
+          "formula": "=CHOOSE($E$2,AE5,AE6,AE7,AE8,AE9,AE10)"
+        },
+        {
+          "cell": "AF13",
+          "formula": "=CHOOSE($E$2,AF5,AF6,AF7,AF8,AF9,AF10)"
+        },
+        {
+          "cell": "AG13",
+          "formula": "=CHOOSE($E$2,AG5,AG6,AG7,AG8,AG9,AG10)"
+        },
+        {
+          "cell": "AH13",
+          "formula": "=CHOOSE($E$2,AH5,AH6,AH7,AH8,AH9,AH10)"
+        },
+        {
+          "cell": "AI13",
+          "formula": "=CHOOSE($E$2,AI5,AI6,AI7,AI8,AI9,AI10)"
+        },
+        {
+          "cell": "AJ13",
+          "formula": "=CHOOSE($E$2,AJ5,AJ6,AJ7,AJ8,AJ9,AJ10)"
+        },
+        {
+          "cell": "AK13",
+          "formula": "=CHOOSE($E$2,AK5,AK6,AK7,AK8,AK9,AK10)"
+        },
+        {
+          "cell": "AL13",
+          "formula": "=CHOOSE($E$2,AL5,AL6,AL7,AL8,AL9,AL10)"
+        },
+        {
+          "cell": "AM13",
+          "formula": "=CHOOSE($E$2,AM5,AM6,AM7,AM8,AM9,AM10)"
+        },
+        {
+          "cell": "AN13",
+          "formula": "=CHOOSE($E$2,AN5,AN6,AN7,AN8,AN9,AN10)"
+        },
+        {
+          "cell": "AO13",
+          "formula": "=CHOOSE($E$2,AO5,AO6,AO7,AO8,AO9,AO10)"
+        },
+        {
+          "cell": "AP13",
+          "formula": "=CHOOSE($E$2,AP5,AP6,AP7,AP8,AP9,AP10)"
+        },
+        {
+          "cell": "AQ13",
+          "formula": "=CHOOSE($E$2,AQ5,AQ6,AQ7,AQ8,AQ9,AQ10)"
+        },
+        {
+          "cell": "AR13",
+          "formula": "=CHOOSE($E$2,AR5,AR6,AR7,AR8,AR9,AR10)"
+        },
+        {
+          "cell": "AS13",
+          "formula": "=CHOOSE($E$2,AS5,AS6,AS7,AS8,AS9,AS10)"
+        },
+        {
+          "cell": "AT13",
+          "formula": "=CHOOSE($E$2,AT5,AT6,AT7,AT8,AT9,AT10)"
+        },
+        {
+          "cell": "AE15",
+          "formula": "=AD13"
+        },
+        {
+          "cell": "AE16",
+          "formula": "=AE13"
+        },
+        {
+          "cell": "AE17",
+          "formula": "=AF13"
+        },
+        {
+          "cell": "AE18",
+          "formula": "=CHOOSE(D3,AD13,AE13,AF13)"
+        },
+        {
+          "cell": "AE19",
+          "formula": "=CHOOSE(H3,AD13,AE13,AF13)"
+        },
+        {
+          "cell": "N25",
+          "formula": "=1/(H25*K25)"
+        },
+        {
+          "cell": "E29",
+          "formula": "=E28/E25"
+        },
+        {
+          "cell": "H29",
+          "formula": "=H28/H25"
+        },
+        {
+          "cell": "K29",
+          "formula": "=K28/K25"
+        },
+        {
+          "cell": "N29",
+          "formula": "=N28/N25"
+        },
+        {
+          "cell": "E34",
+          "formula": "=E33*E25"
+        },
+        {
+          "cell": "H34",
+          "formula": "=H33*H25"
+        },
+        {
+          "cell": "K34",
+          "formula": "=K33*K25"
+        },
+        {
+          "cell": "N34",
+          "formula": "=N33*N25"
+        }
+      ],
+      "cross_sheet_refs": {
+        "Vliegtuiggegevens": 1,
+        "Weight and Balance": 1
+      },
+      "merged_cells": [],
+      "data_validations": 0,
+      "tables": []
+    }
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "aircraftTypes": [
+    {
+      "chooseIndex": 1,
+      "id": 1,
+      "model": "C172N (1043)",
+      "maxTowKg": 1043,
+      "envelope": {
+        "momentLowAtMaxTow": 1020,
+        "momentHighAtMaxTow": 1258,
+        "lowWeightKg": 700,
+        "momentLowAtLowWeight": 622,
+        "momentHighAtLowWeight": 844,
+        "kinkWeightKg": 887,
+        "kinkMomentMkg": 785,
+        "maxUtilityWeightKg": 909,
+        "momentLowAtMaxUtility": 815,
+        "momentHighAtMaxUtility": 930,
+        "momentHighAtLowUtility": 725,
+        "maxYAxisKg": 1150
+      },
+      "limits": {
+        "maxRearPassengerKg": 300,
+        "maxArmM": 1.20613614573346,
+        "minArmSlopeAboveKink": 0.000595785828793554,
+        "minArmBelowKinkM": 0.89,
+        "maxBaggageArea1Kg": 54,
+        "maxBaggageArea2Kg": 23,
+        "maxCombinedBaggageKg": 54,
+        "maxPilotPaxKg": 110
+      },
+      "fuel": {
+        "taxiKg": 3,
+        "climbKgMin": 0.8,
+        "climbSetting": "2500 rpm",
+        "cruiseKgMin": 0.33,
+        "cruiseSetting": "2300 rpm",
+        "descentKgMin": 0.25,
+        "descentSetting": "2000 rpm",
+        "holdKgMin": 0.25,
+        "holdSetting": "2000 rpm"
+      },
+      "arms": {
+        "pilotFrontM": 0.85,
+        "pilotMiddleM": 1.01,
+        "pilotBackM": 1.17,
+        "rearPassengersM": 1.85,
+        "baggageArea1M": 2.41,
+        "baggageArea2M": 3.12,
+        "fuelM": 1.22
+      },
+      "performance": {
+        "cruiseKts": 95,
+        "climbKts": 75,
+        "descentKts": 95,
+        "climbFtMin": 500,
+        "descentFtMin": 500
+      }
+    },
+    {
+      "chooseIndex": 2,
+      "id": 2,
+      "model": "C172M",
+      "maxTowKg": 1043,
+      "envelope": {
+        "momentLowAtMaxTow": 1020.2,
+        "momentHighAtMaxTow": 1253.4,
+        "lowWeightKg": 700,
+        "momentLowAtLowWeight": 622.3,
+        "momentHighAtLowWeight": 841,
+        "kinkWeightKg": 884.5,
+        "kinkMomentMkg": 786.3,
+        "maxUtilityWeightKg": 907.1,
+        "momentLowAtMaxUtility": 818,
+        "momentHighAtMaxUtility": 933.2,
+        "momentHighAtLowUtility": 720.1,
+        "maxYAxisKg": 1150
+      },
+      "limits": {
+        "maxRearPassengerKg": 300,
+        "maxArmM": 1.201,
+        "minArmSlopeAboveKink": 0.000562543582086226,
+        "minArmBelowKinkM": 0.888976823063878,
+        "maxBaggageArea1Kg": 54,
+        "maxBaggageArea2Kg": 23,
+        "maxCombinedBaggageKg": 54,
+        "maxPilotPaxKg": 110
+      },
+      "fuel": {
+        "taxiKg": 3,
+        "climbKgMin": 0.8,
+        "climbSetting": "2500 rpm",
+        "cruiseKgMin": 0.33,
+        "cruiseSetting": "2300 rpm",
+        "descentKgMin": 0.25,
+        "descentSetting": "2000 rpm",
+        "holdKgMin": 0.25,
+        "holdSetting": "2000 rpm"
+      },
+      "arms": {
+        "pilotFrontM": 0.8636,
+        "pilotMiddleM": 1.016,
+        "pilotBackM": 1.1684,
+        "rearPassengersM": 1.8524,
+        "baggageArea1M": 2.41,
+        "baggageArea2M": 3.12,
+        "fuelM": 1.2143
+      },
+      "performance": {
+        "cruiseKts": 95,
+        "climbKts": 75,
+        "descentKts": 95,
+        "climbFtMin": 500,
+        "descentFtMin": 500
+      }
+    },
+    {
+      "chooseIndex": 3,
+      "id": 3,
+      "model": "C172P",
+      "maxTowKg": 1089,
+      "envelope": {
+        "momentLowAtMaxTow": 1090,
+        "momentHighAtMaxTow": 1315,
+        "lowWeightKg": 700,
+        "momentLowAtLowWeight": 618,
+        "momentHighAtLowWeight": 844,
+        "kinkWeightKg": 890,
+        "kinkMomentMkg": 780,
+        "maxUtilityWeightKg": 953,
+        "momentLowAtMaxUtility": 885,
+        "momentHighAtMaxUtility": 980,
+        "momentHighAtLowUtility": 720,
+        "maxYAxisKg": 1200
+      },
+      "limits": {
+        "maxRearPassengerKg": 300,
+        "maxArmM": 1.2053,
+        "minArmSlopeAboveKink": 0.000625697383233789,
+        "minArmBelowKinkM": 0.885,
+        "maxBaggageArea1Kg": 54,
+        "maxBaggageArea2Kg": 23,
+        "maxCombinedBaggageKg": 54,
+        "maxPilotPaxKg": 110
+      },
+      "fuel": {
+        "taxiKg": 3,
+        "climbKgMin": 0.8,
+        "climbSetting": "2500 rpm",
+        "cruiseKgMin": 0.33,
+        "cruiseSetting": "2300 rpm",
+        "descentKgMin": 0.25,
+        "descentSetting": "2000 rpm",
+        "holdKgMin": 0.25,
+        "holdSetting": "2000 rpm"
+      },
+      "arms": {
+        "pilotFrontM": 0.864,
+        "pilotMiddleM": 1.01,
+        "pilotBackM": 1.17,
+        "rearPassengersM": 1.85,
+        "baggageArea1M": 2.41,
+        "baggageArea2M": 3.12,
+        "fuelM": 1.22
+      },
+      "performance": {
+        "cruiseKts": 95,
+        "climbKts": 75,
+        "descentKts": 95,
+        "climbFtMin": 500,
+        "descentFtMin": 500
+      }
+    },
+    {
+      "chooseIndex": 4,
+      "id": 4,
+      "model": "CF152",
+      "maxTowKg": 758,
+      "envelope": {
+        "momentLowAtMaxTow": 630,
+        "momentHighAtMaxTow": 702.5,
+        "lowWeightKg": 500,
+        "momentLowAtLowWeight": 395,
+        "momentHighAtLowWeight": 465,
+        "kinkWeightKg": 614,
+        "kinkMomentMkg": 487.5,
+        "maxUtilityWeightKg": 0,
+        "momentLowAtMaxUtility": 0,
+        "momentHighAtMaxUtility": 0,
+        "momentHighAtLowUtility": null,
+        "maxYAxisKg": 850
+      },
+      "limits": {
+        "maxRearPassengerKg": 0,
+        "maxArmM": 0.928,
+        "minArmSlopeAboveKink": 0.000258059883859175,
+        "minArmBelowKinkM": 0.793973941368078,
+        "maxBaggageArea1Kg": 54,
+        "maxBaggageArea2Kg": 23,
+        "maxCombinedBaggageKg": 54,
+        "maxPilotPaxKg": 110
+      },
+      "fuel": {
+        "taxiKg": 2.2,
+        "climbKgMin": 0.576,
+        "climbSetting": "2500 rpm",
+        "cruiseKgMin": 0.2592,
+        "cruiseSetting": "2300 rpm",
+        "descentKgMin": 0.1872,
+        "descentSetting": "2000 rpm",
+        "holdKgMin": 0.1872,
+        "holdSetting": "2000 rpm"
+      },
+      "arms": {
+        "pilotFrontM": 0.89,
+        "pilotMiddleM": 0.99,
+        "pilotBackM": 1.17,
+        "rearPassengersM": null,
+        "baggageArea1M": 1.63,
+        "baggageArea2M": 2.13,
+        "fuelM": 1
+      },
+      "performance": {
+        "cruiseKts": 85,
+        "climbKts": 75,
+        "descentKts": 85,
+        "climbFtMin": 500,
+        "descentFtMin": 500
+      }
+    },
+    {
+      "chooseIndex": 5,
+      "id": 5,
+      "model": "KDV20-80",
+      "maxTowKg": 730,
+      "envelope": {
+        "momentLowAtMaxTow": 182.5,
+        "momentHighAtMaxTow": 284.7,
+        "lowWeightKg": 560,
+        "momentLowAtLowWeight": 140,
+        "momentHighAtLowWeight": 218.4,
+        "kinkWeightKg": 650,
+        "kinkMomentMkg": 162.5,
+        "maxUtilityWeightKg": 0,
+        "momentLowAtMaxUtility": 0,
+        "momentHighAtMaxUtility": 0,
+        "momentHighAtLowUtility": null,
+        "maxYAxisKg": 750
+      },
+      "limits": {
+        "maxRearPassengerKg": 0,
+        "maxArmM": 0.39,
+        "minArmSlopeAboveKink": 1e-05,
+        "minArmBelowKinkM": 0.25,
+        "maxBaggageArea1Kg": 20,
+        "maxBaggageArea2Kg": 0,
+        "maxCombinedBaggageKg": 20,
+        "maxPilotPaxKg": 110
+      },
+      "fuel": {
+        "taxiKg": 1.8,
+        "climbKgMin": 0.264,
+        "climbSetting": "2400 rpm/28\"",
+        "cruiseKgMin": 0.192,
+        "cruiseSetting": "2300 rpm/25\"",
+        "descentKgMin": 0.156,
+        "descentSetting": "2300 rpm/20\"",
+        "holdKgMin": 0.156,
+        "holdSetting": "2300 rpm/20\""
+      },
+      "arms": {
+        "pilotFrontM": 0.143,
+        "pilotMiddleM": 0.143,
+        "pilotBackM": 0.143,
+        "rearPassengersM": null,
+        "baggageArea1M": 0.824,
+        "baggageArea2M": null,
+        "fuelM": 0.824
+      },
+      "performance": {
+        "cruiseKts": 95,
+        "climbKts": 75,
+        "descentKts": 92,
+        "climbFtMin": 500,
+        "descentFtMin": 500
+      }
+    },
+    {
+      "chooseIndex": 6,
+      "id": 1,
+      "model": "C172N (1089)",
+      "maxTowKg": 1089,
+      "envelope": {
+        "momentLowAtMaxTow": 1092.2,
+        "momentHighAtMaxTow": 1307.9,
+        "lowWeightKg": 700,
+        "momentLowAtLowWeight": 622.3,
+        "momentHighAtLowWeight": 841,
+        "kinkWeightKg": 884.5,
+        "kinkMomentMkg": 786.3,
+        "maxUtilityWeightKg": 952.5,
+        "momentLowAtMaxUtility": 883.1,
+        "momentHighAtMaxUtility": 997.9,
+        "momentHighAtLowUtility": 720.1,
+        "maxYAxisKg": 1150
+      },
+      "limits": {
+        "maxRearPassengerKg": 300,
+        "maxArmM": 1.2010101010101,
+        "minArmSlopeAboveKink": 0.000557269694874673,
+        "minArmBelowKinkM": 0.889,
+        "maxBaggageArea1Kg": 54,
+        "maxBaggageArea2Kg": 23,
+        "maxCombinedBaggageKg": 54,
+        "maxPilotPaxKg": 110
+      },
+      "fuel": {
+        "taxiKg": 3,
+        "climbKgMin": 0.8,
+        "climbSetting": "2500 rpm",
+        "cruiseKgMin": 0.33,
+        "cruiseSetting": "2300 rpm",
+        "descentKgMin": 0.25,
+        "descentSetting": "2000 rpm",
+        "holdKgMin": 0.25,
+        "holdSetting": "2000 rpm"
+      },
+      "arms": {
+        "pilotFrontM": 0.8636,
+        "pilotMiddleM": 1.01,
+        "pilotBackM": 1.1684,
+        "rearPassengersM": 1.85,
+        "baggageArea1M": 2.41,
+        "baggageArea2M": 3.12,
+        "fuelM": 1.22
+      },
+      "performance": {
+        "cruiseKts": 95,
+        "climbKts": 75,
+        "descentKts": 95,
+        "climbFtMin": 500,
+        "descentFtMin": 500
+      }
+    }
+  ]
+}

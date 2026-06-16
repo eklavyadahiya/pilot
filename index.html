@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pilot Training Tools</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Pilot Training Tools</h1>
+    <p>Static pilot toolkit for map planning, quiz practice, in-flight reference, and weight &amp; balance.</p>
+  </header>
+
+  <main class="layout">
+    <aside class="tools-panel">
+      <h2>Tools</h2>
+      <div class="tool-nav">
+        <button class="tool-nav-btn active" data-tool="home" type="button">Homepage</button>
+        <button class="tool-nav-btn" data-tool="map" type="button">Map + Circuit + Wind</button>
+        <button class="tool-nav-btn" data-tool="quiz" type="button">Quiz / Flashcards</button>
+        <button class="tool-nav-btn" data-tool="guide" type="button">In-Flight Guide</button>
+        <button class="tool-nav-btn" data-tool="wb" type="button">Weight &amp; Balance</button>
+      </div>
+      <p class="hint">
+        Place your KMZ files in <code>data/</code> and list them in
+        <code>data/kmz-manifest.json</code>.
+      </p>
+    </aside>
+
+    <section class="tool-view">
+      <section id="home-tool-screen" class="tool-screen">
+        <div class="home-card">
+          <h2>Homepage</h2>
+          <p>Select a tool from the sidebar to get started.</p>
+          <ul class="hint">
+            <li><strong>Weight &amp; Balance</strong> — full conversion of the EFIS W&amp;B spreadsheet</li>
+            <li><strong>Map + Circuit + Wind</strong> — KMZ overlays and wind vector calculator</li>
+            <li><strong>Quiz / Flashcards</strong> — category-based practice</li>
+            <li><strong>In-Flight Guide</strong> — DV20 quick reference</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="map-tool-screen" class="tool-screen hidden">
+        <div class="controls">
+          <div id="kmz-file-buttons" class="kmz-file-buttons">
+            No KMZ files loaded from manifest yet.
+          </div>
+
+          <div class="control-row measure-row">
+            <button id="toggle-measure-btn" type="button">Start Measuring</button>
+            <button id="undo-measure-btn" type="button">Undo Last Point</button>
+            <button id="clear-measure-btn" type="button">Clear Measure</button>
+            <label for="measure-speed-kt-input">Speed (kt)</label>
+            <input
+              id="measure-speed-kt-input"
+              type="number"
+              value="90"
+              min="1"
+              step="1"
+            />
+            <span id="measure-summary" class="summary">No measurement points yet.</span>
+          </div>
+
+          <div class="control-row wind-row">
+            <label for="wind-code-input">Wind code</label>
+            <input
+              id="wind-code-input"
+              type="text"
+              value="31004KT"
+              placeholder="31004KT"
+              spellcheck="false"
+            />
+            <button id="add-wind-btn" type="button">Select Point On Map</button>
+            <button id="clear-wind-btn" type="button">Clear Winds</button>
+            <button id="reset-wind-data-btn" type="button">Reset Wind Data</button>
+            <span class="hint">Format: dddssKT (from direction), e.g. 31004KT.</span>
+          </div>
+
+          <div id="wind-summary" class="summary">
+            No wind indicators yet.
+          </div>
+
+          <div id="wind-readings" class="wind-readings">
+            No saved readings yet.
+          </div>
+        </div>
+
+        <div id="map" aria-label="Map area"></div>
+      </section>
+
+      <section id="quiz-tool-screen" class="quiz-section tool-screen hidden" aria-label="Quiz and flashcards">
+        <div class="quiz-header">
+          <h2>Quiz / Flashcards</h2>
+          <div class="control-row">
+            <label for="quiz-category-select">Category</label>
+            <select id="quiz-category-select">
+              <option value="__all__">All categories</option>
+            </select>
+            <button id="start-quiz-btn" type="button">Start Quiz (50)</button>
+            <button id="start-flashcards-btn" type="button">Start Flashcards</button>
+          </div>
+          <p id="quiz-meta" class="hint">Loading questions</p>
+        </div>
+        <div id="quiz-card" class="quiz-card">
+          Quiz and flashcards will appear here after loading questions.
+        </div>
+      </section>
+
+      <section id="wb-tool-screen" class="wb-section tool-screen hidden" aria-label="Weight and balance">
+        <div id="wb-tool-root"></div>
+      </section>
+
+      <section id="guide-tool-screen" class="guide-section tool-screen hidden" aria-label="In-flight guide">
+        <div class="guide-header">
+          <h2>In-Flight Guide</h2>
+          <div class="control-row">
+            <label for="guide-section-select">Section</label>
+            <select id="guide-section-select">
+              <option value="__all__">All sections</option>
+            </select>
+            <label for="guide-search-input">Search</label>
+            <input
+              id="guide-search-input"
+              type="text"
+              placeholder="Filter procedures, speeds, notes..."
+              spellcheck="false"
+            />
+          </div>
+          <p id="guide-meta" class="hint">Loading guide from guide/dv20-guide.json...</p>
+        </div>
+        <div id="guide-content" class="guide-content">
+          Guide content will appear here after loading.
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
