@@ -8,10 +8,7 @@ import {
 const EHHV = [52.1906, 5.1469];
 const MAX_REFERENCE_RADIUS_KM = 50;
 const WIND_STORAGE_KEY = "pilot-training.wind-data.v1";
-const QUIZ_BANK_PATH = "./quiz/questions.json";
-const GUIDE_PATH = "./guide/dv20-guide.json";
-const KITTEN_TTS_MODEL_ID = "onnx-community/KittenTTS-Nano-v0.8-ONNX";
-const KITTEN_TTS_VOICE = "Luna";
+const KNOWLEDGE_PATH = "./data/dv20-knowledge.json";
 
 const map = L.map("map").setView(EHHV, 12);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -80,24 +77,6 @@ let quizState = null;
 let selectedQuizCategory = "__all__";
 let guideData = null;
 let wbToolInitialized = false;
-const flashcardStudyState = {
-  running: false,
-  questionToAnswerDelayMs: 2500,
-  betweenQuestionsDelayMs: 2000,
-  speechRate: 1,
-  localTtsStatus: "idle",
-  localTtsError: "",
-  currentAudioContext: null,
-  currentAudioSource: null,
-  currentAudioResolve: null,
-  kittenModulePromise: null,
-  kittenEnginePromise: null,
-  kittenEngine: null,
-  runToken: 0,
-  ttsAvailable:
-    typeof window !== "undefined" &&
-    (typeof window.AudioContext !== "undefined" || typeof window.webkitAudioContext !== "undefined")
-};
 
 for (const button of toolNavButtons) {
   button.addEventListener("click", () => {
@@ -194,8 +173,7 @@ restoreWindState();
 updateWindSummary();
 renderWindReadings();
 updateMeasureSummary();
-loadQuestionBank();
-loadGuideData();
+loadKnowledgeData();
 setActiveTool("home");
 
 function clearWindReadings() {
@@ -868,10 +846,6 @@ function removeWindState() {
 }
 
 function setActiveTool(toolId) {
-  if (toolId !== "quiz") {
-    stopFlashcardStudyMode();
-  }
-
   for (const button of toolNavButtons) {
     button.classList.toggle("active", button.dataset.tool === toolId);
   }
@@ -903,29 +877,141 @@ function setActiveTool(toolId) {
   }
 }
 
-async function loadQuestionBank() {
+async function loadKnowledgeData() {
   try {
-    const response = await fetch(QUIZ_BANK_PATH);
+    const response = await fetch(KNOWLEDGE_PATH);
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
-    const data = await response.json();
-    questionBank = parseQuestionsJson(data);
+    const payload = await response.json();
+    const entries = parseKnowledgeJson(payload);
+    questionBank = buildQuestionBankFromKnowledge(entries);
+    guideData = buildGuideFromKnowledge(entries);
+    selectedQuizCategory = "__all__";
     populateQuizCategoryOptions();
     updateQuizMeta();
     quizCardEl.textContent = "Choose Start Quiz (50) or Start Flashcards.";
+    populateGuideSectionOptions();
+    guideMetaEl.textContent = `Loaded ${guideData.sections.length} sections for ${guideData.aircraft}.`;
+    renderGuide();
   } catch (error) {
-    console.error(`Could not load ${QUIZ_BANK_PATH}:`, error);
+    console.error(`Could not load ${KNOWLEDGE_PATH}:`, error);
     questionBank = [];
+    quizState = null;
     selectedQuizCategory = "__all__";
     populateQuizCategoryOptions();
-    quizMetaEl.textContent = `Could not load ${QUIZ_BANK_PATH}.`;
-    quizCardEl.textContent = "Fix the JSON file, then reload the page.";
+    quizMetaEl.textContent = `Could not load ${KNOWLEDGE_PATH}.`;
+    quizCardEl.textContent = "Fix the knowledge JSON file, then reload the page.";
+    guideData = null;
+    guideSectionSelect.innerHTML = `<option value="__all__">All sections</option>`;
+    guideMetaEl.textContent = `Could not load ${KNOWLEDGE_PATH}.`;
+    guideContentEl.textContent = "Fix the knowledge JSON file, then reload the page.";
   }
 }
 
+function parseKnowledgeJson(payload) {
+  let records = payload;
+  if (payload && !Array.isArray(payload) && Array.isArray(payload.entries)) {
+    records = payload.entries;
+  }
+  if (!Array.isArray(records)) {
+    throw new Error("dv20-knowledge.json must be an array or { entries: [] }.");
+  }
+  return records
+    .map((record, index) => normalizeKnowledgeEntry(record, index))
+    .filter((entry) => isValidKnowledgeEntry(entry));
+}
+
+function normalizeKnowledgeEntry(record, index) {
+  const distractors = Array.isArray(record?.distractors)
+    ? record.distractors.map((item) => String(item || "").trim()).filter(Boolean)
+    : [];
+  return {
+    id: String(record?.id || index + 1),
+    category: String(record?.category || "").trim(),
+    type: String(record?.type || "").trim().toLowerCase(),
+    label: String(record?.label || "").trim(),
+    value: String(record?.value || "").trim(),
+    note: String(record?.note || "").trim(),
+    source: String(record?.source || "").trim(),
+    question: String(record?.question || "").trim(),
+    distractors
+  };
+}
+
+function isValidKnowledgeEntry(entry) {
+  if (!entry || !entry.question || !entry.value) {
+    return false;
+  }
+  return entry.distractors.length >= 3;
+}
+
+function buildQuestionBankFromKnowledge(entries) {
+  return entries.map((entry, index) => {
+    const optionPool = [
+      { text: entry.value, isCorrect: true },
+      ...entry.distractors.slice(0, 3).map((text) => ({ text, isCorrect: false }))
+    ];
+    const shuffledOptions = shuffleArray(optionPool);
+    const options = { A: "", B: "", C: "", D: "" };
+    let correct = "A";
+    for (const [optionIndex, optionKey] of ["A", "B", "C", "D"].entries()) {
+      const option = shuffledOptions[optionIndex];
+      if (!option) {
+        continue;
+      }
+      options[optionKey] = option.text;
+      if (option.isCorrect) {
+        correct = optionKey;
+      }
+    }
+    return {
+      id: entry.id || String(index + 1),
+      category: entry.category,
+      question: entry.question,
+      options,
+      correct,
+      source: entry.source
+    };
+  });
+}
+
+function buildGuideFromKnowledge(entries) {
+  const sectionsByCategory = new Map();
+  for (const entry of entries) {
+    const category = entry.category || "General";
+    if (!sectionsByCategory.has(category)) {
+      sectionsByCategory.set(category, {
+        id: toSectionId(category),
+        title: category,
+        items: []
+      });
+    }
+    const section = sectionsByCategory.get(category);
+    section.items.push({
+      type: entry.type || "reference",
+      label: entry.label || entry.question,
+      value: entry.value,
+      note: entry.note,
+      source: entry.source
+    });
+  }
+  return {
+    aircraft: "DV20 Katana",
+    sections: Array.from(sectionsByCategory.values())
+  };
+}
+
+function toSectionId(value) {
+  return String(value || "section")
+    .trim()
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 function startQuizSession() {
-  stopFlashcardStudyMode();
   const filteredBank = getFilteredQuestionBank();
   if (filteredBank.length === 0) {
     quizCardEl.textContent = "No questions available for the selected category.";
@@ -945,7 +1031,6 @@ function startQuizSession() {
 }
 
 function startFlashcardSession() {
-  stopFlashcardStudyMode();
   const filteredBank = getFilteredQuestionBank();
   if (filteredBank.length === 0) {
     quizCardEl.textContent = "No questions available for the selected category.";
@@ -965,7 +1050,6 @@ function startFlashcardSession() {
 
 function renderQuizCard() {
   if (!quizState || quizState.questions.length === 0) {
-    stopFlashcardStudyMode();
     quizCardEl.textContent = "No active quiz session.";
     return;
   }
@@ -976,98 +1060,29 @@ function renderQuizCard() {
   const options = Object.entries(question.options).filter(([, value]) => value && value.trim());
 
   if (quizState.mode === "flashcards") {
-    const isStudyRunning = flashcardStudyState.running;
-    const isLocalTtsLoading = flashcardStudyState.localTtsStatus === "loading";
-    const localTtsFailed = flashcardStudyState.localTtsStatus === "error";
-    const localTtsHint = isLocalTtsLoading
-      ? "Loading local Kitten TTS model (first run downloads ~25MB)..."
-      : localTtsFailed
-        ? `Local TTS failed: ${escapeHtml(flashcardStudyState.localTtsError || "unknown error")}`
-        : "Study mode uses local Kitten TTS in your browser.";
-    const questionAnswerDelaySeconds = (flashcardStudyState.questionToAnswerDelayMs / 1000).toFixed(1);
-    const betweenQuestionsDelaySeconds = (flashcardStudyState.betweenQuestionsDelayMs / 1000).toFixed(1);
-    const speechRate = clampSpeechRate(flashcardStudyState.speechRate);
-    const speechRateLabel = speechRate.toFixed(2);
-    const ttsDisabledAttr = flashcardStudyState.ttsAvailable ? "" : "disabled";
-    const studyToggleDisabledAttr =
-      flashcardStudyState.ttsAvailable && !isLocalTtsLoading ? "" : "disabled";
-    const studyToggleLabel = isLocalTtsLoading
-      ? "Loading Study Mode..."
-      : isStudyRunning
-        ? "Stop Study Mode"
-        : "Start Study Mode";
     let answerHtml = "";
     if (quizState.reveal) {
       const correctText = getFlashcardAnswerText(question);
       answerHtml = `<div class="quiz-feedback"><strong>Answer:</strong> ${escapeHtml(
         correctText
-      )}</div>`;
+      )}</div>${renderSourceHtml(question)}`;
     }
 
     quizCardEl.innerHTML = `
       <div class="hint">${header}${category ? ` | ${category}` : ""}</div>
       <p class="quiz-question">${escapeHtml(question.question)}</p>
-      <div class="flash-study-card">
-        <div class="hint">
-          ${flashcardStudyState.ttsAvailable ? localTtsHint : "TTS is not available in this browser."}
-        </div>
-        <div class="flash-delay-row">
-          <label for="flash-speech-rate">Speech speed: <span id="flash-speech-rate-value">${speechRateLabel}x</span></label>
-          <input
-            id="flash-speech-rate"
-            type="range"
-            min="0.7"
-            max="1.4"
-            step="0.05"
-            value="${speechRateLabel}"
-            ${ttsDisabledAttr}
-          />
-        </div>
-        <div class="flash-delay-row">
-          <label for="flash-question-answer-delay">Question → Answer delay: <span id="flash-question-answer-delay-value">${questionAnswerDelaySeconds}s</span></label>
-          <input
-            id="flash-question-answer-delay"
-            type="range"
-            min="0.5"
-            max="15"
-            step="0.5"
-            value="${questionAnswerDelaySeconds}"
-          />
-        </div>
-        <div class="flash-delay-row">
-          <label for="flash-between-questions-delay">Between questions: <span id="flash-between-questions-delay-value">${betweenQuestionsDelaySeconds}s</span></label>
-          <input
-            id="flash-between-questions-delay"
-            type="range"
-            min="0.5"
-            max="15"
-            step="0.5"
-            value="${betweenQuestionsDelaySeconds}"
-          />
-        </div>
-      </div>
       ${answerHtml}
       <div class="control-row">
-        <button id="flash-reveal-btn" type="button" ${isStudyRunning ? "disabled" : ""}>${quizState.reveal ? "Hide Answer" : "Show Answer"}</button>
-        <button id="flash-next-btn" type="button" ${isStudyRunning ? "disabled" : ""}>${quizState.index + 1 >= quizState.questions.length ? "Restart Flashcards" : "Next Card"}</button>
-        <button id="flash-study-toggle-btn" type="button" ${studyToggleDisabledAttr}>${studyToggleLabel}</button>
+        <button id="flash-reveal-btn" type="button">${quizState.reveal ? "Hide Answer" : "Show Answer"}</button>
+        <button id="flash-next-btn" type="button">${quizState.index + 1 >= quizState.questions.length ? "Restart Flashcards" : "Next Card"}</button>
       </div>
     `;
 
-    const revealBtn = document.getElementById("flash-reveal-btn");
-    const nextBtn = document.getElementById("flash-next-btn");
-    const studyToggleBtn = document.getElementById("flash-study-toggle-btn");
-    const speechRateInput = document.getElementById("flash-speech-rate");
-    const speechRateValueEl = document.getElementById("flash-speech-rate-value");
-    const questionAnswerDelayInput = document.getElementById("flash-question-answer-delay");
-    const questionAnswerDelayValueEl = document.getElementById("flash-question-answer-delay-value");
-    const betweenQuestionsDelayInput = document.getElementById("flash-between-questions-delay");
-    const betweenQuestionsDelayValueEl = document.getElementById("flash-between-questions-delay-value");
-    revealBtn.addEventListener("click", () => {
+    document.getElementById("flash-reveal-btn").addEventListener("click", () => {
       quizState.reveal = !quizState.reveal;
       renderQuizCard();
     });
-    nextBtn.addEventListener("click", () => {
+    document.getElementById("flash-next-btn").addEventListener("click", () => {
       if (quizState.index + 1 >= quizState.questions.length) {
         startFlashcardSession();
         return;
@@ -1076,31 +1091,9 @@ function renderQuizCard() {
       quizState.reveal = false;
       renderQuizCard();
     });
-    studyToggleBtn.addEventListener("click", () => {
-      toggleFlashcardStudyMode();
-    });
-    speechRateInput.addEventListener("input", () => {
-      const rate = clampSpeechRate(Number(speechRateInput.value));
-      flashcardStudyState.speechRate = rate;
-      speechRateValueEl.textContent = `${rate.toFixed(2)}x`;
-      if (flashcardStudyState.currentAudioSource) {
-        flashcardStudyState.currentAudioSource.playbackRate.value = rate;
-      }
-    });
-    questionAnswerDelayInput.addEventListener("input", () => {
-      const seconds = Number(questionAnswerDelayInput.value);
-      flashcardStudyState.questionToAnswerDelayMs = Math.round(seconds * 1000);
-      questionAnswerDelayValueEl.textContent = `${seconds.toFixed(1)}s`;
-    });
-    betweenQuestionsDelayInput.addEventListener("input", () => {
-      const seconds = Number(betweenQuestionsDelayInput.value);
-      flashcardStudyState.betweenQuestionsDelayMs = Math.round(seconds * 1000);
-      betweenQuestionsDelayValueEl.textContent = `${seconds.toFixed(1)}s`;
-    });
     return;
   }
 
-  stopFlashcardStudyMode();
   const optionsHtml = options
     .map(([key, value]) => {
       const disabled = quizState.answered ? "disabled" : "";
@@ -1115,7 +1108,7 @@ function renderQuizCard() {
     const correctText = question.options[question.correct] || "";
     feedbackHtml = `<div class="quiz-feedback"><strong>Correct:</strong> ${escapeHtml(question.correct)} - ${escapeHtml(
       correctText
-    )}</div>`;
+    )}</div>${renderSourceHtml(question)}`;
   }
 
   quizCardEl.innerHTML = `
@@ -1167,37 +1160,6 @@ function renderQuizCard() {
   });
 }
 
-function parseQuestionsJson(payload) {
-  let records = payload;
-  if (payload && !Array.isArray(payload) && Array.isArray(payload.questions)) {
-    records = payload.questions;
-  }
-  if (!Array.isArray(records)) {
-    throw new Error("questions.json must be an array or { questions: [] }.");
-  }
-  return records
-    .map((record, index) => normalizeQuestion(record, index))
-    .filter((question) => isValidQuestion(question));
-}
-
-function normalizeQuestion(record, index) {
-  const options = record && typeof record === "object" ? record.options || {} : {};
-  return {
-    id: String(record?.id || index + 1),
-    category: String(record?.category || "").trim(),
-    question: String(record?.question || "").trim(),
-    options: {
-      A: String(options.A || "").trim(),
-      B: String(options.B || "").trim(),
-      C: String(options.C || "").trim(),
-      D: String(options.D || "").trim()
-    },
-    correct: String(record?.correct || "")
-      .trim()
-      .toUpperCase()
-  };
-}
-
 function populateQuizCategoryOptions() {
   const previousSelection = selectedQuizCategory;
   const categories = Array.from(
@@ -1234,86 +1196,7 @@ function updateQuizMeta() {
   const filteredCount = getFilteredQuestionBank().length;
   const categoryLabel =
     selectedQuizCategory === "__all__" ? "All categories" : selectedQuizCategory;
-  quizMetaEl.textContent = `Loaded ${questionBank.length} questions from ${QUIZ_BANK_PATH}. Selected: ${categoryLabel} (${filteredCount}).`;
-}
-
-async function toggleFlashcardStudyMode() {
-  if (!quizState || quizState.mode !== "flashcards") {
-    return;
-  }
-  if (flashcardStudyState.running) {
-    stopFlashcardStudyMode();
-    renderQuizCard();
-    return;
-  }
-  const ready = await ensureLocalKittenTtsReady();
-  if (!ready || !quizState || quizState.mode !== "flashcards") {
-    renderQuizCard();
-    return;
-  }
-  flashcardStudyState.running = true;
-  flashcardStudyState.runToken += 1;
-  const currentToken = flashcardStudyState.runToken;
-  void runFlashcardStudyLoop(currentToken);
-  renderQuizCard();
-}
-
-function stopFlashcardStudyMode() {
-  if (!flashcardStudyState.running) {
-    stopCurrentFlashcardAudio();
-    return;
-  }
-  flashcardStudyState.running = false;
-  flashcardStudyState.runToken += 1;
-  stopCurrentFlashcardAudio();
-}
-
-async function runFlashcardStudyLoop(token) {
-  while (isFlashcardStudyRunCurrent(token)) {
-    const question = quizState.questions[quizState.index];
-    quizState.reveal = false;
-    renderQuizCard();
-    await speakFlashcardText(question.question, token);
-    if (!isFlashcardStudyRunCurrent(token)) {
-      break;
-    }
-    await waitMs(flashcardStudyState.questionToAnswerDelayMs);
-    if (!isFlashcardStudyRunCurrent(token)) {
-      break;
-    }
-    const answerText = getFlashcardAnswerText(question);
-    quizState.reveal = true;
-    renderQuizCard();
-    await speakFlashcardText(`Answer: ${answerText}`, token);
-    if (!isFlashcardStudyRunCurrent(token)) {
-      break;
-    }
-    await waitMs(flashcardStudyState.betweenQuestionsDelayMs);
-    if (!isFlashcardStudyRunCurrent(token)) {
-      break;
-    }
-    if (quizState.index + 1 >= quizState.questions.length) {
-      quizState.index = 0;
-    } else {
-      quizState.index += 1;
-    }
-    quizState.reveal = false;
-    renderQuizCard();
-  }
-  if (flashcardStudyState.runToken === token) {
-    flashcardStudyState.running = false;
-    renderQuizCard();
-  }
-}
-
-function isFlashcardStudyRunCurrent(token) {
-  return (
-    flashcardStudyState.running &&
-    flashcardStudyState.runToken === token &&
-    quizState &&
-    quizState.mode === "flashcards" &&
-    quizState.questions.length > 0
-  );
+  quizMetaEl.textContent = `Loaded ${questionBank.length} questions from ${KNOWLEDGE_PATH}. Selected: ${categoryLabel} (${filteredCount}).`;
 }
 
 function getFlashcardAnswerText(question) {
@@ -1321,219 +1204,12 @@ function getFlashcardAnswerText(question) {
   return answer && answer.trim() ? answer : String(question?.correct || "").trim();
 }
 
-async function speakFlashcardText(text, token) {
-  if (!isFlashcardStudyRunCurrent(token) || !flashcardStudyState.ttsAvailable) {
-    return;
+function renderSourceHtml(question) {
+  const source = question?.source && String(question.source).trim();
+  if (!source) {
+    return "";
   }
-  if (!text || !text.trim()) {
-    return;
-  }
-  const engine = await ensureLocalKittenTtsReady();
-  if (!engine || !isFlashcardStudyRunCurrent(token)) {
-    return;
-  }
-  const trimmed = String(text || "").replace(/\s+/g, " ").trim();
-  if (!trimmed) {
-    return;
-  }
-  stopCurrentFlashcardAudio();
-  await new Promise(async (resolve) => {
-    let finished = false;
-    const finalize = () => {
-      if (finished) {
-        return;
-      }
-      finished = true;
-      if (flashcardStudyState.currentAudioResolve === finalize) {
-        flashcardStudyState.currentAudioResolve = null;
-      }
-      if (flashcardStudyState.currentAudioSource) {
-        flashcardStudyState.currentAudioSource.onended = null;
-        flashcardStudyState.currentAudioSource = null;
-      }
-      resolve();
-    };
-    flashcardStudyState.currentAudioResolve = finalize;
-    try {
-      const generated = await engine.generate(trimmed, { voice: KITTEN_TTS_VOICE });
-      if (!isFlashcardStudyRunCurrent(token)) {
-        finalize();
-        return;
-      }
-      const audioContext = getFlashcardAudioContext();
-      if (audioContext.state === "suspended") {
-        await audioContext.resume();
-      }
-      const source = audioContext.createBufferSource();
-      source.buffer = generated.toAudioBuffer(audioContext);
-      source.playbackRate.value = clampSpeechRate(flashcardStudyState.speechRate);
-      source.connect(audioContext.destination);
-      source.onended = finalize;
-      flashcardStudyState.currentAudioSource = source;
-      source.start(0);
-    } catch (error) {
-      console.error("Local Kitten TTS playback failed:", error);
-      flashcardStudyState.localTtsStatus = "error";
-      flashcardStudyState.localTtsError = error?.message || "synthesis failed";
-      finalize();
-      if (quizState?.mode === "flashcards") {
-        renderQuizCard();
-      }
-    }
-  });
-}
-
-function stopCurrentFlashcardAudio() {
-  const source = flashcardStudyState.currentAudioSource;
-  const resolvePlayback = flashcardStudyState.currentAudioResolve;
-  flashcardStudyState.currentAudioSource = null;
-  flashcardStudyState.currentAudioResolve = null;
-  if (source) {
-    source.onended = null;
-    try {
-      source.stop(0);
-    } catch {
-      // ignore media teardown failures
-    }
-  }
-  if (typeof resolvePlayback === "function") {
-    resolvePlayback();
-  }
-}
-
-function getFlashcardAudioContext() {
-  if (
-    flashcardStudyState.currentAudioContext &&
-    flashcardStudyState.currentAudioContext.state !== "closed"
-  ) {
-    return flashcardStudyState.currentAudioContext;
-  }
-  const AudioContextCtor = window.AudioContext || window.webkitAudioContext;
-  flashcardStudyState.currentAudioContext = new AudioContextCtor();
-  return flashcardStudyState.currentAudioContext;
-}
-
-async function ensureLocalKittenTtsReady() {
-  if (!flashcardStudyState.ttsAvailable) {
-    return null;
-  }
-  if (flashcardStudyState.kittenEngine) {
-    flashcardStudyState.localTtsStatus = "ready";
-    return flashcardStudyState.kittenEngine;
-  }
-  if (flashcardStudyState.kittenEnginePromise) {
-    return flashcardStudyState.kittenEnginePromise;
-  }
-
-  flashcardStudyState.localTtsStatus = "loading";
-  flashcardStudyState.localTtsError = "";
-  if (quizState?.mode === "flashcards") {
-    renderQuizCard();
-  }
-
-  flashcardStudyState.kittenEnginePromise = (async () => {
-    try {
-      if (!flashcardStudyState.kittenModulePromise) {
-        flashcardStudyState.kittenModulePromise = import("https://esm.sh/kitten-tts-js");
-      }
-      const kittenModule = await flashcardStudyState.kittenModulePromise;
-      const KittenTTS = kittenModule?.KittenTTS;
-      if (!KittenTTS || typeof KittenTTS.from_pretrained !== "function") {
-        throw new Error("KittenTTS package did not load correctly.");
-      }
-
-      const preferredRuntime =
-        typeof navigator !== "undefined" && "gpu" in navigator ? "gpu" : "cpu";
-      let engine;
-      try {
-        engine = await KittenTTS.from_pretrained(KITTEN_TTS_MODEL_ID, {
-          runtime: preferredRuntime
-        });
-      } catch (runtimeError) {
-        if (preferredRuntime !== "cpu") {
-          engine = await KittenTTS.from_pretrained(KITTEN_TTS_MODEL_ID, {
-            runtime: "cpu"
-          });
-        } else {
-          throw runtimeError;
-        }
-      }
-
-      flashcardStudyState.kittenEngine = engine;
-      flashcardStudyState.localTtsStatus = "ready";
-      flashcardStudyState.localTtsError = "";
-      return engine;
-    } catch (error) {
-      console.error("Local Kitten TTS init failed:", error);
-      flashcardStudyState.localTtsStatus = "error";
-      flashcardStudyState.localTtsError = error?.message || "model load failed";
-      return null;
-    } finally {
-      flashcardStudyState.kittenEnginePromise = null;
-      if (quizState?.mode === "flashcards") {
-        renderQuizCard();
-      }
-    }
-  })();
-
-  return flashcardStudyState.kittenEnginePromise;
-}
-
-function clampSpeechRate(rate) {
-  if (!Number.isFinite(rate)) {
-    return 1;
-  }
-  return Math.min(1.4, Math.max(0.7, rate));
-}
-
-function waitMs(ms) {
-  const duration = Number(ms) > 0 ? Number(ms) : 0;
-  return new Promise((resolve) => {
-    setTimeout(resolve, duration);
-  });
-}
-
-async function loadGuideData() {
-  try {
-    const response = await fetch(GUIDE_PATH);
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-    const payload = await response.json();
-    guideData = normalizeGuideData(payload);
-    populateGuideSectionOptions();
-    guideMetaEl.textContent = `Loaded ${guideData.sections.length} sections for ${guideData.aircraft}.`;
-    renderGuide();
-  } catch (error) {
-    console.error(`Could not load ${GUIDE_PATH}:`, error);
-    guideData = null;
-    guideSectionSelect.innerHTML = `<option value="__all__">All sections</option>`;
-    guideMetaEl.textContent = `Could not load ${GUIDE_PATH}.`;
-    guideContentEl.textContent = "Fix the guide JSON file, then reload the page.";
-  }
-}
-
-function normalizeGuideData(payload) {
-  const aircraft = String(payload?.aircraft || "Unknown aircraft").trim();
-  const sections = Array.isArray(payload?.sections)
-    ? payload.sections
-        .map((section, index) => ({
-          id: String(section?.id || `section-${index + 1}`).trim(),
-          title: String(section?.title || `Section ${index + 1}`).trim(),
-          items: Array.isArray(section?.items)
-            ? section.items
-                .map((item) => ({
-                  type: String(item?.type || "note").trim(),
-                  label: String(item?.label || "").trim(),
-                  value: String(item?.value || "").trim(),
-                  note: String(item?.note || "").trim()
-                }))
-                .filter((item) => item.label || item.value || item.note)
-            : []
-        }))
-        .filter((section) => section.items.length > 0)
-    : [];
-  return { aircraft, sections };
+  return `<div class="quiz-source">Source: ${escapeHtml(source)}</div>`;
 }
 
 function populateGuideSectionOptions() {
@@ -1569,7 +1245,7 @@ function renderGuide() {
         if (!searchFilter) {
           return true;
         }
-        const searchable = `${item.type} ${item.label} ${item.value} ${item.note}`.toLowerCase();
+        const searchable = `${item.type} ${item.label} ${item.value} ${item.note} ${item.source}`.toLowerCase();
         return searchable.includes(searchFilter);
       });
 
@@ -1585,7 +1261,10 @@ function renderGuide() {
           const label = item.label ? `<strong>${escapeHtml(item.label)}:</strong> ` : "";
           const value = item.value ? `${escapeHtml(item.value)} ` : "";
           const note = item.note ? `<span class="hint">${escapeHtml(item.note)}</span>` : "";
-          return `<li>${typeBadge}${label}${value}${note}</li>`;
+          const source = item.source
+            ? `<div class="quiz-source">Source: ${escapeHtml(item.source)}</div>`
+            : "";
+          return `<li>${typeBadge}${label}${value}${note}${source}</li>`;
         })
         .join("");
 
@@ -1604,13 +1283,6 @@ function renderGuide() {
   }
 
   guideContentEl.innerHTML = sectionCards.join("");
-}
-
-function isValidQuestion(question) {
-  if (!question || !question.question || !question.correct) {
-    return false;
-  }
-  return ["A", "B", "C", "D"].includes(question.correct);
 }
 
 function shuffleArray(items) {

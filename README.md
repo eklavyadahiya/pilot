@@ -6,8 +6,8 @@ Static web app designed to work with GitHub Pages.
 
 1. Homepage (default)
 2. Map + KMZ circuit viewer + wind vector calculator
-3. Quiz / flashcards (JSON question bank + category selector)
-4. In-Flight Guide (DV20 seeded content)
+3. Quiz / flashcards (derived from unified DV20 knowledge JSON)
+4. In-Flight Guide (derived from unified DV20 knowledge JSON)
 5. Weight & Balance (converted from `W_and_B_Versie_10.03_EFIS.xls`)
 
 ## Wind workflow (simple)
@@ -34,45 +34,55 @@ Use **Reset Wind Data** to clear only wind-related saved page data.
 
 ## Quiz / flashcards
 
-- Questions are loaded from `quiz/questions.json`.
+- Questions are derived from `data/dv20-knowledge.json`.
 - Category filter defaults to `All categories` and applies to both modes.
 - **Start Quiz (50)**: randomizes from the selected category pool and serves up to 50.
 - **Start Flashcards**: randomizes the selected category pool and reveals answer text only.
-- Power drill categories now include:
-  - `Power Settings - Circuit`
-  - `Power Settings - Climb Turns`
-  - `Power Settings - Go Around`
-  - `Power Settings - MP Equipped`
-  - `Power Settings - Cruise & Descent`
-  - `Power Settings - Fundamentals`
-  - `Power Settings - Nightmare Mode`
-  - `Power Settings - Nightmare Mode 2`
+- Each question's options are built from `value` + `distractors` and shuffled once per page load.
+- Source citations from the PDF are shown in quiz and flashcard feedback.
+- Chair-flying practice categories include:
+  - `Chair Flying - Mental Flows`
+  - `Chair Flying - Phase Actions`
+  - `Chair Flying - Full Sequence` (takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final)
 
-### `quiz/questions.json` format
+## Unified DV20 knowledge schema
+
+All DV20 training facts are sourced from one file: `data/dv20-knowledge.json`.
+The app derives all three views from it:
+- Quiz questions (multiple-choice)
+- Flashcards
+- In-Flight Guide sections and items
 
 ```json
 [
   {
-    "id": "DV20-001",
-    "category": "Performance",
-    "question": "What is the best glide speed for the DV20 in normal configuration?",
-    "options": {
-      "A": "60 KIAS",
-      "B": "68 KIAS",
-      "C": "75 KIAS",
-      "D": "82 KIAS"
-    },
-    "correct": "C"
+    "id": "DV20-011",
+    "category": "Performance & Limits",
+    "type": "speed",
+    "label": "Vy (best rate of climb)",
+    "value": "70 kts",
+    "note": "",
+    "source": "General aircraft numbers - Speeds (p.17)",
+    "question": "What is Vy (best rate of climb) for the DV20?",
+    "distractors": ["58 kts", "65 kts", "90 kts"]
   }
 ]
 ```
 
-Required fields per question:
+Required fields per knowledge entry:
 - `id` (string)
-- `category` (string)
-- `question` (string)
-- `options` object with keys `A`, `B`, `C`, `D`
-- `correct` (`A`, `B`, `C`, or `D`)
+- `category` (string; used as guide section title and quiz category)
+- `type` (string; e.g. `speed`, `limit`, `power`, `procedure`, `checklist`, `reference`)
+- `label` (string; guide item label)
+- `value` (string; correct quiz answer and primary flashcard answer)
+- `question` (string; quiz/flashcard prompt)
+- `distractors` (array of 3 strings)
+
+Optional fields:
+- `note` (string; extra context shown in guide/flashcards)
+- `source` (string; citation from `PROCEDURES-DV20-V1.8-01052026.pdf`)
+
+The unified knowledge file is sourced exclusively from `PROCEDURES-DV20-V1.8-01052026.pdf` (ACHA DV20 procedures, v1.8).
 
 ## Weight & Balance
 
@@ -86,47 +96,18 @@ The tool reproduces workbook calculations, limit warnings, envelope chart points
 
 ## In-Flight Guide
 
-- Guide content is loaded from `guide/dv20-guide.json`.
-- Includes seeded sections for performance, power settings, emergency procedures, and expansion placeholders.
-- Use section and search filters to quickly find a value/procedure.
-
-### `guide/dv20-guide.json` format
-
-```json
-{
-  "aircraft": "DV20 Katana",
-  "sections": [
-    {
-      "id": "performance",
-      "title": "Flight Performance Quick Reference",
-      "items": [
-        {
-          "type": "speed",
-          "label": "Best glide",
-          "value": "75 KIAS",
-          "note": "AFM reference required for final dispatch values."
-        }
-      ]
-    }
-  ]
-}
-```
-
-Required structure:
-- top-level `aircraft` (string)
-- top-level `sections` (array)
-- section fields: `id`, `title`, `items`
-- item fields: `type`, `label`, `value`, `note` (strings; keep concise)
+- Guide content is derived from `data/dv20-knowledge.json`.
+- Entries are grouped by `category`, with each item showing `type`, `label`, `value`, optional `note`, and `source`.
+- Use section and search filters to quickly find a value/procedure/reference.
 
 ## Extending To More Aircraft
 
-Current app paths:
-- `quiz/questions.json`
-- `guide/dv20-guide.json`
+Current app path:
+- `data/dv20-knowledge.json`
 
 To extend:
-1. Add new question banks and guide files, e.g. `quiz/da40.json`, `guide/da40-guide.json`.
-2. Keep the same schema so existing renderers continue working.
+1. Add a new aircraft knowledge file, e.g. `data/da40-knowledge.json`.
+2. Keep the same unified schema so existing renderers continue working.
 3. Add an aircraft selector later and map selected aircraft to the corresponding JSON paths.
 4. Keep AFM/POH values conservative and checklist-aligned.
 
@@ -190,5 +171,5 @@ The project `.gitignore` is set to ignore document/spreadsheet binaries such as:
 
 And it explicitly keeps:
 
-- `*.json` (including `quiz/questions.json`)
+- `*.json` (including `data/dv20-knowledge.json`)
 - `*.kmz`

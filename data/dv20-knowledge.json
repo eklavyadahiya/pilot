@@ -1,0 +1,4832 @@
+[
+  {
+    "id": "DV20-001",
+    "category": "Checklists",
+    "type": "checklist",
+    "label": "AFTER TAKE-OFF checklist",
+    "value": "Select flaps UP and set propeller speed to 2400 RPM",
+    "note": "",
+    "source": "Normal checklist - After take-off",
+    "question": "On the AFTER TAKE-OFF checklist (minimum 200 ft AAL), what should you do?",
+    "distractors": [
+      "Set flaps T/O and reduce to idle power",
+      "Retract flaps and turn electric fuel pump OFF",
+      "Extend flaps LDG and set MAX RPM"
+    ]
+  },
+  {
+    "id": "DV20-002",
+    "category": "Checklists",
+    "type": "checklist",
+    "label": "Electric fuel pump OFF timing",
+    "value": "Above 1000 ft AAL",
+    "note": "",
+    "source": "Normal checklist - After take-off",
+    "question": "When should the electric fuel pump be switched OFF after takeoff?",
+    "distractors": [
+      "After landing only",
+      "Immediately after rotation",
+      "At 700 ft AAL on downwind"
+    ]
+  },
+  {
+    "id": "DV20-003",
+    "category": "Checklists",
+    "type": "checklist",
+    "label": "During the engine run-up, to what RPM is the throttle set with the brakes held",
+    "value": "1700 RPM",
+    "note": "",
+    "source": "Normal checklist - Engine runup / before take off",
+    "question": "During the engine run-up, to what RPM is the throttle set with the brakes held?",
+    "distractors": [
+      "1500 RPM",
+      "1100 RPM",
+      "2400 RPM"
+    ]
+  },
+  {
+    "id": "DV20-004",
+    "category": "Checklists",
+    "type": "checklist",
+    "label": "Maximum delay before shutting down the engine",
+    "value": "10 seconds",
+    "note": "",
+    "source": "Normal checklist - Starting engine (CAUTION)",
+    "question": "If oil pressure is below 1.5 bar after start, what is the maximum delay before shutting down the engine?",
+    "distractors": [
+      "30 seconds",
+      "1 minute",
+      "Until taxi is complete"
+    ]
+  },
+  {
+    "id": "DV20-005",
+    "category": "Checklists",
+    "type": "checklist",
+    "label": "DOWNWIND checklist",
+    "value": "ON",
+    "note": "",
+    "source": "Normal checklist - Downwind",
+    "question": "On the DOWNWIND checklist, what position should carburetor heat be in?",
+    "distractors": [
+      "OFF",
+      "ON only below 20\" MP",
+      "Cycled every 5 minutes"
+    ]
+  },
+  {
+    "id": "DV20-006",
+    "category": "Checklists",
+    "type": "checklist",
+    "label": "Target speed on the BALKED LANDING checklist",
+    "value": "58 kts (Vx)",
+    "note": "",
+    "source": "Normal checklist - Balked landing",
+    "question": "What is the target speed on the BALKED LANDING checklist?",
+    "distractors": [
+      "70 kts (Vy)",
+      "60 kts minimum approach",
+      "65 kts"
+    ]
+  },
+  {
+    "id": "DV20-007",
+    "category": "Checklists",
+    "type": "checklist",
+    "label": "Initial airspeed on the ENGINE FAILURE DURING FLIGHT abnormal checklist",
+    "value": "70 kts",
+    "note": "",
+    "source": "Abnormal checklist - Engine failure during flight",
+    "question": "What is the initial airspeed on the ENGINE FAILURE DURING FLIGHT abnormal checklist?",
+    "distractors": [
+      "64 kts",
+      "59 kts",
+      "90 kts"
+    ]
+  },
+  {
+    "id": "DV20-008",
+    "category": "Checklists",
+    "type": "checklist",
+    "label": "What airspeed does the EMERGENCY LANDING WITH ENGINE OFF checklist specify",
+    "value": "59 kts",
+    "note": "",
+    "source": "Abnormal checklist - Emergency landing with engine off",
+    "question": "What airspeed does the EMERGENCY LANDING WITH ENGINE OFF checklist specify?",
+    "distractors": [
+      "70 kts",
+      "43 kts",
+      "55 kts"
+    ]
+  },
+  {
+    "id": "DV20-009",
+    "category": "Checklists",
+    "type": "checklist",
+    "label": "In a flap system failure where only the UP position is available, how should the approach speed be adjusted",
+    "value": "Raised by 10 kts",
+    "note": "",
+    "source": "Abnormal checklist - Flap system failure",
+    "question": "In a flap system failure where only the UP position is available, how should the approach speed be adjusted?",
+    "distractors": [
+      "Kept at normal landing speed",
+      "Reduced by 10 kts",
+      "Set to Vx (58 kts)"
+    ]
+  },
+  {
+    "id": "DV20-010",
+    "category": "Checklists",
+    "type": "checklist",
+    "label": "During taxi warm-up, at what RPM is the engine oil warmed to 50 C",
+    "value": "1100\u20131500 RPM",
+    "note": "",
+    "source": "Normal checklist - During taxiing (CAUTION)",
+    "question": "During taxi warm-up, at what RPM is the engine oil warmed to 50 C?",
+    "distractors": [
+      "1700 RPM only",
+      "Idle power only",
+      "2400 RPM"
+    ]
+  },
+  {
+    "id": "DV20-011",
+    "category": "Performance & Limits",
+    "type": "speed",
+    "label": "Vy (best rate of climb)",
+    "value": "70 kts",
+    "note": "",
+    "source": "General aircraft numbers - Speeds (p.17)",
+    "question": "What is Vy (best rate of climb) for the DV20?",
+    "distractors": [
+      "58 kts",
+      "65 kts",
+      "90 kts"
+    ]
+  },
+  {
+    "id": "DV20-012",
+    "category": "Performance & Limits",
+    "type": "speed",
+    "label": "Vy (best rate of climb) with flaps in the T/O position",
+    "value": "65 kts",
+    "note": "",
+    "source": "General aircraft numbers - Speeds (p.17)",
+    "question": "What is Vy (best rate of climb) with flaps in the T/O position?",
+    "distractors": [
+      "75 kts",
+      "58 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-013",
+    "category": "Performance & Limits",
+    "type": "speed",
+    "label": "Vx (best angle of climb) with flaps T/O",
+    "value": "58 kts",
+    "note": "",
+    "source": "General aircraft numbers - Speeds (p.17)",
+    "question": "What is Vx (best angle of climb) with flaps T/O?",
+    "distractors": [
+      "51 kts",
+      "65 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-014",
+    "category": "Performance & Limits",
+    "type": "speed",
+    "label": "Stall speed VS1 (flaps up)",
+    "value": "43 kts",
+    "note": "",
+    "source": "General aircraft numbers - Speeds (p.17)",
+    "question": "What is the stall speed VS1 (flaps up)?",
+    "distractors": [
+      "39 kts",
+      "58 kts",
+      "38 kts"
+    ]
+  },
+  {
+    "id": "DV20-015",
+    "category": "Performance & Limits",
+    "type": "speed",
+    "label": "VSO (stall speed, flaps down)",
+    "value": "38 kts",
+    "note": "",
+    "source": "General aircraft numbers - Speeds (p.17)",
+    "question": "What is VSO (stall speed, flaps down)?",
+    "distractors": [
+      "43 kts",
+      "55 kts",
+      "39 kts"
+    ]
+  },
+  {
+    "id": "DV20-016",
+    "category": "Performance & Limits",
+    "type": "speed",
+    "label": "VFE (maximum speed with flaps extended)",
+    "value": "81 kts",
+    "note": "",
+    "source": "General aircraft numbers - Speeds (p.17)",
+    "question": "What is VFE (maximum speed with flaps extended)?",
+    "distractors": [
+      "104 kts",
+      "117 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-017",
+    "category": "Performance & Limits",
+    "type": "speed",
+    "label": "VA (maneuvering speed)",
+    "value": "104 kts",
+    "note": "",
+    "source": "General aircraft numbers - Speeds (p.17)",
+    "question": "What is VA (maneuvering speed)?",
+    "distractors": [
+      "117 kts",
+      "90 kts",
+      "161 kts"
+    ]
+  },
+  {
+    "id": "DV20-018",
+    "category": "Performance & Limits",
+    "type": "speed",
+    "label": "Maximum demonstrated crosswind component",
+    "value": "15 kts",
+    "note": "",
+    "source": "General aircraft numbers - Speeds (p.17)",
+    "question": "What is the maximum demonstrated crosswind component?",
+    "distractors": [
+      "20 kts",
+      "25 kts",
+      "10 kts"
+    ]
+  },
+  {
+    "id": "DV20-019",
+    "category": "Performance & Limits",
+    "type": "speed",
+    "label": "Best glide speed with flaps UP",
+    "value": "70 kts",
+    "note": "",
+    "source": "General aircraft numbers - Speeds (p.17)",
+    "question": "What is the best glide speed with flaps UP?",
+    "distractors": [
+      "58 kts",
+      "59 kts",
+      "64 kts"
+    ]
+  },
+  {
+    "id": "DV20-020",
+    "category": "Performance & Limits",
+    "type": "speed",
+    "label": "Best glide speed with flaps T/O",
+    "value": "64 kts",
+    "note": "",
+    "source": "General aircraft numbers - Speeds (p.17)",
+    "question": "What is the best glide speed with flaps T/O?",
+    "distractors": [
+      "70 kts",
+      "59 kts",
+      "65 kts"
+    ]
+  },
+  {
+    "id": "DV20-021",
+    "category": "Performance & Limits",
+    "type": "limit",
+    "label": "Maximum takeoff weight for PH-MFT and PH-SKM",
+    "value": "730 kg",
+    "note": "",
+    "source": "General aircraft numbers - Weights (p.17)",
+    "question": "What is the maximum takeoff weight for PH-MFT and PH-SKM?",
+    "distractors": [
+      "495 kg",
+      "750 kg",
+      "511 kg"
+    ]
+  },
+  {
+    "id": "DV20-022",
+    "category": "Performance & Limits",
+    "type": "limit",
+    "label": "Usable fuel tank capacity",
+    "value": "77 liters",
+    "note": "",
+    "source": "General aircraft numbers - Average fuel usage (p.17)",
+    "question": "What is the usable fuel tank capacity?",
+    "distractors": [
+      "100 liters",
+      "58 liters",
+      "79 liters"
+    ]
+  },
+  {
+    "id": "DV20-023",
+    "category": "Performance & Limits",
+    "type": "speed",
+    "label": "Approximate glide ratio (L/Dmax) of the Katana",
+    "value": "14:1",
+    "note": "",
+    "source": "Estimated gliding distance (p.48)",
+    "question": "What is the approximate glide ratio (L/Dmax) of the Katana?",
+    "distractors": [
+      "10:1",
+      "7:1",
+      "20:1"
+    ]
+  },
+  {
+    "id": "DV20-024",
+    "category": "Power Settings",
+    "type": "power",
+    "label": "Standard power setting for straight and level flight",
+    "value": "25\" MP, 2400 RPM, 90 kts",
+    "note": "",
+    "source": "Normal procedures - Straight and level flight (p.23)",
+    "question": "What is the standard power setting for straight and level flight?",
+    "distractors": [
+      "Full throttle, 2400 RPM, 70 kts",
+      "21\" MP, 2400 RPM, 75 kts",
+      "18\" MP, 2400 RPM, 90 kts"
+    ]
+  },
+  {
+    "id": "DV20-025",
+    "category": "Power Settings",
+    "type": "power",
+    "label": "Power/speed table specify for cruise (flaps UP)",
+    "value": "\u00b125\" MP, 2400 RPM, 90 kts",
+    "note": "",
+    "source": "Powersetting / configuration versus speed table (p.18)",
+    "question": "What does the power/speed table specify for cruise (flaps UP)?",
+    "distractors": [
+      "\u00b121\" MP, 2400 RPM, 70 kts",
+      "\u00b118\" MP, 2400 RPM, 75 kts",
+      "Full throttle, PSCL full forward, 65 kts"
+    ]
+  },
+  {
+    "id": "DV20-026",
+    "category": "Power Settings",
+    "type": "power",
+    "label": "Power/speed table specify for descent (flaps UP)",
+    "value": "\u00b118\" MP, 2400 RPM, 90 kts",
+    "note": "",
+    "source": "Powersetting / configuration versus speed table (p.18)",
+    "question": "What does the power/speed table specify for descent (flaps UP)?",
+    "distractors": [
+      "\u00b125\" MP, 2400 RPM, 90 kts",
+      "Idle power, MAX RPM, 70 kts",
+      "\u00b115\" MP, 2400 RPM, 70 kts"
+    ]
+  },
+  {
+    "id": "DV20-027",
+    "category": "Power Settings",
+    "type": "power",
+    "label": "On downwind, after selecting flaps T/O, to what setting is the throttle advanced",
+    "value": "\u00b124\" MP to maintain 70 kts",
+    "note": "",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "On downwind, after selecting flaps T/O, to what setting is the throttle advanced?",
+    "distractors": [
+      "Full throttle until base",
+      "\u00b115\" MP to maintain 70 kts",
+      "\u00b121\" MP to maintain 75 kts"
+    ]
+  },
+  {
+    "id": "DV20-028",
+    "category": "Power Settings",
+    "type": "power",
+    "label": "Initial throttle (MP) setting when turning base",
+    "value": "15\" MP",
+    "note": "",
+    "source": "Powersetting / configuration versus speed table (p.18)",
+    "question": "What is the initial throttle (MP) setting when turning base?",
+    "distractors": [
+      "24\" MP",
+      "Full throttle",
+      "18\" MP"
+    ]
+  },
+  {
+    "id": "DV20-029",
+    "category": "Power Settings",
+    "type": "power",
+    "label": "Minimum approach speed on final",
+    "value": "60 kts",
+    "note": "",
+    "source": "Powersetting table / Circuit and normal landing (p.18, 39)",
+    "question": "What is the minimum approach speed on final?",
+    "distractors": [
+      "58 kts",
+      "70 kts",
+      "55 kts"
+    ]
+  },
+  {
+    "id": "DV20-030",
+    "category": "Power Settings",
+    "type": "power",
+    "label": "Power setting (MP) must carburetor heat be ON",
+    "value": "20\" MP",
+    "note": "",
+    "source": "Powersetting table - Note (p.18)",
+    "question": "Below what power setting (MP) must carburetor heat be ON?",
+    "distractors": [
+      "25\" MP",
+      "15\" MP",
+      "18\" MP"
+    ]
+  },
+  {
+    "id": "DV20-031",
+    "category": "Power Settings",
+    "type": "power",
+    "label": "Per the power/speed table, what is the target speed for climb with flaps T/O",
+    "value": "65 kts at full throttle, PSCL full forward",
+    "note": "",
+    "source": "Powersetting / configuration versus speed table (p.18)",
+    "question": "Per the power/speed table, what is the target speed for climb with flaps T/O?",
+    "distractors": [
+      "58 kts at \u00b125\" MP",
+      "90 kts at full throttle",
+      "70 kts at 2400 RPM"
+    ]
+  },
+  {
+    "id": "DV20-032",
+    "category": "Power Settings",
+    "type": "power",
+    "label": "During descent, approximately how much extra descent rate does each inch of reduced manifold pressure give",
+    "value": "100 ft/min extra descend rate",
+    "note": "",
+    "source": "Normal procedures - Transition to descend (p.24)",
+    "question": "During descent, approximately how much extra descent rate does each inch of reduced manifold pressure give?",
+    "distractors": [
+      "No change to descend rate",
+      "50 ft/min less descend rate",
+      "200 ft/min extra descend rate"
+    ]
+  },
+  {
+    "id": "DV20-033",
+    "category": "Power Settings",
+    "type": "power",
+    "label": "Staying in the circuit, what power setting and speed are set at 700 ft AAL",
+    "value": "\u00b121\" MP, speed 70 kts",
+    "note": "",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "When staying in the circuit, what power setting and speed are set at 700 ft AAL?",
+    "distractors": [
+      "\u00b124\" MP, speed 75 kts",
+      "\u00b118\" MP, speed 90 kts",
+      "Idle power, speed 70 kts"
+    ]
+  },
+  {
+    "id": "DV20-034",
+    "category": "Normal Procedures",
+    "type": "procedure",
+    "label": "In the transition from straight and level to climb, at what speed is the throttle advanced to FULL",
+    "value": "70 kts",
+    "note": "",
+    "source": "Normal procedures - Transition to climb (p.23)",
+    "question": "In the transition from straight and level to climb, at what speed is the throttle advanced to FULL?",
+    "distractors": [
+      "90 kts",
+      "58 kts",
+      "65 kts"
+    ]
+  },
+  {
+    "id": "DV20-035",
+    "category": "Normal Procedures",
+    "type": "procedure",
+    "label": "Leveling off from a climb, at what airspeed is power reduced to 25\"/2400 RPM",
+    "value": "90 kts",
+    "note": "",
+    "source": "Normal procedures - Transition from climb to straight and level (p.24)",
+    "question": "When leveling off from a climb, at what airspeed is power reduced to 25\"/2400 RPM?",
+    "distractors": [
+      "70 kts",
+      "65 kts",
+      "75 kts"
+    ]
+  },
+  {
+    "id": "DV20-036",
+    "category": "Normal Procedures",
+    "type": "procedure",
+    "label": "In the transition to descent, what should be done with carburetor heat",
+    "value": "ON before reducing power",
+    "note": "",
+    "source": "Normal procedures - Transition to descend (p.24)",
+    "question": "In the transition to descent, what should be done with carburetor heat?",
+    "distractors": [
+      "OFF until final approach",
+      "ON only below 15\" MP",
+      "Cycled ON/OFF every minute"
+    ]
+  },
+  {
+    "id": "DV20-037",
+    "category": "Normal Procedures",
+    "type": "procedure",
+    "label": "Leveling off from a descent, at what point is carburetor heat turned OFF",
+    "value": "100 ft before desired altitude",
+    "note": "",
+    "source": "Normal procedures - Transition from descent to straight and level (p.24)",
+    "question": "When leveling off from a descent, at what point is carburetor heat turned OFF?",
+    "distractors": [
+      "500 ft before desired altitude",
+      "At touchdown",
+      "On downwind only"
+    ]
+  },
+  {
+    "id": "DV20-038",
+    "category": "Normal Procedures",
+    "type": "procedure",
+    "label": "Standard bank angle for a level turn",
+    "value": "30\u00b0",
+    "note": "",
+    "source": "Normal procedures - Level turn (p.26)",
+    "question": "What is the standard bank angle for a level turn?",
+    "distractors": [
+      "45\u00b0",
+      "15\u00b0",
+      "20\u00b0"
+    ]
+  },
+  {
+    "id": "DV20-039",
+    "category": "Normal Procedures",
+    "type": "procedure",
+    "label": "Approximate target speed during a 30 degree level turn",
+    "value": "95 kts",
+    "note": "",
+    "source": "Normal procedures - Level turn (p.26)",
+    "question": "What is the approximate target speed during a 30 degree level turn?",
+    "distractors": [
+      "90 kts",
+      "104 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-040",
+    "category": "Normal Procedures",
+    "type": "procedure",
+    "label": "Maximum bank angle for a climbing turn",
+    "value": "15\u00b0",
+    "note": "",
+    "source": "Normal procedures - Climbing turn (p.27)",
+    "question": "What is the maximum bank angle for a climbing turn?",
+    "distractors": [
+      "20\u00b0",
+      "30\u00b0",
+      "45\u00b0"
+    ]
+  },
+  {
+    "id": "DV20-041",
+    "category": "Normal Procedures",
+    "type": "procedure",
+    "label": "A 45 degree steep turn",
+    "value": "Increase power setting by 2\"",
+    "note": "",
+    "source": "Normal procedures - Steep turn (p.28)",
+    "question": "During a 45 degree steep turn, what should you do when passing 30 degrees of bank?",
+    "distractors": [
+      "Extend flaps T/O",
+      "Decrease power setting by 2\"",
+      "Retard throttle to idle"
+    ]
+  },
+  {
+    "id": "DV20-042",
+    "category": "Normal Procedures",
+    "type": "procedure",
+    "label": "Minimum altitude for the steep turn exercise when solo",
+    "value": "2000 ft AGL",
+    "note": "",
+    "source": "Normal procedures - Steep turn (p.28)",
+    "question": "What is the minimum altitude for the steep turn exercise when solo?",
+    "distractors": [
+      "700 ft AGL",
+      "1500 ft AGL",
+      "3000 ft AGL"
+    ]
+  },
+  {
+    "id": "DV20-043",
+    "category": "Normal Procedures",
+    "type": "procedure",
+    "label": "What method is recommended for reporting traffic during the scanflow",
+    "value": "Clock position combined with above/below/on the horizon",
+    "note": "",
+    "source": "Normal procedures - Reporting of other airplanes (p.20)",
+    "question": "What method is recommended for reporting traffic during the scanflow?",
+    "distractors": [
+      "Altitude in feet only",
+      "Distance in nautical miles only",
+      "Compass heading only"
+    ]
+  },
+  {
+    "id": "DV20-044",
+    "category": "Normal Procedures",
+    "type": "procedure",
+    "label": "What speed should be maintained during clearing turns before maneuvers",
+    "value": "90 kts",
+    "note": "",
+    "source": "Normal procedures - Clearing turns (p.22)",
+    "question": "What speed should be maintained during clearing turns before maneuvers?",
+    "distractors": [
+      "VS+10 kts",
+      "65 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-045",
+    "category": "Normal Procedures",
+    "type": "procedure",
+    "label": "Target speed when establishing a glide from straight and level",
+    "value": "70 kts",
+    "note": "",
+    "source": "Normal procedures - Transition to glide (p.25)",
+    "question": "What is the target speed when establishing a glide from straight and level?",
+    "distractors": [
+      "90 kts",
+      "59 kts",
+      "64 kts"
+    ]
+  },
+  {
+    "id": "DV20-046",
+    "category": "Maneuvers & Stalls",
+    "type": "procedure",
+    "label": "Speed is slow flight performed",
+    "value": "VS + 10 kts",
+    "note": "",
+    "source": "Normal procedures - Slow flight (p.29)",
+    "question": "At what speed is slow flight performed?",
+    "distractors": [
+      "60 kts minimum",
+      "70 kts exactly",
+      "VS + 5 kts"
+    ]
+  },
+  {
+    "id": "DV20-047",
+    "category": "Maneuvers & Stalls",
+    "type": "procedure",
+    "label": "On entry to slow flight, to what power setting is power initially reduced",
+    "value": "12\u201315\" MP",
+    "note": "",
+    "source": "Normal procedures - Slow flight (p.29)",
+    "question": "On entry to slow flight, to what power setting is power initially reduced?",
+    "distractors": [
+      "Idle only",
+      "18\" MP",
+      "25\" MP"
+    ]
+  },
+  {
+    "id": "DV20-048",
+    "category": "Maneuvers & Stalls",
+    "type": "procedure",
+    "label": "Besides stall warning and buffet, what is the other approach-to-stall recovery trigger",
+    "value": "5 kts above stall speed, whichever comes first",
+    "note": "",
+    "source": "Air exercises - The stall (p.31)",
+    "question": "Besides stall warning and buffet, what is the other approach-to-stall recovery trigger?",
+    "distractors": [
+      "10 kts above stall speed always",
+      "Any nose-high attitude",
+      "Full aft elevator only"
+    ]
+  },
+  {
+    "id": "DV20-049",
+    "category": "Maneuvers & Stalls",
+    "type": "procedure",
+    "label": "In a power-on stall recovery, what is the minimum speed before raising the nose to climb attitude",
+    "value": "60 kts",
+    "note": "",
+    "source": "Air exercises - Recovery with power (p.31)",
+    "question": "In a power-on stall recovery, what is the minimum speed before raising the nose to climb attitude?",
+    "distractors": [
+      "43 kts",
+      "55 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-050",
+    "category": "Maneuvers & Stalls",
+    "type": "procedure",
+    "label": "Minimum recovery altitude for a full stall when solo",
+    "value": "3000 ft AGL",
+    "note": "",
+    "source": "Air exercises - Altitude (p.30)",
+    "question": "What is the minimum recovery altitude for a full stall when solo?",
+    "distractors": [
+      "2000 ft AGL",
+      "1500 ft AGL",
+      "700 ft AGL"
+    ]
+  },
+  {
+    "id": "DV20-051",
+    "category": "Maneuvers & Stalls",
+    "type": "procedure",
+    "label": "Minimum recovery altitude for an approach to stall when solo",
+    "value": "2000 ft AGL",
+    "note": "",
+    "source": "Air exercises - Altitude (p.30)",
+    "question": "What is the minimum recovery altitude for an approach to stall when solo?",
+    "distractors": [
+      "1000 ft AGL",
+      "3000 ft AGL",
+      "1500 ft AGL"
+    ]
+  },
+  {
+    "id": "DV20-052",
+    "category": "Maneuvers & Stalls",
+    "type": "procedure",
+    "label": "During stall recovery, what takes priority",
+    "value": "Decrease angle of attack, not altitude loss",
+    "note": "",
+    "source": "Air exercises - The stall, NOTE (p.30)",
+    "question": "During stall recovery, what takes priority?",
+    "distractors": [
+      "Maintain altitude at all costs",
+      "Retard throttle to idle first",
+      "Extend flaps immediately"
+    ]
+  },
+  {
+    "id": "DV20-053",
+    "category": "Maneuvers & Stalls",
+    "type": "procedure",
+    "label": "What must you do before lowering the flaps",
+    "value": "Check speed is in the white arc and call out \"Speed checked\"",
+    "note": "",
+    "source": "Normal procedures - Slow flight / stall (white arc call-out)",
+    "question": "What must you do before lowering the flaps?",
+    "distractors": [
+      "Set power to idle",
+      "Retract flaps fully first",
+      "Set carburetor heat OFF"
+    ]
+  },
+  {
+    "id": "DV20-054",
+    "category": "Maneuvers & Stalls",
+    "type": "procedure",
+    "label": "Accelerating out of slow flight with flaps, by what speed must the flaps be retracted",
+    "value": "81 kts",
+    "note": "",
+    "source": "Normal procedures - Slow flight, accelerate to 90 kts (p.29)",
+    "question": "When accelerating out of slow flight with flaps, by what speed must the flaps be retracted?",
+    "distractors": [
+      "90 kts",
+      "104 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-055",
+    "category": "Circuit",
+    "type": "procedure",
+    "label": "Altitude is the standard traffic circuit flown at uncontrolled aerodromes",
+    "value": "700 ft AAL",
+    "note": "",
+    "source": "Circuit procedures - VFR standard circuit (p.35)",
+    "question": "At what altitude is the standard traffic circuit flown at uncontrolled aerodromes?",
+    "distractors": [
+      "1500 ft AAL",
+      "500 ft AAL",
+      "1000 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-056",
+    "category": "Circuit",
+    "type": "procedure",
+    "label": "Altitude does the aerodrome circuit area extend vertically",
+    "value": "1000 ft AAL",
+    "note": "",
+    "source": "Circuit procedures - VFR standard circuit (p.35)",
+    "question": "Up to what altitude does the aerodrome circuit area extend vertically?",
+    "distractors": [
+      "500 ft AGL",
+      "700 ft AAL",
+      "2000 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-057",
+    "category": "Circuit",
+    "type": "procedure",
+    "label": "And at what angle should you join the standard circuit",
+    "value": "Half-way downwind at 90\u00b0 interception angle",
+    "note": "",
+    "source": "Circuit procedures - VFR standard circuit (p.35)",
+    "question": "Where and at what angle should you join the standard circuit?",
+    "distractors": [
+      "Half-way crosswind at 45\u00b0",
+      "Directly on final",
+      "Overhead at 500 ft"
+    ]
+  },
+  {
+    "id": "DV20-058",
+    "category": "Circuit",
+    "type": "procedure",
+    "label": "Does leaving the aerodrome circuit normally take place",
+    "value": "45\u00b0 half-way crosswind leg",
+    "note": "",
+    "source": "Circuit procedures - VFR standard circuit (p.35)",
+    "question": "Where does leaving the aerodrome circuit normally take place?",
+    "distractors": [
+      "90\u00b0 half-way downwind",
+      "On final approach",
+      "At threshold"
+    ]
+  },
+  {
+    "id": "DV20-059",
+    "category": "Circuit",
+    "type": "procedure",
+    "label": "What speed is included in the downwind HARS check",
+    "value": "70 kts",
+    "note": "",
+    "source": "Landing - Circuit and normal landing, HARS (p.39)",
+    "question": "What speed is included in the downwind HARS check?",
+    "distractors": [
+      "90 kts",
+      "60 kts",
+      "75 kts"
+    ]
+  },
+  {
+    "id": "DV20-060",
+    "category": "Circuit",
+    "type": "procedure",
+    "label": "Turning base, where should the threshold be relative to the wing",
+    "value": "45\u201360\u00b0 behind the wing",
+    "note": "",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "When turning base, where should the threshold be relative to the wing?",
+    "distractors": [
+      "30\u00b0 ahead of the wing",
+      "Directly abeam",
+      "90\u00b0 behind the wing"
+    ]
+  },
+  {
+    "id": "DV20-061",
+    "category": "Circuit",
+    "type": "procedure",
+    "label": "At approximately what altitude and position is the base-to-final turn made",
+    "value": "500 ft and 20\u00b0 before extended centerline",
+    "note": "",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "At approximately what altitude and position is the base-to-final turn made?",
+    "distractors": [
+      "300 ft on centerline",
+      "700 ft at crosswind",
+      "200 ft abeam threshold"
+    ]
+  },
+  {
+    "id": "DV20-062",
+    "category": "Circuit",
+    "type": "procedure",
+    "label": "Altitude should you be established on the final centerline",
+    "value": "300 ft",
+    "note": "",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "By what altitude should you be established on the final centerline?",
+    "distractors": [
+      "Threshold height",
+      "700 ft",
+      "500 ft"
+    ]
+  },
+  {
+    "id": "DV20-063",
+    "category": "Circuit",
+    "type": "procedure",
+    "label": "Speed may the flaps be selected",
+    "value": "81 kts (VFE)",
+    "note": "",
+    "source": "Enroute / Downwind - flaps max 81 kts (p.38-39)",
+    "question": "Below what speed may the flaps be selected?",
+    "distractors": [
+      "70 kts",
+      "117 kts (VNO)",
+      "104 kts (VA)"
+    ]
+  },
+  {
+    "id": "DV20-064",
+    "category": "Circuit",
+    "type": "procedure",
+    "label": "Minimum height for overflying a circuit area to read the signal area",
+    "value": "1000 ft AAL",
+    "note": "",
+    "source": "Circuit procedures - VFR standard circuit (p.35)",
+    "question": "What is the minimum height for overflying a circuit area to read the signal area?",
+    "distractors": [
+      "700 ft AAL",
+      "2000 ft AGL",
+      "500 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-065",
+    "category": "Takeoff",
+    "type": "procedure",
+    "label": "Rotation speed for a normal takeoff",
+    "value": "51 kts",
+    "note": "",
+    "source": "Takeoff procedures - Normal takeoff (p.36)",
+    "question": "What is the rotation speed for a normal takeoff?",
+    "distractors": [
+      "58 kts",
+      "65 kts",
+      "57 kts"
+    ]
+  },
+  {
+    "id": "DV20-066",
+    "category": "Takeoff",
+    "type": "procedure",
+    "label": "After rotation on a normal takeoff, to what speed do you accelerate",
+    "value": "65 kts (Vy flaps T/O) then 70 kts after flap retraction",
+    "note": "",
+    "source": "Takeoff procedures - Normal takeoff (p.36)",
+    "question": "After rotation on a normal takeoff, to what speed do you accelerate?",
+    "distractors": [
+      "90 kts before flap retraction",
+      "58 kts until 700 ft",
+      "70 kts immediately at rotation"
+    ]
+  },
+  {
+    "id": "DV20-067",
+    "category": "Takeoff",
+    "type": "procedure",
+    "label": "For a normal takeoff from a long, hard-surface runway, which flap setting is used",
+    "value": "Flaps UP",
+    "note": "",
+    "source": "Takeoff procedures - Normal takeoff, NOTE (p.36)",
+    "question": "For a normal takeoff from a long, hard-surface runway, which flap setting is used?",
+    "distractors": [
+      "Flaps T/O",
+      "Flaps LDG",
+      "No flaps, with reduced power"
+    ]
+  },
+  {
+    "id": "DV20-068",
+    "category": "Takeoff",
+    "type": "procedure",
+    "label": "For a normal takeoff from a short runway (<800 m) or a soft/grass surface, which flap setting is used",
+    "value": "Flaps T/O",
+    "note": "",
+    "source": "Takeoff procedures - Normal takeoff, NOTE (p.36)",
+    "question": "For a normal takeoff from a short runway (<800 m) or a soft/grass surface, which flap setting is used?",
+    "distractors": [
+      "Flaps UP",
+      "Flaps LDG",
+      "No flaps, with reduced power"
+    ]
+  },
+  {
+    "id": "DV20-069",
+    "category": "Takeoff",
+    "type": "procedure",
+    "label": "Rotation speed for an obstacle clearance (short field) takeoff",
+    "value": "57 kts",
+    "note": "",
+    "source": "Takeoff procedures - Obstacle clearance takeoff (p.37)",
+    "question": "What is the rotation speed for an obstacle clearance (short field) takeoff?",
+    "distractors": [
+      "60 kts",
+      "51 kts",
+      "65 kts"
+    ]
+  },
+  {
+    "id": "DV20-070",
+    "category": "Takeoff",
+    "type": "procedure",
+    "label": "What climb speed is held until clear of obstacles on an obstacle clearance takeoff",
+    "value": "58 kts (Vx)",
+    "note": "",
+    "source": "Takeoff procedures - Obstacle clearance takeoff (p.37)",
+    "question": "What climb speed is held until clear of obstacles on an obstacle clearance takeoff?",
+    "distractors": [
+      "65 kts (Vy)",
+      "70 kts",
+      "51 kts"
+    ]
+  },
+  {
+    "id": "DV20-071",
+    "category": "Takeoff",
+    "type": "procedure",
+    "label": "On a soft/rough field takeoff, at what speed do you gently raise the nose to climb attitude",
+    "value": "60 kts",
+    "note": "",
+    "source": "Takeoff procedures - Soft or rough field takeoff (p.37)",
+    "question": "On a soft/rough field takeoff, at what speed do you gently raise the nose to climb attitude?",
+    "distractors": [
+      "65 kts",
+      "51 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-072",
+    "category": "Takeoff",
+    "type": "procedure",
+    "label": "Takeoff roll",
+    "value": "2400 RPM \u00b1100 RPM",
+    "note": "",
+    "source": "Takeoff procedures - Normal takeoff (p.36)",
+    "question": "During the takeoff roll, what should the engine instruments read?",
+    "distractors": [
+      "1700 RPM \u00b150 RPM",
+      "MAX RPM only after rotation",
+      "1500 RPM exactly"
+    ]
+  },
+  {
+    "id": "DV20-073",
+    "category": "Takeoff",
+    "type": "procedure",
+    "label": "Leaving the circuit after departure, what is done with the electric fuel pump",
+    "value": "OFF",
+    "note": "",
+    "source": "Takeoff procedures - Normal takeoff, leaving the circuit (p.36)",
+    "question": "When leaving the circuit after departure, what is done with the electric fuel pump?",
+    "distractors": [
+      "ON until 700 ft",
+      "Cycled ON/OFF",
+      "ON until cruise"
+    ]
+  },
+  {
+    "id": "DV20-074",
+    "category": "Landing",
+    "type": "procedure",
+    "label": "Normal minimum speed over the threshold",
+    "value": "60 kts",
+    "note": "",
+    "source": "Landing - Circuit and normal landing, NOTE (p.39)",
+    "question": "What is the normal minimum speed over the threshold?",
+    "distractors": [
+      "70 kts",
+      "58 kts",
+      "55 kts"
+    ]
+  },
+  {
+    "id": "DV20-075",
+    "category": "Landing",
+    "type": "procedure",
+    "label": "Minimum threshold speed for a short field landing",
+    "value": "55 kts",
+    "note": "",
+    "source": "Landing - Short field landing, NOTE (p.42)",
+    "question": "What is the minimum threshold speed for a short field landing?",
+    "distractors": [
+      "43 kts",
+      "60 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-076",
+    "category": "Landing",
+    "type": "procedure",
+    "label": "In a flaps-up landing, what are the downwind, base, and final speeds",
+    "value": "70 kts / 70 kts / 70 kts",
+    "note": "",
+    "source": "Landing - Flaps up landing (p.41)",
+    "question": "In a flaps-up landing, what are the downwind, base, and final speeds?",
+    "distractors": [
+      "90 kts / 80 kts / 70 kts",
+      "70 kts / 65 kts / 58 kts",
+      "75 kts / 70 kts / 60 kts"
+    ]
+  },
+  {
+    "id": "DV20-077",
+    "category": "Landing",
+    "type": "procedure",
+    "label": "During a normal landing, when is the throttle retarded to idle",
+    "value": "Level flight about 1 m above the runway is established",
+    "note": "",
+    "source": "Landing - Normal landing (p.40)",
+    "question": "During a normal landing, when is the throttle retarded to idle?",
+    "distractors": [
+      "Crossing the threshold at 60 kts",
+      "During base turn at 500 ft",
+      "On downwind at 70 kts"
+    ]
+  },
+  {
+    "id": "DV20-078",
+    "category": "Landing",
+    "type": "procedure",
+    "label": "Soft field landing technique emphasize",
+    "value": "Keep nosewheel off as long as possible with full back pressure",
+    "note": "",
+    "source": "Landing - Soft field landing (p.41)",
+    "question": "What does soft field landing technique emphasize?",
+    "distractors": [
+      "Brake immediately after main gear touchdown",
+      "Flaps UP throughout approach",
+      "Higher approach speed of 90 kts"
+    ]
+  },
+  {
+    "id": "DV20-079",
+    "category": "Landing",
+    "type": "procedure",
+    "label": "On a short field landing, what is done after the nosewheel touches down",
+    "value": "Flaps UP and brake carefully",
+    "note": "",
+    "source": "Landing - Short field landing (p.42)",
+    "question": "On a short field landing, what is done after the nosewheel touches down?",
+    "distractors": [
+      "Apply full power for touch-and-go",
+      "Leave flaps LDG until clear of runway",
+      "Retract carb heat first"
+    ]
+  },
+  {
+    "id": "DV20-080",
+    "category": "Landing",
+    "type": "procedure",
+    "label": "What flap setting is used for a touch and go on a paved runway",
+    "value": "UP (considering distance available)",
+    "note": "",
+    "source": "Landing - Touch and go (p.43)",
+    "question": "What flap setting is used for a touch and go on a paved runway?",
+    "distractors": [
+      "LDG until rotation",
+      "Full flap throughout",
+      "T/O always"
+    ]
+  },
+  {
+    "id": "DV20-081",
+    "category": "Landing",
+    "type": "procedure",
+    "label": "What flap setting is used for a touch and go on grass",
+    "value": "T/O",
+    "note": "",
+    "source": "Landing - Touch and go (p.43)",
+    "question": "What flap setting is used for a touch and go on grass?",
+    "distractors": [
+      "LDG",
+      "No flaps with idle power",
+      "UP"
+    ]
+  },
+  {
+    "id": "DV20-082",
+    "category": "Landing",
+    "type": "procedure",
+    "label": "In a strong crosswind, what type of landing may be advisable",
+    "value": "A flapless landing",
+    "note": "",
+    "source": "Landing - Crosswind techniques (p.44)",
+    "question": "In a strong crosswind, what type of landing may be advisable?",
+    "distractors": [
+      "Higher power on final only",
+      "Full flap landing always",
+      "Slip without rudder correction"
+    ]
+  },
+  {
+    "id": "DV20-083",
+    "category": "Go-Around",
+    "type": "procedure",
+    "label": "First actions in a go-around / balked landing",
+    "value": "MAX RPM, throttle FULL, carburetor heat OFF",
+    "note": "",
+    "source": "Landing - Go-around, balked landing (p.42)",
+    "question": "What are the first actions in a go-around / balked landing?",
+    "distractors": [
+      "Pitch up before adding power",
+      "Flaps UP, idle power, carb heat ON",
+      "Retract all flaps, then add power"
+    ]
+  },
+  {
+    "id": "DV20-084",
+    "category": "Go-Around",
+    "type": "procedure",
+    "label": "After applying power in a go-around, what flap setting is selected",
+    "value": "T/O after \"Speed checked\" within white arc",
+    "note": "",
+    "source": "Landing - Go-around, balked landing (p.42)",
+    "question": "After applying power in a go-around, what flap setting is selected?",
+    "distractors": [
+      "LDG until 700 ft",
+      "Full flap until crosswind",
+      "UP immediately at any speed"
+    ]
+  },
+  {
+    "id": "DV20-085",
+    "category": "Go-Around",
+    "type": "procedure",
+    "label": "Initial climb speed sequence after a go-around",
+    "value": "58 kts (Vx), then 65 kts (Vy) when clear of obstacles",
+    "note": "",
+    "source": "Landing - Go-around, balked landing (p.42)",
+    "question": "What is the initial climb speed sequence after a go-around?",
+    "distractors": [
+      "90 kts until downwind",
+      "51 kts until 200 ft",
+      "70 kts immediately"
+    ]
+  },
+  {
+    "id": "DV20-086",
+    "category": "Go-Around",
+    "type": "procedure",
+    "label": "After a go-around, above what height are flaps selected UP and the prop set to 2400 RPM",
+    "value": "200 ft AAL",
+    "note": "",
+    "source": "Landing - Go-around, balked landing (p.42)",
+    "question": "After a go-around, above what height are flaps selected UP and the prop set to 2400 RPM?",
+    "distractors": [
+      "700 ft AAL",
+      "500 ft AGL on base",
+      "1000 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-087",
+    "category": "Go-Around",
+    "type": "procedure",
+    "label": "During a go-around at Hilversum, which side of the runway may you need to stay clear of",
+    "value": "Right side of runway due to gliders/paras",
+    "note": "",
+    "source": "Landing - Go-around, balked landing (p.42)",
+    "question": "During a go-around at Hilversum, which side of the runway may you need to stay clear of?",
+    "distractors": [
+      "Left side always regardless of traffic",
+      "Downwind at 1000 ft only",
+      "Final approach path only"
+    ]
+  },
+  {
+    "id": "DV20-088",
+    "category": "Abnormal & Emergency",
+    "type": "checklist",
+    "label": "A rejected takeoff should be executed if a continued takeoff becomes unsafe before what point",
+    "value": "Rotation",
+    "note": "",
+    "source": "Abnormal procedures - Rejected takeoff (p.45)",
+    "question": "A rejected takeoff should be executed if a continued takeoff becomes unsafe before what point?",
+    "distractors": [
+      "700 ft AAL",
+      "Flap retraction",
+      "Crosswind turn"
+    ]
+  },
+  {
+    "id": "DV20-089",
+    "category": "Abnormal & Emergency",
+    "type": "checklist",
+    "label": "Height should a simulated engine failure after takeoff (EFATO) exercise not be initiated",
+    "value": "300 ft AGL",
+    "note": "",
+    "source": "Abnormal procedures - Engine failure after takeoff (p.45)",
+    "question": "Below what height should a simulated engine failure after takeoff (EFATO) exercise not be initiated?",
+    "distractors": [
+      "500 ft AGL",
+      "700 ft AAL",
+      "200 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-090",
+    "category": "Abnormal & Emergency",
+    "type": "checklist",
+    "label": "After an engine failure after takeoff, to what glide speed do you lower the nose",
+    "value": "59 kts with flaps T/O, or 70 kts with flaps UP",
+    "note": "",
+    "source": "Abnormal procedures - Engine failure after takeoff (p.45)",
+    "question": "After an engine failure after takeoff, to what glide speed do you lower the nose?",
+    "distractors": [
+      "43 kts minimum",
+      "90 kts for best glide",
+      "70 kts regardless of flap setting"
+    ]
+  },
+  {
+    "id": "DV20-091",
+    "category": "Abnormal & Emergency",
+    "type": "checklist",
+    "label": "On the insufficient engine power drill, what position is carburetor heat set to",
+    "value": "OFF",
+    "note": "",
+    "source": "Abnormal procedures - Insufficient engine power (p.45)",
+    "question": "On the insufficient engine power drill, what position is carburetor heat set to?",
+    "distractors": [
+      "ON only below 20\" MP",
+      "Cycled ON/OFF",
+      "ON"
+    ]
+  },
+  {
+    "id": "DV20-092",
+    "category": "Abnormal & Emergency",
+    "type": "checklist",
+    "label": "On an engine failure in flight above 1500 ft, where do you fly",
+    "value": "Downwind with 1000 ft point",
+    "note": "",
+    "source": "Abnormal procedures - Engine failure during flight (p.46)",
+    "question": "On an engine failure in flight above 1500 ft, where do you fly?",
+    "distractors": [
+      "Hold at 700 ft circuit",
+      "Direct base only",
+      "Direct final immediately"
+    ]
+  },
+  {
+    "id": "DV20-093",
+    "category": "Abnormal & Emergency",
+    "type": "checklist",
+    "label": "On an engine failure in flight below 700 ft, where do you fly",
+    "value": "Direct final",
+    "note": "",
+    "source": "Abnormal procedures - Engine failure during flight (p.46)",
+    "question": "On an engine failure in flight below 700 ft, where do you fly?",
+    "distractors": [
+      "Climb to 1500 ft first",
+      "Downwind with 1000 ft point",
+      "Direct base only"
+    ]
+  },
+  {
+    "id": "DV20-094",
+    "category": "Abnormal & Emergency",
+    "type": "checklist",
+    "label": "What transponder code is set during an engine failure in flight",
+    "value": "7700",
+    "note": "",
+    "source": "Abnormal procedures - Engine failure during flight (p.46)",
+    "question": "What transponder code is set during an engine failure in flight?",
+    "distractors": [
+      "7500",
+      "1200",
+      "7600"
+    ]
+  },
+  {
+    "id": "DV20-095",
+    "category": "Abnormal & Emergency",
+    "type": "checklist",
+    "label": "What airspeed is used for an emergency landing with the engine off",
+    "value": "59 kts",
+    "note": "",
+    "source": "Abnormal checklist / Engine failure during flight (p.45-46)",
+    "question": "What airspeed is used for an emergency landing with the engine off?",
+    "distractors": [
+      "43 kts always",
+      "55 kts on downwind only",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-096",
+    "category": "Abnormal & Emergency",
+    "type": "checklist",
+    "label": "First action for an electrical fire (with smoke) in flight",
+    "value": "Master switch (battery) OFF",
+    "note": "",
+    "source": "Abnormal checklist - Electrical fire including smoke in flight",
+    "question": "What is the first action for an electrical fire (with smoke) in flight?",
+    "distractors": [
+      "Full throttle",
+      "Open canopy immediately",
+      "Extend flaps LDG"
+    ]
+  },
+  {
+    "id": "DV20-097",
+    "category": "Abnormal & Emergency",
+    "type": "checklist",
+    "label": "You do",
+    "value": "Switch off all nonessential equipment and land at nearest suitable airport",
+    "note": "",
+    "source": "Abnormal checklist - Generator warning light with engine running",
+    "question": "If the generator warning light shows with discharge on the ammeter, what should you do?",
+    "distractors": [
+      "Increase throttle to maximum",
+      "Turn master switch ON and OFF repeatedly",
+      "Continue flight indefinitely"
+    ]
+  },
+  {
+    "id": "DV20-098",
+    "category": "Abnormal & Emergency",
+    "type": "checklist",
+    "label": "What airspeed does the ENGINE FIRE IN FLIGHT checklist specify",
+    "value": "70 kts",
+    "note": "",
+    "source": "Abnormal checklist - Engine fire in flight",
+    "question": "What airspeed does the ENGINE FIRE IN FLIGHT checklist specify?",
+    "distractors": [
+      "59 kts",
+      "Idle speed only",
+      "90 kts"
+    ]
+  },
+  {
+    "id": "DV20-099",
+    "category": "Abnormal & Emergency",
+    "type": "checklist",
+    "label": "First priority in all abnormal procedures",
+    "value": "Maintain airplane control \u2014 fly the airplane",
+    "note": "",
+    "source": "Abnormal procedures - introduction (p.45)",
+    "question": "What is the first priority in all abnormal procedures?",
+    "distractors": [
+      "Extend flaps immediately",
+      "Complete radio calls first",
+      "Shut down all electrical systems"
+    ]
+  },
+  {
+    "id": "DV20-100",
+    "category": "Preflight & Briefing",
+    "type": "reference",
+    "label": "On the fuel dipstick, what does the lowest notch indicate",
+    "value": "10 liters of usable fuel",
+    "note": "",
+    "source": "Preflight - Instructions for use fuel dipstick (p.7)",
+    "question": "On the fuel dipstick, what does the lowest notch indicate?",
+    "distractors": [
+      "Full tank only",
+      "77 liters total",
+      "Unusable fuel quantity"
+    ]
+  },
+  {
+    "id": "DV20-101",
+    "category": "Preflight & Briefing",
+    "type": "reference",
+    "label": "Preferred approved fuel at EHHV",
+    "value": "MOGAS per BAZ-Regulation",
+    "note": "",
+    "source": "General Aircraft Information - Approved fuel grades (p.16)",
+    "question": "What is the preferred approved fuel at EHHV?",
+    "distractors": [
+      "Aviation lubricant mixed with fuel",
+      "Jet A-1",
+      "Automotive diesel"
+    ]
+  },
+  {
+    "id": "DV20-102",
+    "category": "Preflight & Briefing",
+    "type": "reference",
+    "label": "According to the document's CAUTION, what must NOT be used as a lubricant",
+    "value": "Aviation lubricant for engine oil",
+    "note": "",
+    "source": "General Aircraft Information - Approved lubricant, CAUTION (p.16)",
+    "question": "According to the document's CAUTION, what must NOT be used as a lubricant?",
+    "distractors": [
+      "MOGAS at EHHV",
+      "SF or SG marked automotive oil",
+      "100LL AVGAS"
+    ]
+  },
+  {
+    "id": "DV20-103",
+    "category": "Preflight & Briefing",
+    "type": "reference",
+    "label": "In the departure briefing example, where is the circuit left at Hilversum",
+    "value": "700 ft at crosswind leg under 45\u00b0",
+    "note": "",
+    "source": "Departure and approach briefing (p.11)",
+    "question": "In the departure briefing example, where is the circuit left at Hilversum?",
+    "distractors": [
+      "1000 ft on downwind at 90\u00b0",
+      "200 ft after takeoff",
+      "500 ft on base"
+    ]
+  },
+  {
+    "id": "DV20-104",
+    "category": "Preflight & Briefing",
+    "type": "reference",
+    "label": "Threat and error management briefings identify",
+    "value": "Threats and how to mitigate them",
+    "note": "",
+    "source": "Departure and approach briefing & TEM (p.11)",
+    "question": "What should threat and error management briefings identify?",
+    "distractors": [
+      "Passenger meal preferences",
+      "Historical accident statistics only",
+      "Only radio phraseology"
+    ]
+  },
+  {
+    "id": "DV20-105",
+    "category": "Preflight & Briefing",
+    "type": "reference",
+    "label": "An EHHV glide-in from 1000 ft downwind require",
+    "value": "Mandatory call, no traffic ahead, instructor only",
+    "note": "",
+    "source": "Radio telephony - EHHV AIP excerpt (p.14)",
+    "question": "What does an EHHV glide-in from 1000 ft downwind require?",
+    "distractors": [
+      "Solo student approval",
+      "No radio call required",
+      "Full flap landing"
+    ]
+  },
+  {
+    "id": "DV20-106",
+    "category": "Preflight & Briefing",
+    "type": "reference",
+    "label": "What call sign prefix should solo student pilots use",
+    "value": "STUDENT",
+    "note": "",
+    "source": "Radio telephony - EHHV AIP excerpt (p.14)",
+    "question": "What call sign prefix should solo student pilots use?",
+    "distractors": [
+      "GLIDER",
+      "TRAINING",
+      "DV20"
+    ]
+  },
+  {
+    "id": "DV20-107",
+    "category": "Preflight & Briefing",
+    "type": "reference",
+    "label": "Taxiing, the instruments/brakes check is called out after leaving what",
+    "value": "The parking area",
+    "note": "",
+    "source": "Normal procedures - Instruments/brakes check during taxiing (p.19)",
+    "question": "When taxiing, the instruments/brakes check is called out after leaving what?",
+    "distractors": [
+      "Crosswind leg",
+      "The runway",
+      "700 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-108",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (phase checklist flow) - AFTER TAKE-OFF checklist",
+    "value": "Select flaps UP and set propeller speed to 2400 RPM",
+    "note": "Verbalize this from memory during phase checklist flow.",
+    "source": "Normal checklist - After take-off",
+    "question": "Chair-fly phase checklist flow: mental callout check - On the AFTER TAKE-OFF checklist (minimum 200 ft AAL), what should you do?",
+    "distractors": [
+      "Set flaps T/O and reduce to idle power",
+      "Retract flaps and turn electric fuel pump OFF",
+      "Extend flaps LDG and set MAX RPM"
+    ]
+  },
+  {
+    "id": "DV20-109",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (phase checklist flow) - AFTER TAKE-OFF checklist",
+    "value": "Select flaps UP and set propeller speed to 2400 RPM",
+    "note": "Physical setup/action confirmation for phase checklist flow.",
+    "source": "Normal checklist - After take-off",
+    "question": "Chair-fly phase checklist flow: hands-and-eyes flow item - what is correct for \"AFTER TAKE-OFF checklist\"?",
+    "distractors": [
+      "Set flaps T/O and reduce to idle power",
+      "Retract flaps and turn electric fuel pump OFF",
+      "Extend flaps LDG and set MAX RPM"
+    ]
+  },
+  {
+    "id": "DV20-110",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (phase checklist flow) - Electric fuel pump OFF timing",
+    "value": "Above 1000 ft AAL",
+    "note": "Verbalize this from memory during phase checklist flow.",
+    "source": "Normal checklist - After take-off",
+    "question": "Chair-fly phase checklist flow: mental callout check - When should the electric fuel pump be switched OFF after takeoff?",
+    "distractors": [
+      "After landing only",
+      "Immediately after rotation",
+      "At 700 ft AAL on downwind"
+    ]
+  },
+  {
+    "id": "DV20-111",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (phase checklist flow) - Electric fuel pump OFF timing",
+    "value": "Above 1000 ft AAL",
+    "note": "Physical setup/action confirmation for phase checklist flow.",
+    "source": "Normal checklist - After take-off",
+    "question": "Chair-fly phase checklist flow: hands-and-eyes flow item - what is correct for \"Electric fuel pump OFF timing\"?",
+    "distractors": [
+      "After landing only",
+      "Immediately after rotation",
+      "At 700 ft AAL on downwind"
+    ]
+  },
+  {
+    "id": "DV20-112",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (phase checklist flow) - During the engine run-up, to what RPM is the throttle set with the brakes held",
+    "value": "1700 RPM",
+    "note": "Verbalize this from memory during phase checklist flow.",
+    "source": "Normal checklist - Engine runup / before take off",
+    "question": "Chair-fly phase checklist flow: mental callout check - During the engine run-up, to what RPM is the throttle set with the brakes held?",
+    "distractors": [
+      "1500 RPM",
+      "1100 RPM",
+      "2400 RPM"
+    ]
+  },
+  {
+    "id": "DV20-113",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (phase checklist flow) - During the engine run-up, to what RPM is the throttle set with the brakes held",
+    "value": "1700 RPM",
+    "note": "Physical setup/action confirmation for phase checklist flow.",
+    "source": "Normal checklist - Engine runup / before take off",
+    "question": "Chair-fly phase checklist flow: hands-and-eyes flow item - what is correct for \"During the engine run-up, to what RPM is the throttle set with the brakes held\"?",
+    "distractors": [
+      "1500 RPM",
+      "1100 RPM",
+      "2400 RPM"
+    ]
+  },
+  {
+    "id": "DV20-114",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (phase checklist flow) - Maximum delay before shutting down the engine",
+    "value": "10 seconds",
+    "note": "Verbalize this from memory during phase checklist flow.",
+    "source": "Normal checklist - Starting engine (CAUTION)",
+    "question": "Chair-fly phase checklist flow: mental callout check - If oil pressure is below 1.5 bar after start, what is the maximum delay before shutting down the engine?",
+    "distractors": [
+      "30 seconds",
+      "1 minute",
+      "Until taxi is complete"
+    ]
+  },
+  {
+    "id": "DV20-115",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (phase checklist flow) - Maximum delay before shutting down the engine",
+    "value": "10 seconds",
+    "note": "Physical setup/action confirmation for phase checklist flow.",
+    "source": "Normal checklist - Starting engine (CAUTION)",
+    "question": "Chair-fly phase checklist flow: hands-and-eyes flow item - what is correct for \"Maximum delay before shutting down the engine\"?",
+    "distractors": [
+      "30 seconds",
+      "1 minute",
+      "Until taxi is complete"
+    ]
+  },
+  {
+    "id": "DV20-116",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (phase checklist flow) - DOWNWIND checklist",
+    "value": "ON",
+    "note": "Verbalize this from memory during phase checklist flow.",
+    "source": "Normal checklist - Downwind",
+    "question": "Chair-fly phase checklist flow: mental callout check - On the DOWNWIND checklist, what position should carburetor heat be in?",
+    "distractors": [
+      "OFF",
+      "ON only below 20\" MP",
+      "Cycled every 5 minutes"
+    ]
+  },
+  {
+    "id": "DV20-117",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (phase checklist flow) - DOWNWIND checklist",
+    "value": "ON",
+    "note": "Physical setup/action confirmation for phase checklist flow.",
+    "source": "Normal checklist - Downwind",
+    "question": "Chair-fly phase checklist flow: hands-and-eyes flow item - what is correct for \"DOWNWIND checklist\"?",
+    "distractors": [
+      "OFF",
+      "ON only below 20\" MP",
+      "Cycled every 5 minutes"
+    ]
+  },
+  {
+    "id": "DV20-118",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (phase checklist flow) - Target speed on the BALKED LANDING checklist",
+    "value": "58 kts (Vx)",
+    "note": "Verbalize this from memory during phase checklist flow.",
+    "source": "Normal checklist - Balked landing",
+    "question": "Chair-fly phase checklist flow: mental callout check - What is the target speed on the BALKED LANDING checklist?",
+    "distractors": [
+      "70 kts (Vy)",
+      "60 kts minimum approach",
+      "65 kts"
+    ]
+  },
+  {
+    "id": "DV20-119",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (phase checklist flow) - Target speed on the BALKED LANDING checklist",
+    "value": "58 kts (Vx)",
+    "note": "Physical setup/action confirmation for phase checklist flow.",
+    "source": "Normal checklist - Balked landing",
+    "question": "Chair-fly phase checklist flow: hands-and-eyes flow item - what is correct for \"Target speed on the BALKED LANDING checklist\"?",
+    "distractors": [
+      "70 kts (Vy)",
+      "60 kts minimum approach",
+      "65 kts"
+    ]
+  },
+  {
+    "id": "DV20-120",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (phase checklist flow) - Initial airspeed on the ENGINE FAILURE DURING FLIGHT abnormal checklist",
+    "value": "70 kts",
+    "note": "Verbalize this from memory during phase checklist flow.",
+    "source": "Abnormal checklist - Engine failure during flight",
+    "question": "Chair-fly phase checklist flow: mental callout check - What is the initial airspeed on the ENGINE FAILURE DURING FLIGHT abnormal checklist?",
+    "distractors": [
+      "64 kts",
+      "59 kts",
+      "90 kts"
+    ]
+  },
+  {
+    "id": "DV20-121",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (phase checklist flow) - Initial airspeed on the ENGINE FAILURE DURING FLIGHT abnormal checklist",
+    "value": "70 kts",
+    "note": "Physical setup/action confirmation for phase checklist flow.",
+    "source": "Abnormal checklist - Engine failure during flight",
+    "question": "Chair-fly phase checklist flow: hands-and-eyes flow item - what is correct for \"Initial airspeed on the ENGINE FAILURE DURING FLIGHT abnormal checklist\"?",
+    "distractors": [
+      "64 kts",
+      "59 kts",
+      "90 kts"
+    ]
+  },
+  {
+    "id": "DV20-122",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (phase checklist flow) - What airspeed does the EMERGENCY LANDING WITH ENGINE OFF checklist specify",
+    "value": "59 kts",
+    "note": "Verbalize this from memory during phase checklist flow.",
+    "source": "Abnormal checklist - Emergency landing with engine off",
+    "question": "Chair-fly phase checklist flow: mental callout check - What airspeed does the EMERGENCY LANDING WITH ENGINE OFF checklist specify?",
+    "distractors": [
+      "70 kts",
+      "43 kts",
+      "55 kts"
+    ]
+  },
+  {
+    "id": "DV20-123",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (phase checklist flow) - What airspeed does the EMERGENCY LANDING WITH ENGINE OFF checklist specify",
+    "value": "59 kts",
+    "note": "Physical setup/action confirmation for phase checklist flow.",
+    "source": "Abnormal checklist - Emergency landing with engine off",
+    "question": "Chair-fly phase checklist flow: hands-and-eyes flow item - what is correct for \"What airspeed does the EMERGENCY LANDING WITH ENGINE OFF checklist specify\"?",
+    "distractors": [
+      "70 kts",
+      "43 kts",
+      "55 kts"
+    ]
+  },
+  {
+    "id": "DV20-124",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (phase checklist flow) - In a flap system failure where only the UP position is available, how should the approach speed be adjusted",
+    "value": "Raised by 10 kts",
+    "note": "Verbalize this from memory during phase checklist flow.",
+    "source": "Abnormal checklist - Flap system failure",
+    "question": "Chair-fly phase checklist flow: mental callout check - In a flap system failure where only the UP position is available, how should the approach speed be adjusted?",
+    "distractors": [
+      "Kept at normal landing speed",
+      "Reduced by 10 kts",
+      "Set to Vx (58 kts)"
+    ]
+  },
+  {
+    "id": "DV20-125",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (phase checklist flow) - In a flap system failure where only the UP position is available, how should the approach speed be adjusted",
+    "value": "Raised by 10 kts",
+    "note": "Physical setup/action confirmation for phase checklist flow.",
+    "source": "Abnormal checklist - Flap system failure",
+    "question": "Chair-fly phase checklist flow: hands-and-eyes flow item - what is correct for \"In a flap system failure where only the UP position is available, how should the approach speed be adjusted\"?",
+    "distractors": [
+      "Kept at normal landing speed",
+      "Reduced by 10 kts",
+      "Set to Vx (58 kts)"
+    ]
+  },
+  {
+    "id": "DV20-126",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (phase checklist flow) - During taxi warm-up, at what RPM is the engine oil warmed to 50 C",
+    "value": "1100\u20131500 RPM",
+    "note": "Verbalize this from memory during phase checklist flow.",
+    "source": "Normal checklist - During taxiing (CAUTION)",
+    "question": "Chair-fly phase checklist flow: mental callout check - During taxi warm-up, at what RPM is the engine oil warmed to 50 C?",
+    "distractors": [
+      "1700 RPM only",
+      "Idle power only",
+      "2400 RPM"
+    ]
+  },
+  {
+    "id": "DV20-127",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (phase checklist flow) - During taxi warm-up, at what RPM is the engine oil warmed to 50 C",
+    "value": "1100\u20131500 RPM",
+    "note": "Physical setup/action confirmation for phase checklist flow.",
+    "source": "Normal checklist - During taxiing (CAUTION)",
+    "question": "Chair-fly phase checklist flow: hands-and-eyes flow item - what is correct for \"During taxi warm-up, at what RPM is the engine oil warmed to 50 C\"?",
+    "distractors": [
+      "1700 RPM only",
+      "Idle power only",
+      "2400 RPM"
+    ]
+  },
+  {
+    "id": "DV20-128",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (power and energy management) - Standard power setting for straight and level flight",
+    "value": "25\" MP, 2400 RPM, 90 kts",
+    "note": "Verbalize this from memory during power and energy management.",
+    "source": "Normal procedures - Straight and level flight (p.23)",
+    "question": "Chair-fly power and energy management: mental callout check - What is the standard power setting for straight and level flight?",
+    "distractors": [
+      "Full throttle, 2400 RPM, 70 kts",
+      "21\" MP, 2400 RPM, 75 kts",
+      "18\" MP, 2400 RPM, 90 kts"
+    ]
+  },
+  {
+    "id": "DV20-129",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (power and energy management) - Standard power setting for straight and level flight",
+    "value": "25\" MP, 2400 RPM, 90 kts",
+    "note": "Physical setup/action confirmation for power and energy management.",
+    "source": "Normal procedures - Straight and level flight (p.23)",
+    "question": "Chair-fly power and energy management: hands-and-eyes flow item - what is correct for \"Standard power setting for straight and level flight\"?",
+    "distractors": [
+      "Full throttle, 2400 RPM, 70 kts",
+      "21\" MP, 2400 RPM, 75 kts",
+      "18\" MP, 2400 RPM, 90 kts"
+    ]
+  },
+  {
+    "id": "DV20-130",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (power and energy management) - Power/speed table specify for cruise (flaps UP)",
+    "value": "\u00b125\" MP, 2400 RPM, 90 kts",
+    "note": "Verbalize this from memory during power and energy management.",
+    "source": "Powersetting / configuration versus speed table (p.18)",
+    "question": "Chair-fly power and energy management: mental callout check - What does the power/speed table specify for cruise (flaps UP)?",
+    "distractors": [
+      "\u00b121\" MP, 2400 RPM, 70 kts",
+      "\u00b118\" MP, 2400 RPM, 75 kts",
+      "Full throttle, PSCL full forward, 65 kts"
+    ]
+  },
+  {
+    "id": "DV20-131",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (power and energy management) - Power/speed table specify for cruise (flaps UP)",
+    "value": "\u00b125\" MP, 2400 RPM, 90 kts",
+    "note": "Physical setup/action confirmation for power and energy management.",
+    "source": "Powersetting / configuration versus speed table (p.18)",
+    "question": "Chair-fly power and energy management: hands-and-eyes flow item - what is correct for \"Power/speed table specify for cruise (flaps UP)\"?",
+    "distractors": [
+      "\u00b121\" MP, 2400 RPM, 70 kts",
+      "\u00b118\" MP, 2400 RPM, 75 kts",
+      "Full throttle, PSCL full forward, 65 kts"
+    ]
+  },
+  {
+    "id": "DV20-132",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (power and energy management) - Power/speed table specify for descent (flaps UP)",
+    "value": "\u00b118\" MP, 2400 RPM, 90 kts",
+    "note": "Verbalize this from memory during power and energy management.",
+    "source": "Powersetting / configuration versus speed table (p.18)",
+    "question": "Chair-fly power and energy management: mental callout check - What does the power/speed table specify for descent (flaps UP)?",
+    "distractors": [
+      "\u00b125\" MP, 2400 RPM, 90 kts",
+      "Idle power, MAX RPM, 70 kts",
+      "\u00b115\" MP, 2400 RPM, 70 kts"
+    ]
+  },
+  {
+    "id": "DV20-133",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (power and energy management) - Power/speed table specify for descent (flaps UP)",
+    "value": "\u00b118\" MP, 2400 RPM, 90 kts",
+    "note": "Physical setup/action confirmation for power and energy management.",
+    "source": "Powersetting / configuration versus speed table (p.18)",
+    "question": "Chair-fly power and energy management: hands-and-eyes flow item - what is correct for \"Power/speed table specify for descent (flaps UP)\"?",
+    "distractors": [
+      "\u00b125\" MP, 2400 RPM, 90 kts",
+      "Idle power, MAX RPM, 70 kts",
+      "\u00b115\" MP, 2400 RPM, 70 kts"
+    ]
+  },
+  {
+    "id": "DV20-134",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (power and energy management) - On downwind, after selecting flaps T/O, to what setting is the throttle advanced",
+    "value": "\u00b124\" MP to maintain 70 kts",
+    "note": "Verbalize this from memory during power and energy management.",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "Chair-fly power and energy management: mental callout check - On downwind, after selecting flaps T/O, to what setting is the throttle advanced?",
+    "distractors": [
+      "Full throttle until base",
+      "\u00b115\" MP to maintain 70 kts",
+      "\u00b121\" MP to maintain 75 kts"
+    ]
+  },
+  {
+    "id": "DV20-135",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (power and energy management) - On downwind, after selecting flaps T/O, to what setting is the throttle advanced",
+    "value": "\u00b124\" MP to maintain 70 kts",
+    "note": "Physical setup/action confirmation for power and energy management.",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "Chair-fly power and energy management: hands-and-eyes flow item - what is correct for \"On downwind, after selecting flaps T/O, to what setting is the throttle advanced\"?",
+    "distractors": [
+      "Full throttle until base",
+      "\u00b115\" MP to maintain 70 kts",
+      "\u00b121\" MP to maintain 75 kts"
+    ]
+  },
+  {
+    "id": "DV20-136",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (power and energy management) - Initial throttle (MP) setting when turning base",
+    "value": "15\" MP",
+    "note": "Verbalize this from memory during power and energy management.",
+    "source": "Powersetting / configuration versus speed table (p.18)",
+    "question": "Chair-fly power and energy management: mental callout check - What is the initial throttle (MP) setting when turning base?",
+    "distractors": [
+      "24\" MP",
+      "Full throttle",
+      "18\" MP"
+    ]
+  },
+  {
+    "id": "DV20-137",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (power and energy management) - Initial throttle (MP) setting when turning base",
+    "value": "15\" MP",
+    "note": "Physical setup/action confirmation for power and energy management.",
+    "source": "Powersetting / configuration versus speed table (p.18)",
+    "question": "Chair-fly power and energy management: hands-and-eyes flow item - what is correct for \"Initial throttle (MP) setting when turning base\"?",
+    "distractors": [
+      "24\" MP",
+      "Full throttle",
+      "18\" MP"
+    ]
+  },
+  {
+    "id": "DV20-138",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (power and energy management) - Minimum approach speed on final",
+    "value": "60 kts",
+    "note": "Verbalize this from memory during power and energy management.",
+    "source": "Powersetting table / Circuit and normal landing (p.18, 39)",
+    "question": "Chair-fly power and energy management: mental callout check - What is the minimum approach speed on final?",
+    "distractors": [
+      "58 kts",
+      "70 kts",
+      "55 kts"
+    ]
+  },
+  {
+    "id": "DV20-139",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (power and energy management) - Minimum approach speed on final",
+    "value": "60 kts",
+    "note": "Physical setup/action confirmation for power and energy management.",
+    "source": "Powersetting table / Circuit and normal landing (p.18, 39)",
+    "question": "Chair-fly power and energy management: hands-and-eyes flow item - what is correct for \"Minimum approach speed on final\"?",
+    "distractors": [
+      "58 kts",
+      "70 kts",
+      "55 kts"
+    ]
+  },
+  {
+    "id": "DV20-140",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (power and energy management) - Power setting (MP) must carburetor heat be ON",
+    "value": "20\" MP",
+    "note": "Verbalize this from memory during power and energy management.",
+    "source": "Powersetting table - Note (p.18)",
+    "question": "Chair-fly power and energy management: mental callout check - Below what power setting (MP) must carburetor heat be ON?",
+    "distractors": [
+      "25\" MP",
+      "15\" MP",
+      "18\" MP"
+    ]
+  },
+  {
+    "id": "DV20-141",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (power and energy management) - Power setting (MP) must carburetor heat be ON",
+    "value": "20\" MP",
+    "note": "Physical setup/action confirmation for power and energy management.",
+    "source": "Powersetting table - Note (p.18)",
+    "question": "Chair-fly power and energy management: hands-and-eyes flow item - what is correct for \"Power setting (MP) must carburetor heat be ON\"?",
+    "distractors": [
+      "25\" MP",
+      "15\" MP",
+      "18\" MP"
+    ]
+  },
+  {
+    "id": "DV20-142",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (power and energy management) - Per the power/speed table, what is the target speed for climb with flaps T/O",
+    "value": "65 kts at full throttle, PSCL full forward",
+    "note": "Verbalize this from memory during power and energy management.",
+    "source": "Powersetting / configuration versus speed table (p.18)",
+    "question": "Chair-fly power and energy management: mental callout check - Per the power/speed table, what is the target speed for climb with flaps T/O?",
+    "distractors": [
+      "58 kts at \u00b125\" MP",
+      "90 kts at full throttle",
+      "70 kts at 2400 RPM"
+    ]
+  },
+  {
+    "id": "DV20-143",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (power and energy management) - Per the power/speed table, what is the target speed for climb with flaps T/O",
+    "value": "65 kts at full throttle, PSCL full forward",
+    "note": "Physical setup/action confirmation for power and energy management.",
+    "source": "Powersetting / configuration versus speed table (p.18)",
+    "question": "Chair-fly power and energy management: hands-and-eyes flow item - what is correct for \"Per the power/speed table, what is the target speed for climb with flaps T/O\"?",
+    "distractors": [
+      "58 kts at \u00b125\" MP",
+      "90 kts at full throttle",
+      "70 kts at 2400 RPM"
+    ]
+  },
+  {
+    "id": "DV20-144",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (power and energy management) - During descent, approximately how much extra descent rate does each inch of reduced manifold pressure give",
+    "value": "100 ft/min extra descend rate",
+    "note": "Verbalize this from memory during power and energy management.",
+    "source": "Normal procedures - Transition to descend (p.24)",
+    "question": "Chair-fly power and energy management: mental callout check - During descent, approximately how much extra descent rate does each inch of reduced manifold pressure give?",
+    "distractors": [
+      "No change to descend rate",
+      "50 ft/min less descend rate",
+      "200 ft/min extra descend rate"
+    ]
+  },
+  {
+    "id": "DV20-145",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (power and energy management) - During descent, approximately how much extra descent rate does each inch of reduced manifold pressure give",
+    "value": "100 ft/min extra descend rate",
+    "note": "Physical setup/action confirmation for power and energy management.",
+    "source": "Normal procedures - Transition to descend (p.24)",
+    "question": "Chair-fly power and energy management: hands-and-eyes flow item - what is correct for \"During descent, approximately how much extra descent rate does each inch of reduced manifold pressure give\"?",
+    "distractors": [
+      "No change to descend rate",
+      "50 ft/min less descend rate",
+      "200 ft/min extra descend rate"
+    ]
+  },
+  {
+    "id": "DV20-146",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (power and energy management) - Staying in the circuit, what power setting and speed are set at 700 ft AAL",
+    "value": "\u00b121\" MP, speed 70 kts",
+    "note": "Verbalize this from memory during power and energy management.",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "Chair-fly power and energy management: mental callout check - When staying in the circuit, what power setting and speed are set at 700 ft AAL?",
+    "distractors": [
+      "\u00b124\" MP, speed 75 kts",
+      "\u00b118\" MP, speed 90 kts",
+      "Idle power, speed 70 kts"
+    ]
+  },
+  {
+    "id": "DV20-147",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (power and energy management) - Staying in the circuit, what power setting and speed are set at 700 ft AAL",
+    "value": "\u00b121\" MP, speed 70 kts",
+    "note": "Physical setup/action confirmation for power and energy management.",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "Chair-fly power and energy management: hands-and-eyes flow item - what is correct for \"Staying in the circuit, what power setting and speed are set at 700 ft AAL\"?",
+    "distractors": [
+      "\u00b124\" MP, speed 75 kts",
+      "\u00b118\" MP, speed 90 kts",
+      "Idle power, speed 70 kts"
+    ]
+  },
+  {
+    "id": "DV20-148",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (climb / level / descend / turns) - In the transition from straight and level to climb, at what speed is the throttle advanced to FULL",
+    "value": "70 kts",
+    "note": "Verbalize this from memory during climb / level / descend / turns.",
+    "source": "Normal procedures - Transition to climb (p.23)",
+    "question": "Chair-fly climb / level / descend / turns: mental callout check - In the transition from straight and level to climb, at what speed is the throttle advanced to FULL?",
+    "distractors": [
+      "90 kts",
+      "58 kts",
+      "65 kts"
+    ]
+  },
+  {
+    "id": "DV20-149",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (climb / level / descend / turns) - In the transition from straight and level to climb, at what speed is the throttle advanced to FULL",
+    "value": "70 kts",
+    "note": "Physical setup/action confirmation for climb / level / descend / turns.",
+    "source": "Normal procedures - Transition to climb (p.23)",
+    "question": "Chair-fly climb / level / descend / turns: hands-and-eyes flow item - what is correct for \"In the transition from straight and level to climb, at what speed is the throttle advanced to FULL\"?",
+    "distractors": [
+      "90 kts",
+      "58 kts",
+      "65 kts"
+    ]
+  },
+  {
+    "id": "DV20-150",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (climb / level / descend / turns) - Leveling off from a climb, at what airspeed is power reduced to 25\"/2400 RPM",
+    "value": "90 kts",
+    "note": "Verbalize this from memory during climb / level / descend / turns.",
+    "source": "Normal procedures - Transition from climb to straight and level (p.24)",
+    "question": "Chair-fly climb / level / descend / turns: mental callout check - When leveling off from a climb, at what airspeed is power reduced to 25\"/2400 RPM?",
+    "distractors": [
+      "70 kts",
+      "65 kts",
+      "75 kts"
+    ]
+  },
+  {
+    "id": "DV20-151",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (climb / level / descend / turns) - Leveling off from a climb, at what airspeed is power reduced to 25\"/2400 RPM",
+    "value": "90 kts",
+    "note": "Physical setup/action confirmation for climb / level / descend / turns.",
+    "source": "Normal procedures - Transition from climb to straight and level (p.24)",
+    "question": "Chair-fly climb / level / descend / turns: hands-and-eyes flow item - what is correct for \"Leveling off from a climb, at what airspeed is power reduced to 25\"/2400 RPM\"?",
+    "distractors": [
+      "70 kts",
+      "65 kts",
+      "75 kts"
+    ]
+  },
+  {
+    "id": "DV20-152",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (climb / level / descend / turns) - In the transition to descent, what should be done with carburetor heat",
+    "value": "ON before reducing power",
+    "note": "Verbalize this from memory during climb / level / descend / turns.",
+    "source": "Normal procedures - Transition to descend (p.24)",
+    "question": "Chair-fly climb / level / descend / turns: mental callout check - In the transition to descent, what should be done with carburetor heat?",
+    "distractors": [
+      "OFF until final approach",
+      "ON only below 15\" MP",
+      "Cycled ON/OFF every minute"
+    ]
+  },
+  {
+    "id": "DV20-153",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (climb / level / descend / turns) - In the transition to descent, what should be done with carburetor heat",
+    "value": "ON before reducing power",
+    "note": "Physical setup/action confirmation for climb / level / descend / turns.",
+    "source": "Normal procedures - Transition to descend (p.24)",
+    "question": "Chair-fly climb / level / descend / turns: hands-and-eyes flow item - what is correct for \"In the transition to descent, what should be done with carburetor heat\"?",
+    "distractors": [
+      "OFF until final approach",
+      "ON only below 15\" MP",
+      "Cycled ON/OFF every minute"
+    ]
+  },
+  {
+    "id": "DV20-154",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (climb / level / descend / turns) - Leveling off from a descent, at what point is carburetor heat turned OFF",
+    "value": "100 ft before desired altitude",
+    "note": "Verbalize this from memory during climb / level / descend / turns.",
+    "source": "Normal procedures - Transition from descent to straight and level (p.24)",
+    "question": "Chair-fly climb / level / descend / turns: mental callout check - When leveling off from a descent, at what point is carburetor heat turned OFF?",
+    "distractors": [
+      "500 ft before desired altitude",
+      "At touchdown",
+      "On downwind only"
+    ]
+  },
+  {
+    "id": "DV20-155",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (climb / level / descend / turns) - Leveling off from a descent, at what point is carburetor heat turned OFF",
+    "value": "100 ft before desired altitude",
+    "note": "Physical setup/action confirmation for climb / level / descend / turns.",
+    "source": "Normal procedures - Transition from descent to straight and level (p.24)",
+    "question": "Chair-fly climb / level / descend / turns: hands-and-eyes flow item - what is correct for \"Leveling off from a descent, at what point is carburetor heat turned OFF\"?",
+    "distractors": [
+      "500 ft before desired altitude",
+      "At touchdown",
+      "On downwind only"
+    ]
+  },
+  {
+    "id": "DV20-156",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (climb / level / descend / turns) - Standard bank angle for a level turn",
+    "value": "30\u00b0",
+    "note": "Verbalize this from memory during climb / level / descend / turns.",
+    "source": "Normal procedures - Level turn (p.26)",
+    "question": "Chair-fly climb / level / descend / turns: mental callout check - What is the standard bank angle for a level turn?",
+    "distractors": [
+      "45\u00b0",
+      "15\u00b0",
+      "20\u00b0"
+    ]
+  },
+  {
+    "id": "DV20-157",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (climb / level / descend / turns) - Standard bank angle for a level turn",
+    "value": "30\u00b0",
+    "note": "Physical setup/action confirmation for climb / level / descend / turns.",
+    "source": "Normal procedures - Level turn (p.26)",
+    "question": "Chair-fly climb / level / descend / turns: hands-and-eyes flow item - what is correct for \"Standard bank angle for a level turn\"?",
+    "distractors": [
+      "45\u00b0",
+      "15\u00b0",
+      "20\u00b0"
+    ]
+  },
+  {
+    "id": "DV20-158",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (climb / level / descend / turns) - Approximate target speed during a 30 degree level turn",
+    "value": "95 kts",
+    "note": "Verbalize this from memory during climb / level / descend / turns.",
+    "source": "Normal procedures - Level turn (p.26)",
+    "question": "Chair-fly climb / level / descend / turns: mental callout check - What is the approximate target speed during a 30 degree level turn?",
+    "distractors": [
+      "90 kts",
+      "104 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-159",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (climb / level / descend / turns) - Approximate target speed during a 30 degree level turn",
+    "value": "95 kts",
+    "note": "Physical setup/action confirmation for climb / level / descend / turns.",
+    "source": "Normal procedures - Level turn (p.26)",
+    "question": "Chair-fly climb / level / descend / turns: hands-and-eyes flow item - what is correct for \"Approximate target speed during a 30 degree level turn\"?",
+    "distractors": [
+      "90 kts",
+      "104 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-160",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (climb / level / descend / turns) - Maximum bank angle for a climbing turn",
+    "value": "15\u00b0",
+    "note": "Verbalize this from memory during climb / level / descend / turns.",
+    "source": "Normal procedures - Climbing turn (p.27)",
+    "question": "Chair-fly climb / level / descend / turns: mental callout check - What is the maximum bank angle for a climbing turn?",
+    "distractors": [
+      "20\u00b0",
+      "30\u00b0",
+      "45\u00b0"
+    ]
+  },
+  {
+    "id": "DV20-161",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (climb / level / descend / turns) - Maximum bank angle for a climbing turn",
+    "value": "15\u00b0",
+    "note": "Physical setup/action confirmation for climb / level / descend / turns.",
+    "source": "Normal procedures - Climbing turn (p.27)",
+    "question": "Chair-fly climb / level / descend / turns: hands-and-eyes flow item - what is correct for \"Maximum bank angle for a climbing turn\"?",
+    "distractors": [
+      "20\u00b0",
+      "30\u00b0",
+      "45\u00b0"
+    ]
+  },
+  {
+    "id": "DV20-162",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (climb / level / descend / turns) - A 45 degree steep turn",
+    "value": "Increase power setting by 2\"",
+    "note": "Verbalize this from memory during climb / level / descend / turns.",
+    "source": "Normal procedures - Steep turn (p.28)",
+    "question": "Chair-fly climb / level / descend / turns: mental callout check - During a 45 degree steep turn, what should you do when passing 30 degrees of bank?",
+    "distractors": [
+      "Extend flaps T/O",
+      "Decrease power setting by 2\"",
+      "Retard throttle to idle"
+    ]
+  },
+  {
+    "id": "DV20-163",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (climb / level / descend / turns) - A 45 degree steep turn",
+    "value": "Increase power setting by 2\"",
+    "note": "Physical setup/action confirmation for climb / level / descend / turns.",
+    "source": "Normal procedures - Steep turn (p.28)",
+    "question": "Chair-fly climb / level / descend / turns: hands-and-eyes flow item - what is correct for \"A 45 degree steep turn\"?",
+    "distractors": [
+      "Extend flaps T/O",
+      "Decrease power setting by 2\"",
+      "Retard throttle to idle"
+    ]
+  },
+  {
+    "id": "DV20-164",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (climb / level / descend / turns) - Minimum altitude for the steep turn exercise when solo",
+    "value": "2000 ft AGL",
+    "note": "Verbalize this from memory during climb / level / descend / turns.",
+    "source": "Normal procedures - Steep turn (p.28)",
+    "question": "Chair-fly climb / level / descend / turns: mental callout check - What is the minimum altitude for the steep turn exercise when solo?",
+    "distractors": [
+      "700 ft AGL",
+      "1500 ft AGL",
+      "3000 ft AGL"
+    ]
+  },
+  {
+    "id": "DV20-165",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (climb / level / descend / turns) - Minimum altitude for the steep turn exercise when solo",
+    "value": "2000 ft AGL",
+    "note": "Physical setup/action confirmation for climb / level / descend / turns.",
+    "source": "Normal procedures - Steep turn (p.28)",
+    "question": "Chair-fly climb / level / descend / turns: hands-and-eyes flow item - what is correct for \"Minimum altitude for the steep turn exercise when solo\"?",
+    "distractors": [
+      "700 ft AGL",
+      "1500 ft AGL",
+      "3000 ft AGL"
+    ]
+  },
+  {
+    "id": "DV20-166",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (climb / level / descend / turns) - What method is recommended for reporting traffic during the scanflow",
+    "value": "Clock position combined with above/below/on the horizon",
+    "note": "Verbalize this from memory during climb / level / descend / turns.",
+    "source": "Normal procedures - Reporting of other airplanes (p.20)",
+    "question": "Chair-fly climb / level / descend / turns: mental callout check - What method is recommended for reporting traffic during the scanflow?",
+    "distractors": [
+      "Altitude in feet only",
+      "Distance in nautical miles only",
+      "Compass heading only"
+    ]
+  },
+  {
+    "id": "DV20-167",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (climb / level / descend / turns) - What method is recommended for reporting traffic during the scanflow",
+    "value": "Clock position combined with above/below/on the horizon",
+    "note": "Physical setup/action confirmation for climb / level / descend / turns.",
+    "source": "Normal procedures - Reporting of other airplanes (p.20)",
+    "question": "Chair-fly climb / level / descend / turns: hands-and-eyes flow item - what is correct for \"What method is recommended for reporting traffic during the scanflow\"?",
+    "distractors": [
+      "Altitude in feet only",
+      "Distance in nautical miles only",
+      "Compass heading only"
+    ]
+  },
+  {
+    "id": "DV20-168",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (climb / level / descend / turns) - What speed should be maintained during clearing turns before maneuvers",
+    "value": "90 kts",
+    "note": "Verbalize this from memory during climb / level / descend / turns.",
+    "source": "Normal procedures - Clearing turns (p.22)",
+    "question": "Chair-fly climb / level / descend / turns: mental callout check - What speed should be maintained during clearing turns before maneuvers?",
+    "distractors": [
+      "VS+10 kts",
+      "65 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-169",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (climb / level / descend / turns) - What speed should be maintained during clearing turns before maneuvers",
+    "value": "90 kts",
+    "note": "Physical setup/action confirmation for climb / level / descend / turns.",
+    "source": "Normal procedures - Clearing turns (p.22)",
+    "question": "Chair-fly climb / level / descend / turns: hands-and-eyes flow item - what is correct for \"What speed should be maintained during clearing turns before maneuvers\"?",
+    "distractors": [
+      "VS+10 kts",
+      "65 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-170",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (climb / level / descend / turns) - Target speed when establishing a glide from straight and level",
+    "value": "70 kts",
+    "note": "Verbalize this from memory during climb / level / descend / turns.",
+    "source": "Normal procedures - Transition to glide (p.25)",
+    "question": "Chair-fly climb / level / descend / turns: mental callout check - What is the target speed when establishing a glide from straight and level?",
+    "distractors": [
+      "90 kts",
+      "59 kts",
+      "64 kts"
+    ]
+  },
+  {
+    "id": "DV20-171",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (climb / level / descend / turns) - Target speed when establishing a glide from straight and level",
+    "value": "70 kts",
+    "note": "Physical setup/action confirmation for climb / level / descend / turns.",
+    "source": "Normal procedures - Transition to glide (p.25)",
+    "question": "Chair-fly climb / level / descend / turns: hands-and-eyes flow item - what is correct for \"Target speed when establishing a glide from straight and level\"?",
+    "distractors": [
+      "90 kts",
+      "59 kts",
+      "64 kts"
+    ]
+  },
+  {
+    "id": "DV20-172",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (turns and handling) - Speed is slow flight performed",
+    "value": "VS + 10 kts",
+    "note": "Verbalize this from memory during turns and handling.",
+    "source": "Normal procedures - Slow flight (p.29)",
+    "question": "Chair-fly turns and handling: mental callout check - At what speed is slow flight performed?",
+    "distractors": [
+      "60 kts minimum",
+      "70 kts exactly",
+      "VS + 5 kts"
+    ]
+  },
+  {
+    "id": "DV20-173",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (turns and handling) - Speed is slow flight performed",
+    "value": "VS + 10 kts",
+    "note": "Physical setup/action confirmation for turns and handling.",
+    "source": "Normal procedures - Slow flight (p.29)",
+    "question": "Chair-fly turns and handling: hands-and-eyes flow item - what is correct for \"Speed is slow flight performed\"?",
+    "distractors": [
+      "60 kts minimum",
+      "70 kts exactly",
+      "VS + 5 kts"
+    ]
+  },
+  {
+    "id": "DV20-174",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (turns and handling) - On entry to slow flight, to what power setting is power initially reduced",
+    "value": "12\u201315\" MP",
+    "note": "Verbalize this from memory during turns and handling.",
+    "source": "Normal procedures - Slow flight (p.29)",
+    "question": "Chair-fly turns and handling: mental callout check - On entry to slow flight, to what power setting is power initially reduced?",
+    "distractors": [
+      "Idle only",
+      "18\" MP",
+      "25\" MP"
+    ]
+  },
+  {
+    "id": "DV20-175",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (turns and handling) - On entry to slow flight, to what power setting is power initially reduced",
+    "value": "12\u201315\" MP",
+    "note": "Physical setup/action confirmation for turns and handling.",
+    "source": "Normal procedures - Slow flight (p.29)",
+    "question": "Chair-fly turns and handling: hands-and-eyes flow item - what is correct for \"On entry to slow flight, to what power setting is power initially reduced\"?",
+    "distractors": [
+      "Idle only",
+      "18\" MP",
+      "25\" MP"
+    ]
+  },
+  {
+    "id": "DV20-176",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (turns and handling) - Besides stall warning and buffet, what is the other approach-to-stall recovery trigger",
+    "value": "5 kts above stall speed, whichever comes first",
+    "note": "Verbalize this from memory during turns and handling.",
+    "source": "Air exercises - The stall (p.31)",
+    "question": "Chair-fly turns and handling: mental callout check - Besides stall warning and buffet, what is the other approach-to-stall recovery trigger?",
+    "distractors": [
+      "10 kts above stall speed always",
+      "Any nose-high attitude",
+      "Full aft elevator only"
+    ]
+  },
+  {
+    "id": "DV20-177",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (turns and handling) - Besides stall warning and buffet, what is the other approach-to-stall recovery trigger",
+    "value": "5 kts above stall speed, whichever comes first",
+    "note": "Physical setup/action confirmation for turns and handling.",
+    "source": "Air exercises - The stall (p.31)",
+    "question": "Chair-fly turns and handling: hands-and-eyes flow item - what is correct for \"Besides stall warning and buffet, what is the other approach-to-stall recovery trigger\"?",
+    "distractors": [
+      "10 kts above stall speed always",
+      "Any nose-high attitude",
+      "Full aft elevator only"
+    ]
+  },
+  {
+    "id": "DV20-178",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (turns and handling) - In a power-on stall recovery, what is the minimum speed before raising the nose to climb attitude",
+    "value": "60 kts",
+    "note": "Verbalize this from memory during turns and handling.",
+    "source": "Air exercises - Recovery with power (p.31)",
+    "question": "Chair-fly turns and handling: mental callout check - In a power-on stall recovery, what is the minimum speed before raising the nose to climb attitude?",
+    "distractors": [
+      "43 kts",
+      "55 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-179",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (turns and handling) - In a power-on stall recovery, what is the minimum speed before raising the nose to climb attitude",
+    "value": "60 kts",
+    "note": "Physical setup/action confirmation for turns and handling.",
+    "source": "Air exercises - Recovery with power (p.31)",
+    "question": "Chair-fly turns and handling: hands-and-eyes flow item - what is correct for \"In a power-on stall recovery, what is the minimum speed before raising the nose to climb attitude\"?",
+    "distractors": [
+      "43 kts",
+      "55 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-180",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (turns and handling) - Minimum recovery altitude for a full stall when solo",
+    "value": "3000 ft AGL",
+    "note": "Verbalize this from memory during turns and handling.",
+    "source": "Air exercises - Altitude (p.30)",
+    "question": "Chair-fly turns and handling: mental callout check - What is the minimum recovery altitude for a full stall when solo?",
+    "distractors": [
+      "2000 ft AGL",
+      "1500 ft AGL",
+      "700 ft AGL"
+    ]
+  },
+  {
+    "id": "DV20-181",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (turns and handling) - Minimum recovery altitude for a full stall when solo",
+    "value": "3000 ft AGL",
+    "note": "Physical setup/action confirmation for turns and handling.",
+    "source": "Air exercises - Altitude (p.30)",
+    "question": "Chair-fly turns and handling: hands-and-eyes flow item - what is correct for \"Minimum recovery altitude for a full stall when solo\"?",
+    "distractors": [
+      "2000 ft AGL",
+      "1500 ft AGL",
+      "700 ft AGL"
+    ]
+  },
+  {
+    "id": "DV20-182",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (turns and handling) - Minimum recovery altitude for an approach to stall when solo",
+    "value": "2000 ft AGL",
+    "note": "Verbalize this from memory during turns and handling.",
+    "source": "Air exercises - Altitude (p.30)",
+    "question": "Chair-fly turns and handling: mental callout check - What is the minimum recovery altitude for an approach to stall when solo?",
+    "distractors": [
+      "1000 ft AGL",
+      "3000 ft AGL",
+      "1500 ft AGL"
+    ]
+  },
+  {
+    "id": "DV20-183",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (turns and handling) - Minimum recovery altitude for an approach to stall when solo",
+    "value": "2000 ft AGL",
+    "note": "Physical setup/action confirmation for turns and handling.",
+    "source": "Air exercises - Altitude (p.30)",
+    "question": "Chair-fly turns and handling: hands-and-eyes flow item - what is correct for \"Minimum recovery altitude for an approach to stall when solo\"?",
+    "distractors": [
+      "1000 ft AGL",
+      "3000 ft AGL",
+      "1500 ft AGL"
+    ]
+  },
+  {
+    "id": "DV20-184",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (turns and handling) - During stall recovery, what takes priority",
+    "value": "Decrease angle of attack, not altitude loss",
+    "note": "Verbalize this from memory during turns and handling.",
+    "source": "Air exercises - The stall, NOTE (p.30)",
+    "question": "Chair-fly turns and handling: mental callout check - During stall recovery, what takes priority?",
+    "distractors": [
+      "Maintain altitude at all costs",
+      "Retard throttle to idle first",
+      "Extend flaps immediately"
+    ]
+  },
+  {
+    "id": "DV20-185",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (turns and handling) - During stall recovery, what takes priority",
+    "value": "Decrease angle of attack, not altitude loss",
+    "note": "Physical setup/action confirmation for turns and handling.",
+    "source": "Air exercises - The stall, NOTE (p.30)",
+    "question": "Chair-fly turns and handling: hands-and-eyes flow item - what is correct for \"During stall recovery, what takes priority\"?",
+    "distractors": [
+      "Maintain altitude at all costs",
+      "Retard throttle to idle first",
+      "Extend flaps immediately"
+    ]
+  },
+  {
+    "id": "DV20-186",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (turns and handling) - What must you do before lowering the flaps",
+    "value": "Check speed is in the white arc and call out \"Speed checked\"",
+    "note": "Verbalize this from memory during turns and handling.",
+    "source": "Normal procedures - Slow flight / stall (white arc call-out)",
+    "question": "Chair-fly turns and handling: mental callout check - What must you do before lowering the flaps?",
+    "distractors": [
+      "Set power to idle",
+      "Retract flaps fully first",
+      "Set carburetor heat OFF"
+    ]
+  },
+  {
+    "id": "DV20-187",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (turns and handling) - What must you do before lowering the flaps",
+    "value": "Check speed is in the white arc and call out \"Speed checked\"",
+    "note": "Physical setup/action confirmation for turns and handling.",
+    "source": "Normal procedures - Slow flight / stall (white arc call-out)",
+    "question": "Chair-fly turns and handling: hands-and-eyes flow item - what is correct for \"What must you do before lowering the flaps\"?",
+    "distractors": [
+      "Set power to idle",
+      "Retract flaps fully first",
+      "Set carburetor heat OFF"
+    ]
+  },
+  {
+    "id": "DV20-188",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (turns and handling) - Accelerating out of slow flight with flaps, by what speed must the flaps be retracted",
+    "value": "81 kts",
+    "note": "Verbalize this from memory during turns and handling.",
+    "source": "Normal procedures - Slow flight, accelerate to 90 kts (p.29)",
+    "question": "Chair-fly turns and handling: mental callout check - When accelerating out of slow flight with flaps, by what speed must the flaps be retracted?",
+    "distractors": [
+      "90 kts",
+      "104 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-189",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (turns and handling) - Accelerating out of slow flight with flaps, by what speed must the flaps be retracted",
+    "value": "81 kts",
+    "note": "Physical setup/action confirmation for turns and handling.",
+    "source": "Normal procedures - Slow flight, accelerate to 90 kts (p.29)",
+    "question": "Chair-fly turns and handling: hands-and-eyes flow item - what is correct for \"Accelerating out of slow flight with flaps, by what speed must the flaps be retracted\"?",
+    "distractors": [
+      "90 kts",
+      "104 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-190",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (downwind / base / final setup) - Altitude is the standard traffic circuit flown at uncontrolled aerodromes",
+    "value": "700 ft AAL",
+    "note": "Verbalize this from memory during downwind / base / final setup.",
+    "source": "Circuit procedures - VFR standard circuit (p.35)",
+    "question": "Chair-fly downwind / base / final setup: mental callout check - At what altitude is the standard traffic circuit flown at uncontrolled aerodromes?",
+    "distractors": [
+      "1500 ft AAL",
+      "500 ft AAL",
+      "1000 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-191",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (downwind / base / final setup) - Altitude is the standard traffic circuit flown at uncontrolled aerodromes",
+    "value": "700 ft AAL",
+    "note": "Physical setup/action confirmation for downwind / base / final setup.",
+    "source": "Circuit procedures - VFR standard circuit (p.35)",
+    "question": "Chair-fly downwind / base / final setup: hands-and-eyes flow item - what is correct for \"Altitude is the standard traffic circuit flown at uncontrolled aerodromes\"?",
+    "distractors": [
+      "1500 ft AAL",
+      "500 ft AAL",
+      "1000 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-192",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (downwind / base / final setup) - Altitude does the aerodrome circuit area extend vertically",
+    "value": "1000 ft AAL",
+    "note": "Verbalize this from memory during downwind / base / final setup.",
+    "source": "Circuit procedures - VFR standard circuit (p.35)",
+    "question": "Chair-fly downwind / base / final setup: mental callout check - Up to what altitude does the aerodrome circuit area extend vertically?",
+    "distractors": [
+      "500 ft AGL",
+      "700 ft AAL",
+      "2000 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-193",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (downwind / base / final setup) - Altitude does the aerodrome circuit area extend vertically",
+    "value": "1000 ft AAL",
+    "note": "Physical setup/action confirmation for downwind / base / final setup.",
+    "source": "Circuit procedures - VFR standard circuit (p.35)",
+    "question": "Chair-fly downwind / base / final setup: hands-and-eyes flow item - what is correct for \"Altitude does the aerodrome circuit area extend vertically\"?",
+    "distractors": [
+      "500 ft AGL",
+      "700 ft AAL",
+      "2000 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-194",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (downwind / base / final setup) - And at what angle should you join the standard circuit",
+    "value": "Half-way downwind at 90\u00b0 interception angle",
+    "note": "Verbalize this from memory during downwind / base / final setup.",
+    "source": "Circuit procedures - VFR standard circuit (p.35)",
+    "question": "Chair-fly downwind / base / final setup: mental callout check - Where and at what angle should you join the standard circuit?",
+    "distractors": [
+      "Half-way crosswind at 45\u00b0",
+      "Directly on final",
+      "Overhead at 500 ft"
+    ]
+  },
+  {
+    "id": "DV20-195",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (downwind / base / final setup) - And at what angle should you join the standard circuit",
+    "value": "Half-way downwind at 90\u00b0 interception angle",
+    "note": "Physical setup/action confirmation for downwind / base / final setup.",
+    "source": "Circuit procedures - VFR standard circuit (p.35)",
+    "question": "Chair-fly downwind / base / final setup: hands-and-eyes flow item - what is correct for \"And at what angle should you join the standard circuit\"?",
+    "distractors": [
+      "Half-way crosswind at 45\u00b0",
+      "Directly on final",
+      "Overhead at 500 ft"
+    ]
+  },
+  {
+    "id": "DV20-196",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (downwind / base / final setup) - Does leaving the aerodrome circuit normally take place",
+    "value": "45\u00b0 half-way crosswind leg",
+    "note": "Verbalize this from memory during downwind / base / final setup.",
+    "source": "Circuit procedures - VFR standard circuit (p.35)",
+    "question": "Chair-fly downwind / base / final setup: mental callout check - Where does leaving the aerodrome circuit normally take place?",
+    "distractors": [
+      "90\u00b0 half-way downwind",
+      "On final approach",
+      "At threshold"
+    ]
+  },
+  {
+    "id": "DV20-197",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (downwind / base / final setup) - Does leaving the aerodrome circuit normally take place",
+    "value": "45\u00b0 half-way crosswind leg",
+    "note": "Physical setup/action confirmation for downwind / base / final setup.",
+    "source": "Circuit procedures - VFR standard circuit (p.35)",
+    "question": "Chair-fly downwind / base / final setup: hands-and-eyes flow item - what is correct for \"Does leaving the aerodrome circuit normally take place\"?",
+    "distractors": [
+      "90\u00b0 half-way downwind",
+      "On final approach",
+      "At threshold"
+    ]
+  },
+  {
+    "id": "DV20-198",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (downwind / base / final setup) - What speed is included in the downwind HARS check",
+    "value": "70 kts",
+    "note": "Verbalize this from memory during downwind / base / final setup.",
+    "source": "Landing - Circuit and normal landing, HARS (p.39)",
+    "question": "Chair-fly downwind / base / final setup: mental callout check - What speed is included in the downwind HARS check?",
+    "distractors": [
+      "90 kts",
+      "60 kts",
+      "75 kts"
+    ]
+  },
+  {
+    "id": "DV20-199",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (downwind / base / final setup) - What speed is included in the downwind HARS check",
+    "value": "70 kts",
+    "note": "Physical setup/action confirmation for downwind / base / final setup.",
+    "source": "Landing - Circuit and normal landing, HARS (p.39)",
+    "question": "Chair-fly downwind / base / final setup: hands-and-eyes flow item - what is correct for \"What speed is included in the downwind HARS check\"?",
+    "distractors": [
+      "90 kts",
+      "60 kts",
+      "75 kts"
+    ]
+  },
+  {
+    "id": "DV20-200",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (downwind / base / final setup) - Turning base, where should the threshold be relative to the wing",
+    "value": "45\u201360\u00b0 behind the wing",
+    "note": "Verbalize this from memory during downwind / base / final setup.",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "Chair-fly downwind / base / final setup: mental callout check - When turning base, where should the threshold be relative to the wing?",
+    "distractors": [
+      "30\u00b0 ahead of the wing",
+      "Directly abeam",
+      "90\u00b0 behind the wing"
+    ]
+  },
+  {
+    "id": "DV20-201",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (downwind / base / final setup) - Turning base, where should the threshold be relative to the wing",
+    "value": "45\u201360\u00b0 behind the wing",
+    "note": "Physical setup/action confirmation for downwind / base / final setup.",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "Chair-fly downwind / base / final setup: hands-and-eyes flow item - what is correct for \"Turning base, where should the threshold be relative to the wing\"?",
+    "distractors": [
+      "30\u00b0 ahead of the wing",
+      "Directly abeam",
+      "90\u00b0 behind the wing"
+    ]
+  },
+  {
+    "id": "DV20-202",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (downwind / base / final setup) - At approximately what altitude and position is the base-to-final turn made",
+    "value": "500 ft and 20\u00b0 before extended centerline",
+    "note": "Verbalize this from memory during downwind / base / final setup.",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "Chair-fly downwind / base / final setup: mental callout check - At approximately what altitude and position is the base-to-final turn made?",
+    "distractors": [
+      "300 ft on centerline",
+      "700 ft at crosswind",
+      "200 ft abeam threshold"
+    ]
+  },
+  {
+    "id": "DV20-203",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (downwind / base / final setup) - At approximately what altitude and position is the base-to-final turn made",
+    "value": "500 ft and 20\u00b0 before extended centerline",
+    "note": "Physical setup/action confirmation for downwind / base / final setup.",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "Chair-fly downwind / base / final setup: hands-and-eyes flow item - what is correct for \"At approximately what altitude and position is the base-to-final turn made\"?",
+    "distractors": [
+      "300 ft on centerline",
+      "700 ft at crosswind",
+      "200 ft abeam threshold"
+    ]
+  },
+  {
+    "id": "DV20-204",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (downwind / base / final setup) - Altitude should you be established on the final centerline",
+    "value": "300 ft",
+    "note": "Verbalize this from memory during downwind / base / final setup.",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "Chair-fly downwind / base / final setup: mental callout check - By what altitude should you be established on the final centerline?",
+    "distractors": [
+      "Threshold height",
+      "700 ft",
+      "500 ft"
+    ]
+  },
+  {
+    "id": "DV20-205",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (downwind / base / final setup) - Altitude should you be established on the final centerline",
+    "value": "300 ft",
+    "note": "Physical setup/action confirmation for downwind / base / final setup.",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "Chair-fly downwind / base / final setup: hands-and-eyes flow item - what is correct for \"Altitude should you be established on the final centerline\"?",
+    "distractors": [
+      "Threshold height",
+      "700 ft",
+      "500 ft"
+    ]
+  },
+  {
+    "id": "DV20-206",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (downwind / base / final setup) - Speed may the flaps be selected",
+    "value": "81 kts (VFE)",
+    "note": "Verbalize this from memory during downwind / base / final setup.",
+    "source": "Enroute / Downwind - flaps max 81 kts (p.38-39)",
+    "question": "Chair-fly downwind / base / final setup: mental callout check - Below what speed may the flaps be selected?",
+    "distractors": [
+      "70 kts",
+      "117 kts (VNO)",
+      "104 kts (VA)"
+    ]
+  },
+  {
+    "id": "DV20-207",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (downwind / base / final setup) - Speed may the flaps be selected",
+    "value": "81 kts (VFE)",
+    "note": "Physical setup/action confirmation for downwind / base / final setup.",
+    "source": "Enroute / Downwind - flaps max 81 kts (p.38-39)",
+    "question": "Chair-fly downwind / base / final setup: hands-and-eyes flow item - what is correct for \"Speed may the flaps be selected\"?",
+    "distractors": [
+      "70 kts",
+      "117 kts (VNO)",
+      "104 kts (VA)"
+    ]
+  },
+  {
+    "id": "DV20-208",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (downwind / base / final setup) - Minimum height for overflying a circuit area to read the signal area",
+    "value": "1000 ft AAL",
+    "note": "Verbalize this from memory during downwind / base / final setup.",
+    "source": "Circuit procedures - VFR standard circuit (p.35)",
+    "question": "Chair-fly downwind / base / final setup: mental callout check - What is the minimum height for overflying a circuit area to read the signal area?",
+    "distractors": [
+      "700 ft AAL",
+      "2000 ft AGL",
+      "500 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-209",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (downwind / base / final setup) - Minimum height for overflying a circuit area to read the signal area",
+    "value": "1000 ft AAL",
+    "note": "Physical setup/action confirmation for downwind / base / final setup.",
+    "source": "Circuit procedures - VFR standard circuit (p.35)",
+    "question": "Chair-fly downwind / base / final setup: hands-and-eyes flow item - what is correct for \"Minimum height for overflying a circuit area to read the signal area\"?",
+    "distractors": [
+      "700 ft AAL",
+      "2000 ft AGL",
+      "500 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-210",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (takeoff) - Rotation speed for a normal takeoff",
+    "value": "51 kts",
+    "note": "Verbalize this from memory during takeoff.",
+    "source": "Takeoff procedures - Normal takeoff (p.36)",
+    "question": "Chair-fly takeoff: mental callout check - What is the rotation speed for a normal takeoff?",
+    "distractors": [
+      "58 kts",
+      "65 kts",
+      "57 kts"
+    ]
+  },
+  {
+    "id": "DV20-211",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (takeoff) - Rotation speed for a normal takeoff",
+    "value": "51 kts",
+    "note": "Physical setup/action confirmation for takeoff.",
+    "source": "Takeoff procedures - Normal takeoff (p.36)",
+    "question": "Chair-fly takeoff: hands-and-eyes flow item - what is correct for \"Rotation speed for a normal takeoff\"?",
+    "distractors": [
+      "58 kts",
+      "65 kts",
+      "57 kts"
+    ]
+  },
+  {
+    "id": "DV20-212",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (takeoff) - After rotation on a normal takeoff, to what speed do you accelerate",
+    "value": "65 kts (Vy flaps T/O) then 70 kts after flap retraction",
+    "note": "Verbalize this from memory during takeoff.",
+    "source": "Takeoff procedures - Normal takeoff (p.36)",
+    "question": "Chair-fly takeoff: mental callout check - After rotation on a normal takeoff, to what speed do you accelerate?",
+    "distractors": [
+      "90 kts before flap retraction",
+      "58 kts until 700 ft",
+      "70 kts immediately at rotation"
+    ]
+  },
+  {
+    "id": "DV20-213",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (takeoff) - After rotation on a normal takeoff, to what speed do you accelerate",
+    "value": "65 kts (Vy flaps T/O) then 70 kts after flap retraction",
+    "note": "Physical setup/action confirmation for takeoff.",
+    "source": "Takeoff procedures - Normal takeoff (p.36)",
+    "question": "Chair-fly takeoff: hands-and-eyes flow item - what is correct for \"After rotation on a normal takeoff, to what speed do you accelerate\"?",
+    "distractors": [
+      "90 kts before flap retraction",
+      "58 kts until 700 ft",
+      "70 kts immediately at rotation"
+    ]
+  },
+  {
+    "id": "DV20-214",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (takeoff) - For a normal takeoff from a long, hard-surface runway, which flap setting is used",
+    "value": "Flaps UP",
+    "note": "Verbalize this from memory during takeoff.",
+    "source": "Takeoff procedures - Normal takeoff, NOTE (p.36)",
+    "question": "Chair-fly takeoff: mental callout check - For a normal takeoff from a long, hard-surface runway, which flap setting is used?",
+    "distractors": [
+      "Flaps T/O",
+      "Flaps LDG",
+      "No flaps, with reduced power"
+    ]
+  },
+  {
+    "id": "DV20-215",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (takeoff) - For a normal takeoff from a long, hard-surface runway, which flap setting is used",
+    "value": "Flaps UP",
+    "note": "Physical setup/action confirmation for takeoff.",
+    "source": "Takeoff procedures - Normal takeoff, NOTE (p.36)",
+    "question": "Chair-fly takeoff: hands-and-eyes flow item - what is correct for \"For a normal takeoff from a long, hard-surface runway, which flap setting is used\"?",
+    "distractors": [
+      "Flaps T/O",
+      "Flaps LDG",
+      "No flaps, with reduced power"
+    ]
+  },
+  {
+    "id": "DV20-216",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (takeoff) - For a normal takeoff from a short runway (<800 m) or a soft/grass surface, which flap setting is used",
+    "value": "Flaps T/O",
+    "note": "Verbalize this from memory during takeoff.",
+    "source": "Takeoff procedures - Normal takeoff, NOTE (p.36)",
+    "question": "Chair-fly takeoff: mental callout check - For a normal takeoff from a short runway (<800 m) or a soft/grass surface, which flap setting is used?",
+    "distractors": [
+      "Flaps UP",
+      "Flaps LDG",
+      "No flaps, with reduced power"
+    ]
+  },
+  {
+    "id": "DV20-217",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (takeoff) - For a normal takeoff from a short runway (<800 m) or a soft/grass surface, which flap setting is used",
+    "value": "Flaps T/O",
+    "note": "Physical setup/action confirmation for takeoff.",
+    "source": "Takeoff procedures - Normal takeoff, NOTE (p.36)",
+    "question": "Chair-fly takeoff: hands-and-eyes flow item - what is correct for \"For a normal takeoff from a short runway (<800 m) or a soft/grass surface, which flap setting is used\"?",
+    "distractors": [
+      "Flaps UP",
+      "Flaps LDG",
+      "No flaps, with reduced power"
+    ]
+  },
+  {
+    "id": "DV20-218",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (takeoff) - Rotation speed for an obstacle clearance (short field) takeoff",
+    "value": "57 kts",
+    "note": "Verbalize this from memory during takeoff.",
+    "source": "Takeoff procedures - Obstacle clearance takeoff (p.37)",
+    "question": "Chair-fly takeoff: mental callout check - What is the rotation speed for an obstacle clearance (short field) takeoff?",
+    "distractors": [
+      "60 kts",
+      "51 kts",
+      "65 kts"
+    ]
+  },
+  {
+    "id": "DV20-219",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (takeoff) - Rotation speed for an obstacle clearance (short field) takeoff",
+    "value": "57 kts",
+    "note": "Physical setup/action confirmation for takeoff.",
+    "source": "Takeoff procedures - Obstacle clearance takeoff (p.37)",
+    "question": "Chair-fly takeoff: hands-and-eyes flow item - what is correct for \"Rotation speed for an obstacle clearance (short field) takeoff\"?",
+    "distractors": [
+      "60 kts",
+      "51 kts",
+      "65 kts"
+    ]
+  },
+  {
+    "id": "DV20-220",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (takeoff) - What climb speed is held until clear of obstacles on an obstacle clearance takeoff",
+    "value": "58 kts (Vx)",
+    "note": "Verbalize this from memory during takeoff.",
+    "source": "Takeoff procedures - Obstacle clearance takeoff (p.37)",
+    "question": "Chair-fly takeoff: mental callout check - What climb speed is held until clear of obstacles on an obstacle clearance takeoff?",
+    "distractors": [
+      "65 kts (Vy)",
+      "70 kts",
+      "51 kts"
+    ]
+  },
+  {
+    "id": "DV20-221",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (takeoff) - What climb speed is held until clear of obstacles on an obstacle clearance takeoff",
+    "value": "58 kts (Vx)",
+    "note": "Physical setup/action confirmation for takeoff.",
+    "source": "Takeoff procedures - Obstacle clearance takeoff (p.37)",
+    "question": "Chair-fly takeoff: hands-and-eyes flow item - what is correct for \"What climb speed is held until clear of obstacles on an obstacle clearance takeoff\"?",
+    "distractors": [
+      "65 kts (Vy)",
+      "70 kts",
+      "51 kts"
+    ]
+  },
+  {
+    "id": "DV20-222",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (takeoff) - On a soft/rough field takeoff, at what speed do you gently raise the nose to climb attitude",
+    "value": "60 kts",
+    "note": "Verbalize this from memory during takeoff.",
+    "source": "Takeoff procedures - Soft or rough field takeoff (p.37)",
+    "question": "Chair-fly takeoff: mental callout check - On a soft/rough field takeoff, at what speed do you gently raise the nose to climb attitude?",
+    "distractors": [
+      "65 kts",
+      "51 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-223",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (takeoff) - On a soft/rough field takeoff, at what speed do you gently raise the nose to climb attitude",
+    "value": "60 kts",
+    "note": "Physical setup/action confirmation for takeoff.",
+    "source": "Takeoff procedures - Soft or rough field takeoff (p.37)",
+    "question": "Chair-fly takeoff: hands-and-eyes flow item - what is correct for \"On a soft/rough field takeoff, at what speed do you gently raise the nose to climb attitude\"?",
+    "distractors": [
+      "65 kts",
+      "51 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-224",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (takeoff) - Takeoff roll",
+    "value": "2400 RPM \u00b1100 RPM",
+    "note": "Verbalize this from memory during takeoff.",
+    "source": "Takeoff procedures - Normal takeoff (p.36)",
+    "question": "Chair-fly takeoff: mental callout check - During the takeoff roll, what should the engine instruments read?",
+    "distractors": [
+      "1700 RPM \u00b150 RPM",
+      "MAX RPM only after rotation",
+      "1500 RPM exactly"
+    ]
+  },
+  {
+    "id": "DV20-225",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (takeoff) - Takeoff roll",
+    "value": "2400 RPM \u00b1100 RPM",
+    "note": "Physical setup/action confirmation for takeoff.",
+    "source": "Takeoff procedures - Normal takeoff (p.36)",
+    "question": "Chair-fly takeoff: hands-and-eyes flow item - what is correct for \"Takeoff roll\"?",
+    "distractors": [
+      "1700 RPM \u00b150 RPM",
+      "MAX RPM only after rotation",
+      "1500 RPM exactly"
+    ]
+  },
+  {
+    "id": "DV20-226",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (takeoff) - Leaving the circuit after departure, what is done with the electric fuel pump",
+    "value": "OFF",
+    "note": "Verbalize this from memory during takeoff.",
+    "source": "Takeoff procedures - Normal takeoff, leaving the circuit (p.36)",
+    "question": "Chair-fly takeoff: mental callout check - When leaving the circuit after departure, what is done with the electric fuel pump?",
+    "distractors": [
+      "ON until 700 ft",
+      "Cycled ON/OFF",
+      "ON until cruise"
+    ]
+  },
+  {
+    "id": "DV20-227",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (takeoff) - Leaving the circuit after departure, what is done with the electric fuel pump",
+    "value": "OFF",
+    "note": "Physical setup/action confirmation for takeoff.",
+    "source": "Takeoff procedures - Normal takeoff, leaving the circuit (p.36)",
+    "question": "Chair-fly takeoff: hands-and-eyes flow item - what is correct for \"Leaving the circuit after departure, what is done with the electric fuel pump\"?",
+    "distractors": [
+      "ON until 700 ft",
+      "Cycled ON/OFF",
+      "ON until cruise"
+    ]
+  },
+  {
+    "id": "DV20-228",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (final and landing) - Normal minimum speed over the threshold",
+    "value": "60 kts",
+    "note": "Verbalize this from memory during final and landing.",
+    "source": "Landing - Circuit and normal landing, NOTE (p.39)",
+    "question": "Chair-fly final and landing: mental callout check - What is the normal minimum speed over the threshold?",
+    "distractors": [
+      "70 kts",
+      "58 kts",
+      "55 kts"
+    ]
+  },
+  {
+    "id": "DV20-229",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (final and landing) - Normal minimum speed over the threshold",
+    "value": "60 kts",
+    "note": "Physical setup/action confirmation for final and landing.",
+    "source": "Landing - Circuit and normal landing, NOTE (p.39)",
+    "question": "Chair-fly final and landing: hands-and-eyes flow item - what is correct for \"Normal minimum speed over the threshold\"?",
+    "distractors": [
+      "70 kts",
+      "58 kts",
+      "55 kts"
+    ]
+  },
+  {
+    "id": "DV20-230",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (final and landing) - Minimum threshold speed for a short field landing",
+    "value": "55 kts",
+    "note": "Verbalize this from memory during final and landing.",
+    "source": "Landing - Short field landing, NOTE (p.42)",
+    "question": "Chair-fly final and landing: mental callout check - What is the minimum threshold speed for a short field landing?",
+    "distractors": [
+      "43 kts",
+      "60 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-231",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (final and landing) - Minimum threshold speed for a short field landing",
+    "value": "55 kts",
+    "note": "Physical setup/action confirmation for final and landing.",
+    "source": "Landing - Short field landing, NOTE (p.42)",
+    "question": "Chair-fly final and landing: hands-and-eyes flow item - what is correct for \"Minimum threshold speed for a short field landing\"?",
+    "distractors": [
+      "43 kts",
+      "60 kts",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-232",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (final and landing) - In a flaps-up landing, what are the downwind, base, and final speeds",
+    "value": "70 kts / 70 kts / 70 kts",
+    "note": "Verbalize this from memory during final and landing.",
+    "source": "Landing - Flaps up landing (p.41)",
+    "question": "Chair-fly final and landing: mental callout check - In a flaps-up landing, what are the downwind, base, and final speeds?",
+    "distractors": [
+      "90 kts / 80 kts / 70 kts",
+      "70 kts / 65 kts / 58 kts",
+      "75 kts / 70 kts / 60 kts"
+    ]
+  },
+  {
+    "id": "DV20-233",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (final and landing) - In a flaps-up landing, what are the downwind, base, and final speeds",
+    "value": "70 kts / 70 kts / 70 kts",
+    "note": "Physical setup/action confirmation for final and landing.",
+    "source": "Landing - Flaps up landing (p.41)",
+    "question": "Chair-fly final and landing: hands-and-eyes flow item - what is correct for \"In a flaps-up landing, what are the downwind, base, and final speeds\"?",
+    "distractors": [
+      "90 kts / 80 kts / 70 kts",
+      "70 kts / 65 kts / 58 kts",
+      "75 kts / 70 kts / 60 kts"
+    ]
+  },
+  {
+    "id": "DV20-234",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (final and landing) - During a normal landing, when is the throttle retarded to idle",
+    "value": "Level flight about 1 m above the runway is established",
+    "note": "Verbalize this from memory during final and landing.",
+    "source": "Landing - Normal landing (p.40)",
+    "question": "Chair-fly final and landing: mental callout check - During a normal landing, when is the throttle retarded to idle?",
+    "distractors": [
+      "Crossing the threshold at 60 kts",
+      "During base turn at 500 ft",
+      "On downwind at 70 kts"
+    ]
+  },
+  {
+    "id": "DV20-235",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (final and landing) - During a normal landing, when is the throttle retarded to idle",
+    "value": "Level flight about 1 m above the runway is established",
+    "note": "Physical setup/action confirmation for final and landing.",
+    "source": "Landing - Normal landing (p.40)",
+    "question": "Chair-fly final and landing: hands-and-eyes flow item - what is correct for \"During a normal landing, when is the throttle retarded to idle\"?",
+    "distractors": [
+      "Crossing the threshold at 60 kts",
+      "During base turn at 500 ft",
+      "On downwind at 70 kts"
+    ]
+  },
+  {
+    "id": "DV20-236",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (final and landing) - Soft field landing technique emphasize",
+    "value": "Keep nosewheel off as long as possible with full back pressure",
+    "note": "Verbalize this from memory during final and landing.",
+    "source": "Landing - Soft field landing (p.41)",
+    "question": "Chair-fly final and landing: mental callout check - What does soft field landing technique emphasize?",
+    "distractors": [
+      "Brake immediately after main gear touchdown",
+      "Flaps UP throughout approach",
+      "Higher approach speed of 90 kts"
+    ]
+  },
+  {
+    "id": "DV20-237",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (final and landing) - Soft field landing technique emphasize",
+    "value": "Keep nosewheel off as long as possible with full back pressure",
+    "note": "Physical setup/action confirmation for final and landing.",
+    "source": "Landing - Soft field landing (p.41)",
+    "question": "Chair-fly final and landing: hands-and-eyes flow item - what is correct for \"Soft field landing technique emphasize\"?",
+    "distractors": [
+      "Brake immediately after main gear touchdown",
+      "Flaps UP throughout approach",
+      "Higher approach speed of 90 kts"
+    ]
+  },
+  {
+    "id": "DV20-238",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (final and landing) - On a short field landing, what is done after the nosewheel touches down",
+    "value": "Flaps UP and brake carefully",
+    "note": "Verbalize this from memory during final and landing.",
+    "source": "Landing - Short field landing (p.42)",
+    "question": "Chair-fly final and landing: mental callout check - On a short field landing, what is done after the nosewheel touches down?",
+    "distractors": [
+      "Apply full power for touch-and-go",
+      "Leave flaps LDG until clear of runway",
+      "Retract carb heat first"
+    ]
+  },
+  {
+    "id": "DV20-239",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (final and landing) - On a short field landing, what is done after the nosewheel touches down",
+    "value": "Flaps UP and brake carefully",
+    "note": "Physical setup/action confirmation for final and landing.",
+    "source": "Landing - Short field landing (p.42)",
+    "question": "Chair-fly final and landing: hands-and-eyes flow item - what is correct for \"On a short field landing, what is done after the nosewheel touches down\"?",
+    "distractors": [
+      "Apply full power for touch-and-go",
+      "Leave flaps LDG until clear of runway",
+      "Retract carb heat first"
+    ]
+  },
+  {
+    "id": "DV20-240",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (final and landing) - What flap setting is used for a touch and go on a paved runway",
+    "value": "UP (considering distance available)",
+    "note": "Verbalize this from memory during final and landing.",
+    "source": "Landing - Touch and go (p.43)",
+    "question": "Chair-fly final and landing: mental callout check - What flap setting is used for a touch and go on a paved runway?",
+    "distractors": [
+      "LDG until rotation",
+      "Full flap throughout",
+      "T/O always"
+    ]
+  },
+  {
+    "id": "DV20-241",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (final and landing) - What flap setting is used for a touch and go on a paved runway",
+    "value": "UP (considering distance available)",
+    "note": "Physical setup/action confirmation for final and landing.",
+    "source": "Landing - Touch and go (p.43)",
+    "question": "Chair-fly final and landing: hands-and-eyes flow item - what is correct for \"What flap setting is used for a touch and go on a paved runway\"?",
+    "distractors": [
+      "LDG until rotation",
+      "Full flap throughout",
+      "T/O always"
+    ]
+  },
+  {
+    "id": "DV20-242",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (final and landing) - What flap setting is used for a touch and go on grass",
+    "value": "T/O",
+    "note": "Verbalize this from memory during final and landing.",
+    "source": "Landing - Touch and go (p.43)",
+    "question": "Chair-fly final and landing: mental callout check - What flap setting is used for a touch and go on grass?",
+    "distractors": [
+      "LDG",
+      "No flaps with idle power",
+      "UP"
+    ]
+  },
+  {
+    "id": "DV20-243",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (final and landing) - What flap setting is used for a touch and go on grass",
+    "value": "T/O",
+    "note": "Physical setup/action confirmation for final and landing.",
+    "source": "Landing - Touch and go (p.43)",
+    "question": "Chair-fly final and landing: hands-and-eyes flow item - what is correct for \"What flap setting is used for a touch and go on grass\"?",
+    "distractors": [
+      "LDG",
+      "No flaps with idle power",
+      "UP"
+    ]
+  },
+  {
+    "id": "DV20-244",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (final and landing) - In a strong crosswind, what type of landing may be advisable",
+    "value": "A flapless landing",
+    "note": "Verbalize this from memory during final and landing.",
+    "source": "Landing - Crosswind techniques (p.44)",
+    "question": "Chair-fly final and landing: mental callout check - In a strong crosswind, what type of landing may be advisable?",
+    "distractors": [
+      "Higher power on final only",
+      "Full flap landing always",
+      "Slip without rudder correction"
+    ]
+  },
+  {
+    "id": "DV20-245",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (final and landing) - In a strong crosswind, what type of landing may be advisable",
+    "value": "A flapless landing",
+    "note": "Physical setup/action confirmation for final and landing.",
+    "source": "Landing - Crosswind techniques (p.44)",
+    "question": "Chair-fly final and landing: hands-and-eyes flow item - what is correct for \"In a strong crosswind, what type of landing may be advisable\"?",
+    "distractors": [
+      "Higher power on final only",
+      "Full flap landing always",
+      "Slip without rudder correction"
+    ]
+  },
+  {
+    "id": "DV20-246",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (go-around) - First actions in a go-around / balked landing",
+    "value": "MAX RPM, throttle FULL, carburetor heat OFF",
+    "note": "Verbalize this from memory during go-around.",
+    "source": "Landing - Go-around, balked landing (p.42)",
+    "question": "Chair-fly go-around: mental callout check - What are the first actions in a go-around / balked landing?",
+    "distractors": [
+      "Pitch up before adding power",
+      "Flaps UP, idle power, carb heat ON",
+      "Retract all flaps, then add power"
+    ]
+  },
+  {
+    "id": "DV20-247",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (go-around) - First actions in a go-around / balked landing",
+    "value": "MAX RPM, throttle FULL, carburetor heat OFF",
+    "note": "Physical setup/action confirmation for go-around.",
+    "source": "Landing - Go-around, balked landing (p.42)",
+    "question": "Chair-fly go-around: hands-and-eyes flow item - what is correct for \"First actions in a go-around / balked landing\"?",
+    "distractors": [
+      "Pitch up before adding power",
+      "Flaps UP, idle power, carb heat ON",
+      "Retract all flaps, then add power"
+    ]
+  },
+  {
+    "id": "DV20-248",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (go-around) - After applying power in a go-around, what flap setting is selected",
+    "value": "T/O after \"Speed checked\" within white arc",
+    "note": "Verbalize this from memory during go-around.",
+    "source": "Landing - Go-around, balked landing (p.42)",
+    "question": "Chair-fly go-around: mental callout check - After applying power in a go-around, what flap setting is selected?",
+    "distractors": [
+      "LDG until 700 ft",
+      "Full flap until crosswind",
+      "UP immediately at any speed"
+    ]
+  },
+  {
+    "id": "DV20-249",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (go-around) - After applying power in a go-around, what flap setting is selected",
+    "value": "T/O after \"Speed checked\" within white arc",
+    "note": "Physical setup/action confirmation for go-around.",
+    "source": "Landing - Go-around, balked landing (p.42)",
+    "question": "Chair-fly go-around: hands-and-eyes flow item - what is correct for \"After applying power in a go-around, what flap setting is selected\"?",
+    "distractors": [
+      "LDG until 700 ft",
+      "Full flap until crosswind",
+      "UP immediately at any speed"
+    ]
+  },
+  {
+    "id": "DV20-250",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (go-around) - Initial climb speed sequence after a go-around",
+    "value": "58 kts (Vx), then 65 kts (Vy) when clear of obstacles",
+    "note": "Verbalize this from memory during go-around.",
+    "source": "Landing - Go-around, balked landing (p.42)",
+    "question": "Chair-fly go-around: mental callout check - What is the initial climb speed sequence after a go-around?",
+    "distractors": [
+      "90 kts until downwind",
+      "51 kts until 200 ft",
+      "70 kts immediately"
+    ]
+  },
+  {
+    "id": "DV20-251",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (go-around) - Initial climb speed sequence after a go-around",
+    "value": "58 kts (Vx), then 65 kts (Vy) when clear of obstacles",
+    "note": "Physical setup/action confirmation for go-around.",
+    "source": "Landing - Go-around, balked landing (p.42)",
+    "question": "Chair-fly go-around: hands-and-eyes flow item - what is correct for \"Initial climb speed sequence after a go-around\"?",
+    "distractors": [
+      "90 kts until downwind",
+      "51 kts until 200 ft",
+      "70 kts immediately"
+    ]
+  },
+  {
+    "id": "DV20-252",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (go-around) - After a go-around, above what height are flaps selected UP and the prop set to 2400 RPM",
+    "value": "200 ft AAL",
+    "note": "Verbalize this from memory during go-around.",
+    "source": "Landing - Go-around, balked landing (p.42)",
+    "question": "Chair-fly go-around: mental callout check - After a go-around, above what height are flaps selected UP and the prop set to 2400 RPM?",
+    "distractors": [
+      "700 ft AAL",
+      "500 ft AGL on base",
+      "1000 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-253",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (go-around) - After a go-around, above what height are flaps selected UP and the prop set to 2400 RPM",
+    "value": "200 ft AAL",
+    "note": "Physical setup/action confirmation for go-around.",
+    "source": "Landing - Go-around, balked landing (p.42)",
+    "question": "Chair-fly go-around: hands-and-eyes flow item - what is correct for \"After a go-around, above what height are flaps selected UP and the prop set to 2400 RPM\"?",
+    "distractors": [
+      "700 ft AAL",
+      "500 ft AGL on base",
+      "1000 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-254",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (go-around) - During a go-around at Hilversum, which side of the runway may you need to stay clear of",
+    "value": "Right side of runway due to gliders/paras",
+    "note": "Verbalize this from memory during go-around.",
+    "source": "Landing - Go-around, balked landing (p.42)",
+    "question": "Chair-fly go-around: mental callout check - During a go-around at Hilversum, which side of the runway may you need to stay clear of?",
+    "distractors": [
+      "Left side always regardless of traffic",
+      "Downwind at 1000 ft only",
+      "Final approach path only"
+    ]
+  },
+  {
+    "id": "DV20-255",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (go-around) - During a go-around at Hilversum, which side of the runway may you need to stay clear of",
+    "value": "Right side of runway due to gliders/paras",
+    "note": "Physical setup/action confirmation for go-around.",
+    "source": "Landing - Go-around, balked landing (p.42)",
+    "question": "Chair-fly go-around: hands-and-eyes flow item - what is correct for \"During a go-around at Hilversum, which side of the runway may you need to stay clear of\"?",
+    "distractors": [
+      "Left side always regardless of traffic",
+      "Downwind at 1000 ft only",
+      "Final approach path only"
+    ]
+  },
+  {
+    "id": "DV20-256",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (abnormal drills) - A rejected takeoff should be executed if a continued takeoff becomes unsafe before what point",
+    "value": "Rotation",
+    "note": "Verbalize this from memory during abnormal drills.",
+    "source": "Abnormal procedures - Rejected takeoff (p.45)",
+    "question": "Chair-fly abnormal drills: mental callout check - A rejected takeoff should be executed if a continued takeoff becomes unsafe before what point?",
+    "distractors": [
+      "700 ft AAL",
+      "Flap retraction",
+      "Crosswind turn"
+    ]
+  },
+  {
+    "id": "DV20-257",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (abnormal drills) - A rejected takeoff should be executed if a continued takeoff becomes unsafe before what point",
+    "value": "Rotation",
+    "note": "Physical setup/action confirmation for abnormal drills.",
+    "source": "Abnormal procedures - Rejected takeoff (p.45)",
+    "question": "Chair-fly abnormal drills: hands-and-eyes flow item - what is correct for \"A rejected takeoff should be executed if a continued takeoff becomes unsafe before what point\"?",
+    "distractors": [
+      "700 ft AAL",
+      "Flap retraction",
+      "Crosswind turn"
+    ]
+  },
+  {
+    "id": "DV20-258",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (abnormal drills) - Height should a simulated engine failure after takeoff (EFATO) exercise not be initiated",
+    "value": "300 ft AGL",
+    "note": "Verbalize this from memory during abnormal drills.",
+    "source": "Abnormal procedures - Engine failure after takeoff (p.45)",
+    "question": "Chair-fly abnormal drills: mental callout check - Below what height should a simulated engine failure after takeoff (EFATO) exercise not be initiated?",
+    "distractors": [
+      "500 ft AGL",
+      "700 ft AAL",
+      "200 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-259",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (abnormal drills) - Height should a simulated engine failure after takeoff (EFATO) exercise not be initiated",
+    "value": "300 ft AGL",
+    "note": "Physical setup/action confirmation for abnormal drills.",
+    "source": "Abnormal procedures - Engine failure after takeoff (p.45)",
+    "question": "Chair-fly abnormal drills: hands-and-eyes flow item - what is correct for \"Height should a simulated engine failure after takeoff (EFATO) exercise not be initiated\"?",
+    "distractors": [
+      "500 ft AGL",
+      "700 ft AAL",
+      "200 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-260",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (abnormal drills) - After an engine failure after takeoff, to what glide speed do you lower the nose",
+    "value": "59 kts with flaps T/O, or 70 kts with flaps UP",
+    "note": "Verbalize this from memory during abnormal drills.",
+    "source": "Abnormal procedures - Engine failure after takeoff (p.45)",
+    "question": "Chair-fly abnormal drills: mental callout check - After an engine failure after takeoff, to what glide speed do you lower the nose?",
+    "distractors": [
+      "43 kts minimum",
+      "90 kts for best glide",
+      "70 kts regardless of flap setting"
+    ]
+  },
+  {
+    "id": "DV20-261",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (abnormal drills) - After an engine failure after takeoff, to what glide speed do you lower the nose",
+    "value": "59 kts with flaps T/O, or 70 kts with flaps UP",
+    "note": "Physical setup/action confirmation for abnormal drills.",
+    "source": "Abnormal procedures - Engine failure after takeoff (p.45)",
+    "question": "Chair-fly abnormal drills: hands-and-eyes flow item - what is correct for \"After an engine failure after takeoff, to what glide speed do you lower the nose\"?",
+    "distractors": [
+      "43 kts minimum",
+      "90 kts for best glide",
+      "70 kts regardless of flap setting"
+    ]
+  },
+  {
+    "id": "DV20-262",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (abnormal drills) - On the insufficient engine power drill, what position is carburetor heat set to",
+    "value": "OFF",
+    "note": "Verbalize this from memory during abnormal drills.",
+    "source": "Abnormal procedures - Insufficient engine power (p.45)",
+    "question": "Chair-fly abnormal drills: mental callout check - On the insufficient engine power drill, what position is carburetor heat set to?",
+    "distractors": [
+      "ON only below 20\" MP",
+      "Cycled ON/OFF",
+      "ON"
+    ]
+  },
+  {
+    "id": "DV20-263",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (abnormal drills) - On the insufficient engine power drill, what position is carburetor heat set to",
+    "value": "OFF",
+    "note": "Physical setup/action confirmation for abnormal drills.",
+    "source": "Abnormal procedures - Insufficient engine power (p.45)",
+    "question": "Chair-fly abnormal drills: hands-and-eyes flow item - what is correct for \"On the insufficient engine power drill, what position is carburetor heat set to\"?",
+    "distractors": [
+      "ON only below 20\" MP",
+      "Cycled ON/OFF",
+      "ON"
+    ]
+  },
+  {
+    "id": "DV20-264",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (abnormal drills) - On an engine failure in flight above 1500 ft, where do you fly",
+    "value": "Downwind with 1000 ft point",
+    "note": "Verbalize this from memory during abnormal drills.",
+    "source": "Abnormal procedures - Engine failure during flight (p.46)",
+    "question": "Chair-fly abnormal drills: mental callout check - On an engine failure in flight above 1500 ft, where do you fly?",
+    "distractors": [
+      "Hold at 700 ft circuit",
+      "Direct base only",
+      "Direct final immediately"
+    ]
+  },
+  {
+    "id": "DV20-265",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (abnormal drills) - On an engine failure in flight above 1500 ft, where do you fly",
+    "value": "Downwind with 1000 ft point",
+    "note": "Physical setup/action confirmation for abnormal drills.",
+    "source": "Abnormal procedures - Engine failure during flight (p.46)",
+    "question": "Chair-fly abnormal drills: hands-and-eyes flow item - what is correct for \"On an engine failure in flight above 1500 ft, where do you fly\"?",
+    "distractors": [
+      "Hold at 700 ft circuit",
+      "Direct base only",
+      "Direct final immediately"
+    ]
+  },
+  {
+    "id": "DV20-266",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (abnormal drills) - On an engine failure in flight below 700 ft, where do you fly",
+    "value": "Direct final",
+    "note": "Verbalize this from memory during abnormal drills.",
+    "source": "Abnormal procedures - Engine failure during flight (p.46)",
+    "question": "Chair-fly abnormal drills: mental callout check - On an engine failure in flight below 700 ft, where do you fly?",
+    "distractors": [
+      "Climb to 1500 ft first",
+      "Downwind with 1000 ft point",
+      "Direct base only"
+    ]
+  },
+  {
+    "id": "DV20-267",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (abnormal drills) - On an engine failure in flight below 700 ft, where do you fly",
+    "value": "Direct final",
+    "note": "Physical setup/action confirmation for abnormal drills.",
+    "source": "Abnormal procedures - Engine failure during flight (p.46)",
+    "question": "Chair-fly abnormal drills: hands-and-eyes flow item - what is correct for \"On an engine failure in flight below 700 ft, where do you fly\"?",
+    "distractors": [
+      "Climb to 1500 ft first",
+      "Downwind with 1000 ft point",
+      "Direct base only"
+    ]
+  },
+  {
+    "id": "DV20-268",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (abnormal drills) - What transponder code is set during an engine failure in flight",
+    "value": "7700",
+    "note": "Verbalize this from memory during abnormal drills.",
+    "source": "Abnormal procedures - Engine failure during flight (p.46)",
+    "question": "Chair-fly abnormal drills: mental callout check - What transponder code is set during an engine failure in flight?",
+    "distractors": [
+      "7500",
+      "1200",
+      "7600"
+    ]
+  },
+  {
+    "id": "DV20-269",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (abnormal drills) - What transponder code is set during an engine failure in flight",
+    "value": "7700",
+    "note": "Physical setup/action confirmation for abnormal drills.",
+    "source": "Abnormal procedures - Engine failure during flight (p.46)",
+    "question": "Chair-fly abnormal drills: hands-and-eyes flow item - what is correct for \"What transponder code is set during an engine failure in flight\"?",
+    "distractors": [
+      "7500",
+      "1200",
+      "7600"
+    ]
+  },
+  {
+    "id": "DV20-270",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (abnormal drills) - What airspeed is used for an emergency landing with the engine off",
+    "value": "59 kts",
+    "note": "Verbalize this from memory during abnormal drills.",
+    "source": "Abnormal checklist / Engine failure during flight (p.45-46)",
+    "question": "Chair-fly abnormal drills: mental callout check - What airspeed is used for an emergency landing with the engine off?",
+    "distractors": [
+      "43 kts always",
+      "55 kts on downwind only",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-271",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (abnormal drills) - What airspeed is used for an emergency landing with the engine off",
+    "value": "59 kts",
+    "note": "Physical setup/action confirmation for abnormal drills.",
+    "source": "Abnormal checklist / Engine failure during flight (p.45-46)",
+    "question": "Chair-fly abnormal drills: hands-and-eyes flow item - what is correct for \"What airspeed is used for an emergency landing with the engine off\"?",
+    "distractors": [
+      "43 kts always",
+      "55 kts on downwind only",
+      "70 kts"
+    ]
+  },
+  {
+    "id": "DV20-272",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (abnormal drills) - First action for an electrical fire (with smoke) in flight",
+    "value": "Master switch (battery) OFF",
+    "note": "Verbalize this from memory during abnormal drills.",
+    "source": "Abnormal checklist - Electrical fire including smoke in flight",
+    "question": "Chair-fly abnormal drills: mental callout check - What is the first action for an electrical fire (with smoke) in flight?",
+    "distractors": [
+      "Full throttle",
+      "Open canopy immediately",
+      "Extend flaps LDG"
+    ]
+  },
+  {
+    "id": "DV20-273",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (abnormal drills) - First action for an electrical fire (with smoke) in flight",
+    "value": "Master switch (battery) OFF",
+    "note": "Physical setup/action confirmation for abnormal drills.",
+    "source": "Abnormal checklist - Electrical fire including smoke in flight",
+    "question": "Chair-fly abnormal drills: hands-and-eyes flow item - what is correct for \"First action for an electrical fire (with smoke) in flight\"?",
+    "distractors": [
+      "Full throttle",
+      "Open canopy immediately",
+      "Extend flaps LDG"
+    ]
+  },
+  {
+    "id": "DV20-274",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (abnormal drills) - You do",
+    "value": "Switch off all nonessential equipment and land at nearest suitable airport",
+    "note": "Verbalize this from memory during abnormal drills.",
+    "source": "Abnormal checklist - Generator warning light with engine running",
+    "question": "Chair-fly abnormal drills: mental callout check - If the generator warning light shows with discharge on the ammeter, what should you do?",
+    "distractors": [
+      "Increase throttle to maximum",
+      "Turn master switch ON and OFF repeatedly",
+      "Continue flight indefinitely"
+    ]
+  },
+  {
+    "id": "DV20-275",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (abnormal drills) - You do",
+    "value": "Switch off all nonessential equipment and land at nearest suitable airport",
+    "note": "Physical setup/action confirmation for abnormal drills.",
+    "source": "Abnormal checklist - Generator warning light with engine running",
+    "question": "Chair-fly abnormal drills: hands-and-eyes flow item - what is correct for \"You do\"?",
+    "distractors": [
+      "Increase throttle to maximum",
+      "Turn master switch ON and OFF repeatedly",
+      "Continue flight indefinitely"
+    ]
+  },
+  {
+    "id": "DV20-276",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (abnormal drills) - What airspeed does the ENGINE FIRE IN FLIGHT checklist specify",
+    "value": "70 kts",
+    "note": "Verbalize this from memory during abnormal drills.",
+    "source": "Abnormal checklist - Engine fire in flight",
+    "question": "Chair-fly abnormal drills: mental callout check - What airspeed does the ENGINE FIRE IN FLIGHT checklist specify?",
+    "distractors": [
+      "59 kts",
+      "Idle speed only",
+      "90 kts"
+    ]
+  },
+  {
+    "id": "DV20-277",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (abnormal drills) - What airspeed does the ENGINE FIRE IN FLIGHT checklist specify",
+    "value": "70 kts",
+    "note": "Physical setup/action confirmation for abnormal drills.",
+    "source": "Abnormal checklist - Engine fire in flight",
+    "question": "Chair-fly abnormal drills: hands-and-eyes flow item - what is correct for \"What airspeed does the ENGINE FIRE IN FLIGHT checklist specify\"?",
+    "distractors": [
+      "59 kts",
+      "Idle speed only",
+      "90 kts"
+    ]
+  },
+  {
+    "id": "DV20-278",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (abnormal drills) - First priority in all abnormal procedures",
+    "value": "Maintain airplane control \u2014 fly the airplane",
+    "note": "Verbalize this from memory during abnormal drills.",
+    "source": "Abnormal procedures - introduction (p.45)",
+    "question": "Chair-fly abnormal drills: mental callout check - What is the first priority in all abnormal procedures?",
+    "distractors": [
+      "Extend flaps immediately",
+      "Complete radio calls first",
+      "Shut down all electrical systems"
+    ]
+  },
+  {
+    "id": "DV20-279",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (abnormal drills) - First priority in all abnormal procedures",
+    "value": "Maintain airplane control \u2014 fly the airplane",
+    "note": "Physical setup/action confirmation for abnormal drills.",
+    "source": "Abnormal procedures - introduction (p.45)",
+    "question": "Chair-fly abnormal drills: hands-and-eyes flow item - what is correct for \"First priority in all abnormal procedures\"?",
+    "distractors": [
+      "Extend flaps immediately",
+      "Complete radio calls first",
+      "Shut down all electrical systems"
+    ]
+  },
+  {
+    "id": "DV20-280",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (pre-departure) - On the fuel dipstick, what does the lowest notch indicate",
+    "value": "10 liters of usable fuel",
+    "note": "Verbalize this from memory during pre-departure.",
+    "source": "Preflight - Instructions for use fuel dipstick (p.7)",
+    "question": "Chair-fly pre-departure: mental callout check - On the fuel dipstick, what does the lowest notch indicate?",
+    "distractors": [
+      "Full tank only",
+      "77 liters total",
+      "Unusable fuel quantity"
+    ]
+  },
+  {
+    "id": "DV20-281",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (pre-departure) - On the fuel dipstick, what does the lowest notch indicate",
+    "value": "10 liters of usable fuel",
+    "note": "Physical setup/action confirmation for pre-departure.",
+    "source": "Preflight - Instructions for use fuel dipstick (p.7)",
+    "question": "Chair-fly pre-departure: hands-and-eyes flow item - what is correct for \"On the fuel dipstick, what does the lowest notch indicate\"?",
+    "distractors": [
+      "Full tank only",
+      "77 liters total",
+      "Unusable fuel quantity"
+    ]
+  },
+  {
+    "id": "DV20-282",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (pre-departure) - Preferred approved fuel at EHHV",
+    "value": "MOGAS per BAZ-Regulation",
+    "note": "Verbalize this from memory during pre-departure.",
+    "source": "General Aircraft Information - Approved fuel grades (p.16)",
+    "question": "Chair-fly pre-departure: mental callout check - What is the preferred approved fuel at EHHV?",
+    "distractors": [
+      "Aviation lubricant mixed with fuel",
+      "Jet A-1",
+      "Automotive diesel"
+    ]
+  },
+  {
+    "id": "DV20-283",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (pre-departure) - Preferred approved fuel at EHHV",
+    "value": "MOGAS per BAZ-Regulation",
+    "note": "Physical setup/action confirmation for pre-departure.",
+    "source": "General Aircraft Information - Approved fuel grades (p.16)",
+    "question": "Chair-fly pre-departure: hands-and-eyes flow item - what is correct for \"Preferred approved fuel at EHHV\"?",
+    "distractors": [
+      "Aviation lubricant mixed with fuel",
+      "Jet A-1",
+      "Automotive diesel"
+    ]
+  },
+  {
+    "id": "DV20-284",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (pre-departure) - According to the document's CAUTION, what must NOT be used as a lubricant",
+    "value": "Aviation lubricant for engine oil",
+    "note": "Verbalize this from memory during pre-departure.",
+    "source": "General Aircraft Information - Approved lubricant, CAUTION (p.16)",
+    "question": "Chair-fly pre-departure: mental callout check - According to the document's CAUTION, what must NOT be used as a lubricant?",
+    "distractors": [
+      "MOGAS at EHHV",
+      "SF or SG marked automotive oil",
+      "100LL AVGAS"
+    ]
+  },
+  {
+    "id": "DV20-285",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (pre-departure) - According to the document's CAUTION, what must NOT be used as a lubricant",
+    "value": "Aviation lubricant for engine oil",
+    "note": "Physical setup/action confirmation for pre-departure.",
+    "source": "General Aircraft Information - Approved lubricant, CAUTION (p.16)",
+    "question": "Chair-fly pre-departure: hands-and-eyes flow item - what is correct for \"According to the document's CAUTION, what must NOT be used as a lubricant\"?",
+    "distractors": [
+      "MOGAS at EHHV",
+      "SF or SG marked automotive oil",
+      "100LL AVGAS"
+    ]
+  },
+  {
+    "id": "DV20-286",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (pre-departure) - In the departure briefing example, where is the circuit left at Hilversum",
+    "value": "700 ft at crosswind leg under 45\u00b0",
+    "note": "Verbalize this from memory during pre-departure.",
+    "source": "Departure and approach briefing (p.11)",
+    "question": "Chair-fly pre-departure: mental callout check - In the departure briefing example, where is the circuit left at Hilversum?",
+    "distractors": [
+      "1000 ft on downwind at 90\u00b0",
+      "200 ft after takeoff",
+      "500 ft on base"
+    ]
+  },
+  {
+    "id": "DV20-287",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (pre-departure) - In the departure briefing example, where is the circuit left at Hilversum",
+    "value": "700 ft at crosswind leg under 45\u00b0",
+    "note": "Physical setup/action confirmation for pre-departure.",
+    "source": "Departure and approach briefing (p.11)",
+    "question": "Chair-fly pre-departure: hands-and-eyes flow item - what is correct for \"In the departure briefing example, where is the circuit left at Hilversum\"?",
+    "distractors": [
+      "1000 ft on downwind at 90\u00b0",
+      "200 ft after takeoff",
+      "500 ft on base"
+    ]
+  },
+  {
+    "id": "DV20-288",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (pre-departure) - Threat and error management briefings identify",
+    "value": "Threats and how to mitigate them",
+    "note": "Verbalize this from memory during pre-departure.",
+    "source": "Departure and approach briefing & TEM (p.11)",
+    "question": "Chair-fly pre-departure: mental callout check - What should threat and error management briefings identify?",
+    "distractors": [
+      "Passenger meal preferences",
+      "Historical accident statistics only",
+      "Only radio phraseology"
+    ]
+  },
+  {
+    "id": "DV20-289",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (pre-departure) - Threat and error management briefings identify",
+    "value": "Threats and how to mitigate them",
+    "note": "Physical setup/action confirmation for pre-departure.",
+    "source": "Departure and approach briefing & TEM (p.11)",
+    "question": "Chair-fly pre-departure: hands-and-eyes flow item - what is correct for \"Threat and error management briefings identify\"?",
+    "distractors": [
+      "Passenger meal preferences",
+      "Historical accident statistics only",
+      "Only radio phraseology"
+    ]
+  },
+  {
+    "id": "DV20-290",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (pre-departure) - An EHHV glide-in from 1000 ft downwind require",
+    "value": "Mandatory call, no traffic ahead, instructor only",
+    "note": "Verbalize this from memory during pre-departure.",
+    "source": "Radio telephony - EHHV AIP excerpt (p.14)",
+    "question": "Chair-fly pre-departure: mental callout check - What does an EHHV glide-in from 1000 ft downwind require?",
+    "distractors": [
+      "Solo student approval",
+      "No radio call required",
+      "Full flap landing"
+    ]
+  },
+  {
+    "id": "DV20-291",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (pre-departure) - An EHHV glide-in from 1000 ft downwind require",
+    "value": "Mandatory call, no traffic ahead, instructor only",
+    "note": "Physical setup/action confirmation for pre-departure.",
+    "source": "Radio telephony - EHHV AIP excerpt (p.14)",
+    "question": "Chair-fly pre-departure: hands-and-eyes flow item - what is correct for \"An EHHV glide-in from 1000 ft downwind require\"?",
+    "distractors": [
+      "Solo student approval",
+      "No radio call required",
+      "Full flap landing"
+    ]
+  },
+  {
+    "id": "DV20-292",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (pre-departure) - What call sign prefix should solo student pilots use",
+    "value": "STUDENT",
+    "note": "Verbalize this from memory during pre-departure.",
+    "source": "Radio telephony - EHHV AIP excerpt (p.14)",
+    "question": "Chair-fly pre-departure: mental callout check - What call sign prefix should solo student pilots use?",
+    "distractors": [
+      "GLIDER",
+      "TRAINING",
+      "DV20"
+    ]
+  },
+  {
+    "id": "DV20-293",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (pre-departure) - What call sign prefix should solo student pilots use",
+    "value": "STUDENT",
+    "note": "Physical setup/action confirmation for pre-departure.",
+    "source": "Radio telephony - EHHV AIP excerpt (p.14)",
+    "question": "Chair-fly pre-departure: hands-and-eyes flow item - what is correct for \"What call sign prefix should solo student pilots use\"?",
+    "distractors": [
+      "GLIDER",
+      "TRAINING",
+      "DV20"
+    ]
+  },
+  {
+    "id": "DV20-294",
+    "category": "Chair Flying - Mental Flows",
+    "type": "mental",
+    "label": "Mental cue (pre-departure) - Taxiing, the instruments/brakes check is called out after leaving what",
+    "value": "The parking area",
+    "note": "Verbalize this from memory during pre-departure.",
+    "source": "Normal procedures - Instruments/brakes check during taxiing (p.19)",
+    "question": "Chair-fly pre-departure: mental callout check - When taxiing, the instruments/brakes check is called out after leaving what?",
+    "distractors": [
+      "Crosswind leg",
+      "The runway",
+      "700 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-295",
+    "category": "Chair Flying - Phase Actions",
+    "type": "checklist",
+    "label": "Action flow (pre-departure) - Taxiing, the instruments/brakes check is called out after leaving what",
+    "value": "The parking area",
+    "note": "Physical setup/action confirmation for pre-departure.",
+    "source": "Normal procedures - Instruments/brakes check during taxiing (p.19)",
+    "question": "Chair-fly pre-departure: hands-and-eyes flow item - what is correct for \"Taxiing, the instruments/brakes check is called out after leaving what\"?",
+    "distractors": [
+      "Crosswind leg",
+      "The runway",
+      "700 ft AAL"
+    ]
+  },
+  {
+    "id": "DV20-296",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 1 step 1 - takeoff",
+    "value": "51 kts",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Takeoff procedures - Normal takeoff (p.36)",
+    "question": "Full sequence loop 1, step 1 (takeoff): You are chair-flying a complete circuit. At this step, what is your target? [What is the rotation speed for a normal takeoff?]",
+    "distractors": [
+      "58 kts",
+      "65 kts",
+      "57 kts"
+    ]
+  },
+  {
+    "id": "DV20-297",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 1 step 2 - climb",
+    "value": "65 kts (Vy flaps T/O) then 70 kts after flap retraction",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Takeoff procedures - Normal takeoff (p.36)",
+    "question": "Full sequence loop 1, step 2 (climb): You are chair-flying a complete circuit. At this step, what is your target? [After rotation on a normal takeoff, to what speed do you accelerate?]",
+    "distractors": [
+      "90 kts before flap retraction",
+      "58 kts until 700 ft",
+      "70 kts immediately at rotation"
+    ]
+  },
+  {
+    "id": "DV20-298",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 1 step 3 - level flight",
+    "value": "25\" MP, 2400 RPM, 90 kts",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Normal procedures - Straight and level flight (p.23)",
+    "question": "Full sequence loop 1, step 3 (level flight): You are chair-flying a complete circuit. At this step, what is your target? [What is the standard power setting for straight and level flight?]",
+    "distractors": [
+      "Full throttle, 2400 RPM, 70 kts",
+      "21\" MP, 2400 RPM, 75 kts",
+      "18\" MP, 2400 RPM, 90 kts"
+    ]
+  },
+  {
+    "id": "DV20-299",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 1 step 4 - climb",
+    "value": "70 kts",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Normal procedures - Transition to climb (p.23)",
+    "question": "Full sequence loop 1, step 4 (climb): You are chair-flying a complete circuit. At this step, what is your target? [In the transition from straight and level to climb, at what speed is the throttle advanced to FULL?]",
+    "distractors": [
+      "90 kts",
+      "58 kts",
+      "65 kts"
+    ]
+  },
+  {
+    "id": "DV20-300",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 1 step 5 - descend",
+    "value": "ON before reducing power",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Normal procedures - Transition to descend (p.24)",
+    "question": "Full sequence loop 1, step 5 (descend): You are chair-flying a complete circuit. At this step, what is your target? [In the transition to descent, what should be done with carburetor heat?]",
+    "distractors": [
+      "OFF until final approach",
+      "ON only below 15\" MP",
+      "Cycled ON/OFF every minute"
+    ]
+  },
+  {
+    "id": "DV20-301",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 1 step 6 - turns",
+    "value": "30\u00b0",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Normal procedures - Level turn (p.26)",
+    "question": "Full sequence loop 1, step 6 (turns): You are chair-flying a complete circuit. At this step, what is your target? [What is the standard bank angle for a level turn?]",
+    "distractors": [
+      "45\u00b0",
+      "15\u00b0",
+      "20\u00b0"
+    ]
+  },
+  {
+    "id": "DV20-302",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 1 step 7 - downwind",
+    "value": "70 kts",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Landing - Circuit and normal landing, HARS (p.39)",
+    "question": "Full sequence loop 1, step 7 (downwind): You are chair-flying a complete circuit. At this step, what is your target? [What speed is included in the downwind HARS check?]",
+    "distractors": [
+      "90 kts",
+      "60 kts",
+      "75 kts"
+    ]
+  },
+  {
+    "id": "DV20-303",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 1 step 8 - base",
+    "value": "45\u201360\u00b0 behind the wing",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "Full sequence loop 1, step 8 (base): You are chair-flying a complete circuit. At this step, what is your target? [When turning base, where should the threshold be relative to the wing?]",
+    "distractors": [
+      "30\u00b0 ahead of the wing",
+      "Directly abeam",
+      "90\u00b0 behind the wing"
+    ]
+  },
+  {
+    "id": "DV20-304",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 1 step 9 - final",
+    "value": "60 kts",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Powersetting table / Circuit and normal landing (p.18, 39)",
+    "question": "Full sequence loop 1, step 9 (final): You are chair-flying a complete circuit. At this step, what is your target? [What is the minimum approach speed on final?]",
+    "distractors": [
+      "58 kts",
+      "70 kts",
+      "55 kts"
+    ]
+  },
+  {
+    "id": "DV20-305",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 2 step 1 - takeoff",
+    "value": "51 kts",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Takeoff procedures - Normal takeoff (p.36)",
+    "question": "Full sequence loop 2, step 1 (takeoff): In the full sequence drill, what is the correct target/action now? [What is the rotation speed for a normal takeoff?]",
+    "distractors": [
+      "58 kts",
+      "65 kts",
+      "57 kts"
+    ]
+  },
+  {
+    "id": "DV20-306",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 2 step 2 - climb",
+    "value": "65 kts (Vy flaps T/O) then 70 kts after flap retraction",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Takeoff procedures - Normal takeoff (p.36)",
+    "question": "Full sequence loop 2, step 2 (climb): In the full sequence drill, what is the correct target/action now? [After rotation on a normal takeoff, to what speed do you accelerate?]",
+    "distractors": [
+      "90 kts before flap retraction",
+      "58 kts until 700 ft",
+      "70 kts immediately at rotation"
+    ]
+  },
+  {
+    "id": "DV20-307",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 2 step 3 - level flight",
+    "value": "25\" MP, 2400 RPM, 90 kts",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Normal procedures - Straight and level flight (p.23)",
+    "question": "Full sequence loop 2, step 3 (level flight): In the full sequence drill, what is the correct target/action now? [What is the standard power setting for straight and level flight?]",
+    "distractors": [
+      "Full throttle, 2400 RPM, 70 kts",
+      "21\" MP, 2400 RPM, 75 kts",
+      "18\" MP, 2400 RPM, 90 kts"
+    ]
+  },
+  {
+    "id": "DV20-308",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 2 step 4 - climb",
+    "value": "70 kts",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Normal procedures - Transition to climb (p.23)",
+    "question": "Full sequence loop 2, step 4 (climb): In the full sequence drill, what is the correct target/action now? [In the transition from straight and level to climb, at what speed is the throttle advanced to FULL?]",
+    "distractors": [
+      "90 kts",
+      "58 kts",
+      "65 kts"
+    ]
+  },
+  {
+    "id": "DV20-309",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 2 step 5 - descend",
+    "value": "ON before reducing power",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Normal procedures - Transition to descend (p.24)",
+    "question": "Full sequence loop 2, step 5 (descend): In the full sequence drill, what is the correct target/action now? [In the transition to descent, what should be done with carburetor heat?]",
+    "distractors": [
+      "OFF until final approach",
+      "ON only below 15\" MP",
+      "Cycled ON/OFF every minute"
+    ]
+  },
+  {
+    "id": "DV20-310",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 2 step 6 - turns",
+    "value": "30\u00b0",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Normal procedures - Level turn (p.26)",
+    "question": "Full sequence loop 2, step 6 (turns): In the full sequence drill, what is the correct target/action now? [What is the standard bank angle for a level turn?]",
+    "distractors": [
+      "45\u00b0",
+      "15\u00b0",
+      "20\u00b0"
+    ]
+  },
+  {
+    "id": "DV20-311",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 2 step 7 - downwind",
+    "value": "70 kts",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Landing - Circuit and normal landing, HARS (p.39)",
+    "question": "Full sequence loop 2, step 7 (downwind): In the full sequence drill, what is the correct target/action now? [What speed is included in the downwind HARS check?]",
+    "distractors": [
+      "90 kts",
+      "60 kts",
+      "75 kts"
+    ]
+  },
+  {
+    "id": "DV20-312",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 2 step 8 - base",
+    "value": "45\u201360\u00b0 behind the wing",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "Full sequence loop 2, step 8 (base): In the full sequence drill, what is the correct target/action now? [When turning base, where should the threshold be relative to the wing?]",
+    "distractors": [
+      "30\u00b0 ahead of the wing",
+      "Directly abeam",
+      "90\u00b0 behind the wing"
+    ]
+  },
+  {
+    "id": "DV20-313",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 2 step 9 - final",
+    "value": "60 kts",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Powersetting table / Circuit and normal landing (p.18, 39)",
+    "question": "Full sequence loop 2, step 9 (final): In the full sequence drill, what is the correct target/action now? [What is the minimum approach speed on final?]",
+    "distractors": [
+      "58 kts",
+      "70 kts",
+      "55 kts"
+    ]
+  },
+  {
+    "id": "DV20-314",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 3 step 1 - takeoff",
+    "value": "51 kts",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Takeoff procedures - Normal takeoff (p.36)",
+    "question": "Full sequence loop 3, step 1 (takeoff): Sequence discipline check: what should you set/hold at this point? [What is the rotation speed for a normal takeoff?]",
+    "distractors": [
+      "58 kts",
+      "65 kts",
+      "57 kts"
+    ]
+  },
+  {
+    "id": "DV20-315",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 3 step 2 - climb",
+    "value": "65 kts (Vy flaps T/O) then 70 kts after flap retraction",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Takeoff procedures - Normal takeoff (p.36)",
+    "question": "Full sequence loop 3, step 2 (climb): Sequence discipline check: what should you set/hold at this point? [After rotation on a normal takeoff, to what speed do you accelerate?]",
+    "distractors": [
+      "90 kts before flap retraction",
+      "58 kts until 700 ft",
+      "70 kts immediately at rotation"
+    ]
+  },
+  {
+    "id": "DV20-316",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 3 step 3 - level flight",
+    "value": "25\" MP, 2400 RPM, 90 kts",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Normal procedures - Straight and level flight (p.23)",
+    "question": "Full sequence loop 3, step 3 (level flight): Sequence discipline check: what should you set/hold at this point? [What is the standard power setting for straight and level flight?]",
+    "distractors": [
+      "Full throttle, 2400 RPM, 70 kts",
+      "21\" MP, 2400 RPM, 75 kts",
+      "18\" MP, 2400 RPM, 90 kts"
+    ]
+  },
+  {
+    "id": "DV20-317",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 3 step 4 - climb",
+    "value": "70 kts",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Normal procedures - Transition to climb (p.23)",
+    "question": "Full sequence loop 3, step 4 (climb): Sequence discipline check: what should you set/hold at this point? [In the transition from straight and level to climb, at what speed is the throttle advanced to FULL?]",
+    "distractors": [
+      "90 kts",
+      "58 kts",
+      "65 kts"
+    ]
+  },
+  {
+    "id": "DV20-318",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 3 step 5 - descend",
+    "value": "ON before reducing power",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Normal procedures - Transition to descend (p.24)",
+    "question": "Full sequence loop 3, step 5 (descend): Sequence discipline check: what should you set/hold at this point? [In the transition to descent, what should be done with carburetor heat?]",
+    "distractors": [
+      "OFF until final approach",
+      "ON only below 15\" MP",
+      "Cycled ON/OFF every minute"
+    ]
+  },
+  {
+    "id": "DV20-319",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 3 step 6 - turns",
+    "value": "30\u00b0",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Normal procedures - Level turn (p.26)",
+    "question": "Full sequence loop 3, step 6 (turns): Sequence discipline check: what should you set/hold at this point? [What is the standard bank angle for a level turn?]",
+    "distractors": [
+      "45\u00b0",
+      "15\u00b0",
+      "20\u00b0"
+    ]
+  },
+  {
+    "id": "DV20-320",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 3 step 7 - downwind",
+    "value": "70 kts",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Landing - Circuit and normal landing, HARS (p.39)",
+    "question": "Full sequence loop 3, step 7 (downwind): Sequence discipline check: what should you set/hold at this point? [What speed is included in the downwind HARS check?]",
+    "distractors": [
+      "90 kts",
+      "60 kts",
+      "75 kts"
+    ]
+  },
+  {
+    "id": "DV20-321",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 3 step 8 - base",
+    "value": "45\u201360\u00b0 behind the wing",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Landing - Circuit and normal landing (p.39)",
+    "question": "Full sequence loop 3, step 8 (base): Sequence discipline check: what should you set/hold at this point? [When turning base, where should the threshold be relative to the wing?]",
+    "distractors": [
+      "30\u00b0 ahead of the wing",
+      "Directly abeam",
+      "90\u00b0 behind the wing"
+    ]
+  },
+  {
+    "id": "DV20-322",
+    "category": "Chair Flying - Full Sequence",
+    "type": "scenario",
+    "label": "Loop 3 step 9 - final",
+    "value": "60 kts",
+    "note": "Sequence: takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final.",
+    "source": "Powersetting table / Circuit and normal landing (p.18, 39)",
+    "question": "Full sequence loop 3, step 9 (final): Sequence discipline check: what should you set/hold at this point? [What is the minimum approach speed on final?]",
+    "distractors": [
+      "58 kts",
+      "70 kts",
+      "55 kts"
+    ]
+  }
+]
