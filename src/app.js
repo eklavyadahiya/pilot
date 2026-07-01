@@ -1025,6 +1025,7 @@ function startQuizSession() {
     index: 0,
     score: 0,
     answered: false,
+    selectedChoice: null,
     reveal: false
   };
   renderQuizCard();
@@ -1097,7 +1098,15 @@ function renderQuizCard() {
   const optionsHtml = options
     .map(([key, value]) => {
       const disabled = quizState.answered ? "disabled" : "";
-      return `<button class="quiz-option-btn" data-opt="${key}" type="button" ${disabled}>${escapeHtml(
+      let stateClass = "";
+      if (quizState.answered) {
+        if (key === question.correct) {
+          stateClass = " quiz-option-correct";
+        } else if (key === quizState.selectedChoice) {
+          stateClass = " quiz-option-incorrect";
+        }
+      }
+      return `<button class="quiz-option-btn${stateClass}" data-opt="${key}" type="button" ${disabled}>${escapeHtml(
         key
       )}. ${escapeHtml(value)}</button>`;
     })
@@ -1106,9 +1115,14 @@ function renderQuizCard() {
   let feedbackHtml = "";
   if (quizState.answered) {
     const correctText = question.options[question.correct] || "";
-    feedbackHtml = `<div class="quiz-feedback"><strong>Correct:</strong> ${escapeHtml(question.correct)} - ${escapeHtml(
+    const isCorrect = quizState.selectedChoice === question.correct;
+    const selectedText = question.options[quizState.selectedChoice] || "";
+    const resultLabel = isCorrect ? "Correct" : "Incorrect";
+    feedbackHtml = `<div class="quiz-feedback quiz-feedback-${isCorrect ? "correct" : "incorrect"}"><strong>${resultLabel}.</strong> You chose ${escapeHtml(
+      quizState.selectedChoice
+    )} - ${escapeHtml(selectedText)}. The correct answer is ${escapeHtml(question.correct)} - ${escapeHtml(
       correctText
-    )}</div>${renderSourceHtml(question)}`;
+    )}.</div>${renderSourceHtml(question)}`;
   }
 
   quizCardEl.innerHTML = `
@@ -1127,6 +1141,7 @@ function renderQuizCard() {
         return;
       }
       const choice = btn.dataset.opt;
+      quizState.selectedChoice = choice;
       if (choice === question.correct) {
         quizState.score += 1;
       }
@@ -1156,6 +1171,7 @@ function renderQuizCard() {
     }
     quizState.index += 1;
     quizState.answered = false;
+    quizState.selectedChoice = null;
     renderQuizCard();
   });
 }

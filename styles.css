@@ -258,8 +258,28 @@ input[type="file"] {
   text-align: left;
 }
 
+.quiz-option-btn.quiz-option-correct {
+  border-color: #15803d;
+  background: #dcfce7;
+  color: #14532d;
+}
+
+.quiz-option-btn.quiz-option-incorrect {
+  border-color: #b91c1c;
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
 .quiz-feedback {
   font-size: 0.92rem;
+}
+
+.quiz-feedback-correct {
+  color: #14532d;
+}
+
+.quiz-feedback-incorrect {
+  color: #7f1d1d;
 }
 
 .quiz-source {

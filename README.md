@@ -44,6 +44,19 @@ Use **Reset Wind Data** to clear only wind-related saved page data.
   - `Chair Flying - Mental Flows`
   - `Chair Flying - Phase Actions`
   - `Chair Flying - Full Sequence` (takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final)
+  - `Chair Flying - Phase Decision Drills`
+  - `Chair Flying - If Then Traps`
+  - `Chair Flying - Radio Timing & Calls`
+  - `Chair Flying - Emergency Pressure Loops`
+- Regenerate chair-flying scenario packs with:
+  - `python scripts/generate-chair-flying-pack.py --replace --write`
+  - `python scripts/cleanup-chair-flying-data.py --validate-only`
+- Validate question completeness (schema, distractors, truncated prompts, chair-flying context):
+  - `python scripts/cleanup-chair-flying-data.py --validate-only`
+  - Safe auto-fix for mangled labels and broken generated questions:
+    `python scripts/cleanup-chair-flying-data.py --validate-only --fix-completeness --write`
+- To strip low-quality generated categories and rewrite Full Sequence prompts:
+  - `python scripts/cleanup-chair-flying-data.py --write`
 
 ## Unified DV20 knowledge schema
 
