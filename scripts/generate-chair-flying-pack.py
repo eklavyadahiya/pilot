@@ -9,7 +9,20 @@ import json
 import re
 from pathlib import Path
 
-from knowledge_validation import anchor_context, is_complete_entry, normalize
+from knowledge_validation import (
+    STRUCTURED_VALUE_KINDS,
+    anchor_context,
+    check_entry_audit,
+    check_semantic_match,
+    classify_anchor,
+    classify_value_kind,
+    effective_label,
+    is_complete_entry,
+    is_radio_anchor,
+    is_verbal_callout_anchor,
+    normalize,
+    pick_same_kind_distractors,
+)
 
 
 SCHEMA_KEYS = {
@@ -67,57 +80,191 @@ CATEGORY_MATRIX = [
 QUESTION_TEMPLATES = {
     ("Chair Flying - Phase Decision Drills", "scenario"): [
         "You are chair-flying {anchor_context}. {anchor_question}",
-        "At {anchor_context}, what is the correct next action?",
-        "At this point in {anchor_context}, what should you do next?",
+        "At this point in {anchor_context}, {anchor_question}",
+        "While chair-flying {anchor_context}, {anchor_question}",
     ],
     ("Chair Flying - Phase Decision Drills", "procedure"): [
-        "In {anchor_context}, which procedure step applies here?",
-        "For {anchor_context}, what is the required action?",
+        "In {anchor_context}, which procedure step applies: {anchor_question}",
+        "For {anchor_context}, what is the required action for: {anchor_question}",
         "At {anchor_context}, what procedure step matches this cue: {anchor_question}",
     ],
     ("Chair Flying - Phase Decision Drills", "mental"): [
         "From memory at {anchor_context}: {anchor_question}",
-        "While chair-flying {anchor_context}, what is the correct response?",
+        "While chair-flying {anchor_context}, recall: {anchor_question}",
     ],
     ("Chair Flying - If Then Traps", "scenario"): [
-        "If you notice a problem at {anchor_context}, what should you do before continuing?",
-        "You are behind profile at {anchor_context}. What is the correct recovery?",
-        "If workload rises at {anchor_context}, what is the priority action?",
+        "If you notice a problem at {anchor_context}, {anchor_question}",
+        "You are behind profile at {anchor_context}. {anchor_question}",
+        "If workload rises at {anchor_context}, {anchor_question}",
     ],
     ("Chair Flying - If Then Traps", "procedure"): [
-        "If this trigger appears at {anchor_context}, what procedure step is required now?",
-        "At {anchor_context}, which action avoids the common trap?",
-        "If you miss this step at {anchor_context}, what procedure restores the correct state?",
+        "If this trigger appears at {anchor_context}, {anchor_question}",
+        "At {anchor_context}, which action avoids the trap for: {anchor_question}",
+        "If you miss this step at {anchor_context}, {anchor_question}",
     ],
     ("Chair Flying - If Then Traps", "checklist"): [
-        "If this checklist cue is missed at {anchor_context}, what must be done next?",
-        "At {anchor_context}, which checklist response restores the correct configuration?",
+        "If this checklist cue is missed at {anchor_context}, {anchor_question}",
+        "At {anchor_context}, which checklist response applies: {anchor_question}",
+        "During chair-flying at {anchor_context}, if you skip this checklist item: {anchor_question}",
+        "While chair-flying at {anchor_context}, after missing this checklist cue: {anchor_question}",
     ],
     ("Chair Flying - Radio Timing & Calls", "mental"): [
-        "What call or action should you verbalize for {anchor_context}?",
-        "While chair-flying {anchor_context}, what is the correct spoken response?",
+        "While chair-flying {anchor_context}, {anchor_question}",
+        "At {anchor_context}, recall: {anchor_question}",
+        "From memory while chair-flying {anchor_context}: {anchor_question}",
+        "During chair-flying at {anchor_context}, {anchor_question}",
     ],
     ("Chair Flying - Radio Timing & Calls", "scenario"): [
-        "At {anchor_context}, what call or action is correct?",
-        "When reaching {anchor_context}, what should you transmit or execute?",
+        "At {anchor_context}, {anchor_question}",
+        "When reaching {anchor_context}, {anchor_question}",
+        "You are chair-flying {anchor_context}. {anchor_question}",
+        "In the {anchor_context} phase, {anchor_question}",
     ],
     ("Chair Flying - Radio Timing & Calls", "reference"): [
-        "Recall the standard call or action for {anchor_context}.",
-        "Which reference-standard response applies at {anchor_context}?",
+        "From memory for {anchor_context}: {anchor_question}",
+        "Which standard applies at {anchor_context}? {anchor_question}",
+        "Recall for {anchor_context}: {anchor_question}",
+        "Reference check at {anchor_context}: {anchor_question}",
     ],
     ("Chair Flying - Emergency Pressure Loops", "scenario"): [
-        "Under time pressure at {anchor_context}, what is your first stabilizing action?",
-        "In a high-workload branch at {anchor_context}, what immediate response is correct?",
-        "If workload spikes at {anchor_context}, what is the correct next action?",
+        "Under time pressure at {anchor_context}, {anchor_question}",
+        "In a high-workload branch at {anchor_context}, {anchor_question}",
+        "If workload spikes at {anchor_context}, {anchor_question}",
     ],
     ("Chair Flying - Emergency Pressure Loops", "procedure"): [
-        "For this trigger at {anchor_context}, what procedure step must happen without delay?",
-        "At {anchor_context}, what emergency procedure step is required now?",
+        "For this trigger at {anchor_context}, {anchor_question}",
+        "At {anchor_context}, what emergency step applies: {anchor_question}",
     ],
     ("Chair Flying - Emergency Pressure Loops", "checklist"): [
-        "With this cue at {anchor_context}, which checklist action keeps you in the safe branch?",
-        "If this trigger appears under pressure at {anchor_context}, what checklist item is mandatory next?",
+        "With this cue at {anchor_context}, {anchor_question}",
+        "If this trigger appears under pressure at {anchor_context}, {anchor_question}",
+        "Under pressure at {anchor_context}, which checklist step applies: {anchor_question}",
     ],
+}
+
+KIND_TEMPLATES = {
+    ("Chair Flying - Phase Decision Drills", "scenario", "speed"): [
+        "You are chair-flying {anchor_context}. {anchor_question}",
+        "At this point in {anchor_context}, {anchor_question}",
+    ],
+    ("Chair Flying - Phase Decision Drills", "scenario", "numeric"): [
+        "You are chair-flying {anchor_context}. {anchor_question}",
+        "At this point in {anchor_context}, {anchor_question}",
+    ],
+    ("Chair Flying - Phase Decision Drills", "procedure", "speed"): [
+        "For {anchor_context}, {anchor_question}",
+        "In {anchor_context}, confirm the procedure: {anchor_question}",
+    ],
+    ("Chair Flying - Phase Decision Drills", "procedure", "numeric"): [
+        "For {anchor_context}, {anchor_question}",
+        "In {anchor_context}, confirm the procedure: {anchor_question}",
+    ],
+    ("Chair Flying - Phase Decision Drills", "mental", "speed"): [
+        "From memory at {anchor_context}: {anchor_question}",
+        "While chair-flying {anchor_context}, recall: {anchor_question}",
+    ],
+    ("Chair Flying - If Then Traps", "scenario", "speed"): [
+        "If you notice a problem at {anchor_context}, {anchor_question}",
+        "You are behind profile at {anchor_context}. {anchor_question}",
+    ],
+    ("Chair Flying - If Then Traps", "procedure", "speed"): [
+        "If this trigger appears at {anchor_context}, {anchor_question}",
+        "If you miss this step at {anchor_context}, {anchor_question}",
+    ],
+    ("Chair Flying - If Then Traps", "checklist", "checklist"): [
+        "If this checklist cue is missed at {anchor_context}, {anchor_question}",
+        "At {anchor_context}, which checklist response applies: {anchor_question}",
+    ],
+    ("Chair Flying - If Then Traps", "checklist", "numeric"): [
+        "If this checklist cue is missed at {anchor_context}, {anchor_question}",
+        "At {anchor_context}, {anchor_question}",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "mental", "radio"): [
+        "What radio call is required at {anchor_context}?",
+        "While chair-flying {anchor_context}, what should you transmit?",
+        "At {anchor_context}: {anchor_question}",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "scenario", "radio"): [
+        "At {anchor_context}, what radio call is correct?",
+        "When reaching {anchor_context}, what should you transmit to ATC?",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "reference", "radio"): [
+        "Recall the standard radio call for {anchor_context}.",
+        "Which reference-standard transmission applies at {anchor_context}?",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "mental", "speed"): [
+        "While chair-flying {anchor_context}, what speed do you call out?",
+        "At {anchor_context}, what speed do you say aloud?",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "scenario", "speed"): [
+        "When reaching {anchor_context}, what verbal speed callout applies?",
+        "At {anchor_context}, what target speed do you verbalize?",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "reference", "speed"): [
+        "Recall the target speed callout for {anchor_context}.",
+        "Which reference speed do you verbalize at {anchor_context}?",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "mental", "numeric"): [
+        "While chair-flying {anchor_context}, what do you call out aloud?",
+        "At {anchor_context}, what value do you verbalize?",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "scenario", "numeric"): [
+        "When reaching {anchor_context}, what verbal callout is correct?",
+        "At {anchor_context}, what do you say aloud to confirm the setting?",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "reference", "numeric"): [
+        "Recall the standard verbal callout for {anchor_context}.",
+        "Which reference value do you verbalize at {anchor_context}?",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "mental", "checklist"): [
+        "While chair-flying {anchor_context}, what checklist item do you call out?",
+        "At {anchor_context}, what configuration do you verbalize?",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "scenario", "checklist"): [
+        "When reaching {anchor_context}, what checklist callout is correct?",
+        "At {anchor_context}, what checklist setting do you say aloud?",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "reference", "checklist"): [
+        "Recall the checklist callout for {anchor_context}.",
+        "Which checklist response do you verbalize at {anchor_context}?",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "mental", "procedure"): [
+        "While chair-flying {anchor_context}, what do you say aloud to confirm this step?",
+        "At {anchor_context}, what verbal confirmation applies?",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "scenario", "procedure"): [
+        "When reaching {anchor_context}, what do you say to confirm the procedure step?",
+        "At {anchor_context}, what spoken confirmation is required?",
+    ],
+    ("Chair Flying - Emergency Pressure Loops", "scenario", "speed"): [
+        "Under time pressure at {anchor_context}, {anchor_question}",
+        "In a high-workload branch at {anchor_context}, {anchor_question}",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "reference", "procedure"): [
+        "From memory for {anchor_context}: {anchor_question}",
+        "Which standard applies at {anchor_context}? {anchor_question}",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "mental", "other"): [
+        "While chair-flying {anchor_context}, {anchor_question}",
+        "At {anchor_context}, recall: {anchor_question}",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "scenario", "other"): [
+        "At {anchor_context}, {anchor_question}",
+        "When reaching {anchor_context}, {anchor_question}",
+    ],
+    ("Chair Flying - Radio Timing & Calls", "reference", "other"): [
+        "From memory for {anchor_context}: {anchor_question}",
+        "Which standard applies at {anchor_context}? {anchor_question}",
+    ],
+    ("Chair Flying - Emergency Pressure Loops", "procedure", "speed"): [
+        "For this trigger at {anchor_context}, {anchor_question}",
+        "At {anchor_context} under pressure, {anchor_question}",
+    ],
+}
+
+INCOMPATIBLE_TEMPLATE_RES = {
+    ("Chair Flying - Phase Decision Drills", "procedure"): re.compile(r"\bprocedure step\b", re.I),
+    ("Chair Flying - If Then Traps", "checklist"): re.compile(r"\bchecklist response applies\b", re.I),
 }
 
 LEVEL_NOTES = {
@@ -125,20 +272,6 @@ LEVEL_NOTES = {
     2: "Level 2 ambiguous alternatives.",
     3: "Level 3 sequence continuity.",
 }
-
-RADIO_VALUE_HINTS = (
-    "radio call",
-    "transmit",
-    " readback",
-    "squawk",
-    "call sign",
-    "report traffic",
-    "mandatory call",
-    "atc",
-    " tower",
-    "contact tower",
-    "announce",
-)
 
 
 def stable_index(seed: str, size: int) -> int:
@@ -155,52 +288,101 @@ def compact_question(question: str) -> str:
     return cleaned
 
 
-def is_radio_anchor(anchor: dict) -> bool:
-    haystack = " ".join(
-        [
-            str(anchor.get("value", "")),
-            str(anchor.get("label", "")),
-            str(anchor.get("question", "")),
-            str(anchor.get("source", "")),
-        ]
-    ).lower()
-    return any(hint in haystack for hint in RADIO_VALUE_HINTS)
+def anchor_question_for_template(anchor: dict) -> str:
+    """Use anchor question text without repeating checklist/phase context."""
+    question = compact_question(anchor["question"])
+    lowered = question.lower()
+    if lowered.startswith("on the ") and "checklist" in lowered[:50]:
+        match = re.search(r"checklist,\s*(.+)$", question, re.I)
+        if match:
+            return compact_question(match.group(1))
+    if lowered.startswith("during the ") and "checklist" in lowered[:50]:
+        match = re.search(r"checklist,\s*(.+)$", question, re.I)
+        if match:
+            return compact_question(match.group(1))
+    return question
+
+
+def templates_for(category: str, target_type: str, anchor: dict) -> list[str]:
+    kind = classify_anchor(anchor)
+    kind_key = (category, target_type, kind)
+    if kind_key in KIND_TEMPLATES:
+        return KIND_TEMPLATES[kind_key]
+
+    base = QUESTION_TEMPLATES.get((category, target_type), [])
+    if category == "Chair Flying - Radio Timing & Calls" and kind != "radio":
+        generic_radio = re.compile(r"\b(call or action|verbalize for|standard call|transmit or execute)\b", re.I)
+        filtered = [template for template in base if not generic_radio.search(template)]
+        if filtered:
+            base = filtered
+    if kind in {"speed", "numeric"}:
+        incompatible = INCOMPATIBLE_TEMPLATE_RES.get((category, target_type))
+        if incompatible:
+            filtered = [template for template in base if not incompatible.search(template)]
+            if filtered:
+                return filtered
+    if kind == "checklist" and target_type == "checklist":
+        return base
+    if kind in {"procedure", "scenario", "mental", "reference", "other", "radio"}:
+        return base
+    return base
+
+
+def category_pool(category_name: str, target_type: str, type_pool: list[dict], anchors: list[dict]) -> list[dict]:
+    if category_name == "Chair Flying - Radio Timing & Calls":
+        return anchors
+    pool = type_pool if type_pool else anchors
+    return pool
 
 
 def choose_distractors(anchor: dict, pool: list[dict], global_values: list[str], seed: str) -> list[str]:
     answer_norm = normalize(str(anchor["value"]))
-    chosen: list[str] = []
-    seen: set[str] = set()
+    kind = classify_value_kind(str(anchor["value"]))
+    kind_pool = [
+        str(item["value"]).strip()
+        for item in pool
+        if classify_value_kind(str(item["value"])) == kind and normalize(str(item["value"])) != answer_norm
+    ]
+    if len(kind_pool) < 3:
+        kind_pool.extend(
+            str(item).strip()
+            for item in global_values
+            if classify_value_kind(str(item)) == kind and normalize(str(item)) != answer_norm
+        )
+    kind_pool = list(dict.fromkeys(kind_pool))
+    combined_pool = kind_pool or [
+        str(item["value"]).strip() for item in pool if normalize(str(item["value"])) != answer_norm
+    ]
+    combined_pool = combined_pool or [item for item in global_values if normalize(str(item)) != answer_norm]
 
-    def try_add(raw: str) -> None:
+    chosen = pick_same_kind_distractors(
+        str(anchor["value"]),
+        combined_pool,
+        seed,
+        count=3,
+        existing=list(anchor.get("distractors", [])),
+    )
+    if len(chosen) >= 3:
+        return chosen[:3]
+
+    if kind in STRUCTURED_VALUE_KINDS:
+        raise RuntimeError(f"Unable to build three {kind} distractors")
+
+    # Last resort for procedure/text answers: any distinct compatible values.
+    fallback: list[str] = list(chosen)
+    seen = {normalize(str(anchor["value"]))} | {normalize(item) for item in fallback}
+    for raw in combined_pool + global_values:
         cleaned = re.sub(r"\s+", " ", str(raw).strip())
-        if not cleaned:
-            return
         key = normalize(cleaned)
-        if not key or key == answer_norm or key in seen:
-            return
-        chosen.append(cleaned)
+        if not key or key in seen:
+            continue
+        fallback.append(cleaned)
         seen.add(key)
-
-    for item in anchor.get("distractors", []):
-        try_add(item)
-
-    start_pool = stable_index(seed + "|pool", len(pool))
-    for idx in range(len(pool)):
-        if len(chosen) >= 3:
+        if len(fallback) >= 3:
             break
-        try_add(pool[(start_pool + idx) % len(pool)]["value"])
-
-    start_global = stable_index(seed + "|global", len(global_values))
-    for idx in range(len(global_values)):
-        if len(chosen) >= 3:
-            break
-        try_add(global_values[(start_global + idx) % len(global_values)])
-
-    if len(chosen) < 3:
+    if len(fallback) < 3:
         raise RuntimeError("Unable to build three distractors")
-
-    return chosen[:3]
+    return fallback[:3]
 
 
 def build_entry(
@@ -210,33 +392,52 @@ def build_entry(
     seq: int,
     pool: list[dict],
     global_values: list[str],
-) -> dict:
+    variant: int = 0,
+) -> dict | None:
+    pool_len = max(len(pool), 1)
+    pass_num = seq // pool_len
     level = (seq % 3) + 1
-    loop = (seq // max(1, len(pool))) + 1
-    templates = QUESTION_TEMPLATES[(category_conf["category"], target_type)]
-    template = templates[seq % len(templates)]
-    question = compact_question(
-        template.format(
-            anchor_context=anchor_context(anchor),
-            anchor_label=anchor["label"],
-            anchor_question=compact_question(anchor["question"]),
-            source=anchor["source"],
+    loop = pass_num + 1
+    templates = templates_for(category_conf["category"], target_type, anchor)
+    if not templates:
+        return None
+
+    seed_base = f"{category_conf['category']}|{target_type}|{anchor['id']}|{seq}|{variant}"
+    start = (pass_num + variant) % len(templates)
+
+    for offset in range(len(templates)):
+        template = templates[(start + offset) % len(templates)]
+        question = compact_question(
+            template.format(
+                anchor_context=anchor_context(anchor),
+                anchor_label=effective_label(anchor),
+                anchor_question=anchor_question_for_template(anchor),
+                source=anchor["source"],
+            )
         )
-    )
-    label = f"{category_conf['label_prefix']} L{level} loop {loop} - {anchor['label']}"
-    seed = f"{category_conf['category']}|{target_type}|{anchor['id']}|{seq}"
-    distractors = choose_distractors(anchor, pool, global_values, seed)
-    return {
-        "id": "",
-        "category": category_conf["category"],
-        "type": target_type,
-        "label": label,
-        "value": anchor["value"],
-        "note": f"{category_conf['note']} {LEVEL_NOTES[level]}",
-        "source": anchor["source"],
-        "question": question,
-        "distractors": distractors,
-    }
+        label = f"{category_conf['label_prefix']} L{level} loop {loop} - {effective_label(anchor)}"
+        seed = f"{seed_base}|{offset}"
+        try:
+            distractors = choose_distractors(anchor, pool, global_values, seed)
+        except RuntimeError:
+            continue
+        candidate = {
+            "id": "",
+            "category": category_conf["category"],
+            "type": target_type,
+            "label": label,
+            "value": anchor["value"],
+            "note": f"{category_conf['note']} {LEVEL_NOTES[level]}",
+            "source": anchor["source"],
+            "question": question,
+            "distractors": distractors,
+        }
+        if check_semantic_match(candidate):
+            continue
+        if check_entry_audit(candidate):
+            continue
+        return candidate
+    return None
 
 
 def main() -> None:
@@ -292,24 +493,32 @@ def main() -> None:
         counts_by_category[category_name] = 0
         for target_type, target_count in category_conf["type_targets"].items():
             type_pool = anchors_by_type.get(target_type) or []
-            pool = type_pool if len(type_pool) >= target_count else anchors
-            if category_name == "Chair Flying - Radio Timing & Calls":
-                radio_pool = [item for item in pool if is_radio_anchor(item)]
-                if len(radio_pool) >= 3:
-                    pool = radio_pool
+            pool = category_pool(category_name, target_type, type_pool, anchors)
             offset = stable_index(f"{category_name}|{target_type}", len(pool))
             made = 0
             cursor = 0
-            attempt_limit = target_count * 40
+            attempt_limit = target_count * 80
 
             while made < target_count and cursor < attempt_limit:
                 anchor = pool[(offset + cursor) % len(pool)]
-                candidate = build_entry(category_conf, target_type, anchor, cursor, pool, global_values)
+                candidate = None
+                for variant in range(max(len(templates_for(category_name, target_type, anchor)) * 2, 4)):
+                    candidate = build_entry(
+                        category_conf, target_type, anchor, cursor, pool, global_values, variant=variant
+                    )
+                    if candidate is None:
+                        continue
+                    question_key = f"{category_name}|{normalize(candidate['question'])}"
+                    if question_key in question_set:
+                        candidate = None
+                        continue
+                    break
+                cursor += 1
+                if candidate is None:
+                    continue
                 if not is_complete_entry(candidate):
-                    cursor += 1
                     continue
                 question_key = f"{category_name}|{normalize(candidate['question'])}"
-                cursor += 1
                 if question_key in question_set:
                     continue
                 question_set.add(question_key)

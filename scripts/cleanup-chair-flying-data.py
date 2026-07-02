@@ -12,8 +12,15 @@ from pathlib import Path
 
 from knowledge_validation import (
     GENERATED_CATEGORIES,
-    apply_label_fixes,
+    audit_entries,
+    check_entry_audit,
     check_entry_completeness,
+    classify_value_kind,
+    fix_bad_labels,
+    fix_garbage_questions,
+    normalize,
+    pick_same_kind_distractors,
+    strip_page_refs,
     validate_entries,
 )
 
@@ -127,8 +134,10 @@ def fix_completeness(entries: list[dict]) -> dict[str, int]:
         "fixed_labels": 0,
         "rewritten_generated_questions": 0,
         "updated_generated_labels": 0,
+        "fixed_garbage_questions": 0,
     }
-    stats["fixed_labels"] = apply_label_fixes(entries)
+    stats["fixed_labels"] = fix_bad_labels(entries)
+    stats["fixed_garbage_questions"] = fix_garbage_questions(entries)
 
     generator = load_generator_module()
     seen_questions: set[str] = {
@@ -200,6 +209,60 @@ def fix_completeness(entries: list[dict]) -> dict[str, int]:
     return stats
 
 
+def fix_audit_issues(entries: list[dict]) -> dict[str, int]:
+    """Rewrite questions and distractors flagged by the quality audit."""
+    stats = {
+        "stripped_page_refs": 0,
+        "fixed_distractors": 0,
+        "removed_unsalvageable": 0,
+    }
+
+    kind_pools: dict[str, list[str]] = {}
+    for entry in entries:
+        value = str(entry.get("value", "")).strip()
+        if not value:
+            continue
+        kind = classify_value_kind(value)
+        kind_pools.setdefault(kind, [])
+        if value not in kind_pools[kind]:
+            kind_pools[kind].append(value)
+
+    global_values = [str(entry.get("value", "")).strip() for entry in entries if str(entry.get("value", "")).strip()]
+    kept: list[dict] = []
+
+    for entry in entries:
+        entry_id = str(entry.get("id", "")).strip()
+        question = str(entry.get("question", "")).strip()
+        cleaned_question = strip_page_refs(question)
+        if cleaned_question != question:
+            entry["question"] = cleaned_question
+            question = cleaned_question
+            stats["stripped_page_refs"] += 1
+
+        issues = check_entry_audit(entry)
+        distractor_issues = [issue for issue in issues if "distractor" in issue]
+        if distractor_issues:
+            value = str(entry.get("value", "")).strip()
+            kind = classify_value_kind(value)
+            pool = kind_pools.get(kind) or global_values
+            seed = f"fix|{entry_id}|{value}"
+            new_distractors = pick_same_kind_distractors(value, pool, seed, count=3, existing=[])
+            if len(new_distractors) == 3 and not check_entry_audit({**entry, "distractors": new_distractors}):
+                entry["distractors"] = new_distractors
+                stats["fixed_distractors"] += 1
+                issues = check_entry_audit(entry)
+
+        if issues and str(entry.get("category", "")) in GENERATED_CATEGORIES:
+            stats["removed_unsalvageable"] += 1
+            continue
+
+        kept.append(entry)
+
+    entries.clear()
+    entries.extend(kept)
+    return stats
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", default="data/dv20-knowledge.json")
@@ -213,6 +276,11 @@ def main() -> int:
         "--fix-completeness",
         action="store_true",
         help="Apply safe completeness fixes (labels and generated question rewrites)",
+    )
+    parser.add_argument(
+        "--fix-audit",
+        action="store_true",
+        help="Strip page refs, fix distractor types, and drop unsalvageable generated entries",
     )
     parser.add_argument("--write", action="store_true")
     args = parser.parse_args()
@@ -240,7 +308,12 @@ def main() -> int:
     if args.fix_completeness:
         fix_stats = fix_completeness(cleaned)
 
+    audit_stats: dict[str, int] = {}
+    if args.fix_audit:
+        audit_stats = fix_audit_issues(cleaned)
+
     errors = validate_entries(cleaned)
+    audit_issues, _reason_counts = audit_entries(cleaned)
 
     print(f"original_entries={original_count}")
     print(f"validated_entries={len(cleaned)}")
@@ -251,7 +324,11 @@ def main() -> int:
     if fix_stats:
         for key, value in fix_stats.items():
             print(f"{key}={value}")
+    if audit_stats:
+        for key, value in audit_stats.items():
+            print(f"{key}={value}")
     print(f"validation_errors={len(errors)}")
+    print(f"audit_issues={len(audit_issues)}")
     for error in errors[:20]:
         print(f"  - {error}")
     if len(errors) > 20:
@@ -264,7 +341,7 @@ def main() -> int:
             handle.write("\n")
         print(f"wrote={output_path}")
 
-    return 1 if errors else 0
+    return 1 if errors or audit_issues else 0
 
 
 if __name__ == "__main__":

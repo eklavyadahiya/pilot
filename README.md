@@ -58,6 +58,30 @@ Use **Reset Wind Data** to clear only wind-related saved page data.
 - To strip low-quality generated categories and rewrite Full Sequence prompts:
   - `python scripts/cleanup-chair-flying-data.py --write`
 
+## Auditing every question
+
+Every entry in `data/dv20-knowledge.json` is checked individually (no sampling). The audit runs schema, completeness, label quality, semantic match, distractor plausibility, question–value alignment, answerability, bad context slots, near-duplicates, and explicit red-flag pattern scans.
+
+Regenerate the per-entry audit report and human-review spreadsheet:
+
+```bash
+python scripts/audit-knowledge.py
+```
+
+Apply safe automatic fixes (labels, garbage questions, short context slots) and re-audit:
+
+```bash
+python scripts/audit-knowledge.py --fix
+```
+
+Outputs:
+
+- `data/knowledge-audit-report.jsonl` — one JSON object per entry (`id`, `status`, `issues`, …)
+- `data/knowledge-audit-summary.json` — totals, failure counts by reason and category
+- `data/knowledge-review.tsv` — all entries in tab-separated format for spreadsheet review
+
+The script prints a red-flag scan to stdout; all counts must be zero before the bank is considered clean.
+
 ## Unified DV20 knowledge schema
 
 All DV20 training facts are sourced from one file: `data/dv20-knowledge.json`.
