@@ -935,6 +935,7 @@ function normalizeKnowledgeEntry(record, index) {
     note: String(record?.note || "").trim(),
     source: String(record?.source || "").trim(),
     question: String(record?.question || "").trim(),
+    explanation: String(record?.explanation || "").trim(),
     distractors
   };
 }
@@ -971,7 +972,8 @@ function buildQuestionBankFromKnowledge(entries) {
       question: entry.question,
       options,
       correct,
-      source: entry.source
+      source: entry.source,
+      explanation: entry.explanation
     };
   });
 }
@@ -1066,7 +1068,7 @@ function renderQuizCard() {
       const correctText = getFlashcardAnswerText(question);
       answerHtml = `<div class="quiz-feedback"><strong>Answer:</strong> ${escapeHtml(
         correctText
-      )}</div>${renderSourceHtml(question)}`;
+      )}</div>${renderExplanationHtml(question)}${renderSourceHtml(question)}`;
     }
 
     quizCardEl.innerHTML = `
@@ -1122,7 +1124,7 @@ function renderQuizCard() {
       quizState.selectedChoice
     )} - ${escapeHtml(selectedText)}. The correct answer is ${escapeHtml(question.correct)} - ${escapeHtml(
       correctText
-    )}.</div>${renderSourceHtml(question)}`;
+    )}.</div>${renderExplanationHtml(question)}${renderSourceHtml(question)}`;
   }
 
   quizCardEl.innerHTML = `
@@ -1218,6 +1220,14 @@ function updateQuizMeta() {
 function getFlashcardAnswerText(question) {
   const answer = question?.options?.[question?.correct];
   return answer && answer.trim() ? answer : String(question?.correct || "").trim();
+}
+
+function renderExplanationHtml(question) {
+  const explanation = question?.explanation && String(question.explanation).trim();
+  if (!explanation) {
+    return "";
+  }
+  return `<div class="quiz-explanation"><strong>Explanation:</strong> ${escapeHtml(explanation)}</div>`;
 }
 
 function renderSourceHtml(question) {

@@ -282,6 +282,21 @@ input[type="file"] {
   color: #7f1d1d;
 }
 
+.quiz-explanation {
+  margin-top: 0.5rem;
+  padding: 0.65rem 0.75rem;
+  border-left: 3px solid #2563eb;
+  border-radius: 0 6px 6px 0;
+  background: #eff6ff;
+  color: #1e3a5f;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.quiz-explanation strong {
+  color: #1d4ed8;
+}
+
 .quiz-source {
   margin-top: 0.35rem;
   font-size: 0.8rem;

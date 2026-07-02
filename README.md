@@ -39,11 +39,12 @@ Use **Reset Wind Data** to clear only wind-related saved page data.
 - **Start Quiz (50)**: randomizes from the selected category pool and serves up to 50.
 - **Start Flashcards**: randomizes the selected category pool and reveals answer text only.
 - Each question's options are built from `value` + `distractors` and shuffled once per page load.
+- After each quiz answer, an **explanation** teaches why the correct answer is right (shown whether you were correct or incorrect).
 - Source citations from the PDF are shown in quiz and flashcard feedback.
 
 ### Knowledge bank curation
 
-The question bank is **manually curated** from `PROCEDURES-DV20-V1.8-01052026.pdf` (ACHA DV20 procedures, v1.8). The bank contains **394 entries** (197 PDF-sourced originals plus 197 hand-written rephrased variants). Each entry is a standalone quiz question — no template wrappers or script-generated text.
+The question bank is **manually curated** from `PROCEDURES-DV20-V1.8-01052026.pdf` (ACHA DV20 procedures, v1.8). The bank contains **420 entries** (197 PDF-sourced originals plus 197 hand-written rephrased variants, plus additional entries). Each entry is a standalone quiz question — no template wrappers or script-generated text.
 
 To add or edit questions:
 
@@ -73,7 +74,8 @@ The app derives all three views from it:
     "note": "",
     "source": "General aircraft numbers - Speeds (p.17)",
     "question": "What is Vy (best rate of climb) for the DV20?",
-    "distractors": ["58 kts", "65 kts", "90 kts"]
+    "distractors": ["58 kts", "65 kts", "90 kts"],
+    "explanation": "Vy is 70 kts with flaps UP — the speed that gives the greatest altitude gain per minute in a clean climb, per the speeds table on p.17."
   }
 ]
 ```
@@ -86,6 +88,7 @@ Required fields per knowledge entry:
 - `value` (string; correct quiz answer and primary flashcard answer)
 - `question` (string; quiz/flashcard prompt)
 - `distractors` (array of 3 strings)
+- `explanation` (string; 1–3 sentences teaching why the correct answer is right; shown in quiz and flashcard feedback)
 
 Optional fields:
 - `note` (string; extra context shown in guide/flashcards)

@@ -12,7 +12,8 @@
       "Set flaps T/O and reduce to idle power",
       "Retract flaps and turn electric fuel pump OFF",
       "Extend flaps LDG and set MAX RPM"
-    ]
+    ],
+    "explanation": "Once you are at least 200 ft AAL, the AFTER TAKE-OFF checklist calls for flaps UP and 2400 RPM so you transition from takeoff configuration into a clean climb with the prop set for normal climb power."
   },
   {
     "id": "DV20-002",
@@ -27,7 +28,8 @@
       "3000 ft AGL",
       "700 ft AAL",
       "Immediately after flap retraction"
-    ]
+    ],
+    "explanation": "The electric fuel pump is a backup; above 1000 ft AAL the engine-driven pump should be providing adequate fuel pressure, so the electric pump is switched OFF to avoid unnecessary wear and to confirm the primary system is working."
   },
   {
     "id": "DV20-003",
@@ -42,7 +44,8 @@
       "1500 RPM",
       "1100 RPM",
       "2400 RPM"
-    ]
+    ],
+    "explanation": "1700 RPM is the standard run-up power with brakes held — high enough to check magnetos, prop, and carb heat, but low enough to keep the aircraft stationary and manageable on the ground."
   },
   {
     "id": "DV20-004",
@@ -57,7 +60,8 @@
       "5 seconds",
       "15 seconds",
       "30 seconds"
-    ]
+    ],
+    "explanation": "The CAUTION on engine start limits how long you may wait for oil pressure: if it stays below 1.5 bar, shut down within 10 seconds to avoid running the engine without proper lubrication."
   },
   {
     "id": "DV20-005",
@@ -72,7 +76,8 @@
       "OFF",
       "T/O",
       "UP"
-    ]
+    ],
+    "explanation": "Carburetor heat ON on downwind prevents carburetor icing during the prolonged low-power phase of the circuit, when the throttle is often well below 20\" MP."
   },
   {
     "id": "DV20-006",
@@ -87,7 +92,8 @@
       "70 kts",
       "65 kts",
       "51 kts"
-    ]
+    ],
+    "explanation": "58 kts is Vx with flaps T/O — the best angle of climb speed used on a balked landing to gain altitude quickly while obstacles may still be a factor."
   },
   {
     "id": "DV20-007",
@@ -102,7 +108,8 @@
       "64 kts",
       "59 kts",
       "90 kts"
-    ]
+    ],
+    "explanation": "70 kts is the initial target after engine failure in cruise — it matches best glide with flaps UP and gives you time to fly the airplane and plan your landing before further configuration changes."
   },
   {
     "id": "DV20-008",
@@ -117,7 +124,8 @@
       "70 kts",
       "43 kts",
       "55 kts"
-    ]
+    ],
+    "explanation": "59 kts is the specified approach speed for an emergency landing with the engine off, balancing controllability with minimum sink in the landing configuration."
   },
   {
     "id": "DV20-009",
@@ -132,7 +140,8 @@
       "Lowered by 10 kts",
       "Unchanged from normal",
       "Raised by 5 kts"
-    ]
+    ],
+    "explanation": "With flaps stuck UP you lose the drag and lift benefit of landing flaps, so approach speed is raised by 10 kts to maintain adequate control margin above the higher stall speed."
   },
   {
     "id": "DV20-010",
@@ -147,7 +156,8 @@
       "1700 RPM",
       "2400 RPM ±100 RPM",
       "1100 RPM"
-    ]
+    ],
+    "explanation": "During cold taxi warm-up, 1100–1500 RPM is enough to bring engine oil to 50 °C without excessive brake loading or overheating on the ground."
   },
   {
     "id": "DV20-011",
@@ -162,7 +172,8 @@
       "58 kts",
       "65 kts",
       "90 kts"
-    ]
+    ],
+    "explanation": "Vy of 70 kts with flaps UP is the speed that produces the greatest rate of climb in the clean configuration — more altitude per minute than Vx, which optimizes angle instead."
   },
   {
     "id": "DV20-012",
@@ -177,7 +188,8 @@
       "75 kts",
       "58 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "With takeoff flaps still selected, Vy drops to 65 kts because the wing produces more lift at a lower angle of attack, changing the best rate-of-climb point."
   },
   {
     "id": "DV20-013",
@@ -192,7 +204,8 @@
       "51 kts",
       "65 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "Vx of 58 kts with flaps T/O gives the steepest climb path — use it when you need to clear an obstacle rather than maximize climb rate."
   },
   {
     "id": "DV20-014",
@@ -207,7 +220,8 @@
       "39 kts",
       "58 kts",
       "38 kts"
-    ]
+    ],
+    "explanation": "VS1 of 43 kts is the clean-configuration stall speed (flaps UP) — the baseline reference for approach margins and slow-flight training."
   },
   {
     "id": "DV20-015",
@@ -222,7 +236,8 @@
       "43 kts",
       "55 kts",
       "39 kts"
-    ]
+    ],
+    "explanation": "VSO of 38 kts is the stall speed with landing flaps — the lower end of the white arc on the airspeed indicator."
   },
   {
     "id": "DV20-016",
@@ -237,7 +252,8 @@
       "104 kts",
       "117 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "VFE of 81 kts is the maximum speed with flaps extended; exceeding it risks structural damage to the flap system, which is why flap changes require a \"Speed checked\" callout below this limit."
   },
   {
     "id": "DV20-017",
@@ -252,7 +268,8 @@
       "117 kts",
       "90 kts",
       "161 kts"
-    ]
+    ],
+    "explanation": "VA of 104 kts is maneuvering speed — below this speed the wing will stall before exceeding the design load limit in full-deflection maneuvers."
   },
   {
     "id": "DV20-018",
@@ -267,7 +284,8 @@
       "20 kts",
       "25 kts",
       "10 kts"
-    ]
+    ],
+    "explanation": "15 kts is the maximum demonstrated crosswind component; it represents flight-test experience, not a hard legal limit, but is the figure you plan around for safe operations."
   },
   {
     "id": "DV20-019",
@@ -282,7 +300,8 @@
       "58 kts",
       "59 kts",
       "64 kts"
-    ]
+    ],
+    "explanation": "Best glide with flaps UP is 70 kts — the speed that maximizes range and time aloft after an engine failure in the clean configuration."
   },
   {
     "id": "DV20-020",
@@ -297,7 +316,8 @@
       "70 kts",
       "59 kts",
       "65 kts"
-    ]
+    ],
+    "explanation": "With takeoff flaps out, best glide is 64 kts — slightly slower than clean because the extended flaps change the wing's lift/drag characteristics."
   },
   {
     "id": "DV20-021",
@@ -312,7 +332,8 @@
       "495 kg",
       "750 kg",
       "511 kg"
-    ]
+    ],
+    "explanation": "730 kg is the maximum takeoff weight for PH-MFT and PH-SKM; exceeding it violates loading limits and degrades performance margins."
   },
   {
     "id": "DV20-022",
@@ -327,7 +348,8 @@
       "100 liters",
       "58 liters",
       "79 liters"
-    ]
+    ],
+    "explanation": "77 liters is the usable fuel capacity — the quantity you can actually burn in flight, distinct from total tank capacity which includes unusable fuel."
   },
   {
     "id": "DV20-023",
@@ -342,7 +364,8 @@
       "10:1",
       "7:1",
       "20:1"
-    ]
+    ],
+    "explanation": "A 14:1 glide ratio means for every 1000 ft of altitude you can glide roughly 2.8 nm in still air — a planning figure for engine-out scenarios."
   },
   {
     "id": "DV20-024",
@@ -357,7 +380,8 @@
       "20\" MP",
       "±21\" MP, speed 70 kts",
       "12–15\" MP"
-    ]
+    ],
+    "explanation": "25\" MP, 2400 RPM, and 90 kts is the standard straight-and-level cruise setting — a balanced power configuration for efficient level flight per the normal procedures."
   },
   {
     "id": "DV20-025",
@@ -372,7 +396,8 @@
       "20\" MP",
       "±21\" MP, speed 70 kts",
       "12–15\" MP"
-    ]
+    ],
+    "explanation": "The power/speed table lists ±25\" MP, 2400 RPM, and 90 kts for cruise with flaps UP — the reference setting when established in level flight."
   },
   {
     "id": "DV20-026",
@@ -387,7 +412,8 @@
       "25\" MP, 2400 RPM, 90 kts",
       "15\" MP",
       "20\" MP"
-    ]
+    ],
+    "explanation": "For descent with flaps UP, the table specifies ±18\" MP at 2400 RPM and 90 kts — reduced power while maintaining airspeed for a controlled descent."
   },
   {
     "id": "DV20-027",
@@ -402,7 +428,8 @@
       "Full throttle until base",
       "±15\" MP to maintain 70 kts",
       "±21\" MP to maintain 75 kts"
-    ]
+    ],
+    "explanation": "Selecting flaps T/O on downwind increases drag; advancing to ±24\" MP restores the energy needed to hold 70 kts in the circuit."
   },
   {
     "id": "DV20-028",
@@ -417,7 +444,8 @@
       "±21\" MP, speed 70 kts",
       "12–15\" MP",
       "25\" MP, 2400 RPM, 90 kts"
-    ]
+    ],
+    "explanation": "15\" MP on base is the initial power reduction that begins slowing the aircraft from downwind speed toward final approach speed."
   },
   {
     "id": "DV20-029",
@@ -432,7 +460,8 @@
       "58 kts",
       "70 kts",
       "55 kts"
-    ]
+    ],
+    "explanation": "60 kts is the minimum approach speed on final — the floor that keeps adequate margin above stall while allowing a stabilized approach."
   },
   {
     "id": "DV20-030",
@@ -447,7 +476,8 @@
       "25\" MP",
       "15\" MP",
       "18\" MP"
-    ]
+    ],
+    "explanation": "Below 20\" MP the throttle is low enough that carburetor icing risk rises significantly, so carburetor heat must be ON per the power table note."
   },
   {
     "id": "DV20-031",
@@ -462,7 +492,8 @@
       "81 kts",
       "104 kts",
       "15 kts"
-    ]
+    ],
+    "explanation": "Climb with flaps T/O uses full throttle and prop full forward at 65 kts — matching Vy for the takeoff flap configuration on the power/speed table."
   },
   {
     "id": "DV20-032",
@@ -477,7 +508,8 @@
       "No change to descend rate",
       "50 ft/min less descend rate",
       "200 ft/min extra descend rate"
-    ]
+    ],
+    "explanation": "Each inch of reduced manifold pressure adds roughly 100 ft/min of descent rate — a useful rule of thumb when fine-tuning your descent profile."
   },
   {
     "id": "DV20-033",
@@ -492,7 +524,8 @@
       "12–15\" MP",
       "25\" MP, 2400 RPM, 90 kts",
       "±18\" MP, 2400 RPM, 90 kts"
-    ]
+    ],
+    "explanation": "At 700 ft AAL in the circuit, ±21\" MP and 70 kts is the standard downwind configuration — enough power to maintain circuit speed with flaps still UP."
   },
   {
     "id": "DV20-034",
@@ -507,7 +540,8 @@
       "90 kts",
       "58 kts",
       "65 kts"
-    ]
+    ],
+    "explanation": "Advancing to full throttle at 70 kts during the climb transition ensures you have adequate airspeed before adding climb power, preventing excessive pitch and stall risk."
   },
   {
     "id": "DV20-035",
@@ -522,7 +556,8 @@
       "70 kts",
       "65 kts",
       "75 kts"
-    ]
+    ],
+    "explanation": "At 90 kts during level-off from climb, power is reduced to 25\"/2400 RPM — the standard cruise setting once the aircraft is stabilized in level flight."
   },
   {
     "id": "DV20-036",
@@ -537,7 +572,8 @@
       "OFF until below 20\" MP",
       "ON only after landing",
       "OFF throughout descent"
-    ]
+    ],
+    "explanation": "Carburetor heat goes ON before reducing power for descent because the sudden power reduction creates ideal conditions for carburetor icing."
   },
   {
     "id": "DV20-037",
@@ -552,7 +588,8 @@
       "300 ft",
       "200 ft AAL",
       "300 ft AGL"
-    ]
+    ],
+    "explanation": "Turning carb heat OFF 100 ft before the target altitude during a descent level-off prevents carrying unnecessary heat into the cruise power setting."
   },
   {
     "id": "DV20-038",
@@ -567,7 +604,8 @@
       "45°",
       "15°",
       "20°"
-    ]
+    ],
+    "explanation": "30° bank is the standard for level turns — steep enough for reasonable turn rate while keeping g-load and stall speed increase manageable."
   },
   {
     "id": "DV20-039",
@@ -582,7 +620,8 @@
       "90 kts",
       "104 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "In a 30° level turn, target approximately 95 kts to compensate for the increased load factor and prevent altitude loss."
   },
   {
     "id": "DV20-040",
@@ -597,7 +636,8 @@
       "20°",
       "30°",
       "45°"
-    ]
+    ],
+    "explanation": "Maximum 15° bank in a climbing turn limits the additional stall-speed rise and helps maintain Vy while turning — steeper banks bleed climb performance."
   },
   {
     "id": "DV20-041",
@@ -612,7 +652,8 @@
       "Extend flaps T/O",
       "Decrease power setting by 2\"",
       "Retard throttle to idle"
-    ]
+    ],
+    "explanation": "At 30° bank in a steep turn, increasing power by 2\" compensates for the extra induced drag and load factor that would otherwise cause altitude loss."
   },
   {
     "id": "DV20-042",
@@ -627,7 +668,8 @@
       "700 ft AGL",
       "1500 ft AGL",
       "3000 ft AGL"
-    ]
+    ],
+    "explanation": "2000 ft AGL minimum for solo steep turns provides recovery altitude if something goes wrong during the maneuver."
   },
   {
     "id": "DV20-043",
@@ -642,7 +684,8 @@
       "Altitude in feet only",
       "Distance in nautical miles only",
       "Compass heading only"
-    ]
+    ],
+    "explanation": "Clock position plus above/below/on the horizon gives other traffic a precise, unambiguous location that both pilots can visualize quickly."
   },
   {
     "id": "DV20-044",
@@ -657,7 +700,8 @@
       "VS+10 kts",
       "65 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "90 kts during clearing turns keeps the aircraft stable and gives good visibility while scanning before maneuvers."
   },
   {
     "id": "DV20-045",
@@ -672,7 +716,8 @@
       "90 kts",
       "59 kts",
       "64 kts"
-    ]
+    ],
+    "explanation": "70 kts is the target glide speed from straight and level — matching best glide with flaps UP for a controlled transition into engine-idle flight."
   },
   {
     "id": "DV20-046",
@@ -687,7 +732,8 @@
       "60 kts minimum",
       "70 kts exactly",
       "VS + 5 kts"
-    ]
+    ],
+    "explanation": "Slow flight is flown at VS + 10 kts — close enough to the stall to be realistic, but with a deliberate margin for control and recovery practice."
   },
   {
     "id": "DV20-047",
@@ -702,7 +748,8 @@
       "25\" MP, 2400 RPM, 90 kts",
       "±18\" MP, 2400 RPM, 90 kts",
       "15\" MP"
-    ]
+    ],
+    "explanation": "Reducing to 12–15\" MP on slow-flight entry bleeds energy gradually so you can stabilize at VS+10 without overshooting into a stall."
   },
   {
     "id": "DV20-048",
@@ -717,7 +764,8 @@
       "10 kts above cruise speed",
       "Any nose dip occurs",
       "Full power is applied"
-    ]
+    ],
+    "explanation": "Recovery triggers include the stall warning, buffet, or reaching 5 kts above stall speed — whichever comes first ensures you recover before a full stall develops."
   },
   {
     "id": "DV20-049",
@@ -732,7 +780,8 @@
       "43 kts",
       "55 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "In a power-on stall recovery, 60 kts minimum before raising the nose ensures adequate airflow and control authority to safely transition back to climb attitude."
   },
   {
     "id": "DV20-050",
@@ -747,7 +796,8 @@
       "2000 ft AGL",
       "1500 ft AGL",
       "700 ft AGL"
-    ]
+    ],
+    "explanation": "3000 ft AGL minimum for solo full stalls provides enough altitude to recover from a developed stall and any altitude loss during the maneuver."
   },
   {
     "id": "DV20-051",
@@ -762,7 +812,8 @@
       "1000 ft AGL",
       "3000 ft AGL",
       "1500 ft AGL"
-    ]
+    ],
+    "explanation": "2000 ft AGL minimum for solo approach-to-stall exercises allows recovery before reaching an unsafe altitude, with less margin needed than a full stall."
   },
   {
     "id": "DV20-052",
@@ -777,7 +828,8 @@
       "Maintain altitude at all costs",
       "Retard throttle to idle first",
       "Extend flaps immediately"
-    ]
+    ],
+    "explanation": "Stall recovery always prioritizes reducing angle of attack — trying to save altitude before unstalling the wing can deepen the stall and worsen the situation."
   },
   {
     "id": "DV20-053",
@@ -792,7 +844,8 @@
       "Set power to idle",
       "Retract flaps fully first",
       "Set carburetor heat OFF"
-    ]
+    ],
+    "explanation": "The white arc callout confirms your speed is at or below VFE before any flap change, preventing structural damage from extending flaps at too high an airspeed."
   },
   {
     "id": "DV20-054",
@@ -807,7 +860,8 @@
       "90 kts",
       "104 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "Flaps must be fully retracted by 81 kts (VFE) when accelerating out of slow flight — you cannot leave flaps down above the maximum flap-extended speed."
   },
   {
     "id": "DV20-055",
@@ -822,7 +876,8 @@
       "1500 ft AAL",
       "500 ft AAL",
       "1000 ft AAL"
-    ]
+    ],
+    "explanation": "700 ft AAL is the standard circuit height at uncontrolled aerodromes — low enough for efficient operations, high enough for a stable pattern."
   },
   {
     "id": "DV20-056",
@@ -837,7 +892,8 @@
       "500 ft AGL",
       "700 ft AAL",
       "2000 ft AAL"
-    ]
+    ],
+    "explanation": "The circuit area extends vertically to 1000 ft AAL — traffic above this height is outside the standard circuit protection volume."
   },
   {
     "id": "DV20-057",
@@ -852,7 +908,8 @@
       "30°",
       "15°",
       "45° half-way crosswind leg"
-    ]
+    ],
+    "explanation": "Joining at half-way downwind on a 90° intercept gives a predictable, non-conflicting entry that keeps you aligned with standard circuit flow."
   },
   {
     "id": "DV20-058",
@@ -867,7 +924,8 @@
       "30°",
       "15°",
       "Half-way downwind at 90° interception angle"
-    ]
+    ],
+    "explanation": "Leaving the circuit at the 45° half-way crosswind point keeps your departure clear of downwind traffic and follows standard VFR circuit procedure."
   },
   {
     "id": "DV20-059",
@@ -882,7 +940,8 @@
       "90 kts",
       "60 kts",
       "75 kts"
-    ]
+    ],
+    "explanation": "70 kts is the downwind speed checked in HARS — the reference circuit speed before flap selection and base turn."
   },
   {
     "id": "DV20-060",
@@ -897,7 +956,8 @@
       "30°",
       "15°",
       "Half-way downwind at 90° interception angle"
-    ]
+    ],
+    "explanation": "With the threshold 45–60° behind the wing on base, you are at the correct position and distance for a stable base-to-final turn."
   },
   {
     "id": "DV20-061",
@@ -912,7 +972,8 @@
       "300 ft on centerline",
       "700 ft at crosswind",
       "200 ft abeam threshold"
-    ]
+    ],
+    "explanation": "Turning base-to-final at 500 ft and 20° before the extended centerline sets up a stabilized final without overshooting or cutting in too close."
   },
   {
     "id": "DV20-062",
@@ -927,7 +988,8 @@
       "200 ft AAL",
       "300 ft AGL",
       "Downwind with 1000 ft point"
-    ]
+    ],
+    "explanation": "Being established on final centerline by 300 ft gives enough time to stabilize speed and glidepath before the roundout."
   },
   {
     "id": "DV20-063",
@@ -942,7 +1004,8 @@
       "70 kts",
       "117 kts (VNO)",
       "104 kts (VA)"
-    ]
+    ],
+    "explanation": "Flaps may only be selected below 81 kts (VFE) — the structural limit for extended flaps on the DV20."
   },
   {
     "id": "DV20-064",
@@ -957,7 +1020,8 @@
       "700 ft AAL",
       "2000 ft AGL",
       "500 ft AAL"
-    ]
+    ],
+    "explanation": "Overflying the circuit at a minimum of 1000 ft AAL keeps you clear of circuit traffic while allowing a safe read of the signal area."
   },
   {
     "id": "DV20-065",
@@ -972,7 +1036,8 @@
       "58 kts",
       "65 kts",
       "57 kts"
-    ]
+    ],
+    "explanation": "51 kts is the normal rotation speed — the point where the wing generates enough lift to leave the ground smoothly without premature rotation."
   },
   {
     "id": "DV20-066",
@@ -987,7 +1052,8 @@
       "65 kts only, then hold 70 kts",
       "51 kts until 200 ft AAL",
       "70 kts immediately after rotation"
-    ]
+    ],
+    "explanation": "After rotation, accelerate to 65 kts (Vy with T/O flaps) then 70 kts after flap retraction — the standard climb speed sequence for a normal takeoff."
   },
   {
     "id": "DV20-067",
@@ -1002,7 +1068,8 @@
       "Flaps T/O",
       "Flaps LDG",
       "No flaps, with reduced power"
-    ]
+    ],
+    "explanation": "Flaps UP on a long hard runway minimizes drag during the takeoff roll, shortening ground run when runway length is not a constraint."
   },
   {
     "id": "DV20-068",
@@ -1017,7 +1084,8 @@
       "Flaps UP",
       "Flaps LDG",
       "No flaps, with reduced power"
-    ]
+    ],
+    "explanation": "Flaps T/O on short (<800 m) or soft/grass runways reduces the rotation and liftoff speed, shortening ground run and improving takeoff performance."
   },
   {
     "id": "DV20-069",
@@ -1032,7 +1100,8 @@
       "60 kts",
       "51 kts",
       "65 kts"
-    ]
+    ],
+    "explanation": "57 kts rotation on an obstacle clearance takeoff is slightly higher than normal to ensure positive climb performance over obstacles."
   },
   {
     "id": "DV20-070",
@@ -1047,7 +1116,8 @@
       "65 kts (Vy)",
       "70 kts",
       "51 kts"
-    ]
+    ],
+    "explanation": "58 kts (Vx) after an obstacle clearance takeoff maximizes climb angle until obstacles are cleared, then you can accelerate to Vy."
   },
   {
     "id": "DV20-071",
@@ -1062,7 +1132,8 @@
       "65 kts",
       "51 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "Raising the nose gently at 60 kts on a soft field takeoff lifts the nosewheel early to reduce drag and prevent the nosewheel from digging in."
   },
   {
     "id": "DV20-072",
@@ -1077,7 +1148,8 @@
       "1700 RPM",
       "1100–1500 RPM",
       "1100 RPM"
-    ]
+    ],
+    "explanation": "2400 RPM ±100 during the takeoff roll confirms the engine is delivering full rated power — a critical check before committing to flight."
   },
   {
     "id": "DV20-073",
@@ -1092,7 +1164,8 @@
       "T/O",
       "ON",
       "UP"
-    ]
+    ],
+    "explanation": "The electric fuel pump is switched OFF when leaving the circuit because the engine-driven pump is now providing adequate fuel pressure at cruise power."
   },
   {
     "id": "DV20-074",
@@ -1107,7 +1180,8 @@
       "70 kts",
       "58 kts",
       "55 kts"
-    ]
+    ],
+    "explanation": "60 kts minimum over the threshold on a normal landing keeps adequate stall margin while allowing a stabilized approach in the landing configuration."
   },
   {
     "id": "DV20-075",
@@ -1122,7 +1196,8 @@
       "43 kts",
       "60 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "55 kts minimum threshold speed on a short field landing reduces float and ground roll, maximizing available runway."
   },
   {
     "id": "DV20-076",
@@ -1137,7 +1212,8 @@
       "90 kts / 80 kts / 70 kts",
       "70 kts / 65 kts / 58 kts",
       "75 kts / 70 kts / 60 kts"
-    ]
+    ],
+    "explanation": "A flaps-up landing uses 70 kts throughout the circuit because without flaps the higher stall speed requires a faster approach profile."
   },
   {
     "id": "DV20-077",
@@ -1152,7 +1228,8 @@
       "At 500 ft on final approach",
       "Immediately after passing the threshold",
       "During the round-out before the threshold"
-    ]
+    ],
+    "explanation": "Retarding the throttle to idle once level flight about 1 m above the runway is established in the roundout — the standard technique for a normal landing."
   },
   {
     "id": "DV20-078",
@@ -1167,7 +1244,8 @@
       "Brake immediately after main gear touchdown",
       "Flaps UP throughout approach",
       "Higher approach speed of 90 kts"
-    ]
+    ],
+    "explanation": "Keeping the nosewheel off with full back pressure on a soft field landing prevents the nosewheel from digging into soft surface and damaging the aircraft."
   },
   {
     "id": "DV20-079",
@@ -1182,7 +1260,8 @@
       "Apply full power for touch-and-go",
       "Leave flaps LDG until clear of runway",
       "Retract carb heat first"
-    ]
+    ],
+    "explanation": "After a short field landing, flaps UP reduces drag for braking effectiveness, and careful braking minimizes ground roll without risking tire damage."
   },
   {
     "id": "DV20-080",
@@ -1197,7 +1276,8 @@
       "LDG until rotation",
       "Full flap throughout",
       "T/O always"
-    ]
+    ],
+    "explanation": "Flaps UP for a touch and go on pavement minimizes drag on the subsequent takeoff roll when runway length allows."
   },
   {
     "id": "DV20-081",
@@ -1212,7 +1292,8 @@
       "Flaps UP",
       "Flaps LDG",
       "No flap change from landing"
-    ]
+    ],
+    "explanation": "Flaps T/O for a touch and go on grass improves takeoff performance on the softer surface where reduced ground run matters."
   },
   {
     "id": "DV20-082",
@@ -1227,7 +1308,8 @@
       "Higher power on final only",
       "Full flap landing always",
       "Slip without rudder correction"
-    ]
+    ],
+    "explanation": "A flapless landing in strong crosswind reduces the side force on the flaps and gives better roll control during the landing roll."
   },
   {
     "id": "DV20-083",
@@ -1242,7 +1324,8 @@
       "Pitch up before adding power",
       "Flaps UP, idle power, carb heat ON",
       "Retract all flaps, then add power"
-    ]
+    ],
+    "explanation": "MAX RPM, full throttle, and carb heat OFF are the immediate go-around actions — restoring full climb power without the power loss carb heat causes."
   },
   {
     "id": "DV20-084",
@@ -1257,7 +1340,8 @@
       "Flaps LDG immediately",
       "Flaps UP without speed check",
       "Maintain landing flaps until 700 ft"
-    ]
+    ],
+    "explanation": "T/O flaps after \"Speed checked\" within the white arc gives partial flap for climb while staying below VFE during the initial go-around acceleration."
   },
   {
     "id": "DV20-085",
@@ -1272,7 +1356,8 @@
       "90 kts until downwind",
       "51 kts until 200 ft",
       "70 kts immediately"
-    ]
+    ],
+    "explanation": "58 kts (Vx) initially after go-around maximizes climb angle; transition to 65 kts (Vy) once clear of obstacles for best rate of climb."
   },
   {
     "id": "DV20-086",
@@ -1287,7 +1372,8 @@
       "700 ft AAL",
       "500 ft AGL on base",
       "1000 ft AAL"
-    ]
+    ],
+    "explanation": "Above 200 ft AAL after go-around, flaps UP and 2400 RPM transition the aircraft into the standard climb configuration."
   },
   {
     "id": "DV20-087",
@@ -1302,7 +1388,8 @@
       "Left side of the runway",
       "Either side is acceptable",
       "Remain on centerline only"
-    ]
+    ],
+    "explanation": "At Hilversum, staying clear of the right side of the runway on go-around avoids conflict with gliders and paragliders operating from that side."
   },
   {
     "id": "DV20-088",
@@ -1317,7 +1404,8 @@
       "700 ft AAL",
       "Flap retraction",
       "Crosswind turn"
-    ]
+    ],
+    "explanation": "A rejected takeoff must be executed before rotation — once airborne, abort options are severely limited and the procedure changes entirely."
   },
   {
     "id": "DV20-089",
@@ -1332,7 +1420,8 @@
       "500 ft AGL",
       "700 ft AAL",
       "200 ft AAL"
-    ]
+    ],
+    "explanation": "EFATO simulation below 300 ft AGL is prohibited because there is insufficient altitude to safely practice the maneuver and recover."
   },
   {
     "id": "DV20-090",
@@ -1347,7 +1436,8 @@
       "70 kts regardless of flap setting",
       "51 kts with flaps T/O",
       "65 kts with flaps UP"
-    ]
+    ],
+    "explanation": "Glide speed after takeoff engine failure depends on flap setting: 59 kts with T/O flaps, 70 kts with flaps UP — matching the configuration-specific best glide speeds."
   },
   {
     "id": "DV20-091",
@@ -1362,7 +1452,8 @@
       "T/O",
       "ON",
       "UP"
-    ]
+    ],
+    "explanation": "Carb heat OFF on the insufficient power drill eliminates carb icing as a cause and ensures full power delivery while troubleshooting."
   },
   {
     "id": "DV20-092",
@@ -1377,7 +1468,8 @@
       "100 ft before desired altitude",
       "2000 ft AGL",
       "3000 ft AGL"
-    ]
+    ],
+    "explanation": "Above 1500 ft, fly a downwind with a 1000 ft abeam point — enough altitude to set up a normal circuit approach to a landing site."
   },
   {
     "id": "DV20-093",
@@ -1392,7 +1484,8 @@
       "Climb to 1500 ft first",
       "Downwind with 1000 ft point",
       "Direct base only"
-    ]
+    ],
+    "explanation": "Below 700 ft, fly direct final — there is insufficient altitude for a full circuit, so the most direct approach to a landing site is required."
   },
   {
     "id": "DV20-094",
@@ -1407,7 +1500,8 @@
       "7500",
       "1200",
       "7600"
-    ]
+    ],
+    "explanation": "7700 is the transponder code for emergency — alerting ATC and other traffic that you have an urgent situation."
   },
   {
     "id": "DV20-095",
@@ -1422,7 +1516,8 @@
       "43 kts always",
       "55 kts on downwind only",
       "70 kts"
-    ]
+    ],
+    "explanation": "59 kts for emergency landing with engine off matches the checklist approach speed for a controlled descent to touchdown with flaps in landing configuration."
   },
   {
     "id": "DV20-096",
@@ -1437,7 +1532,8 @@
       "Full throttle",
       "Open canopy immediately",
       "Extend flaps LDG"
-    ]
+    ],
+    "explanation": "Master switch OFF is the first action for electrical fire — removing the power source stops the current that is feeding the fire."
   },
   {
     "id": "DV20-097",
@@ -1452,7 +1548,8 @@
       "Increase throttle to maximum",
       "Turn master switch ON and OFF repeatedly",
       "Continue flight indefinitely"
-    ]
+    ],
+    "explanation": "With generator failure, shedding nonessential loads reduces electrical demand and may allow the remaining battery capacity to reach a suitable airport."
   },
   {
     "id": "DV20-098",
@@ -1467,7 +1564,8 @@
       "81 kts",
       "104 kts",
       "15 kts"
-    ]
+    ],
+    "explanation": "70 kts during engine fire in flight maintains control while minimizing airflow that could feed the fire, per the abnormal checklist."
   },
   {
     "id": "DV20-099",
@@ -1482,7 +1580,8 @@
       "Extend flaps immediately",
       "Complete radio calls first",
       "Shut down all electrical systems"
-    ]
+    ],
+    "explanation": "Fly the airplane first — maintaining control is always the top priority in any abnormal situation before troubleshooting or running checklists."
   },
   {
     "id": "DV20-100",
@@ -1497,7 +1596,8 @@
       "Full tank only",
       "77 liters total",
       "Unusable fuel quantity"
-    ]
+    ],
+    "explanation": "The lowest notch on the fuel dipstick marks 10 liters of usable fuel — the minimum quantity reading you should expect from a dip check."
   },
   {
     "id": "DV20-101",
@@ -1512,7 +1612,8 @@
       "Aviation lubricant mixed with fuel",
       "Jet A-1",
       "Automotive diesel"
-    ]
+    ],
+    "explanation": "MOGAS per BAZ-Regulation is the preferred fuel at EHHV (Hilversum), reflecting local operating approval for automotive gasoline."
   },
   {
     "id": "DV20-102",
@@ -1527,7 +1628,8 @@
       "MOGAS at EHHV",
       "SF or SG marked automotive oil",
       "100LL AVGAS"
-    ]
+    ],
+    "explanation": "Aviation lubricant must never substitute for engine oil — it lacks the properties required for engine lubrication and can cause serious engine damage."
   },
   {
     "id": "DV20-103",
@@ -1542,7 +1644,8 @@
       "700 ft AAL",
       "1000 ft AAL",
       "500 ft and 20° before extended centerline"
-    ]
+    ],
+    "explanation": "The example departure briefing leaves the circuit at 700 ft on the crosswind leg under 45° — the standard Hilversum departure procedure."
   },
   {
     "id": "DV20-104",
@@ -1557,7 +1660,8 @@
       "Passenger meal preferences",
       "Historical accident statistics only",
       "Only radio phraseology"
-    ]
+    ],
+    "explanation": "TEM briefings identify threats to your operation and how to mitigate them — turning potential problems into planned responses before they occur."
   },
   {
     "id": "DV20-105",
@@ -1572,7 +1676,8 @@
       "Solo student approval",
       "No radio call required",
       "Full flap landing"
-    ]
+    ],
+    "explanation": "The EHHV glide-in from 1000 ft downwind requires a mandatory call, no traffic ahead, and instructor only — it is not approved for solo students."
   },
   {
     "id": "DV20-106",
@@ -1587,7 +1692,8 @@
       "GLIDER",
       "TRAINING",
       "DV20"
-    ]
+    ],
+    "explanation": "Solo student pilots prefix their call sign with STUDENT so other traffic and ATC recognize they are a student and may need additional consideration."
   },
   {
     "id": "DV20-107",
@@ -1602,7 +1708,8 @@
       "Crosswind leg",
       "The runway",
       "700 ft AAL"
-    ]
+    ],
+    "explanation": "The instruments/brakes check is called out after leaving the parking area — confirming systems are working before entering active taxi routes."
   },
   {
     "id": "DV20-108",
@@ -1617,7 +1724,8 @@
       "117 kts",
       "104 kts",
       "181 kts"
-    ]
+    ],
+    "explanation": "VNE of 161 kts is the never-exceed speed — the red line on the airspeed indicator that must never be exceeded in any condition."
   },
   {
     "id": "DV20-109",
@@ -1632,7 +1740,8 @@
       "104 kts",
       "161 kts",
       "90 kts"
-    ]
+    ],
+    "explanation": "VNO of 117 kts is the maximum structural cruising speed in smooth air — above this, only fly in smooth conditions or reduce speed."
   },
   {
     "id": "DV20-110",
@@ -1647,7 +1756,8 @@
       "10 kg",
       "58 kg",
       "30 kg"
-    ]
+    ],
+    "explanation": "20 kg maximum baggage in the aft compartment keeps the CG within limits and prevents overloading the rear of the aircraft."
   },
   {
     "id": "DV20-111",
@@ -1662,7 +1772,8 @@
       "495 kg",
       "730 kg",
       "511 lb"
-    ]
+    ],
+    "explanation": "511 kg is the empty weight of PH-MFT — the baseline for weight and balance calculations before adding fuel, occupants, and baggage."
   },
   {
     "id": "DV20-112",
@@ -1677,7 +1788,8 @@
       "-2.2G to +4.4G",
       "-1.0G to +3.0G",
       "0.0G to +4.4G"
-    ]
+    ],
+    "explanation": "With flaps extended, the normal category G-load range is 0.0G to +2.0G — reduced from the clean configuration due to the lower structural limit with flaps down."
   },
   {
     "id": "DV20-113",
@@ -1692,7 +1804,8 @@
       "70 kts at ±24\" MP",
       "90 kts at ±25\" MP",
       "60 kts at ±15\" MP"
-    ]
+    ],
+    "explanation": "The circuit with flaps UP uses 75 kts at ±21\" MP per the power table — slightly faster than the 70 kts used with T/O flaps because clean configuration has a higher stall speed."
   },
   {
     "id": "DV20-114",
@@ -1707,7 +1820,8 @@
       "30 RPM drop",
       "150 RPM drop",
       "50–100 RPM drop"
-    ]
+    ],
+    "explanation": "A 100–200 RPM drop during the propeller check confirms the governor is functioning and can control prop pitch at run-up RPM."
   },
   {
     "id": "DV20-115",
@@ -1722,7 +1836,8 @@
       "Max 30 RPM drop, max 100 RPM difference",
       "Max 200 RPM drop, max 50 RPM difference",
       "No drop allowed on either magneto"
-    ]
+    ],
+    "explanation": "Mag check limits of max 150 RPM drop per side and max 50 RPM difference between L and R confirm both magnetos and the ignition system are healthy."
   },
   {
     "id": "DV20-116",
@@ -1737,7 +1852,8 @@
       "50 RPM",
       "150 RPM",
       "100–200 RPM"
-    ]
+    ],
+    "explanation": "A 30 RPM drop during the carb heat check confirms heated air is reaching the carburetor — proving the carb heat system works before flight."
   },
   {
     "id": "DV20-117",
@@ -1752,7 +1868,8 @@
       "T/O",
       "LDG",
       "AS REQUIRED"
-    ]
+    ],
+    "explanation": "Flaps UP on the AFTER LANDING checklist reduces drag and prepares the aircraft for taxi — flaps are not needed on the ground."
   },
   {
     "id": "DV20-118",
@@ -1767,7 +1884,8 @@
       "ON",
       "AS REQUIRED",
       "CHECK"
-    ]
+    ],
+    "explanation": "Carb heat OFF after landing because full power is no longer needed and carb icing risk is minimal during taxi with intermittent power changes."
   },
   {
     "id": "DV20-119",
@@ -1782,7 +1900,8 @@
       "Continue flight for up to 1 hour",
       "Switch to electric fuel pump only",
       "No action — gauge is reliable"
-    ]
+    ],
+    "explanation": "At ¼ tank on the fuel gauge, land within 30 minutes — the gauge reads optimistically, so this is a conservative fuel reserve trigger."
   },
   {
     "id": "DV20-120",
@@ -1797,7 +1916,8 @@
       "100 ft before desired altitude",
       "50 ft before desired altitude",
       "At the desired altitude"
-    ]
+    ],
+    "explanation": "Begin lowering the nose 20 ft before the target altitude during climb level-off — a small lead that prevents overshooting the assigned level."
   },
   {
     "id": "DV20-121",
@@ -1812,7 +1932,8 @@
       "100 ft before desired altitude",
       "50 ft before desired altitude",
       "At the desired altitude"
-    ]
+    ],
+    "explanation": "150 ft before target altitude during glide level-off gives time to add power and turn carb heat OFF smoothly without an altitude overshoot."
   },
   {
     "id": "DV20-122",
@@ -1827,7 +1948,8 @@
       "1 second",
       "10 seconds",
       "Until 90 kts is reached"
-    ]
+    ],
+    "explanation": "3–5 seconds of full power during a prolonged glide clears spark plug fouling from the rich mixture at idle — keeping the engine ready for a power addition."
   },
   {
     "id": "DV20-123",
@@ -1842,7 +1964,8 @@
       "Every 5 minutes",
       "Only before descent",
       "Once per hour"
-    ]
+    ],
+    "explanation": "Engine instruments and fuel quantity checked every 15 minutes during cruise catches developing problems early while they are still manageable."
   },
   {
     "id": "DV20-124",
@@ -1857,7 +1980,8 @@
       "15°",
       "45°",
       "20°"
-    ]
+    ],
+    "explanation": "30° bank in a descending turn matches the standard level turn bank angle while allowing a controlled descent path."
   },
   {
     "id": "DV20-125",
@@ -1872,7 +1996,8 @@
       "1500 ft AGL",
       "3000 ft AGL",
       "700 ft AGL"
-    ]
+    ],
+    "explanation": "2000 ft AGL minimum for solo slow flight provides recovery margin if control degrades near the stall."
   },
   {
     "id": "DV20-126",
@@ -1887,7 +2012,8 @@
       "12–15\" MP",
       "25\" MP",
       "Idle power only"
-    ]
+    ],
+    "explanation": "22–24\" MP maintains slow flight at VS+10 — enough power to hold altitude near the stall without accelerating away from the maneuver."
   },
   {
     "id": "DV20-127",
@@ -1902,7 +2028,8 @@
       "2000 ft AGL",
       "1500 ft AGL",
       "2500 ft AGL"
-    ]
+    ],
+    "explanation": "3000 ft AGL minimum for solo full stalls — same as the general full-stall solo minimum, providing adequate recovery altitude."
   },
   {
     "id": "DV20-128",
@@ -1917,7 +2044,8 @@
       "Permitted on the downwind leg only",
       "Permitted if faster aircraft announces on radio",
       "Permitted above 700 ft AAL only"
-    ]
+    ],
+    "explanation": "Overtaking within the circuit is not permitted — it disrupts standard circuit spacing and creates collision risk in a confined traffic pattern."
   },
   {
     "id": "DV20-129",
@@ -1932,7 +2060,8 @@
       "700 ft AAL",
       "500 ft AGL",
       "1000 ft AAL"
-    ]
+    ],
+    "explanation": "Flaps UP at minimum 200 ft AAL after takeoff follows the AFTER TAKE-OFF checklist — retracting flaps once safely airborne and clear of obstacles."
   },
   {
     "id": "DV20-130",
@@ -1947,7 +2076,8 @@
       "600 m",
       "1000 m",
       "500 m"
-    ]
+    ],
+    "explanation": "Below 800 m runway length, use flaps T/O for takeoff — the shorter ground run from the lower liftoff speed is essential on limited runway."
   },
   {
     "id": "DV20-131",
@@ -1962,7 +2092,8 @@
       "Downwind with 1000 ft point",
       "Direct final only",
       "Climb to 2000 ft first"
-    ]
+    ],
+    "explanation": "Between 700 and 1500 ft after engine failure, fly direct base — enough altitude for a base leg but not a full downwind circuit."
   },
   {
     "id": "DV20-132",
@@ -1977,7 +2108,8 @@
       "GO-AROUND",
       "MAYDAY",
       "ABORT"
-    ]
+    ],
+    "explanation": "Calling STOP during a rejected takeoff alerts your instructor/passenger and confirms your decision to abort — a standard callout for a RTO."
   },
   {
     "id": "DV20-133",
@@ -1992,7 +2124,8 @@
       "90° left or right only",
       "Straight ahead only",
       "180° behind the aircraft"
-    ]
+    ],
+    "explanation": "Choose a landing site within 30° left or right of the nose after EFATO — you cannot turn back, so the field must be within your forward arc."
   },
   {
     "id": "DV20-134",
@@ -2007,7 +2140,8 @@
       "70 kts",
       "55 kts",
       "43 kts"
-    ]
+    ],
+    "explanation": "59 kts during the crash drill on final matches the emergency approach speed — practicing the speed you would fly on an actual forced landing."
   },
   {
     "id": "DV20-135",
@@ -2022,7 +2156,8 @@
       "Fuel shut-off valve CLOSED",
       "Throttle to idle immediately",
       "Master switch OFF"
-    ]
+    ],
+    "explanation": "Electric fuel pump ON is the first action for loss of fuel pressure — the backup pump restores fuel flow while you diagnose the cause."
   },
   {
     "id": "DV20-136",
@@ -2037,7 +2172,8 @@
       "UP",
       "LDG",
       "AS REQUIRED"
-    ]
+    ],
+    "explanation": "T/O flaps during engine fire in flight provide partial flap for a controlled approach speed without the full drag of landing flaps."
   },
   {
     "id": "DV20-137",
@@ -2052,7 +2188,8 @@
       "5°",
       "1°",
       "7°"
-    ]
+    ],
+    "explanation": "A 3° glidepath on final is the standard approach angle — it provides a stabilized descent profile to the threshold."
   },
   {
     "id": "DV20-138",
@@ -2067,7 +2204,8 @@
       "16 seconds",
       "11 seconds",
       "12 seconds"
-    ]
+    ],
+    "explanation": "14 seconds at 70 kts ground speed during a precautionary landing inspection run corresponds to the minimal landing distance check per the timing table."
   },
   {
     "id": "DV20-139",
@@ -2082,7 +2220,8 @@
       "MAYDAY",
       "STOP",
       "Balked landing"
-    ]
+    ],
+    "explanation": "Calling \"Go-around\" aloud confirms your decision to the instructor, passengers, and yourself before executing the maneuver."
   },
   {
     "id": "DV20-140",
@@ -2097,7 +2236,8 @@
       "On the horizon",
       "10 fingers above the horizon",
       "Cowling against the horizon"
-    ]
+    ],
+    "explanation": "About 5 fingers below the horizon is the visual pitch reference for straight and level — a consistent sight picture for maintaining altitude."
   },
   {
     "id": "DV20-141",
@@ -2112,7 +2252,8 @@
       "Throttle idle, master OFF, canopy open",
       "Flaps LDG, carb heat OFF, fuel pump OFF",
       "Full throttle, choke ON, transponder 7700"
-    ]
+    ],
+    "explanation": "Carb heat ON, electric fuel pump ON, and checking BOTH magnetos address the three most common causes of rough running — icing, fuel supply, and ignition."
   },
   {
     "id": "DV20-142",
@@ -2127,7 +2268,8 @@
       "Continue flight and monitor",
       "Shut down engine immediately in flight",
       "Land as soon as possible regardless of temperature"
-    ]
+    ],
+    "explanation": "Low oil pressure with normal temperature suggests a gauge or pump issue rather than imminent engine failure — land at the nearest airport to investigate safely."
   },
   {
     "id": "DV20-143",
@@ -2142,7 +2284,8 @@
       "Downwind main gear",
       "Both main gear simultaneously always",
       "Nosewheel first"
-    ]
+    ],
+    "explanation": "Upwind main gear first in a crosswind landing keeps the into-wind wing down and prevents weathervaning and ground looping after touchdown."
   },
   {
     "id": "DV20-144",
@@ -2157,7 +2300,8 @@
       "500 ft on the downwind leg at 90°",
       "1000 ft at mid-downwind straight out",
       "700 ft on the base leg at 30°"
-    ]
+    ],
+    "explanation": "The example departure briefing leaves at 700 ft on the crosswind leg under 45° — the standard Hilversum circuit departure procedure."
   },
   {
     "id": "DV20-145",
@@ -2172,7 +2316,8 @@
       "MAYDAY MAYDAY MAYDAY",
       "SECURITÉ SECURITÉ SECURITÉ",
       "No call required for precautionary landing"
-    ]
+    ],
+    "explanation": "PAN PAN PAN PAN PAN PAN alerts ATC that you have an urgent situation that is not yet a full emergency — appropriate for a precautionary landing."
   },
   {
     "category": "Preflight & Briefing",
@@ -2187,7 +2332,8 @@
       "40 liters of usable fuel",
       "60 liters total capacity"
     ],
-    "id": "DV20-146"
+    "id": "DV20-146",
+    "explanation": "The third notch on the fuel dipstick indicates 30 liters of usable fuel — a mid-range reference for preflight fuel verification."
   },
   {
     "category": "Preflight & Briefing",
@@ -2202,7 +2348,8 @@
       "50 liters",
       "40 liters"
     ],
-    "id": "DV20-147"
+    "id": "DV20-147",
+    "explanation": "The highest dipstick marking is 60 liters, not the full 77 L capacity — you must interpolate or calculate remaining fuel above the highest notch."
   },
   {
     "category": "Preflight & Briefing",
@@ -2217,7 +2364,8 @@
       "Aeroshell W100",
       "Automotive 10W-40"
     ],
-    "id": "DV20-148"
+    "id": "DV20-148",
+    "explanation": "Aeroshell Sport Plus 4 is the specified engine oil for the Katana DV20 — using the correct grade ensures proper lubrication and engine protection."
   },
   {
     "category": "Preflight & Briefing",
@@ -2232,7 +2380,8 @@
       "Either direction is acceptable",
       "Alternating clockwise and counterclockwise"
     ],
-    "id": "DV20-149"
+    "id": "DV20-149",
+    "explanation": "Turn the prop counterclockwise (from in front) during oil checks — the normal rotation direction that prevents gearbox damage."
   },
   {
     "category": "Preflight & Briefing",
@@ -2247,7 +2396,8 @@
       "1.0 liter",
       "2.0 liters"
     ],
-    "id": "DV20-150"
+    "id": "DV20-150",
+    "explanation": "0.45 liters between MIN and MAX on the oil dipstick is a small quantity — even a small overfill or underfill matters for this engine."
   },
   {
     "category": "Checklists",
@@ -2262,7 +2412,8 @@
       "Half open",
       "As required"
     ],
-    "id": "DV20-151"
+    "id": "DV20-151",
+    "explanation": "Choke ON for a cold start enriches the mixture for a cold engine that cannot vaporize fuel efficiently at ambient temperature."
   },
   {
     "category": "Checklists",
@@ -2277,7 +2428,8 @@
       "1000 RPM",
       "2400 RPM"
     ],
-    "id": "DV20-152"
+    "id": "DV20-152",
+    "explanation": "1100–1500 RPM after engine start allows oil pressure to stabilize and the engine to warm without excessive RPM on the ground."
   },
   {
     "category": "Checklists",
@@ -2292,7 +2444,8 @@
       "STBY",
       "GND"
     ],
-    "id": "DV20-153"
+    "id": "DV20-153",
+    "explanation": "Transponder ALT mode during run-up ensures altitude reporting is active before entering controlled or monitored airspace."
   },
   {
     "category": "Checklists",
@@ -2307,7 +2460,8 @@
       "1500–1900 RPM",
       "MAX RPM only"
     ],
-    "id": "DV20-154"
+    "id": "DV20-154",
+    "explanation": "1900–2400 RPM is the CRUISE checklist prop range — the normal operating band for cruise power settings."
   },
   {
     "category": "Checklists",
@@ -2322,7 +2476,8 @@
       "SET standard pressure",
       "No change required"
     ],
-    "id": "DV20-155"
+    "id": "DV20-155",
+    "explanation": "SET QNH on the APPROACH checklist ensures your altimeter reads true height above sea level for the approach and landing."
   },
   {
     "category": "Checklists",
@@ -2337,7 +2492,8 @@
       "55 kts",
       "81 kts"
     ],
-    "id": "DV20-156"
+    "id": "DV20-156",
+    "explanation": "60 kts minimum on the FINAL checklist matches the minimum approach speed — the floor for a stabilized final approach."
   },
   {
     "category": "Abnormal & Emergency",
@@ -2352,7 +2508,8 @@
       "Carburetor heat ON, fuel pump ON, ignition BOTH",
       "Flaps T/O, throttle FULL, cabin heat OPEN"
     ],
-    "id": "DV20-157"
+    "id": "DV20-157",
+    "explanation": "Master OFF, cabin heat CLOSED, and cabin air OPEN for cabin fire — remove electrical power, stop heat flow, and vent smoke from the cockpit."
   },
   {
     "category": "Abnormal & Emergency",
@@ -2367,7 +2524,8 @@
       "As required",
       "Half open"
     ],
-    "id": "DV20-158"
+    "id": "DV20-158",
+    "explanation": "Throttle FULL during engine fire on the ground keeps the engine running to draw fire extinguishing agent through the engine bay if available, then evacuate."
   },
   {
     "category": "Abnormal & Emergency",
@@ -2382,7 +2540,8 @@
       "Normal landing with LDG flaps",
       "59 kts minimum"
     ],
-    "id": "DV20-159"
+    "id": "DV20-159",
+    "explanation": "If only T/O flaps are available, use normal approach speed — T/O flaps provide adequate drag for approach without the full landing flap configuration."
   },
   {
     "category": "Abnormal & Emergency",
@@ -2397,7 +2556,8 @@
       "Flaps-up landing at 70 kts",
       "Go-around immediately"
     ],
-    "id": "DV20-160"
+    "id": "DV20-160",
+    "explanation": "If only LDG flaps are available, fly a normal landing — the landing flap position is actually the preferred configuration for landing."
   },
   {
     "category": "Abnormal & Emergency",
@@ -2412,7 +2572,8 @@
       "Electric fuel pump ON",
       "Transponder 7700"
     ],
-    "id": "DV20-161"
+    "id": "DV20-161",
+    "explanation": "Landing light OFF when the LO/V (low voltage) caution illuminates reduces electrical load on a potentially failing electrical system."
   },
   {
     "category": "Preflight & Briefing",
@@ -2427,7 +2588,8 @@
       "ATC, runway, wind, flaps",
       "Walk-around, run-up, takeoff, climb"
     ],
-    "id": "DV20-162"
+    "id": "DV20-162",
+    "explanation": "Plan, threats, threat management, and miscellaneous — the four-part briefing structure ensures you cover the flight, risks, mitigations, and other items systematically."
   },
   {
     "category": "Preflight & Briefing",
@@ -2442,7 +2604,8 @@
       "Passenger meal preferences",
       "Post-landing taxi route"
     ],
-    "id": "DV20-163"
+    "id": "DV20-163",
+    "explanation": "A departure briefing must include rejected takeoff actions — knowing your abort plan before the takeoff roll is essential for safety."
   },
   {
     "category": "Preflight & Briefing",
@@ -2457,7 +2620,8 @@
       "Flight plan filing",
       "Weather briefing request"
     ],
-    "id": "DV20-164"
+    "id": "DV20-164",
+    "explanation": "The first radio call at EHHV is a radio check only — aerodrome information is obtained during the havendienst (airport office) visit before flight."
   },
   {
     "category": "Preflight & Briefing",
@@ -2472,7 +2636,8 @@
       "Aircraft type instead of registration",
       "No call sign required at uncontrolled fields"
     ],
-    "id": "DV20-165"
+    "id": "DV20-165",
+    "explanation": "Full call sign on initial contact with ATS ensures positive identification — abbreviations are only used after ATC acknowledges and abbreviates first."
   },
   {
     "category": "Preflight & Briefing",
@@ -2487,7 +2652,8 @@
       "Final only",
       "No calls required below 1000 ft"
     ],
-    "id": "DV20-166"
+    "id": "DV20-166",
+    "explanation": "EHHV circuit calls: initial call with position, downwind report, and final with intention — the standard sequence for traffic awareness at Hilversum."
   },
   {
     "category": "Performance & Limits",
@@ -2502,7 +2668,8 @@
       "AVGAS 80",
       "Diesel"
     ],
-    "id": "DV20-167"
+    "id": "DV20-167",
+    "explanation": "AVGAS 100LL is an approved fuel grade for the DV20 — the standard aviation gasoline when MOGAS is not available or preferred."
   },
   {
     "category": "Performance & Limits",
@@ -2517,7 +2684,8 @@
       "60 liters",
       "100 liters"
     ],
-    "id": "DV20-168"
+    "id": "DV20-168",
+    "explanation": "79 liters is the maximum fuel capacity (including unusable) for PH-MFT and PH-SKM — the total tank volume, not the usable amount."
   },
   {
     "category": "Performance & Limits",
@@ -2532,7 +2700,8 @@
       "±22.3 L/hr",
       "±10 L/hr"
     ],
-    "id": "DV20-169"
+    "id": "DV20-169",
+    "explanation": "±15.3 L/hr at 75% power (2300 RPM, 25.7\" MP at 2000 ft) is the planning fuel flow for cruise fuel calculations."
   },
   {
     "category": "Performance & Limits",
@@ -2547,7 +2716,8 @@
       "43 kts",
       "45 kts"
     ],
-    "id": "DV20-170"
+    "id": "DV20-170",
+    "explanation": "39 kts stall speed with T/O flaps — between clean (43 kts) and full flap (38 kts), reflecting the partial flap configuration."
   },
   {
     "category": "Normal Procedures",
@@ -2562,7 +2732,8 @@
       "Memorize all items before flight",
       "Check items only after landing"
     ],
-    "id": "DV20-171"
+    "id": "DV20-171",
+    "explanation": "Keeping your thumb by the last completed checklist item prevents skipping steps — a simple technique for disciplined checklist flow."
   },
   {
     "category": "Normal Procedures",
@@ -2577,7 +2748,8 @@
       "Only before entering the circuit",
       "Every 200 ft"
     ],
-    "id": "DV20-172"
+    "id": "DV20-172",
+    "explanation": "Clearing turns every 500 ft during climb (15° bank, 30° left and right) maintains situational awareness and traffic scan during the climb."
   },
   {
     "category": "Normal Procedures",
@@ -2592,7 +2764,8 @@
       "At desired altitude",
       "20 ft before desired altitude"
     ],
-    "id": "DV20-173"
+    "id": "DV20-173",
+    "explanation": "Power to 25\"/2400 RPM at 50 ft before target altitude during descent level-off prevents an altitude undershoot while smoothly transitioning to cruise."
   },
   {
     "category": "Normal Procedures",
@@ -2607,7 +2780,8 @@
       "20° after the desired heading",
       "When bank reaches 45°"
     ],
-    "id": "DV20-174"
+    "id": "DV20-174",
+    "explanation": "Begin rolling wings level 10° before the desired heading in a level turn — lead angle compensates for roll-out lag."
   },
   {
     "category": "Normal Procedures",
@@ -2622,7 +2796,8 @@
       "At the desired heading",
       "When approaching desired altitude"
     ],
-    "id": "DV20-175"
+    "id": "DV20-175",
+    "explanation": "Begin rolling wings level 5° before desired heading in a climbing turn — a smaller lead than level turns because the turn rate is slower at climb speed."
   },
   {
     "category": "Maneuvers & Stalls",
@@ -2637,7 +2812,8 @@
       "Radio frequency and transponder code",
       "Taxi route and parking position"
     ],
-    "id": "DV20-176"
+    "id": "DV20-176",
+    "explanation": "Pre-stall briefings must cover stall type, altitude/heading, and recovery start/manner — ensuring both pilots know the plan before the maneuver."
   },
   {
     "category": "Maneuvers & Stalls",
@@ -2652,7 +2828,8 @@
       "As required",
       "ON only above 3000 ft"
     ],
-    "id": "DV20-177"
+    "id": "DV20-177",
+    "explanation": "Electric fuel pump ON before stall exercises ensures uninterrupted fuel flow during the low-power, high-AOA phases of the maneuver."
   },
   {
     "category": "Maneuvers & Stalls",
@@ -2667,7 +2844,8 @@
       "30°",
       "45°"
     ],
-    "id": "DV20-178"
+    "id": "DV20-178",
+    "explanation": "20° bank in an approach-to-stall descending turn adds a turning component while still allowing controlled stall entry practice."
   },
   {
     "category": "Maneuvers & Stalls",
@@ -2682,7 +2860,8 @@
       "70 kts",
       "81 kts"
     ],
-    "id": "DV20-179"
+    "id": "DV20-179",
+    "explanation": "Flaps UP at minimum 60 kts during recovery from approach-to-stall in a descending turn — above stall speed with margin before retraction."
   },
   {
     "category": "Maneuvers & Stalls",
@@ -2697,7 +2876,8 @@
       "No clearing turns required solo",
       "360° orbit only"
     ],
-    "id": "DV20-180"
+    "id": "DV20-180",
+    "explanation": "2 × 90° or one 180° clearing turn before stall exercises ensures the area is clear of traffic before beginning the maneuver."
   },
   {
     "category": "Takeoff",
@@ -2712,7 +2892,8 @@
       "Transponder ALT and landing light ON",
       "Fuel pressure and generator OFF"
     ],
-    "id": "DV20-181"
+    "id": "DV20-181",
+    "explanation": "Engine instruments (2400 RPM ±100) and airspeed alive are the two critical takeoff roll callouts — confirming power and instrument function before rotation."
   },
   {
     "category": "Takeoff",
@@ -2727,7 +2908,8 @@
       "±18\" MP, 75 kts",
       "Idle power, 70 kts"
     ],
-    "id": "DV20-182"
+    "id": "DV20-182",
+    "explanation": "At 700 ft AAL in the circuit after takeoff, ±21\" MP and 70 kts is the standard downwind configuration per the takeoff procedures."
   },
   {
     "category": "Takeoff",
@@ -2742,7 +2924,8 @@
       "Full forward",
       "Into the wind"
     ],
-    "id": "DV20-183"
+    "id": "DV20-183",
+    "explanation": "Full aft stick during taxi for soft field takeoff keeps weight off the nosewheel, reducing drag and preventing nosewheel digging on soft surfaces."
   },
   {
     "category": "Takeoff",
@@ -2757,7 +2940,8 @@
       "Release brakes before advancing throttle",
       "Rotate immediately at brake release"
     ],
-    "id": "DV20-184"
+    "id": "DV20-184",
+    "explanation": "Hold brakes, advance throttle FULL, check engine instruments, then release — the short field takeoff sequence that maximizes energy at rotation."
   },
   {
     "category": "Normal Procedures",
@@ -2772,7 +2956,8 @@
       "±21\" MP, 2400 RPM, 65 kts",
       "Idle power, 70 kts glide"
     ],
-    "id": "DV20-185"
+    "id": "DV20-185",
+    "explanation": "Enroute climb uses full throttle, 2400 RPM, and Vy 70 kts — maximum climb performance for the clean configuration during cross-country."
   },
   {
     "category": "Landing",
@@ -2787,7 +2972,8 @@
       "Retard to idle",
       "Hold at ±21\" MP"
     ],
-    "id": "DV20-186"
+    "id": "DV20-186",
+    "explanation": "Immediately advancing to ±24\" MP after selecting T/O flaps on downwind prevents speed decay from the increased drag of extended flaps."
   },
   {
     "category": "Landing",
@@ -2802,7 +2988,8 @@
       "10° maximum",
       "45° standard"
     ],
-    "id": "DV20-187"
+    "id": "DV20-187",
+    "explanation": "15°–20° bank (max 30°) on the downwind-to-base turn gives a controlled turn rate without excessive bank close to the ground."
   },
   {
     "category": "Landing",
@@ -2817,7 +3004,8 @@
       "At the threshold",
       "About 10 m"
     ],
-    "id": "DV20-188"
+    "id": "DV20-188",
+    "explanation": "Level flight about 1 m above the runway in the roundout is the transition point before retarding the throttle to idle for touchdown."
   },
   {
     "category": "Landing",
@@ -2832,7 +3020,8 @@
       "It causes the nosewheel to lift off",
       "It reduces generator output"
     ],
-    "id": "DV20-189"
+    "id": "DV20-189",
+    "explanation": "Excessive braking to exit sooner risks blown tires — the NOTE warns against sacrificing tire integrity for a shorter taxi distance."
   },
   {
     "category": "Landing",
@@ -2847,7 +3036,8 @@
       "After landing on the runway",
       "Before engine start"
     ],
-    "id": "DV20-190"
+    "id": "DV20-190",
+    "explanation": "State touch-and-go intention in the final radio call so other circuit traffic knows you will not full-stop and vacate the runway."
   },
   {
     "category": "Takeoff",
@@ -2862,7 +3052,8 @@
       "Away from the wind",
       "Full aft until rotation"
     ],
-    "id": "DV20-191"
+    "id": "DV20-191",
+    "explanation": "Control stick into the wind during crosswind takeoff (maximum deflection reducing with speed) counteracts weathervaning and keeps the wings level during the roll."
   },
   {
     "category": "Abnormal & Emergency",
@@ -2877,7 +3068,8 @@
       "Leave the aircraft to the instructor",
       "Only verbalize without touching controls"
     ],
-    "id": "DV20-192"
+    "id": "DV20-192",
+    "explanation": "During simulated EFATO, do not actually switch anything off — point to switches only (touch-drill) to practice the flow without creating a real emergency."
   },
   {
     "category": "Abnormal & Emergency",
@@ -2892,7 +3084,8 @@
       "Climb to gain altitude first",
       "Maintain current attitude until 90 kts"
     ],
-    "id": "DV20-193"
+    "id": "DV20-193",
+    "explanation": "Maintain altitude until speed reduces to 70 kts, then lower the nose — the correct technique to establish best glide without diving below optimal glide speed."
   },
   {
     "category": "Abnormal & Emergency",
@@ -2907,7 +3100,8 @@
       "The far end of the field",
       "The threshold only"
     ],
-    "id": "DV20-194"
+    "id": "DV20-194",
+    "explanation": "Aim for the first third of the landing field — provides margin if you come up short while avoiding the far end where obstacles may exist."
   },
   {
     "category": "Abnormal & Emergency",
@@ -2922,7 +3116,8 @@
       "ELT activates automatically only",
       "ELT OFF to save battery"
     ],
-    "id": "DV20-195"
+    "id": "DV20-195",
+    "explanation": "ELT ON manually after engine failure ensures the emergency locator activates even if the automatic g-switch does not trigger."
   },
   {
     "category": "Landing",
@@ -2937,7 +3132,8 @@
       "1000 ft AAL",
       "200 ft AGL"
     ],
-    "id": "DV20-196"
+    "id": "DV20-196",
+    "explanation": "500 ft downwind during a precautionary landing — lower than a normal circuit to allow closer inspection of the landing site."
   },
   {
     "category": "Landing",
@@ -2952,7 +3148,8 @@
       "500 ft at 75 kts",
       "100 ft at 55 kts"
     ],
-    "id": "DV20-197"
+    "id": "DV20-197",
+    "explanation": "Level off at 200 ft abeam the field during inspection run at ±24\" MP and 70 kts — close enough to assess the surface while maintaining safe speed."
   },
   {
     "id": "DV20-198",
@@ -2967,7 +3164,8 @@
       "Set flaps T/O and reduce to idle power",
       "Retract flaps and turn electric fuel pump OFF",
       "Extend flaps LDG and set MAX RPM"
-    ]
+    ],
+    "explanation": "Passing 200 ft AAL triggers the AFTER TAKE-OFF checklist: flaps UP and 2400 RPM transition you from takeoff into a clean climb configuration."
   },
   {
     "id": "DV20-199",
@@ -2982,7 +3180,8 @@
       "3000 ft AGL",
       "700 ft AAL",
       "Immediately after flap retraction"
-    ]
+    ],
+    "explanation": "The electric fuel pump is switched OFF above 1000 ft AAL because the engine-driven pump should now supply adequate fuel pressure on its own."
   },
   {
     "id": "DV20-200",
@@ -2997,7 +3196,8 @@
       "1500 RPM",
       "1100 RPM",
       "2400 RPM"
-    ]
+    ],
+    "explanation": "1700 RPM with brakes held during run-up is the standard setting for magneto, propeller, and carburetor heat checks before takeoff."
   },
   {
     "id": "DV20-201",
@@ -3012,7 +3212,8 @@
       "5 seconds",
       "15 seconds",
       "30 seconds"
-    ]
+    ],
+    "explanation": "If oil pressure stays below 1.5 bar after start, the CAUTION limits you to 10 seconds before shutdown to prevent engine damage from inadequate lubrication."
   },
   {
     "id": "DV20-202",
@@ -3027,7 +3228,8 @@
       "OFF",
       "T/O",
       "UP"
-    ]
+    ],
+    "explanation": "Carburetor heat ON on downwind protects against carb icing during the low-power circuit phase when throttle is typically below 20\" MP."
   },
   {
     "id": "DV20-203",
@@ -3042,7 +3244,8 @@
       "70 kts",
       "65 kts",
       "51 kts"
-    ]
+    ],
+    "explanation": "The balked landing checklist targets 58 kts (Vx) — best angle of climb to gain altitude quickly when aborting a landing."
   },
   {
     "id": "DV20-204",
@@ -3057,7 +3260,8 @@
       "64 kts",
       "59 kts",
       "90 kts"
-    ]
+    ],
+    "explanation": "After engine failure in cruise, establish 70 kts first — best glide with flaps UP — giving you control and time to plan before further actions."
   },
   {
     "id": "DV20-205",
@@ -3072,7 +3276,8 @@
       "70 kts",
       "43 kts",
       "55 kts"
-    ]
+    ],
+    "explanation": "59 kts is the checklist approach speed for a dead-stick landing, balancing controllability with minimum sink rate."
   },
   {
     "id": "DV20-206",
@@ -3087,7 +3292,8 @@
       "Lowered by 10 kts",
       "Unchanged from normal",
       "Raised by 5 kts"
-    ]
+    ],
+    "explanation": "With flaps stuck UP, raise approach speed by 10 kts to compensate for the higher stall speed without landing flap benefit."
   },
   {
     "id": "DV20-207",
@@ -3102,7 +3308,8 @@
       "1700 RPM",
       "2400 RPM ±100 RPM",
       "1100 RPM"
-    ]
+    ],
+    "explanation": "On cold mornings, 1100–1500 RPM during taxi warms oil to 50 °C without over-revving or excessive brake use on the ground."
   },
   {
     "id": "DV20-208",
@@ -3117,7 +3324,8 @@
       "58 kts",
       "65 kts",
       "90 kts"
-    ]
+    ],
+    "explanation": "Vy of 70 kts with flaps UP is the speed that produces the greatest rate of climb in the clean configuration — more altitude per minute than Vx, which optimizes angle instead."
   },
   {
     "id": "DV20-209",
@@ -3132,7 +3340,8 @@
       "75 kts",
       "58 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "With takeoff flaps still selected, Vy drops to 65 kts because the wing produces more lift at a lower angle of attack, changing the best rate-of-climb point."
   },
   {
     "id": "DV20-210",
@@ -3147,7 +3356,8 @@
       "51 kts",
       "65 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "Vx of 58 kts with flaps T/O gives the steepest climb path — use it when you need to clear an obstacle rather than maximize climb rate."
   },
   {
     "id": "DV20-211",
@@ -3162,7 +3372,8 @@
       "39 kts",
       "58 kts",
       "38 kts"
-    ]
+    ],
+    "explanation": "VS1 of 43 kts is the clean-configuration stall speed (flaps UP) — the baseline reference for approach margins and slow-flight training."
   },
   {
     "id": "DV20-212",
@@ -3177,7 +3388,8 @@
       "43 kts",
       "55 kts",
       "39 kts"
-    ]
+    ],
+    "explanation": "VSO of 38 kts is the stall speed with landing flaps — the lower end of the white arc on the airspeed indicator."
   },
   {
     "id": "DV20-213",
@@ -3192,7 +3404,8 @@
       "104 kts",
       "117 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "VFE of 81 kts is the maximum speed with flaps extended; exceeding it risks structural damage to the flap system, which is why flap changes require a \"Speed checked\" callout below this limit."
   },
   {
     "id": "DV20-214",
@@ -3207,7 +3420,8 @@
       "117 kts",
       "90 kts",
       "161 kts"
-    ]
+    ],
+    "explanation": "VA of 104 kts is maneuvering speed — below this speed the wing will stall before exceeding the design load limit in full-deflection maneuvers."
   },
   {
     "id": "DV20-215",
@@ -3222,7 +3436,8 @@
       "20 kts",
       "25 kts",
       "10 kts"
-    ]
+    ],
+    "explanation": "15 kts is the maximum demonstrated crosswind component; it represents flight-test experience, not a hard legal limit, but is the figure you plan around for safe operations."
   },
   {
     "id": "DV20-216",
@@ -3237,7 +3452,8 @@
       "58 kts",
       "59 kts",
       "64 kts"
-    ]
+    ],
+    "explanation": "Best glide with flaps UP is 70 kts — the speed that maximizes range and time aloft after an engine failure in the clean configuration."
   },
   {
     "id": "DV20-217",
@@ -3252,7 +3468,8 @@
       "70 kts",
       "59 kts",
       "65 kts"
-    ]
+    ],
+    "explanation": "With takeoff flaps out, best glide is 64 kts — slightly slower than clean because the extended flaps change the wing's lift/drag characteristics."
   },
   {
     "id": "DV20-218",
@@ -3267,7 +3484,8 @@
       "495 kg",
       "750 kg",
       "511 kg"
-    ]
+    ],
+    "explanation": "730 kg is the maximum takeoff weight for PH-MFT and PH-SKM; exceeding it violates loading limits and degrades performance margins."
   },
   {
     "id": "DV20-219",
@@ -3282,7 +3500,8 @@
       "100 liters",
       "58 liters",
       "79 liters"
-    ]
+    ],
+    "explanation": "77 liters is the usable fuel capacity — the quantity you can actually burn in flight, distinct from total tank capacity which includes unusable fuel."
   },
   {
     "id": "DV20-220",
@@ -3297,7 +3516,8 @@
       "10:1",
       "7:1",
       "20:1"
-    ]
+    ],
+    "explanation": "A 14:1 glide ratio means for every 1000 ft of altitude you can glide roughly 2.8 nm in still air — a planning figure for engine-out scenarios."
   },
   {
     "id": "DV20-221",
@@ -3312,7 +3532,8 @@
       "20\" MP",
       "±21\" MP, speed 70 kts",
       "12–15\" MP"
-    ]
+    ],
+    "explanation": "25\" MP, 2400 RPM, and 90 kts is the standard straight-and-level cruise setting — a balanced power configuration for efficient level flight per the normal procedures."
   },
   {
     "id": "DV20-222",
@@ -3327,7 +3548,8 @@
       "20\" MP",
       "±21\" MP, speed 70 kts",
       "12–15\" MP"
-    ]
+    ],
+    "explanation": "The power/speed table lists ±25\" MP, 2400 RPM, and 90 kts for cruise with flaps UP — the reference setting when established in level flight."
   },
   {
     "id": "DV20-223",
@@ -3342,7 +3564,8 @@
       "25\" MP, 2400 RPM, 90 kts",
       "15\" MP",
       "20\" MP"
-    ]
+    ],
+    "explanation": "For descent with flaps UP, the table specifies ±18\" MP at 2400 RPM and 90 kts — reduced power while maintaining airspeed for a controlled descent."
   },
   {
     "id": "DV20-224",
@@ -3357,7 +3580,8 @@
       "Full throttle until base",
       "±15\" MP to maintain 70 kts",
       "±21\" MP to maintain 75 kts"
-    ]
+    ],
+    "explanation": "Selecting flaps T/O on downwind increases drag; advancing to ±24\" MP restores the energy needed to hold 70 kts in the circuit."
   },
   {
     "id": "DV20-225",
@@ -3372,7 +3596,8 @@
       "±21\" MP, speed 70 kts",
       "12–15\" MP",
       "25\" MP, 2400 RPM, 90 kts"
-    ]
+    ],
+    "explanation": "15\" MP on base is the initial power reduction that begins slowing the aircraft from downwind speed toward final approach speed."
   },
   {
     "id": "DV20-226",
@@ -3387,7 +3612,8 @@
       "58 kts",
       "70 kts",
       "55 kts"
-    ]
+    ],
+    "explanation": "60 kts is the minimum approach speed on final — the floor that keeps adequate margin above stall while allowing a stabilized approach."
   },
   {
     "id": "DV20-227",
@@ -3402,7 +3628,8 @@
       "25\" MP",
       "15\" MP",
       "18\" MP"
-    ]
+    ],
+    "explanation": "Below 20\" MP the throttle is low enough that carburetor icing risk rises significantly, so carburetor heat must be ON per the power table note."
   },
   {
     "id": "DV20-228",
@@ -3417,7 +3644,8 @@
       "81 kts",
       "104 kts",
       "15 kts"
-    ]
+    ],
+    "explanation": "Climb with flaps T/O uses full throttle and prop full forward at 65 kts — matching Vy for the takeoff flap configuration on the power/speed table."
   },
   {
     "id": "DV20-229",
@@ -3432,7 +3660,8 @@
       "No change to descend rate",
       "50 ft/min less descend rate",
       "200 ft/min extra descend rate"
-    ]
+    ],
+    "explanation": "Each inch of reduced manifold pressure adds roughly 100 ft/min of descent rate — a useful rule of thumb when fine-tuning your descent profile."
   },
   {
     "id": "DV20-230",
@@ -3447,7 +3676,8 @@
       "12–15\" MP",
       "25\" MP, 2400 RPM, 90 kts",
       "±18\" MP, 2400 RPM, 90 kts"
-    ]
+    ],
+    "explanation": "At 700 ft AAL in the circuit, ±21\" MP and 70 kts is the standard downwind configuration — enough power to maintain circuit speed with flaps still UP."
   },
   {
     "id": "DV20-231",
@@ -3462,7 +3692,8 @@
       "90 kts",
       "58 kts",
       "65 kts"
-    ]
+    ],
+    "explanation": "Advancing to full throttle at 70 kts during the climb transition ensures you have adequate airspeed before adding climb power, preventing excessive pitch and stall risk."
   },
   {
     "id": "DV20-232",
@@ -3477,7 +3708,8 @@
       "70 kts",
       "65 kts",
       "75 kts"
-    ]
+    ],
+    "explanation": "At 90 kts during level-off from climb, power is reduced to 25\"/2400 RPM — the standard cruise setting once the aircraft is stabilized in level flight."
   },
   {
     "id": "DV20-233",
@@ -3492,7 +3724,8 @@
       "OFF until below 20\" MP",
       "ON only after landing",
       "OFF throughout descent"
-    ]
+    ],
+    "explanation": "Carburetor heat goes ON before reducing power for descent because the sudden power reduction creates ideal conditions for carburetor icing."
   },
   {
     "id": "DV20-234",
@@ -3507,7 +3740,8 @@
       "300 ft",
       "200 ft AAL",
       "300 ft AGL"
-    ]
+    ],
+    "explanation": "Turning carb heat OFF 100 ft before the target altitude during a descent level-off prevents carrying unnecessary heat into the cruise power setting."
   },
   {
     "id": "DV20-235",
@@ -3522,7 +3756,8 @@
       "45°",
       "15°",
       "20°"
-    ]
+    ],
+    "explanation": "30° bank is the standard for level turns — steep enough for reasonable turn rate while keeping g-load and stall speed increase manageable."
   },
   {
     "id": "DV20-236",
@@ -3537,7 +3772,8 @@
       "90 kts",
       "104 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "In a 30° level turn, target approximately 95 kts to compensate for the increased load factor and prevent altitude loss."
   },
   {
     "id": "DV20-237",
@@ -3552,7 +3788,8 @@
       "20°",
       "30°",
       "45°"
-    ]
+    ],
+    "explanation": "Maximum 15° bank in a climbing turn limits the additional stall-speed rise and helps maintain Vy while turning — steeper banks bleed climb performance."
   },
   {
     "id": "DV20-238",
@@ -3567,7 +3804,8 @@
       "Extend flaps T/O",
       "Decrease power setting by 2\"",
       "Retard throttle to idle"
-    ]
+    ],
+    "explanation": "At 30° bank in a steep turn, increasing power by 2\" compensates for the extra induced drag and load factor that would otherwise cause altitude loss."
   },
   {
     "id": "DV20-239",
@@ -3582,7 +3820,8 @@
       "700 ft AGL",
       "1500 ft AGL",
       "3000 ft AGL"
-    ]
+    ],
+    "explanation": "2000 ft AGL minimum for solo steep turns provides recovery altitude if something goes wrong during the maneuver."
   },
   {
     "id": "DV20-240",
@@ -3597,7 +3836,8 @@
       "Altitude in feet only",
       "Distance in nautical miles only",
       "Compass heading only"
-    ]
+    ],
+    "explanation": "Clock position plus above/below/on the horizon gives other traffic a precise, unambiguous location that both pilots can visualize quickly."
   },
   {
     "id": "DV20-241",
@@ -3612,7 +3852,8 @@
       "VS+10 kts",
       "65 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "90 kts during clearing turns keeps the aircraft stable and gives good visibility while scanning before maneuvers."
   },
   {
     "id": "DV20-242",
@@ -3627,7 +3868,8 @@
       "90 kts",
       "59 kts",
       "64 kts"
-    ]
+    ],
+    "explanation": "70 kts is the target glide speed from straight and level — matching best glide with flaps UP for a controlled transition into engine-idle flight."
   },
   {
     "id": "DV20-243",
@@ -3642,7 +3884,8 @@
       "60 kts minimum",
       "70 kts exactly",
       "VS + 5 kts"
-    ]
+    ],
+    "explanation": "Slow flight is flown at VS + 10 kts — close enough to the stall to be realistic, but with a deliberate margin for control and recovery practice."
   },
   {
     "id": "DV20-244",
@@ -3657,7 +3900,8 @@
       "25\" MP, 2400 RPM, 90 kts",
       "±18\" MP, 2400 RPM, 90 kts",
       "15\" MP"
-    ]
+    ],
+    "explanation": "Reducing to 12–15\" MP on slow-flight entry bleeds energy gradually so you can stabilize at VS+10 without overshooting into a stall."
   },
   {
     "id": "DV20-245",
@@ -3672,7 +3916,8 @@
       "10 kts above cruise speed",
       "Any nose dip occurs",
       "Full power is applied"
-    ]
+    ],
+    "explanation": "Recovery triggers include the stall warning, buffet, or reaching 5 kts above stall speed — whichever comes first ensures you recover before a full stall develops."
   },
   {
     "id": "DV20-246",
@@ -3687,7 +3932,8 @@
       "43 kts",
       "55 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "In a power-on stall recovery, 60 kts minimum before raising the nose ensures adequate airflow and control authority to safely transition back to climb attitude."
   },
   {
     "id": "DV20-247",
@@ -3702,7 +3948,8 @@
       "2000 ft AGL",
       "1500 ft AGL",
       "700 ft AGL"
-    ]
+    ],
+    "explanation": "3000 ft AGL minimum for solo full stalls provides enough altitude to recover from a developed stall and any altitude loss during the maneuver."
   },
   {
     "id": "DV20-248",
@@ -3717,7 +3964,8 @@
       "1000 ft AGL",
       "3000 ft AGL",
       "1500 ft AGL"
-    ]
+    ],
+    "explanation": "2000 ft AGL minimum for solo approach-to-stall exercises allows recovery before reaching an unsafe altitude, with less margin needed than a full stall."
   },
   {
     "id": "DV20-249",
@@ -3732,7 +3980,8 @@
       "Maintain altitude at all costs",
       "Retard throttle to idle first",
       "Extend flaps immediately"
-    ]
+    ],
+    "explanation": "Stall recovery always prioritizes reducing angle of attack — trying to save altitude before unstalling the wing can deepen the stall and worsen the situation."
   },
   {
     "id": "DV20-250",
@@ -3747,7 +3996,8 @@
       "Set power to idle",
       "Retract flaps fully first",
       "Set carburetor heat OFF"
-    ]
+    ],
+    "explanation": "The white arc callout confirms your speed is at or below VFE before any flap change, preventing structural damage from extending flaps at too high an airspeed."
   },
   {
     "id": "DV20-251",
@@ -3762,7 +4012,8 @@
       "90 kts",
       "104 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "Flaps must be fully retracted by 81 kts (VFE) when accelerating out of slow flight — you cannot leave flaps down above the maximum flap-extended speed."
   },
   {
     "id": "DV20-252",
@@ -3777,7 +4028,8 @@
       "1500 ft AAL",
       "500 ft AAL",
       "1000 ft AAL"
-    ]
+    ],
+    "explanation": "700 ft AAL is the standard circuit height at uncontrolled aerodromes — low enough for efficient operations, high enough for a stable pattern."
   },
   {
     "id": "DV20-253",
@@ -3792,7 +4044,8 @@
       "500 ft AGL",
       "700 ft AAL",
       "2000 ft AAL"
-    ]
+    ],
+    "explanation": "The circuit area extends vertically to 1000 ft AAL — traffic above this height is outside the standard circuit protection volume."
   },
   {
     "id": "DV20-254",
@@ -3807,7 +4060,8 @@
       "30°",
       "15°",
       "45° half-way crosswind leg"
-    ]
+    ],
+    "explanation": "Joining at half-way downwind on a 90° intercept gives a predictable, non-conflicting entry that keeps you aligned with standard circuit flow."
   },
   {
     "id": "DV20-255",
@@ -3822,7 +4076,8 @@
       "30°",
       "15°",
       "Half-way downwind at 90° interception angle"
-    ]
+    ],
+    "explanation": "Leaving the circuit at the 45° half-way crosswind point keeps your departure clear of downwind traffic and follows standard VFR circuit procedure."
   },
   {
     "id": "DV20-256",
@@ -3837,7 +4092,8 @@
       "90 kts",
       "60 kts",
       "75 kts"
-    ]
+    ],
+    "explanation": "70 kts is the downwind speed checked in HARS — the reference circuit speed before flap selection and base turn."
   },
   {
     "id": "DV20-257",
@@ -3852,7 +4108,8 @@
       "30°",
       "15°",
       "Half-way downwind at 90° interception angle"
-    ]
+    ],
+    "explanation": "With the threshold 45–60° behind the wing on base, you are at the correct position and distance for a stable base-to-final turn."
   },
   {
     "id": "DV20-258",
@@ -3867,7 +4124,8 @@
       "300 ft on centerline",
       "700 ft at crosswind",
       "200 ft abeam threshold"
-    ]
+    ],
+    "explanation": "Turning base-to-final at 500 ft and 20° before the extended centerline sets up a stabilized final without overshooting or cutting in too close."
   },
   {
     "id": "DV20-259",
@@ -3882,7 +4140,8 @@
       "200 ft AAL",
       "300 ft AGL",
       "Downwind with 1000 ft point"
-    ]
+    ],
+    "explanation": "Being established on final centerline by 300 ft gives enough time to stabilize speed and glidepath before the roundout."
   },
   {
     "id": "DV20-260",
@@ -3897,7 +4156,8 @@
       "70 kts",
       "117 kts (VNO)",
       "104 kts (VA)"
-    ]
+    ],
+    "explanation": "Flaps may only be selected below 81 kts (VFE) — the structural limit for extended flaps on the DV20."
   },
   {
     "id": "DV20-261",
@@ -3912,7 +4172,8 @@
       "700 ft AAL",
       "2000 ft AGL",
       "500 ft AAL"
-    ]
+    ],
+    "explanation": "Overflying the circuit at a minimum of 1000 ft AAL keeps you clear of circuit traffic while allowing a safe read of the signal area."
   },
   {
     "id": "DV20-262",
@@ -3927,7 +4188,8 @@
       "58 kts",
       "65 kts",
       "57 kts"
-    ]
+    ],
+    "explanation": "51 kts is the normal rotation speed — the point where the wing generates enough lift to leave the ground smoothly without premature rotation."
   },
   {
     "id": "DV20-263",
@@ -3942,7 +4204,8 @@
       "65 kts only, then hold 70 kts",
       "51 kts until 200 ft AAL",
       "70 kts immediately after rotation"
-    ]
+    ],
+    "explanation": "After rotation, accelerate to 65 kts (Vy with T/O flaps) then 70 kts after flap retraction — the standard climb speed sequence for a normal takeoff."
   },
   {
     "id": "DV20-264",
@@ -3957,7 +4220,8 @@
       "Flaps T/O",
       "Flaps LDG",
       "No flaps, with reduced power"
-    ]
+    ],
+    "explanation": "Flaps UP on a long hard runway minimizes drag during the takeoff roll, shortening ground run when runway length is not a constraint."
   },
   {
     "id": "DV20-265",
@@ -3972,7 +4236,8 @@
       "Flaps UP",
       "Flaps LDG",
       "No flaps, with reduced power"
-    ]
+    ],
+    "explanation": "Flaps T/O on short (<800 m) or soft/grass runways reduces the rotation and liftoff speed, shortening ground run and improving takeoff performance."
   },
   {
     "id": "DV20-266",
@@ -3987,7 +4252,8 @@
       "60 kts",
       "51 kts",
       "65 kts"
-    ]
+    ],
+    "explanation": "57 kts rotation on an obstacle clearance takeoff is slightly higher than normal to ensure positive climb performance over obstacles."
   },
   {
     "id": "DV20-267",
@@ -4002,7 +4268,8 @@
       "65 kts (Vy)",
       "70 kts",
       "51 kts"
-    ]
+    ],
+    "explanation": "58 kts (Vx) after an obstacle clearance takeoff maximizes climb angle until obstacles are cleared, then you can accelerate to Vy."
   },
   {
     "id": "DV20-268",
@@ -4017,7 +4284,8 @@
       "65 kts",
       "51 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "Raising the nose gently at 60 kts on a soft field takeoff lifts the nosewheel early to reduce drag and prevent the nosewheel from digging in."
   },
   {
     "id": "DV20-269",
@@ -4032,7 +4300,8 @@
       "1700 RPM",
       "1100–1500 RPM",
       "1100 RPM"
-    ]
+    ],
+    "explanation": "2400 RPM ±100 during the takeoff roll confirms the engine is delivering full rated power — a critical check before committing to flight."
   },
   {
     "id": "DV20-270",
@@ -4047,7 +4316,8 @@
       "T/O",
       "ON",
       "UP"
-    ]
+    ],
+    "explanation": "The electric fuel pump is switched OFF when leaving the circuit because the engine-driven pump is now providing adequate fuel pressure at cruise power."
   },
   {
     "id": "DV20-271",
@@ -4062,7 +4332,8 @@
       "70 kts",
       "58 kts",
       "55 kts"
-    ]
+    ],
+    "explanation": "60 kts minimum over the threshold on a normal landing keeps adequate stall margin while allowing a stabilized approach in the landing configuration."
   },
   {
     "id": "DV20-272",
@@ -4077,7 +4348,8 @@
       "43 kts",
       "60 kts",
       "70 kts"
-    ]
+    ],
+    "explanation": "55 kts minimum threshold speed on a short field landing reduces float and ground roll, maximizing available runway."
   },
   {
     "id": "DV20-273",
@@ -4092,7 +4364,8 @@
       "90 kts / 80 kts / 70 kts",
       "70 kts / 65 kts / 58 kts",
       "75 kts / 70 kts / 60 kts"
-    ]
+    ],
+    "explanation": "A flaps-up landing uses 70 kts throughout the circuit because without flaps the higher stall speed requires a faster approach profile."
   },
   {
     "id": "DV20-274",
@@ -4107,7 +4380,8 @@
       "At 500 ft on final approach",
       "Immediately after passing the threshold",
       "During the round-out before the threshold"
-    ]
+    ],
+    "explanation": "Retarding the throttle to idle once level flight about 1 m above the runway is established in the roundout — the standard technique for a normal landing."
   },
   {
     "id": "DV20-275",
@@ -4122,7 +4396,8 @@
       "Brake immediately after main gear touchdown",
       "Flaps UP throughout approach",
       "Higher approach speed of 90 kts"
-    ]
+    ],
+    "explanation": "Keeping the nosewheel off with full back pressure on a soft field landing prevents the nosewheel from digging into soft surface and damaging the aircraft."
   },
   {
     "id": "DV20-276",
@@ -4137,7 +4412,8 @@
       "Apply full power for touch-and-go",
       "Leave flaps LDG until clear of runway",
       "Retract carb heat first"
-    ]
+    ],
+    "explanation": "After a short field landing, flaps UP reduces drag for braking effectiveness, and careful braking minimizes ground roll without risking tire damage."
   },
   {
     "id": "DV20-277",
@@ -4152,7 +4428,8 @@
       "LDG until rotation",
       "Full flap throughout",
       "T/O always"
-    ]
+    ],
+    "explanation": "Flaps UP for a touch and go on pavement minimizes drag on the subsequent takeoff roll when runway length allows."
   },
   {
     "id": "DV20-278",
@@ -4167,7 +4444,8 @@
       "Flaps UP",
       "Flaps LDG",
       "No flap change from landing"
-    ]
+    ],
+    "explanation": "Flaps T/O for a touch and go on grass improves takeoff performance on the softer surface where reduced ground run matters."
   },
   {
     "id": "DV20-279",
@@ -4182,7 +4460,8 @@
       "Higher power on final only",
       "Full flap landing always",
       "Slip without rudder correction"
-    ]
+    ],
+    "explanation": "A flapless landing in strong crosswind reduces the side force on the flaps and gives better roll control during the landing roll."
   },
   {
     "id": "DV20-280",
@@ -4197,7 +4476,8 @@
       "Pitch up before adding power",
       "Flaps UP, idle power, carb heat ON",
       "Retract all flaps, then add power"
-    ]
+    ],
+    "explanation": "The first go-around actions are MAX RPM, full throttle, and carb heat OFF — immediately restoring full climb power."
   },
   {
     "id": "DV20-281",
@@ -4212,7 +4492,8 @@
       "Flaps LDG immediately",
       "Flaps UP without speed check",
       "Maintain landing flaps until 700 ft"
-    ]
+    ],
+    "explanation": "T/O flaps after \"Speed checked\" within the white arc gives partial flap for climb while staying below VFE during the initial go-around acceleration."
   },
   {
     "id": "DV20-282",
@@ -4227,7 +4508,8 @@
       "90 kts until downwind",
       "51 kts until 200 ft",
       "70 kts immediately"
-    ]
+    ],
+    "explanation": "58 kts (Vx) initially after go-around maximizes climb angle; transition to 65 kts (Vy) once clear of obstacles for best rate of climb."
   },
   {
     "id": "DV20-283",
@@ -4242,7 +4524,8 @@
       "700 ft AAL",
       "500 ft AGL on base",
       "1000 ft AAL"
-    ]
+    ],
+    "explanation": "Above 200 ft AAL after go-around, flaps UP and 2400 RPM transition the aircraft into the standard climb configuration."
   },
   {
     "id": "DV20-284",
@@ -4257,7 +4540,8 @@
       "Left side of the runway",
       "Either side is acceptable",
       "Remain on centerline only"
-    ]
+    ],
+    "explanation": "At Hilversum, staying clear of the right side of the runway on go-around avoids conflict with gliders and paragliders operating from that side."
   },
   {
     "id": "DV20-285",
@@ -4272,7 +4556,8 @@
       "700 ft AAL",
       "Flap retraction",
       "Crosswind turn"
-    ]
+    ],
+    "explanation": "You can only safely abort a takeoff before rotation; once airborne, the procedure and options change completely."
   },
   {
     "id": "DV20-286",
@@ -4287,7 +4572,8 @@
       "500 ft AGL",
       "700 ft AAL",
       "200 ft AAL"
-    ]
+    ],
+    "explanation": "EFATO simulation below 300 ft AGL is prohibited because there is insufficient altitude to safely practice the maneuver and recover."
   },
   {
     "id": "DV20-287",
@@ -4302,7 +4588,8 @@
       "70 kts regardless of flap setting",
       "51 kts with flaps T/O",
       "65 kts with flaps UP"
-    ]
+    ],
+    "explanation": "Glide speed after takeoff engine failure depends on flap setting: 59 kts with T/O flaps, 70 kts with flaps UP — matching the configuration-specific best glide speeds."
   },
   {
     "id": "DV20-288",
@@ -4317,7 +4604,8 @@
       "T/O",
       "ON",
       "UP"
-    ]
+    ],
+    "explanation": "Carb heat OFF on the insufficient power drill eliminates carb icing as a cause and ensures full power delivery while troubleshooting."
   },
   {
     "id": "DV20-289",
@@ -4332,7 +4620,8 @@
       "100 ft before desired altitude",
       "2000 ft AGL",
       "3000 ft AGL"
-    ]
+    ],
+    "explanation": "Above 1500 ft, fly a downwind with a 1000 ft abeam point — enough altitude to set up a normal circuit approach to a landing site."
   },
   {
     "id": "DV20-290",
@@ -4347,7 +4636,8 @@
       "Climb to 1500 ft first",
       "Downwind with 1000 ft point",
       "Direct base only"
-    ]
+    ],
+    "explanation": "Below 700 ft, fly direct final — there is insufficient altitude for a full circuit, so the most direct approach to a landing site is required."
   },
   {
     "id": "DV20-291",
@@ -4362,7 +4652,8 @@
       "7500",
       "1200",
       "7600"
-    ]
+    ],
+    "explanation": "7700 is the transponder code for emergency — alerting ATC and other traffic that you have an urgent situation."
   },
   {
     "id": "DV20-292",
@@ -4377,7 +4668,8 @@
       "43 kts always",
       "55 kts on downwind only",
       "70 kts"
-    ]
+    ],
+    "explanation": "59 kts for emergency landing with engine off matches the checklist approach speed for a controlled descent to touchdown with flaps in landing configuration."
   },
   {
     "id": "DV20-293",
@@ -4392,7 +4684,8 @@
       "Full throttle",
       "Open canopy immediately",
       "Extend flaps LDG"
-    ]
+    ],
+    "explanation": "Master switch OFF is the first action for electrical fire — removing the power source stops the current that is feeding the fire."
   },
   {
     "id": "DV20-294",
@@ -4407,7 +4700,8 @@
       "Increase throttle to maximum",
       "Turn master switch ON and OFF repeatedly",
       "Continue flight indefinitely"
-    ]
+    ],
+    "explanation": "With generator failure, shedding nonessential loads reduces electrical demand and may allow the remaining battery capacity to reach a suitable airport."
   },
   {
     "id": "DV20-295",
@@ -4422,7 +4716,8 @@
       "81 kts",
       "104 kts",
       "15 kts"
-    ]
+    ],
+    "explanation": "70 kts during engine fire in flight maintains control while minimizing airflow that could feed the fire, per the abnormal checklist."
   },
   {
     "id": "DV20-296",
@@ -4437,7 +4732,8 @@
       "Extend flaps immediately",
       "Complete radio calls first",
       "Shut down all electrical systems"
-    ]
+    ],
+    "explanation": "In any abnormal situation, flying the airplane and maintaining control always comes first — before checklists or troubleshooting."
   },
   {
     "id": "DV20-297",
@@ -4452,7 +4748,8 @@
       "Full tank only",
       "77 liters total",
       "Unusable fuel quantity"
-    ]
+    ],
+    "explanation": "The lowest notch on the fuel dipstick marks 10 liters of usable fuel — the minimum quantity reading you should expect from a dip check."
   },
   {
     "id": "DV20-298",
@@ -4467,7 +4764,8 @@
       "Aviation lubricant mixed with fuel",
       "Jet A-1",
       "Automotive diesel"
-    ]
+    ],
+    "explanation": "MOGAS per BAZ-Regulation is the preferred fuel at EHHV (Hilversum), reflecting local operating approval for automotive gasoline."
   },
   {
     "id": "DV20-299",
@@ -4482,7 +4780,8 @@
       "MOGAS at EHHV",
       "SF or SG marked automotive oil",
       "100LL AVGAS"
-    ]
+    ],
+    "explanation": "Aviation lubricant must never substitute for engine oil — it lacks the properties required for engine lubrication and can cause serious engine damage."
   },
   {
     "id": "DV20-300",
@@ -4497,7 +4796,8 @@
       "700 ft AAL",
       "1000 ft AAL",
       "500 ft and 20° before extended centerline"
-    ]
+    ],
+    "explanation": "The example departure briefing leaves the circuit at 700 ft on the crosswind leg under 45° — the standard Hilversum departure procedure."
   },
   {
     "id": "DV20-301",
@@ -4512,7 +4812,8 @@
       "Passenger meal preferences",
       "Historical accident statistics only",
       "Only radio phraseology"
-    ]
+    ],
+    "explanation": "TEM briefings identify threats to your operation and how to mitigate them — turning potential problems into planned responses before they occur."
   },
   {
     "id": "DV20-302",
@@ -4527,7 +4828,8 @@
       "Solo student approval",
       "No radio call required",
       "Full flap landing"
-    ]
+    ],
+    "explanation": "The EHHV glide-in from 1000 ft downwind requires a mandatory call, no traffic ahead, and instructor only — it is not approved for solo students."
   },
   {
     "id": "DV20-303",
@@ -4542,7 +4844,8 @@
       "GLIDER",
       "TRAINING",
       "DV20"
-    ]
+    ],
+    "explanation": "Solo student pilots prefix their call sign with STUDENT so other traffic and ATC recognize they are a student and may need additional consideration."
   },
   {
     "id": "DV20-304",
@@ -4557,7 +4860,8 @@
       "Crosswind leg",
       "The runway",
       "700 ft AAL"
-    ]
+    ],
+    "explanation": "Call out the instruments/brakes check after leaving the parking area, confirming systems before entering active taxiways."
   },
   {
     "id": "DV20-305",
@@ -4572,7 +4876,8 @@
       "117 kts",
       "104 kts",
       "181 kts"
-    ]
+    ],
+    "explanation": "VNE of 161 kts is the never-exceed speed — the red line on the airspeed indicator that must never be exceeded in any condition."
   },
   {
     "id": "DV20-306",
@@ -4587,7 +4892,8 @@
       "104 kts",
       "161 kts",
       "90 kts"
-    ]
+    ],
+    "explanation": "VNO of 117 kts is the maximum structural cruising speed in smooth air — above this, only fly in smooth conditions or reduce speed."
   },
   {
     "id": "DV20-307",
@@ -4602,7 +4908,8 @@
       "10 kg",
       "58 kg",
       "30 kg"
-    ]
+    ],
+    "explanation": "20 kg maximum baggage in the aft compartment keeps the CG within limits and prevents overloading the rear of the aircraft."
   },
   {
     "id": "DV20-308",
@@ -4617,7 +4924,8 @@
       "495 kg",
       "730 kg",
       "511 lb"
-    ]
+    ],
+    "explanation": "511 kg is the empty weight of PH-MFT — the baseline for weight and balance calculations before adding fuel, occupants, and baggage."
   },
   {
     "id": "DV20-309",
@@ -4632,7 +4940,8 @@
       "-2.2G to +4.4G",
       "-1.0G to +3.0G",
       "0.0G to +4.4G"
-    ]
+    ],
+    "explanation": "With flaps extended, the normal category G-load range is 0.0G to +2.0G — reduced from the clean configuration due to the lower structural limit with flaps down."
   },
   {
     "id": "DV20-310",
@@ -4647,7 +4956,8 @@
       "70 kts at ±24\" MP",
       "90 kts at ±25\" MP",
       "60 kts at ±15\" MP"
-    ]
+    ],
+    "explanation": "The circuit with flaps UP uses 75 kts at ±21\" MP per the power table — slightly faster than the 70 kts used with T/O flaps because clean configuration has a higher stall speed."
   },
   {
     "id": "DV20-311",
@@ -4662,7 +4972,8 @@
       "30 RPM drop",
       "150 RPM drop",
       "50–100 RPM drop"
-    ]
+    ],
+    "explanation": "A 100–200 RPM drop during the propeller check confirms the governor is functioning and can control prop pitch at run-up RPM."
   },
   {
     "id": "DV20-312",
@@ -4677,7 +4988,8 @@
       "Max 30 RPM drop, max 100 RPM difference",
       "Max 200 RPM drop, max 50 RPM difference",
       "No drop allowed on either magneto"
-    ]
+    ],
+    "explanation": "Mag check limits of max 150 RPM drop per side and max 50 RPM difference between L and R confirm both magnetos and the ignition system are healthy."
   },
   {
     "id": "DV20-313",
@@ -4692,7 +5004,8 @@
       "50 RPM",
       "150 RPM",
       "100–200 RPM"
-    ]
+    ],
+    "explanation": "A 30 RPM drop during the carb heat check confirms heated air is reaching the carburetor — proving the carb heat system works before flight."
   },
   {
     "id": "DV20-314",
@@ -4707,7 +5020,8 @@
       "T/O",
       "LDG",
       "AS REQUIRED"
-    ]
+    ],
+    "explanation": "Flaps UP on the AFTER LANDING checklist reduces drag and prepares the aircraft for taxi — flaps are not needed on the ground."
   },
   {
     "id": "DV20-315",
@@ -4722,7 +5036,8 @@
       "ON",
       "AS REQUIRED",
       "CHECK"
-    ]
+    ],
+    "explanation": "Carb heat OFF after landing because full power is no longer needed and carb icing risk is minimal during taxi with intermittent power changes."
   },
   {
     "id": "DV20-316",
@@ -4737,7 +5052,8 @@
       "Continue flight for up to 1 hour",
       "Switch to electric fuel pump only",
       "No action — gauge is reliable"
-    ]
+    ],
+    "explanation": "At ¼ tank on the fuel gauge, land within 30 minutes — the gauge reads optimistically, so this is a conservative fuel reserve trigger."
   },
   {
     "id": "DV20-317",
@@ -4752,7 +5068,8 @@
       "100 ft before desired altitude",
       "50 ft before desired altitude",
       "At the desired altitude"
-    ]
+    ],
+    "explanation": "Begin lowering the nose 20 ft before the target altitude during climb level-off — a small lead that prevents overshooting the assigned level."
   },
   {
     "id": "DV20-318",
@@ -4767,7 +5084,8 @@
       "100 ft before desired altitude",
       "50 ft before desired altitude",
       "At the desired altitude"
-    ]
+    ],
+    "explanation": "150 ft before target altitude during glide level-off gives time to add power and turn carb heat OFF smoothly without an altitude overshoot."
   },
   {
     "id": "DV20-319",
@@ -4782,7 +5100,8 @@
       "1 second",
       "10 seconds",
       "Until 90 kts is reached"
-    ]
+    ],
+    "explanation": "3–5 seconds of full power during a prolonged glide clears spark plug fouling from the rich mixture at idle — keeping the engine ready for a power addition."
   },
   {
     "id": "DV20-320",
@@ -4797,7 +5116,8 @@
       "Every 5 minutes",
       "Only before descent",
       "Once per hour"
-    ]
+    ],
+    "explanation": "Engine instruments and fuel quantity checked every 15 minutes during cruise catches developing problems early while they are still manageable."
   },
   {
     "id": "DV20-321",
@@ -4812,7 +5132,8 @@
       "15°",
       "45°",
       "20°"
-    ]
+    ],
+    "explanation": "30° bank in a descending turn matches the standard level turn bank angle while allowing a controlled descent path."
   },
   {
     "id": "DV20-322",
@@ -4827,7 +5148,8 @@
       "1500 ft AGL",
       "3000 ft AGL",
       "700 ft AGL"
-    ]
+    ],
+    "explanation": "2000 ft AGL minimum for solo slow flight provides recovery margin if control degrades near the stall."
   },
   {
     "id": "DV20-323",
@@ -4842,7 +5164,8 @@
       "12–15\" MP",
       "25\" MP",
       "Idle power only"
-    ]
+    ],
+    "explanation": "22–24\" MP maintains slow flight at VS+10 — enough power to hold altitude near the stall without accelerating away from the maneuver."
   },
   {
     "id": "DV20-324",
@@ -4857,7 +5180,8 @@
       "2000 ft AGL",
       "1500 ft AGL",
       "2500 ft AGL"
-    ]
+    ],
+    "explanation": "3000 ft AGL minimum for solo full stalls — same as the general full-stall solo minimum, providing adequate recovery altitude."
   },
   {
     "id": "DV20-325",
@@ -4872,7 +5196,8 @@
       "Permitted on the downwind leg only",
       "Permitted if faster aircraft announces on radio",
       "Permitted above 700 ft AAL only"
-    ]
+    ],
+    "explanation": "Overtaking within the circuit is not permitted — it disrupts standard circuit spacing and creates collision risk in a confined traffic pattern."
   },
   {
     "id": "DV20-326",
@@ -4887,7 +5212,8 @@
       "700 ft AAL",
       "500 ft AGL",
       "1000 ft AAL"
-    ]
+    ],
+    "explanation": "Flaps UP at minimum 200 ft AAL after takeoff follows the AFTER TAKE-OFF checklist — retracting flaps once safely airborne and clear of obstacles."
   },
   {
     "id": "DV20-327",
@@ -4902,7 +5228,8 @@
       "600 m",
       "1000 m",
       "500 m"
-    ]
+    ],
+    "explanation": "Below 800 m runway length, use flaps T/O for takeoff — the shorter ground run from the lower liftoff speed is essential on limited runway."
   },
   {
     "id": "DV20-328",
@@ -4917,7 +5244,8 @@
       "Downwind with 1000 ft point",
       "Direct final only",
       "Climb to 2000 ft first"
-    ]
+    ],
+    "explanation": "Between 700 and 1500 ft after engine failure, fly direct base — enough altitude for a base leg but not a full downwind circuit."
   },
   {
     "id": "DV20-329",
@@ -4932,7 +5260,8 @@
       "GO-AROUND",
       "MAYDAY",
       "ABORT"
-    ]
+    ],
+    "explanation": "Call STOP during a rejected takeoff to alert your instructor and confirm the abort decision."
   },
   {
     "id": "DV20-330",
@@ -4947,7 +5276,8 @@
       "90° left or right only",
       "Straight ahead only",
       "180° behind the aircraft"
-    ]
+    ],
+    "explanation": "Choose a landing site within 30° left or right of the nose after EFATO — you cannot turn back, so the field must be within your forward arc."
   },
   {
     "id": "DV20-331",
@@ -4962,7 +5292,8 @@
       "70 kts",
       "55 kts",
       "43 kts"
-    ]
+    ],
+    "explanation": "59 kts during the crash drill on final matches the emergency approach speed — practicing the speed you would fly on an actual forced landing."
   },
   {
     "id": "DV20-332",
@@ -4977,7 +5308,8 @@
       "Fuel shut-off valve CLOSED",
       "Throttle to idle immediately",
       "Master switch OFF"
-    ]
+    ],
+    "explanation": "Electric fuel pump ON is the first action for loss of fuel pressure — the backup pump restores fuel flow while you diagnose the cause."
   },
   {
     "id": "DV20-333",
@@ -4992,7 +5324,8 @@
       "UP",
       "LDG",
       "AS REQUIRED"
-    ]
+    ],
+    "explanation": "T/O flaps during engine fire in flight provide partial flap for a controlled approach speed without the full drag of landing flaps."
   },
   {
     "id": "DV20-334",
@@ -5007,7 +5340,8 @@
       "5°",
       "1°",
       "7°"
-    ]
+    ],
+    "explanation": "A 3° glidepath on final is the standard approach angle — it provides a stabilized descent profile to the threshold."
   },
   {
     "id": "DV20-335",
@@ -5022,7 +5356,8 @@
       "16 seconds",
       "11 seconds",
       "12 seconds"
-    ]
+    ],
+    "explanation": "14 seconds at 70 kts ground speed during a precautionary landing inspection run corresponds to the minimal landing distance check per the timing table."
   },
   {
     "id": "DV20-336",
@@ -5037,7 +5372,8 @@
       "MAYDAY",
       "STOP",
       "Balked landing"
-    ]
+    ],
+    "explanation": "Announcing \"Go-around\" aloud confirms your decision before executing the maneuver."
   },
   {
     "id": "DV20-337",
@@ -5052,7 +5388,8 @@
       "On the horizon",
       "10 fingers above the horizon",
       "Cowling against the horizon"
-    ]
+    ],
+    "explanation": "About 5 fingers below the horizon is the visual pitch reference for straight and level — a consistent sight picture for maintaining altitude."
   },
   {
     "id": "DV20-338",
@@ -5067,7 +5404,8 @@
       "Throttle idle, master OFF, canopy open",
       "Flaps LDG, carb heat OFF, fuel pump OFF",
       "Full throttle, choke ON, transponder 7700"
-    ]
+    ],
+    "explanation": "Carb heat ON, electric fuel pump ON, and checking BOTH magnetos address the three most common causes of rough running — icing, fuel supply, and ignition."
   },
   {
     "id": "DV20-339",
@@ -5082,7 +5420,8 @@
       "Continue flight and monitor",
       "Shut down engine immediately in flight",
       "Land as soon as possible regardless of temperature"
-    ]
+    ],
+    "explanation": "Low oil pressure with normal temperature suggests a gauge or pump issue rather than imminent engine failure — land at the nearest airport to investigate safely."
   },
   {
     "id": "DV20-340",
@@ -5097,7 +5436,8 @@
       "Downwind main gear",
       "Both main gear simultaneously always",
       "Nosewheel first"
-    ]
+    ],
+    "explanation": "Upwind main gear first in a crosswind landing keeps the into-wind wing down and prevents weathervaning and ground looping after touchdown."
   },
   {
     "id": "DV20-341",
@@ -5112,7 +5452,8 @@
       "500 ft on the downwind leg at 90°",
       "1000 ft at mid-downwind straight out",
       "700 ft on the base leg at 30°"
-    ]
+    ],
+    "explanation": "The example departure briefing leaves at 700 ft on the crosswind leg under 45° — the standard Hilversum circuit departure procedure."
   },
   {
     "id": "DV20-342",
@@ -5127,7 +5468,8 @@
       "MAYDAY MAYDAY MAYDAY",
       "SECURITÉ SECURITÉ SECURITÉ",
       "No call required for precautionary landing"
-    ]
+    ],
+    "explanation": "PAN PAN PAN PAN PAN PAN is the urgency call when setting up a precautionary landing — urgent but not yet a full Mayday emergency."
   },
   {
     "id": "DV20-343",
@@ -5142,7 +5484,8 @@
       "20 liters of usable fuel",
       "40 liters of usable fuel",
       "60 liters total capacity"
-    ]
+    ],
+    "explanation": "The third notch on the fuel dipstick indicates 30 liters of usable fuel — a mid-range reference for preflight fuel verification."
   },
   {
     "id": "DV20-344",
@@ -5157,7 +5500,8 @@
       "77 liters (full tank)",
       "50 liters",
       "40 liters"
-    ]
+    ],
+    "explanation": "The highest dipstick marking is 60 liters, not the full 77 L capacity — you must interpolate or calculate remaining fuel above the highest notch."
   },
   {
     "id": "DV20-345",
@@ -5172,7 +5516,8 @@
       "Any aviation lubricant",
       "Aeroshell W100",
       "Automotive 10W-40"
-    ]
+    ],
+    "explanation": "Aeroshell Sport Plus 4 is the specified engine oil for the Katana DV20 — using the correct grade ensures proper lubrication and engine protection."
   },
   {
     "id": "DV20-346",
@@ -5187,7 +5532,8 @@
       "Clockwise from in front",
       "Either direction is acceptable",
       "Alternating clockwise and counterclockwise"
-    ]
+    ],
+    "explanation": "Turn the prop counterclockwise (from in front) during oil checks — the normal rotation direction that prevents gearbox damage."
   },
   {
     "id": "DV20-347",
@@ -5202,7 +5548,8 @@
       "0.25 liters",
       "1.0 liter",
       "2.0 liters"
-    ]
+    ],
+    "explanation": "0.45 liters between MIN and MAX on the oil dipstick is a small quantity — even a small overfill or underfill matters for this engine."
   },
   {
     "id": "DV20-348",
@@ -5217,7 +5564,8 @@
       "OFF",
       "Half open",
       "As required"
-    ]
+    ],
+    "explanation": "Choke ON for a cold start enriches the mixture for a cold engine that cannot vaporize fuel efficiently at ambient temperature."
   },
   {
     "id": "DV20-349",
@@ -5232,7 +5580,8 @@
       "1700 RPM",
       "1000 RPM",
       "2400 RPM"
-    ]
+    ],
+    "explanation": "1100–1500 RPM after engine start allows oil pressure to stabilize and the engine to warm without excessive RPM on the ground."
   },
   {
     "id": "DV20-350",
@@ -5247,7 +5596,8 @@
       "ON",
       "STBY",
       "GND"
-    ]
+    ],
+    "explanation": "Transponder ALT mode during run-up ensures altitude reporting is active before entering controlled or monitored airspace."
   },
   {
     "id": "DV20-351",
@@ -5262,7 +5612,8 @@
       "2400 RPM only",
       "1500–1900 RPM",
       "MAX RPM only"
-    ]
+    ],
+    "explanation": "1900–2400 RPM is the CRUISE checklist prop range — the normal operating band for cruise power settings."
   },
   {
     "id": "DV20-352",
@@ -5277,7 +5628,8 @@
       "SET QFE",
       "SET standard pressure",
       "No change required"
-    ]
+    ],
+    "explanation": "SET QNH on the APPROACH checklist ensures your altimeter reads true height above sea level for the approach and landing."
   },
   {
     "id": "DV20-353",
@@ -5292,7 +5644,8 @@
       "70 kts",
       "55 kts",
       "81 kts"
-    ]
+    ],
+    "explanation": "60 kts minimum on the FINAL checklist matches the minimum approach speed — the floor for a stabilized final approach."
   },
   {
     "id": "DV20-354",
@@ -5307,7 +5660,8 @@
       "Throttle idle, fuel shut-off CLOSED, ignition OFF",
       "Carburetor heat ON, fuel pump ON, ignition BOTH",
       "Flaps T/O, throttle FULL, cabin heat OPEN"
-    ]
+    ],
+    "explanation": "Master OFF, cabin heat CLOSED, and cabin air OPEN for cabin fire — remove electrical power, stop heat flow, and vent smoke from the cockpit."
   },
   {
     "id": "DV20-355",
@@ -5322,7 +5676,8 @@
       "IDLE",
       "As required",
       "Half open"
-    ]
+    ],
+    "explanation": "Throttle FULL during engine fire on the ground keeps the engine running to draw fire extinguishing agent through the engine bay if available, then evacuate."
   },
   {
     "id": "DV20-356",
@@ -5337,7 +5692,8 @@
       "Raise approach speed by 10 kts",
       "Normal landing with LDG flaps",
       "59 kts minimum"
-    ]
+    ],
+    "explanation": "If only T/O flaps are available, use normal approach speed — T/O flaps provide adequate drag for approach without the full landing flap configuration."
   },
   {
     "id": "DV20-357",
@@ -5352,7 +5708,8 @@
       "Raise approach speed by 10 kts",
       "Flaps-up landing at 70 kts",
       "Go-around immediately"
-    ]
+    ],
+    "explanation": "If only LDG flaps are available, fly a normal landing — the landing flap position is actually the preferred configuration for landing."
   },
   {
     "id": "DV20-358",
@@ -5367,7 +5724,8 @@
       "Master switch OFF immediately",
       "Electric fuel pump ON",
       "Transponder 7700"
-    ]
+    ],
+    "explanation": "Landing light OFF when the LO/V (low voltage) caution illuminates reduces electrical load on a potentially failing electrical system."
   },
   {
     "id": "DV20-359",
@@ -5382,7 +5740,8 @@
       "Weather, NOTAMs, fuel, passengers",
       "ATC, runway, wind, flaps",
       "Walk-around, run-up, takeoff, climb"
-    ]
+    ],
+    "explanation": "Plan, threats, threat management, and miscellaneous — the four-part briefing structure ensures you cover the flight, risks, mitigations, and other items systematically."
   },
   {
     "id": "DV20-360",
@@ -5397,7 +5756,8 @@
       "Expected cruise altitude only",
       "Passenger meal preferences",
       "Post-landing taxi route"
-    ]
+    ],
+    "explanation": "A departure briefing must include rejected takeoff actions — knowing your abort plan before the takeoff roll is essential for safety."
   },
   {
     "id": "DV20-361",
@@ -5412,7 +5772,8 @@
       "Full aerodrome information request",
       "Flight plan filing",
       "Weather briefing request"
-    ]
+    ],
+    "explanation": "The first radio call at EHHV is a radio check only — aerodrome information is obtained during the havendienst (airport office) visit before flight."
   },
   {
     "id": "DV20-362",
@@ -5427,7 +5788,8 @@
       "Abbreviated call sign only",
       "Aircraft type instead of registration",
       "No call sign required at uncontrolled fields"
-    ]
+    ],
+    "explanation": "Full call sign on initial contact with ATS ensures positive identification — abbreviations are only used after ATC acknowledges and abbreviates first."
   },
   {
     "id": "DV20-363",
@@ -5442,7 +5804,8 @@
       "Downwind only",
       "Final only",
       "No calls required below 1000 ft"
-    ]
+    ],
+    "explanation": "EHHV circuit calls: initial call with position, downwind report, and final with intention — the standard sequence for traffic awareness at Hilversum."
   },
   {
     "id": "DV20-364",
@@ -5457,7 +5820,8 @@
       "Jet A-1",
       "AVGAS 80",
       "Diesel"
-    ]
+    ],
+    "explanation": "AVGAS 100LL is an approved fuel grade for the DV20 — the standard aviation gasoline when MOGAS is not available or preferred."
   },
   {
     "id": "DV20-365",
@@ -5472,7 +5836,8 @@
       "77 liters",
       "60 liters",
       "100 liters"
-    ]
+    ],
+    "explanation": "79 liters is the maximum fuel capacity (including unusable) for PH-MFT and PH-SKM — the total tank volume, not the usable amount."
   },
   {
     "id": "DV20-366",
@@ -5487,7 +5852,8 @@
       "±18.7 L/hr",
       "±22.3 L/hr",
       "±10 L/hr"
-    ]
+    ],
+    "explanation": "±15.3 L/hr at 75% power (2300 RPM, 25.7\" MP at 2000 ft) is the planning fuel flow for cruise fuel calculations."
   },
   {
     "id": "DV20-367",
@@ -5502,7 +5868,8 @@
       "38 kts",
       "43 kts",
       "45 kts"
-    ]
+    ],
+    "explanation": "39 kts stall speed with T/O flaps — between clean (43 kts) and full flap (38 kts), reflecting the partial flap configuration."
   },
   {
     "id": "DV20-368",
@@ -5517,7 +5884,8 @@
       "Read the entire checklist aloud before starting",
       "Memorize all items before flight",
       "Check items only after landing"
-    ]
+    ],
+    "explanation": "Keeping your thumb by the last completed checklist item prevents skipping steps — a simple technique for disciplined checklist flow."
   },
   {
     "id": "DV20-369",
@@ -5532,7 +5900,8 @@
       "Every 1000 ft only",
       "Only before entering the circuit",
       "Every 200 ft"
-    ]
+    ],
+    "explanation": "Clearing turns every 500 ft during climb (15° bank, 30° left and right) maintains situational awareness and traffic scan during the climb."
   },
   {
     "id": "DV20-370",
@@ -5547,7 +5916,8 @@
       "100 ft before desired altitude",
       "At desired altitude",
       "20 ft before desired altitude"
-    ]
+    ],
+    "explanation": "Power to 25\"/2400 RPM at 50 ft before target altitude during descent level-off prevents an altitude undershoot while smoothly transitioning to cruise."
   },
   {
     "id": "DV20-371",
@@ -5562,7 +5932,8 @@
       "At the desired heading",
       "20° after the desired heading",
       "When bank reaches 45°"
-    ]
+    ],
+    "explanation": "Begin rolling wings level 10° before the desired heading in a level turn — lead angle compensates for roll-out lag."
   },
   {
     "id": "DV20-372",
@@ -5577,7 +5948,8 @@
       "10° before desired heading",
       "At the desired heading",
       "When approaching desired altitude"
-    ]
+    ],
+    "explanation": "Begin rolling wings level 5° before desired heading in a climbing turn — a smaller lead than level turns because the turn rate is slower at climb speed."
   },
   {
     "id": "DV20-373",
@@ -5592,7 +5964,8 @@
       "Fuel quantity and passenger weights only",
       "Radio frequency and transponder code",
       "Taxi route and parking position"
-    ]
+    ],
+    "explanation": "Pre-stall briefings must cover stall type, altitude/heading, and recovery start/manner — ensuring both pilots know the plan before the maneuver."
   },
   {
     "id": "DV20-374",
@@ -5607,7 +5980,8 @@
       "OFF",
       "As required",
       "ON only above 3000 ft"
-    ]
+    ],
+    "explanation": "Electric fuel pump ON before stall exercises ensures uninterrupted fuel flow during the low-power, high-AOA phases of the maneuver."
   },
   {
     "id": "DV20-375",
@@ -5622,7 +5996,8 @@
       "15°",
       "30°",
       "45°"
-    ]
+    ],
+    "explanation": "20° bank in an approach-to-stall descending turn adds a turning component while still allowing controlled stall entry practice."
   },
   {
     "id": "DV20-376",
@@ -5637,7 +6012,8 @@
       "55 kts",
       "70 kts",
       "81 kts"
-    ]
+    ],
+    "explanation": "Flaps UP at minimum 60 kts during recovery from approach-to-stall in a descending turn — above stall speed with margin before retraction."
   },
   {
     "id": "DV20-377",
@@ -5652,7 +6028,8 @@
       "One 30° turn each direction",
       "No clearing turns required solo",
       "360° orbit only"
-    ]
+    ],
+    "explanation": "2 × 90° or one 180° clearing turn before stall exercises ensures the area is clear of traffic before beginning the maneuver."
   },
   {
     "id": "DV20-378",
@@ -5667,7 +6044,8 @@
       "Flaps UP and carb heat OFF",
       "Transponder ALT and landing light ON",
       "Fuel pressure and generator OFF"
-    ]
+    ],
+    "explanation": "Engine instruments (2400 RPM ±100) and airspeed alive are the two critical takeoff roll callouts — confirming power and instrument function before rotation."
   },
   {
     "id": "DV20-379",
@@ -5682,7 +6060,8 @@
       "±25\" MP, 90 kts",
       "±18\" MP, 75 kts",
       "Idle power, 70 kts"
-    ]
+    ],
+    "explanation": "At 700 ft AAL in the circuit after takeoff, ±21\" MP and 70 kts is the standard downwind configuration per the takeoff procedures."
   },
   {
     "id": "DV20-380",
@@ -5697,7 +6076,8 @@
       "Neutral",
       "Full forward",
       "Into the wind"
-    ]
+    ],
+    "explanation": "Full aft stick during taxi for soft field takeoff keeps weight off the nosewheel, reducing drag and preventing nosewheel digging on soft surfaces."
   },
   {
     "id": "DV20-381",
@@ -5712,7 +6092,8 @@
       "Rolling takeoff with partial power",
       "Release brakes before advancing throttle",
       "Rotate immediately at brake release"
-    ]
+    ],
+    "explanation": "Hold brakes, advance throttle FULL, check engine instruments, then release — the short field takeoff sequence that maximizes energy at rotation."
   },
   {
     "id": "DV20-382",
@@ -5727,7 +6108,8 @@
       "±25\" MP, 1900 RPM, 90 kts",
       "±21\" MP, 2400 RPM, 65 kts",
       "Idle power, 70 kts glide"
-    ]
+    ],
+    "explanation": "Enroute climb uses full throttle, 2400 RPM, and Vy 70 kts — maximum climb performance for the clean configuration during cross-country."
   },
   {
     "id": "DV20-383",
@@ -5742,7 +6124,8 @@
       "Reduce to ±15\" MP",
       "Retard to idle",
       "Hold at ±21\" MP"
-    ]
+    ],
+    "explanation": "Immediately advancing to ±24\" MP after selecting T/O flaps on downwind prevents speed decay from the increased drag of extended flaps."
   },
   {
     "id": "DV20-384",
@@ -5757,7 +6140,8 @@
       "30°–45°",
       "10° maximum",
       "45° standard"
-    ]
+    ],
+    "explanation": "15°–20° bank (max 30°) on the downwind-to-base turn gives a controlled turn rate without excessive bank close to the ground."
   },
   {
     "id": "DV20-385",
@@ -5772,7 +6156,8 @@
       "About 3 m",
       "At the threshold",
       "About 10 m"
-    ]
+    ],
+    "explanation": "Level flight about 1 m above the runway in the roundout is the transition point before retarding the throttle to idle for touchdown."
   },
   {
     "id": "DV20-386",
@@ -5787,7 +6172,8 @@
       "It overheats the carburetor",
       "It causes the nosewheel to lift off",
       "It reduces generator output"
-    ]
+    ],
+    "explanation": "Excessive braking to exit sooner risks blown tires — the NOTE warns against sacrificing tire integrity for a shorter taxi distance."
   },
   {
     "id": "DV20-387",
@@ -5802,7 +6188,8 @@
       "On downwind only",
       "After landing on the runway",
       "Before engine start"
-    ]
+    ],
+    "explanation": "State touch-and-go intention in the final radio call so other circuit traffic knows you will not full-stop and vacate the runway."
   },
   {
     "id": "DV20-388",
@@ -5817,7 +6204,8 @@
       "Neutral throughout",
       "Away from the wind",
       "Full aft until rotation"
-    ]
+    ],
+    "explanation": "Control stick into the wind during crosswind takeoff (maximum deflection reducing with speed) counteracts weathervaning and keeps the wings level during the roll."
   },
   {
     "id": "DV20-389",
@@ -5832,7 +6220,8 @@
       "Turn all switches off as in the real checklist",
       "Leave the aircraft to the instructor",
       "Only verbalize without touching controls"
-    ]
+    ],
+    "explanation": "During simulated EFATO, do not actually switch anything off — point to switches only (touch-drill) to practice the flow without creating a real emergency."
   },
   {
     "id": "DV20-390",
@@ -5847,7 +6236,8 @@
       "Lower nose immediately to 59 kts",
       "Climb to gain altitude first",
       "Maintain current attitude until 90 kts"
-    ]
+    ],
+    "explanation": "Maintain altitude until speed reduces to 70 kts, then lower the nose — the correct technique to establish best glide without diving below optimal glide speed."
   },
   {
     "id": "DV20-391",
@@ -5862,7 +6252,8 @@
       "The middle of the field",
       "The far end of the field",
       "The threshold only"
-    ]
+    ],
+    "explanation": "Aim for the first third of the landing field — provides margin if you come up short while avoiding the far end where obstacles may exist."
   },
   {
     "id": "DV20-392",
@@ -5877,7 +6268,8 @@
       "Leave ELT in standby",
       "ELT activates automatically only",
       "ELT OFF to save battery"
-    ]
+    ],
+    "explanation": "ELT ON manually after engine failure ensures the emergency locator activates even if the automatic g-switch does not trigger."
   },
   {
     "id": "DV20-393",
@@ -5892,7 +6284,8 @@
       "700 ft AAL",
       "1000 ft AAL",
       "200 ft AGL"
-    ]
+    ],
+    "explanation": "500 ft downwind during a precautionary landing — lower than a normal circuit to allow closer inspection of the landing site."
   },
   {
     "id": "DV20-394",
@@ -5907,7 +6300,8 @@
       "300 ft at 60 kts",
       "500 ft at 75 kts",
       "100 ft at 55 kts"
-    ]
+    ],
+    "explanation": "Level off at 200 ft abeam the field during inspection run at ±24\" MP and 70 kts — close enough to assess the surface while maintaining safe speed."
   },
   {
     "id": "DV20-395",
@@ -5922,7 +6316,8 @@
       "Throttle IDLE, choke ON",
       "Throttle FULL, choke ON",
       "Throttle IDLE, choke OFF"
-    ]
+    ],
+    "explanation": "On a warm start the engine is already warm, so choke stays OFF and throttle is set approximately 2 cm forward for a leaner starting mixture."
   },
   {
     "id": "DV20-396",
@@ -5937,7 +6332,8 @@
       "3000 ft AGL",
       "1500 ft AGL",
       "700 ft AGL"
-    ]
+    ],
+    "explanation": "When flying dual, 2000 ft AGL is the minimum recovery altitude for a full stall — the instructor can take over if recovery is needed, so less solo margin is required."
   },
   {
     "id": "DV20-397",
@@ -5952,7 +6348,8 @@
       "2000 ft AGL",
       "3000 ft AGL",
       "1000 ft AGL"
-    ]
+    ],
+    "explanation": "When flying dual, 1500 ft AGL suffices for approach-to-stall — less altitude needed than solo because the instructor provides a safety backup."
   },
   {
     "id": "DV20-398",
@@ -5967,7 +6364,8 @@
       "OFF",
       "AS REQUIRED only after takeoff",
       "STBY"
-    ]
+    ],
+    "explanation": "Landing light ON before stall exercises improves visibility of the wing and horizon reference during the maneuver."
   },
   {
     "id": "DV20-399",
@@ -5982,7 +6380,8 @@
       "Rural farmland",
       "Small lakes with a visible shoreline",
       "Coastal cliffs with clear horizon"
-    ]
+    ],
+    "explanation": "Avoid flying stall exercises over open water — the lack of a visible horizon makes attitude reference difficult and can disorient the pilot."
   },
   {
     "id": "DV20-400",
@@ -5997,7 +6396,8 @@
       "Straight and level at 90 kts",
       "Best climb at 65 kts",
       "Idle descent at 59 kts"
-    ]
+    ],
+    "explanation": "Stall recovery without power transitions to glide attitude at 70 kts — best glide speed to maximize range and control after an unpowered stall recovery."
   },
   {
     "id": "DV20-401",
@@ -6012,7 +6412,8 @@
       "Using carburetor heat on downwind",
       "Flying at 700 ft AAL",
       "Making position calls on downwind"
-    ]
+    ],
+    "explanation": "Do not continue into marginal VFR weather in the circuit — if ceilings or visibility are deteriorating, divert or land rather than pressing into unsafe conditions."
   },
   {
     "id": "DV20-402",
@@ -6027,7 +6428,8 @@
       "Full LDG flaps throughout the circuit",
       "Flaps UP only on final approach",
       "No change from the normal full-flap circuit"
-    ]
+    ],
+    "explanation": "Reduced flaps (UP or T/O) in turbulent circuit conditions give greater roll control authority — full landing flaps can be harder to manage in gusty conditions."
   },
   {
     "id": "DV20-403",
@@ -6042,7 +6444,8 @@
       "Rotate at a lower airspeed than normal",
       "Use exactly the same rotation speed regardless of wind",
       "Delay rotation until Vy is reached"
-    ]
+    ],
+    "explanation": "Slightly higher rotation speed in crosswind takeoff provides additional control margin and reduces weathervaning tendency during the critical rotation phase."
   },
   {
     "id": "DV20-404",
@@ -6057,7 +6460,8 @@
       "Wait in the cockpit for rescue",
       "Attempt another engine start",
       "Taxi clear of the apron"
-    ]
+    ],
+    "explanation": "After completing engine fire on the ground checklist actions, evacuate immediately — fire can spread rapidly and the priority is getting away from the aircraft."
   },
   {
     "id": "DV20-405",
@@ -6072,7 +6476,8 @@
       "Loose for quick egress",
       "Off before touchdown",
       "As required only"
-    ]
+    ],
+    "explanation": "Seat belts TIGHT for emergency landing with engine off — securing occupants for the potentially firm touchdown of a forced landing."
   },
   {
     "id": "DV20-406",
@@ -6087,7 +6492,8 @@
       "Continue to destination at reduced power",
       "Land at the nearest airport only if oil temperature is normal",
       "Shut down the engine immediately in flight"
-    ]
+    ],
+    "explanation": "Low oil pressure AND rising oil temperature indicates imminent engine failure — land as soon as possible and prepare for a forced landing."
   },
   {
     "id": "DV20-407",
@@ -6102,7 +6508,8 @@
       "ON",
       "ON then OFF after landing",
       "As required"
-    ]
+    ],
+    "explanation": "Electric fuel pump OFF during engine fire in flight — removing a potential fuel source that could feed the fire."
   },
   {
     "id": "DV20-408",
@@ -6117,7 +6524,8 @@
       "The gauge is always exact",
       "The gauge shows less fuel than the dipstick",
       "Both always match within 5 liters"
-    ]
+    ],
+    "explanation": "The cockpit fuel gauge reads higher than the dipstick (false positive) — always trust the dipstick for accurate fuel quantity, not the gauge."
   },
   {
     "id": "DV20-409",
@@ -6132,7 +6540,8 @@
       "Add oil immediately before flight",
       "Shut down and turn the propeller before checking again",
       "Ground the aircraft until maintenance refills oil"
-    ]
+    ],
+    "explanation": "Minimum on the dipstick after a hot engine means sufficient oil — oil expands when hot, so the reading is lower than when cold but still adequate."
   },
   {
     "id": "DV20-410",
@@ -6147,7 +6556,8 @@
       "Nothing harmful if the ignition key is removed",
       "Only the oil seal is affected",
       "The engine will self-prime incorrectly"
-    ]
+    ],
+    "explanation": "Turning the prop against normal rotation can damage the gearbox — always rotate counterclockwise when viewed from in front of the aircraft."
   },
   {
     "id": "DV20-411",
@@ -6162,7 +6572,8 @@
       "To pressurize the oil system",
       "To set idle RPM correctly",
       "To engage the parking brake interlock"
-    ]
+    ],
+    "explanation": "Throttle fully open during manual prop rotation ensures the engine cannot start — a critical safety step before turning the propeller by hand."
   },
   {
     "id": "DV20-412",
@@ -6177,7 +6588,8 @@
       "12–15 in. MP",
       "Idle only",
       "25 in. MP"
-    ]
+    ],
+    "explanation": "18 in. MP for approach-to-stall in a climbing turn without flaps — a moderate power reduction that allows controlled deceleration toward the stall in a turn."
   },
   {
     "id": "DV20-413",
@@ -6192,7 +6604,8 @@
       "5° before the desired heading",
       "10° after reaching the desired heading",
       "Immediately at the desired heading"
-    ]
+    ],
+    "explanation": "Begin rolling wings level 20° before desired heading in a 45° steep turn — a larger lead angle because the turn rate is higher at steep bank."
   },
   {
     "id": "DV20-414",
@@ -6207,7 +6620,8 @@
       "Flaps must be inoperative",
       "At least half fuel remaining",
       "Dual controls only"
-    ]
+    ],
+    "explanation": "The airplane must be in good technical condition before a precautionary landing — a compromised aircraft makes an already challenging maneuver even riskier."
   },
   {
     "id": "DV20-415",
@@ -6222,7 +6636,8 @@
       "14 seconds",
       "11 seconds",
       "12 seconds"
-    ]
+    ],
+    "explanation": "16 seconds at 60 kts ground speed during inspection run corresponds to the minimal landing distance check — slower speed, longer time for the same distance."
   },
   {
     "id": "DV20-416",
@@ -6237,7 +6652,8 @@
       "511 kg",
       "730 kg",
       "495 lb"
-    ]
+    ],
+    "explanation": "495 kg is the empty weight of PH-SKM — used as the W&B baseline for that specific aircraft registration."
   },
   {
     "id": "DV20-417",
@@ -6252,7 +6668,8 @@
       "77 liters",
       "10 liters",
       "58 liters"
-    ]
+    ],
+    "explanation": "2 liters unusable fuel cannot be drawn from the tanks — subtract from total capacity to get the 77 liters of usable fuel for flight planning."
   },
   {
     "id": "DV20-418",
@@ -6267,7 +6684,8 @@
       "1900 RPM",
       "MAX RPM",
       "1700 RPM"
-    ]
+    ],
+    "explanation": "2400 RPM at minimum 200 ft AAL after takeoff sets the prop for the standard climb power setting per the AFTER TAKE-OFF checklist."
   },
   {
     "id": "DV20-419",
@@ -6282,7 +6700,8 @@
       "Both OFF until recovery",
       "Carburetor heat OFF, electric fuel pump ON",
       "Carburetor heat ON, electric fuel pump OFF"
-    ]
+    ],
+    "explanation": "Carb heat ON and electric fuel pump ON when entering slow flight — carb heat prevents icing at low power, and the electric pump ensures fuel flow near the stall."
   },
   {
     "id": "DV20-420",
@@ -6297,6 +6716,7 @@
       "30 seconds",
       "1 minute",
       "Before advancing the throttle at all"
-    ]
+    ],
+    "explanation": "Oil pressure must be in the green within 10 seconds after start — if not, the CAUTION requires shutdown within 10 seconds to protect the engine."
   }
 ]
