@@ -40,47 +40,19 @@ Use **Reset Wind Data** to clear only wind-related saved page data.
 - **Start Flashcards**: randomizes the selected category pool and reveals answer text only.
 - Each question's options are built from `value` + `distractors` and shuffled once per page load.
 - Source citations from the PDF are shown in quiz and flashcard feedback.
-- Chair-flying practice categories include:
-  - `Chair Flying - Mental Flows`
-  - `Chair Flying - Phase Actions`
-  - `Chair Flying - Full Sequence` (takeoff -> climb -> level flight -> climb -> descend -> turns -> downwind -> base -> final)
-  - `Chair Flying - Phase Decision Drills`
-  - `Chair Flying - If Then Traps`
-  - `Chair Flying - Radio Timing & Calls`
-  - `Chair Flying - Emergency Pressure Loops`
-- Regenerate chair-flying scenario packs with:
-  - `python scripts/generate-chair-flying-pack.py --replace --write`
-  - `python scripts/cleanup-chair-flying-data.py --validate-only`
-- Validate question completeness (schema, distractors, truncated prompts, chair-flying context):
-  - `python scripts/cleanup-chair-flying-data.py --validate-only`
-  - Safe auto-fix for mangled labels and broken generated questions:
-    `python scripts/cleanup-chair-flying-data.py --validate-only --fix-completeness --write`
-- To strip low-quality generated categories and rewrite Full Sequence prompts:
-  - `python scripts/cleanup-chair-flying-data.py --write`
 
-## Auditing every question
+### Knowledge bank curation
 
-Every entry in `data/dv20-knowledge.json` is checked individually (no sampling). The audit runs schema, completeness, label quality, semantic match, distractor plausibility, question–value alignment, answerability, bad context slots, near-duplicates, and explicit red-flag pattern scans.
+The question bank is **manually curated** from `PROCEDURES-DV20-V1.8-01052026.pdf` (ACHA DV20 procedures, v1.8). The bank contains **394 entries** (197 PDF-sourced originals plus 197 hand-written rephrased variants). Each entry is a standalone quiz question — no template wrappers or script-generated text.
 
-Regenerate the per-entry audit report and human-review spreadsheet:
+To add or edit questions:
 
-```bash
-python scripts/audit-knowledge.py
-```
+1. Read the relevant PDF page(s) and draft a clear `question`, `value`, and three plausible `distractors`.
+2. Edit `data/dv20-knowledge.json` directly, keeping the unified schema below.
+3. Renumber `id` fields continuously (`DV20-001`, `DV20-002`, …) after any insertions or deletions.
+4. Reload the app and spot-check quiz and flashcard modes.
 
-Apply safe automatic fixes (labels, garbage questions, short context slots) and re-audit:
-
-```bash
-python scripts/audit-knowledge.py --fix
-```
-
-Outputs:
-
-- `data/knowledge-audit-report.jsonl` — one JSON object per entry (`id`, `status`, `issues`, …)
-- `data/knowledge-audit-summary.json` — totals, failure counts by reason and category
-- `data/knowledge-review.tsv` — all entries in tab-separated format for spreadsheet review
-
-The script prints a red-flag scan to stdout; all counts must be zero before the bank is considered clean.
+Categories: Checklists, Performance & Limits, Power Settings, Normal Procedures, Maneuvers & Stalls, Circuit, Takeoff, Landing, Go-Around, Abnormal & Emergency, Preflight & Briefing.
 
 ## Unified DV20 knowledge schema
 
@@ -118,8 +90,6 @@ Required fields per knowledge entry:
 Optional fields:
 - `note` (string; extra context shown in guide/flashcards)
 - `source` (string; citation from `PROCEDURES-DV20-V1.8-01052026.pdf`)
-
-The unified knowledge file is sourced exclusively from `PROCEDURES-DV20-V1.8-01052026.pdf` (ACHA DV20 procedures, v1.8).
 
 ## Weight & Balance
 
