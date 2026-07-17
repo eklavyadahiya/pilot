@@ -26,7 +26,9 @@
         <button class="tool-nav-btn" data-tool="map" type="button">Map + Circuit + Wind</button>
         <button class="tool-nav-btn" data-tool="quiz" type="button">Quiz / Flashcards</button>
         <button class="tool-nav-btn" data-tool="guide" type="button">In-Flight Guide</button>
+        <button class="tool-nav-btn" data-tool="formulas" type="button">Formulas</button>
         <button class="tool-nav-btn" data-tool="wb" type="button">Weight &amp; Balance</button>
+        <button class="tool-nav-btn" data-tool="audio" type="button">Audio</button>
       </div>
       <p class="hint">
         Place your KMZ files in <code>data/</code> and list them in
@@ -44,6 +46,8 @@
             <li><strong>Map + Circuit + Wind</strong> — KMZ overlays and wind vector calculator</li>
             <li><strong>Quiz / Flashcards</strong> — category-based practice</li>
             <li><strong>In-Flight Guide</strong> — DV20 quick reference</li>
+            <li><strong>Formulas</strong> — expanded PPL math references with rendered equations</li>
+            <li><strong>Audio</strong> — playlist and MP3 practice tracks</li>
           </ul>
         </div>
       </section>
@@ -140,6 +144,59 @@
           Guide content will appear here after loading.
         </div>
       </section>
+
+      <section id="formulas-tool-screen" class="formulas-section tool-screen hidden" aria-label="Formula reference">
+        <div class="formulas-header">
+          <h2>PPL Formula Reference</h2>
+          <p class="hint">Expanded explanations from your quick-reference PDF. Open each formula for details and examples.</p>
+          <p id="formulas-meta" class="hint">Loading formulas...</p>
+        </div>
+        <div id="formulas-content" class="formulas-content">
+          Formula content will appear here after loading.
+        </div>
+      </section>
+
+      <section id="audio-tool-screen" class="audio-section tool-screen hidden" aria-label="Audio playlist">
+        <div class="audio-header">
+          <h2>Audio</h2>
+          <p class="hint">Reorder your playlist, control speed, and practice with your MP3 briefings.</p>
+        </div>
+        <div class="audio-controls">
+          <div class="control-row">
+            <button id="audio-prev-btn" type="button">Prev</button>
+            <button id="audio-play-toggle-btn" type="button">Play</button>
+            <button id="audio-next-btn" type="button">Next</button>
+            <label for="audio-speed-select">Speed</label>
+            <select id="audio-speed-select">
+              <option value="0.5">0.5x</option>
+              <option value="0.75">0.75x</option>
+              <option value="1" selected>1.0x</option>
+              <option value="1.25">1.25x</option>
+              <option value="1.5">1.5x</option>
+              <option value="1.75">1.75x</option>
+              <option value="2">2.0x</option>
+            </select>
+            <label class="audio-toggle">
+              <input id="audio-autoplay-toggle" type="checkbox" checked />
+              Autoplay all
+            </label>
+            <label for="audio-repeat-select">Repeat</label>
+            <select id="audio-repeat-select">
+              <option value="off" selected>Off</option>
+              <option value="one">One</option>
+              <option value="all">All</option>
+            </select>
+            <button id="audio-shuffle-btn" type="button">Shuffle Playlist</button>
+          </div>
+          <p id="audio-now-playing" class="summary">No track selected.</p>
+          <audio id="audio-player" controls preload="metadata"></audio>
+        </div>
+        <div class="audio-playlist-wrap">
+          <h3>Playlist</h3>
+          <p class="hint">One playlist only. Use Up/Down to rearrange, or Shuffle Playlist to randomize order.</p>
+          <div id="audio-playlist" class="audio-playlist">Loading audio playlist...</div>
+        </div>
+      </section>
     </section>
   </main>
 
@@ -147,6 +204,22 @@
     src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""
+  ></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"]],
+        displayMath: [["\\[", "\\]"]]
+      },
+      svg: {
+        fontCache: "global"
+      }
+    };
+  </script>
+  <script
+    id="mathjax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
   ></script>
   <script type="module" src="./src/app.js"></script>
 </body>

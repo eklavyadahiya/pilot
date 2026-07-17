@@ -8,7 +8,11 @@ import {
 const EHHV = [52.1906, 5.1469];
 const MAX_REFERENCE_RADIUS_KM = 50;
 const WIND_STORAGE_KEY = "pilot-training.wind-data.v1";
+const AUDIO_STORAGE_KEY = "pilot-training.audio-data.v1";
+const AUDIO_AUTOPLAY_DELAY_MS = 5000;
 const KNOWLEDGE_PATH = "./data/dv20-knowledge.json";
+const AUDIO_MANIFEST_PATH = "./data/audio-manifest.json";
+const FORMULAS_PATH = "./data/ppl-formulas.json";
 
 const map = L.map("map").setView(EHHV, 12);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -36,7 +40,9 @@ const homeToolScreen = document.getElementById("home-tool-screen");
 const mapToolScreen = document.getElementById("map-tool-screen");
 const quizToolScreen = document.getElementById("quiz-tool-screen");
 const guideToolScreen = document.getElementById("guide-tool-screen");
+const formulasToolScreen = document.getElementById("formulas-tool-screen");
 const wbToolScreen = document.getElementById("wb-tool-screen");
+const audioToolScreen = document.getElementById("audio-tool-screen");
 const wbToolRoot = document.getElementById("wb-tool-root");
 const addWindBtn = document.getElementById("add-wind-btn");
 const clearWindBtn = document.getElementById("clear-wind-btn");
@@ -55,9 +61,22 @@ const guideSectionSelect = document.getElementById("guide-section-select");
 const guideSearchInput = document.getElementById("guide-search-input");
 const guideMetaEl = document.getElementById("guide-meta");
 const guideContentEl = document.getElementById("guide-content");
+const formulasMetaEl = document.getElementById("formulas-meta");
+const formulasContentEl = document.getElementById("formulas-content");
 const windCodeInput = document.getElementById("wind-code-input");
 const summaryEl = document.getElementById("wind-summary");
 const readingsEl = document.getElementById("wind-readings");
+const audioPlayerEl = document.getElementById("audio-player");
+const audioPlaylistEl = document.getElementById("audio-playlist");
+const audioNowPlayingEl = document.getElementById("audio-now-playing");
+const audioPlayToggleBtn = document.getElementById("audio-play-toggle-btn");
+const audioPrevBtn = document.getElementById("audio-prev-btn");
+const audioNextBtn = document.getElementById("audio-next-btn");
+const audioSpeedSelect = document.getElementById("audio-speed-select");
+const audioAutoplayToggle = document.getElementById("audio-autoplay-toggle");
+const audioRepeatSelect = document.getElementById("audio-repeat-select");
+const audioShuffleBtn = document.getElementById("audio-shuffle-btn");
+const mathJaxScriptEl = document.getElementById("mathjax-script");
 
 const winds = [];
 let placeWindMode = false;
@@ -76,7 +95,21 @@ let questionBank = [];
 let quizState = null;
 let selectedQuizCategory = "__all__";
 let guideData = null;
+let formulasData = null;
 let wbToolInitialized = false;
+let audioPlaylist = [];
+let audioCurrentIndex = -1;
+let audioAutoplayAll = true;
+let audioRepeatMode = "off";
+let audioPlaybackRate = 1;
+let pendingAudioAutoplayTimeout = null;
+const pendingMathTypesetElements = new Set();
+
+if (mathJaxScriptEl) {
+  mathJaxScriptEl.addEventListener("load", () => {
+    flushQueuedMathTypeset();
+  });
+}
 
 for (const button of toolNavButtons) {
   button.addEventListener("click", () => {
@@ -138,6 +171,72 @@ guideSearchInput.addEventListener("input", () => {
   renderGuide();
 });
 
+audioPlayToggleBtn.addEventListener("click", () => {
+  toggleAudioPlayback();
+});
+
+audioPrevBtn.addEventListener("click", () => {
+  const previousIndex = getPreviousAudioIndex();
+  if (previousIndex === -1) {
+    return;
+  }
+  playAudioTrack(previousIndex);
+});
+
+audioNextBtn.addEventListener("click", () => {
+  const nextIndex = getNextAudioIndex();
+  if (nextIndex === -1) {
+    return;
+  }
+  playAudioTrack(nextIndex);
+});
+
+audioSpeedSelect.addEventListener("change", () => {
+  const rate = Number(audioSpeedSelect.value);
+  if (!Number.isFinite(rate) || rate <= 0) {
+    return;
+  }
+  audioPlaybackRate = rate;
+  audioPlayerEl.playbackRate = rate;
+  updateAudioNowPlaying();
+  saveAudioState();
+});
+
+audioAutoplayToggle.addEventListener("change", () => {
+  audioAutoplayAll = Boolean(audioAutoplayToggle.checked);
+  saveAudioState();
+});
+
+audioRepeatSelect.addEventListener("change", () => {
+  const nextMode = audioRepeatSelect.value;
+  if (nextMode === "off" || nextMode === "one" || nextMode === "all") {
+    audioRepeatMode = nextMode;
+    saveAudioState();
+  }
+});
+
+audioShuffleBtn.addEventListener("click", () => {
+  shuffleAudioPlaylist();
+});
+
+audioPlayerEl.addEventListener("play", () => {
+  updateAudioPlayToggleButton();
+  updateAudioNowPlaying();
+});
+
+audioPlayerEl.addEventListener("pause", () => {
+  updateAudioPlayToggleButton();
+  updateAudioNowPlaying();
+});
+
+audioPlayerEl.addEventListener("ended", () => {
+  handleAudioEnded();
+});
+
+audioPlayerEl.addEventListener("loadedmetadata", () => {
+  audioPlayerEl.playbackRate = audioPlaybackRate;
+});
+
 undoMeasureBtn.addEventListener("click", () => {
   if (measurePoints.length === 0) {
     return;
@@ -174,6 +273,8 @@ updateWindSummary();
 renderWindReadings();
 updateMeasureSummary();
 loadKnowledgeData();
+loadFormulasData();
+loadAudioPlaylist();
 setActiveTool("home");
 
 function clearWindReadings() {
@@ -845,6 +946,384 @@ function removeWindState() {
   }
 }
 
+async function fetchAudioManifest() {
+  try {
+    const response = await fetch(AUDIO_MANIFEST_PATH);
+    if (!response.ok) {
+      return null;
+    }
+    return await response.json();
+  } catch {
+    return null;
+  }
+}
+
+async function loadAudioPlaylist() {
+  const manifest = await fetchAudioManifest();
+  const files = manifest && Array.isArray(manifest.files) ? manifest.files : [];
+  audioPlaylist = files
+    .filter((filePath) => typeof filePath === "string" && filePath.trim())
+    .map((filePath, index) => {
+      const normalizedPath = filePath.trim();
+      return {
+        id: `audio-track-${index + 1}`,
+        path: normalizedPath,
+        title: toAudioTitle(normalizedPath)
+      };
+    });
+
+  restoreAudioState();
+
+  if (audioPlaylist.length === 0) {
+    audioCurrentIndex = -1;
+    audioPlaylistEl.textContent =
+      "No audio files listed in data/audio-manifest.json. Add your MP3 paths there.";
+    updateAudioNowPlaying();
+    updateAudioPlayToggleButton();
+    return;
+  }
+
+  if (audioCurrentIndex < 0 || audioCurrentIndex >= audioPlaylist.length) {
+    audioCurrentIndex = 0;
+  }
+
+  syncAudioPlayerSource(false);
+  renderAudioPlaylist();
+  updateAudioNowPlaying();
+  updateAudioPlayToggleButton();
+}
+
+function toAudioTitle(filePath) {
+  const fileName = getFileName(filePath);
+  const withoutExtension = fileName.replace(/\.mp3$/i, "");
+  return withoutExtension
+    .replaceAll("_", " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function renderAudioPlaylist() {
+  if (audioPlaylist.length === 0) {
+    audioPlaylistEl.textContent = "No audio tracks available.";
+    return;
+  }
+
+  audioPlaylistEl.innerHTML = audioPlaylist
+    .map((track, index) => {
+      const isActive = index === audioCurrentIndex;
+      const activeClass = isActive ? " active" : "";
+      return `
+        <div class="audio-track-row${activeClass}" data-index="${index}">
+          <div class="audio-track-main">
+            <span class="audio-track-index">${index + 1}.</span>
+            <button type="button" data-action="play">Play</button>
+            <span class="audio-track-title">${escapeHtml(track.title)}</span>
+          </div>
+          <div class="audio-track-actions">
+            <button type="button" data-action="up" ${index === 0 ? "disabled" : ""}>Up</button>
+            <button type="button" data-action="down" ${index === audioPlaylist.length - 1 ? "disabled" : ""}>Down</button>
+          </div>
+        </div>
+      `;
+    })
+    .join("");
+
+  for (const row of audioPlaylistEl.querySelectorAll(".audio-track-row")) {
+    const index = Number(row.dataset.index);
+    const playBtn = row.querySelector('[data-action="play"]');
+    const upBtn = row.querySelector('[data-action="up"]');
+    const downBtn = row.querySelector('[data-action="down"]');
+
+    playBtn.addEventListener("click", () => {
+      if (index === audioCurrentIndex && !audioPlayerEl.paused) {
+        audioPlayerEl.pause();
+        return;
+      }
+      playAudioTrack(index);
+    });
+    upBtn.addEventListener("click", () => {
+      moveAudioTrack(index, index - 1);
+    });
+    downBtn.addEventListener("click", () => {
+      moveAudioTrack(index, index + 1);
+    });
+  }
+}
+
+function moveAudioTrack(fromIndex, toIndex) {
+  if (
+    fromIndex < 0 ||
+    toIndex < 0 ||
+    fromIndex >= audioPlaylist.length ||
+    toIndex >= audioPlaylist.length ||
+    fromIndex === toIndex
+  ) {
+    return;
+  }
+
+  const currentPath = audioPlaylist[audioCurrentIndex]?.path || null;
+  const [moved] = audioPlaylist.splice(fromIndex, 1);
+  audioPlaylist.splice(toIndex, 0, moved);
+
+  if (currentPath) {
+    audioCurrentIndex = audioPlaylist.findIndex((track) => track.path === currentPath);
+  }
+
+  renderAudioPlaylist();
+  updateAudioNowPlaying();
+  saveAudioState();
+}
+
+function shuffleAudioPlaylist() {
+  if (audioPlaylist.length <= 1) {
+    return;
+  }
+
+  const currentPath = audioPlaylist[audioCurrentIndex]?.path || null;
+  audioPlaylist = shuffleArray(audioPlaylist);
+
+  if (currentPath) {
+    audioCurrentIndex = audioPlaylist.findIndex((track) => track.path === currentPath);
+  }
+  if (audioCurrentIndex < 0 && audioPlaylist.length > 0) {
+    audioCurrentIndex = 0;
+  }
+
+  renderAudioPlaylist();
+  updateAudioNowPlaying();
+  saveAudioState();
+}
+
+function playAudioTrack(index) {
+  clearPendingAudioAutoplay();
+  if (index < 0 || index >= audioPlaylist.length) {
+    return;
+  }
+  audioCurrentIndex = index;
+  syncAudioPlayerSource(true);
+}
+
+function toggleAudioPlayback() {
+  clearPendingAudioAutoplay();
+  if (audioPlaylist.length === 0) {
+    return;
+  }
+
+  if (audioCurrentIndex < 0 || audioCurrentIndex >= audioPlaylist.length) {
+    audioCurrentIndex = 0;
+    syncAudioPlayerSource(false);
+  }
+
+  if (audioPlayerEl.paused) {
+    audioPlayerEl.play().catch((error) => {
+      console.warn("Audio playback failed:", error);
+    });
+  } else {
+    audioPlayerEl.pause();
+  }
+}
+
+function syncAudioPlayerSource(autoplay) {
+  const track = audioPlaylist[audioCurrentIndex];
+  if (!track) {
+    audioPlayerEl.removeAttribute("src");
+    audioPlayerEl.dataset.trackPath = "";
+    audioPlayerEl.load();
+    updateAudioNowPlaying();
+    updateAudioPlayToggleButton();
+    return;
+  }
+
+  if (audioPlayerEl.dataset.trackPath !== track.path) {
+    audioPlayerEl.src = track.path;
+    audioPlayerEl.dataset.trackPath = track.path;
+  }
+
+  audioPlayerEl.playbackRate = audioPlaybackRate;
+  renderAudioPlaylist();
+  updateAudioNowPlaying();
+  updateAudioPlayToggleButton();
+  saveAudioState();
+
+  if (autoplay) {
+    audioPlayerEl.play().catch((error) => {
+      console.warn("Audio playback failed:", error);
+    });
+  }
+}
+
+function getNextAudioIndex() {
+  if (audioPlaylist.length === 0) {
+    return -1;
+  }
+
+  const nextIndex = audioCurrentIndex + 1;
+  if (nextIndex < audioPlaylist.length) {
+    return nextIndex;
+  }
+  if (audioRepeatMode === "all") {
+    return 0;
+  }
+  return -1;
+}
+
+function getPreviousAudioIndex() {
+  if (audioPlaylist.length === 0) {
+    return -1;
+  }
+  const previousIndex = audioCurrentIndex - 1;
+  if (previousIndex >= 0) {
+    return previousIndex;
+  }
+  if (audioRepeatMode === "all") {
+    return audioPlaylist.length - 1;
+  }
+  return -1;
+}
+
+function handleAudioEnded() {
+  if (audioRepeatMode === "one") {
+    scheduleAudioAutoplay(() => {
+      audioPlayerEl.currentTime = 0;
+      audioPlayerEl.play().catch((error) => {
+        console.warn("Audio replay failed:", error);
+      });
+    });
+    return;
+  }
+
+  if (!audioAutoplayAll) {
+    updateAudioPlayToggleButton();
+    return;
+  }
+
+  const nextIndex = getNextAudioIndex();
+  if (nextIndex === -1) {
+    updateAudioPlayToggleButton();
+    return;
+  }
+  scheduleAudioAutoplay(() => {
+    playAudioTrack(nextIndex);
+  });
+}
+
+function scheduleAudioAutoplay(callback) {
+  clearPendingAudioAutoplay();
+  pendingAudioAutoplayTimeout = window.setTimeout(() => {
+    pendingAudioAutoplayTimeout = null;
+    callback();
+  }, AUDIO_AUTOPLAY_DELAY_MS);
+}
+
+function clearPendingAudioAutoplay() {
+  if (pendingAudioAutoplayTimeout === null) {
+    return;
+  }
+  window.clearTimeout(pendingAudioAutoplayTimeout);
+  pendingAudioAutoplayTimeout = null;
+}
+
+function updateAudioPlayToggleButton() {
+  if (audioPlaylist.length === 0 || audioCurrentIndex === -1) {
+    audioPlayToggleBtn.textContent = "Play";
+    audioPlayToggleBtn.disabled = true;
+    audioPrevBtn.disabled = true;
+    audioNextBtn.disabled = true;
+    return;
+  }
+
+  audioPlayToggleBtn.textContent = audioPlayerEl.paused ? "Play" : "Pause";
+  audioPlayToggleBtn.disabled = false;
+  audioPrevBtn.disabled = false;
+  audioNextBtn.disabled = false;
+}
+
+function updateAudioNowPlaying() {
+  const track = audioPlaylist[audioCurrentIndex];
+  if (!track) {
+    audioNowPlayingEl.textContent = "No track selected.";
+    return;
+  }
+
+  const status = audioPlayerEl.paused ? "Paused" : "Playing";
+  audioNowPlayingEl.textContent = `${status}: ${track.title} (${audioPlaybackRate.toFixed(2)}x)`;
+}
+
+function saveAudioState() {
+  try {
+    const payload = {
+      autoplayAll: audioAutoplayAll,
+      repeatMode: audioRepeatMode,
+      playbackRate: audioPlaybackRate,
+      orderedPaths: audioPlaylist.map((track) => track.path),
+      currentPath: audioPlaylist[audioCurrentIndex]?.path || null
+    };
+    localStorage.setItem(AUDIO_STORAGE_KEY, JSON.stringify(payload));
+  } catch (error) {
+    console.warn("Could not save audio state:", error);
+  }
+}
+
+function restoreAudioState() {
+  try {
+    const raw = localStorage.getItem(AUDIO_STORAGE_KEY);
+    if (!raw) {
+      applyAudioControlValues();
+      return;
+    }
+
+    const state = JSON.parse(raw);
+    if (!state || typeof state !== "object") {
+      applyAudioControlValues();
+      return;
+    }
+
+    if (Array.isArray(state.orderedPaths) && state.orderedPaths.length > 0 && audioPlaylist.length > 0) {
+      const byPath = new Map(audioPlaylist.map((track) => [track.path, track]));
+      const reordered = [];
+      for (const path of state.orderedPaths) {
+        const track = byPath.get(path);
+        if (track) {
+          reordered.push(track);
+          byPath.delete(path);
+        }
+      }
+      for (const track of byPath.values()) {
+        reordered.push(track);
+      }
+      audioPlaylist = reordered;
+    }
+
+    if (typeof state.autoplayAll === "boolean") {
+      audioAutoplayAll = state.autoplayAll;
+    }
+    if (state.repeatMode === "off" || state.repeatMode === "one" || state.repeatMode === "all") {
+      audioRepeatMode = state.repeatMode;
+    }
+    if (Number.isFinite(state.playbackRate) && state.playbackRate > 0) {
+      audioPlaybackRate = state.playbackRate;
+    }
+
+    if (typeof state.currentPath === "string" && state.currentPath) {
+      audioCurrentIndex = audioPlaylist.findIndex((track) => track.path === state.currentPath);
+    }
+    if (audioCurrentIndex < 0 && audioPlaylist.length > 0) {
+      audioCurrentIndex = 0;
+    }
+  } catch (error) {
+    console.warn("Could not restore audio state:", error);
+  }
+
+  applyAudioControlValues();
+}
+
+function applyAudioControlValues() {
+  audioAutoplayToggle.checked = audioAutoplayAll;
+  audioRepeatSelect.value = audioRepeatMode;
+  audioSpeedSelect.value = String(audioPlaybackRate);
+  audioPlayerEl.playbackRate = audioPlaybackRate;
+}
+
 function setActiveTool(toolId) {
   for (const button of toolNavButtons) {
     button.classList.toggle("active", button.dataset.tool === toolId);
@@ -854,7 +1333,9 @@ function setActiveTool(toolId) {
   mapToolScreen.classList.toggle("hidden", toolId !== "map");
   quizToolScreen.classList.toggle("hidden", toolId !== "quiz");
   guideToolScreen.classList.toggle("hidden", toolId !== "guide");
+  formulasToolScreen.classList.toggle("hidden", toolId !== "formulas");
   wbToolScreen.classList.toggle("hidden", toolId !== "wb");
+  audioToolScreen.classList.toggle("hidden", toolId !== "audio");
 
   if (toolId === "wb") {
     if (!wbToolInitialized) {
@@ -875,6 +1356,241 @@ function setActiveTool(toolId) {
       map.invalidateSize();
     }, 0);
   }
+
+  if (toolId === "formulas") {
+    queueMathTypeset(formulasContentEl);
+  }
+}
+
+async function loadFormulasData() {
+  try {
+    const response = await fetch(FORMULAS_PATH);
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    const payload = await response.json();
+    formulasData = normalizeFormulasPayload(payload);
+    renderFormulas();
+    const formulaCount = formulasData.categories.reduce(
+      (count, category) => count + category.formulas.length,
+      0
+    );
+    formulasMetaEl.textContent = `Loaded ${formulaCount} formulas across ${formulasData.categories.length} sections from ${FORMULAS_PATH}.`;
+  } catch (error) {
+    console.error(`Could not load ${FORMULAS_PATH}:`, error);
+    formulasData = null;
+    formulasMetaEl.textContent = `Could not load ${FORMULAS_PATH}.`;
+    formulasContentEl.textContent = "Fix the formulas JSON file, then reload the page.";
+  }
+}
+
+function normalizeFormulasPayload(payload) {
+  if (!payload || !Array.isArray(payload.categories)) {
+    throw new Error("ppl-formulas.json must contain a categories array.");
+  }
+
+  return {
+    title: String(payload.title || "Formula Reference").trim(),
+    source: String(payload.source || "").trim(),
+    categories: payload.categories
+      .map((category, index) => normalizeFormulaCategory(category, index))
+      .filter((category) => category.formulas.length > 0)
+  };
+}
+
+function normalizeFormulaCategory(category, index) {
+  const formulas = Array.isArray(category?.formulas)
+    ? category.formulas
+        .map((formula, formulaIndex) => normalizeFormulaItem(formula, formulaIndex))
+        .filter((formula) => formula.name && formula.latex)
+    : [];
+
+  return {
+    id: String(category?.id || `section-${index + 1}`),
+    title: String(category?.title || `Section ${index + 1}`).trim(),
+    formulas
+  };
+}
+
+function normalizeFormulaItem(formula, index) {
+  const variables = Array.isArray(formula?.variables)
+    ? formula.variables
+        .map((item) => ({
+          symbol: String(item?.symbol || "").trim(),
+          meaning: String(item?.meaning || "").trim()
+        }))
+        .filter((item) => item.symbol && item.meaning)
+    : [];
+  const variations = normalizeFormulaExpressionList(formula?.variations);
+  const simplifications = normalizeFormulaExpressionList(formula?.simplifications);
+
+  return {
+    id: String(formula?.id || `formula-${index + 1}`),
+    name: String(formula?.name || "").trim(),
+    latex: String(formula?.latex || "").trim(),
+    explanation: String(formula?.explanation || "").trim(),
+    useCase: String(formula?.useCase || "").trim(),
+    variations,
+    simplifications,
+    variables
+  };
+}
+
+function normalizeFormulaExpressionList(items) {
+  if (!Array.isArray(items)) {
+    return [];
+  }
+
+  return items
+    .map((item, index) => ({
+      id: String(item?.id || `expr-${index + 1}`),
+      name: String(item?.name || "").trim(),
+      latex: String(item?.latex || "").trim(),
+      explanation: String(item?.explanation || "").trim()
+    }))
+    .filter((item) => item.latex);
+}
+
+function renderFormulas() {
+  if (!formulasData || formulasData.categories.length === 0) {
+    formulasContentEl.textContent = "No formulas available.";
+    return;
+  }
+
+  const categoriesHtml = formulasData.categories
+    .map((category) => {
+      const formulasHtml = category.formulas
+        .map((formula, formulaIndex) => {
+          const openAttr = formulaIndex === 0 ? " open" : "";
+          const variablesHtml = formula.variables.length
+            ? `
+              <div class="formula-variables">
+                <h4>Variables</h4>
+                <ul class="formula-variable-list">
+                  ${formula.variables
+                    .map(
+                      (item) => `
+                        <li>
+                          <span class="formula-var-symbol">\\(${item.symbol}\\)</span>
+                          <span>${escapeHtml(item.meaning)}</span>
+                        </li>
+                      `
+                    )
+                    .join("")}
+                </ul>
+              </div>
+            `
+            : "";
+
+          const meaningHtml = formula.explanation
+            ? `<p><strong>What it means:</strong> ${escapeHtml(formula.explanation)}</p>`
+            : "";
+          const useHtml = formula.useCase
+            ? `<p><strong>How to use it:</strong> ${escapeHtml(formula.useCase)}</p>`
+            : "";
+          const variationsHtml = renderFormulaExpressionSection(
+            "Rearrangements and Variations",
+            formula.variations,
+            "formula-variations"
+          );
+          const simplificationsHtml = renderFormulaExpressionSection(
+            "Simplifications and Rules of Thumb",
+            formula.simplifications,
+            "formula-simplifications"
+          );
+
+          return `
+            <details class="formula-item"${openAttr}>
+              <summary>
+                <span class="formula-item-title">${escapeHtml(formula.name)}</span>
+                <span class="formula-item-inline">\\(${formula.latex}\\)</span>
+              </summary>
+              <div class="formula-item-body">
+                <div class="formula-item-math">\\[${formula.latex}\\]</div>
+                ${meaningHtml}
+                ${useHtml}
+                ${variationsHtml}
+                ${simplificationsHtml}
+                ${variablesHtml}
+              </div>
+            </details>
+          `;
+        })
+        .join("");
+
+      return `
+        <article class="formula-category-card">
+          <h3>${escapeHtml(category.title)}</h3>
+          <div class="formula-category-list">
+            ${formulasHtml}
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+
+  formulasContentEl.innerHTML = categoriesHtml;
+  queueMathTypeset(formulasContentEl);
+}
+
+function renderFormulaExpressionSection(title, items, className) {
+  if (!Array.isArray(items) || items.length === 0) {
+    return "";
+  }
+
+  const listHtml = items
+    .map((item) => {
+      const nameHtml = item.name
+        ? `<div class="formula-expression-name">${escapeHtml(item.name)}</div>`
+        : "";
+      const explanationHtml = item.explanation
+        ? `<div class="formula-expression-note">${escapeHtml(item.explanation)}</div>`
+        : "";
+      return `
+        <li class="formula-expression-item">
+          ${nameHtml}
+          <div class="formula-expression-math">\\(${item.latex}\\)</div>
+          ${explanationHtml}
+        </li>
+      `;
+    })
+    .join("");
+
+  return `
+    <div class="${className}">
+      <h4>${title}</h4>
+      <ul class="formula-expression-list">
+        ${listHtml}
+      </ul>
+    </div>
+  `;
+}
+
+function queueMathTypeset(targetEl) {
+  if (!targetEl) {
+    return;
+  }
+  if (window.MathJax && typeof window.MathJax.typesetPromise === "function") {
+    window.MathJax.typesetPromise([targetEl]).catch((error) => {
+      console.warn("Math typesetting failed:", error);
+    });
+    return;
+  }
+  pendingMathTypesetElements.add(targetEl);
+}
+
+function flushQueuedMathTypeset() {
+  if (!window.MathJax || typeof window.MathJax.typesetPromise !== "function") {
+    return;
+  }
+  if (pendingMathTypesetElements.size === 0) {
+    return;
+  }
+  const targets = Array.from(pendingMathTypesetElements);
+  pendingMathTypesetElements.clear();
+  window.MathJax.typesetPromise(targets).catch((error) => {
+    console.warn("Math typesetting failed:", error);
+  });
 }
 
 async function loadKnowledgeData() {

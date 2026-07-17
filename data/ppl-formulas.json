@@ -1,0 +1,736 @@
+{
+  "title": "PPL Formula Quick Reference",
+  "source": "PPL_Formula_QRF.pdf",
+  "categories": [
+    {
+      "id": "aerodynamics",
+      "title": "Aerodynamics",
+      "formulas": [
+        {
+          "name": "Lift Equation",
+          "latex": "L = C_L \\cdot \\frac{1}{2}\\rho V^2 S",
+          "explanation": "This is the core lift model: lift grows with air density, wing area, lift coefficient, and especially with the square of airspeed.",
+          "useCase": "Use this to explain why small speed increases can produce large lift changes, and why high density altitude hurts performance.",
+          "variations": [
+            {
+              "name": "Solve for Lift Coefficient",
+              "latex": "C_L = \\frac{2L}{\\rho V^2 S}",
+              "explanation": "Useful when lift is known and you need the required CL for the current speed/configuration."
+            },
+            {
+              "name": "Solve for Required Airspeed",
+              "latex": "V = \\sqrt{\\frac{2L}{\\rho S C_L}}",
+              "explanation": "Shows the speed required to produce a target lift at a given density and wing setup."
+            },
+            {
+              "name": "Ratio Form",
+              "latex": "\\frac{L_2}{L_1}=\\frac{\\rho_2}{\\rho_1}\\cdot\\frac{C_{L2}}{C_{L1}}\\cdot\\left(\\frac{V_2}{V_1}\\right)^2\\cdot\\frac{S_2}{S_1}",
+              "explanation": "Compares two conditions directly without solving absolute lift first."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "Speed-Only View",
+              "latex": "L \\propto V^2 \\quad (\\rho,S,C_L\\ \\text{constant})",
+              "explanation": "If everything else is fixed, lift follows the square of speed."
+            },
+            {
+              "name": "Double-Speed Rule",
+              "latex": "V \\times 2 \\Rightarrow L \\times 4",
+              "explanation": "Great quick check for oral questions on speed/lift sensitivity."
+            }
+          ],
+          "variables": [
+            { "symbol": "L", "meaning": "lift force" },
+            { "symbol": "C_L", "meaning": "coefficient of lift" },
+            { "symbol": "\\rho", "meaning": "air density" },
+            { "symbol": "V", "meaning": "true airspeed" },
+            { "symbol": "S", "meaning": "wing area" }
+          ]
+        },
+        {
+          "name": "Basic Stall Speed",
+          "latex": "V_S = \\sqrt{\\frac{2W}{\\rho S C_{L_{max}}}}",
+          "explanation": "Stall speed rises with aircraft weight and falls with denser air, larger wing area, or higher maximum lift coefficient.",
+          "useCase": "Use this relationship when discussing why heavier aircraft, high altitude, and icing (lower CLmax) increase stall speed.",
+          "variations": [
+            {
+              "name": "Solve for Weight",
+              "latex": "W = \\frac{\\rho S C_{L_{max}} V_S^2}{2}",
+              "explanation": "Rearranged to estimate maximum supported weight at a chosen stall speed."
+            },
+            {
+              "name": "Weight Ratio Form",
+              "latex": "V_{S2}=V_{S1}\\sqrt{\\frac{W_2}{W_1}}",
+              "explanation": "Valid when configuration, density, and CLmax are unchanged."
+            },
+            {
+              "name": "Density Sensitivity",
+              "latex": "V_S \\propto \\frac{1}{\\sqrt{\\rho}}",
+              "explanation": "Lower air density raises stall speed for the same aircraft and configuration."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "10 Percent Weight Rule",
+              "latex": "W\\uparrow 10\\% \\Rightarrow V_S\\uparrow \\sqrt{1.10} \\approx 4.9\\%",
+              "explanation": "A quick way to estimate stall-speed increase from extra weight."
+            },
+            {
+              "name": "21 Percent Weight Rule",
+              "latex": "W\\uparrow 21\\% \\Rightarrow V_S\\uparrow 10\\%",
+              "explanation": "Handy reverse estimate because 1.1 squared is about 1.21."
+            }
+          ],
+          "variables": [
+            { "symbol": "V_S", "meaning": "stall speed" },
+            { "symbol": "W", "meaning": "aircraft weight" },
+            { "symbol": "\\rho", "meaning": "air density" },
+            { "symbol": "S", "meaning": "wing area" },
+            { "symbol": "C_{L_{max}}", "meaning": "maximum lift coefficient" }
+          ]
+        },
+        {
+          "name": "Stall Speed vs Load Factor",
+          "latex": "V_{S,new} = V_{S,old} \\cdot \\sqrt{\\frac{n_{new}}{n_{old}}}",
+          "explanation": "Stall speed increases with the square root of load factor. Pulling G in turns increases required lift and therefore raises stall speed.",
+          "useCase": "A common oral/written application: at 60 degrees bank (about 2g), stall speed increases by about 41 percent.",
+          "variations": [
+            {
+              "name": "Direct 1g Form",
+              "latex": "V_{S,n} = V_{S,1g} \\sqrt{n}",
+              "explanation": "Most common PPL memory form when comparing to published clean/configured stall speed."
+            },
+            {
+              "name": "Solve for Load Factor",
+              "latex": "n = \\left(\\frac{V_{S,n}}{V_{S,1g}}\\right)^2",
+              "explanation": "Useful to estimate g-loading from observed/required stall speed margin."
+            },
+            {
+              "name": "Ratio Form",
+              "latex": "\\frac{V_{S,new}}{V_{S,old}}=\\sqrt{\\frac{n_{new}}{n_{old}}}",
+              "explanation": "Works for any two operating points, not only from 1g baseline."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "Common Multipliers",
+              "latex": "n=1.5\\Rightarrow1.225\\times,\\ n=2\\Rightarrow1.414\\times,\\ n=3\\Rightarrow1.732\\times",
+              "explanation": "Fast multipliers for mental checks in steep turns and maneuvering."
+            },
+            {
+              "name": "Equivalent Statement",
+              "latex": "V_S = V_{S,1g}\\sqrt{G}",
+              "explanation": "Correct when G is the load factor n in g units."
+            }
+          ],
+          "variables": [
+            { "symbol": "V_{S,new}", "meaning": "new stall speed" },
+            { "symbol": "V_{S,old}", "meaning": "reference stall speed" },
+            { "symbol": "n", "meaning": "load factor in g" }
+          ]
+        },
+        {
+          "name": "Load Factor in a Level Coordinated Turn",
+          "latex": "n = \\frac{1}{\\cos\\theta}",
+          "explanation": "As bank angle increases, cosine(theta) decreases, so load factor rises quickly. This ties bank angle directly to structural and stall margins.",
+          "useCase": "Quick checkpoints: 45 degrees bank is about 1.41g, and 60 degrees bank is 2g.",
+          "variations": [
+            {
+              "name": "Solve for Cosine",
+              "latex": "\\cos\\theta = \\frac{1}{n}",
+              "explanation": "Intermediate step for converting known load factor into bank angle."
+            },
+            {
+              "name": "Solve for Bank Angle",
+              "latex": "\\theta = \\arccos\\left(\\frac{1}{n}\\right)",
+              "explanation": "Use to estimate bank from observed/desired load factor."
+            },
+            {
+              "name": "Combined Stall-Speed Form",
+              "latex": "V_{S,turn}=\\frac{V_{S,1g}}{\\sqrt{\\cos\\theta}}",
+              "explanation": "Combines load-factor and stall-speed relations in one equation."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "Bank to G Quick Values",
+              "latex": "30^\\circ\\approx1.15g,\\ 45^\\circ\\approx1.41g,\\ 60^\\circ=2g",
+              "explanation": "Most-used checkpoints for maneuvering speed and stall margin discussion."
+            },
+            {
+              "name": "Steep-Bank Warning",
+              "latex": "75^\\circ\\approx3.86g",
+              "explanation": "Shows how quickly g-load rises beyond 60 degrees bank."
+            }
+          ],
+          "variables": [
+            { "symbol": "n", "meaning": "load factor" },
+            { "symbol": "\\theta", "meaning": "bank angle" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weight-balance",
+      "title": "Weight and Balance",
+      "formulas": [
+        {
+          "name": "Moment",
+          "latex": "M = W \\cdot A",
+          "explanation": "Moment is turning effect around a datum. Every weight station creates a moment based on its arm.",
+          "useCase": "Compute each station's moment before summing total moments and total weights.",
+          "variations": [
+            {
+              "name": "Solve for Weight",
+              "latex": "W = \\frac{M}{A}",
+              "explanation": "Useful if moment limit and arm are known and you need allowable weight."
+            },
+            {
+              "name": "Solve for Arm",
+              "latex": "A = \\frac{M}{W}",
+              "explanation": "Used when back-solving station location from tabulated weight and moment."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "Linear Scaling",
+              "latex": "W\\times k \\Rightarrow M\\times k\\quad (A\\ \\text{constant})",
+              "explanation": "If arm does not change, moment scales directly with weight."
+            },
+            {
+              "name": "Sign Convention",
+              "latex": "A_{aft}>0,\\ A_{fwd}<0\\ \\text{(by POH convention)}",
+              "explanation": "Always follow the aircraft's datum/sign convention to avoid CG mistakes."
+            }
+          ],
+          "variables": [
+            { "symbol": "M", "meaning": "moment" },
+            { "symbol": "W", "meaning": "weight" },
+            { "symbol": "A", "meaning": "arm from datum" }
+          ]
+        },
+        {
+          "name": "Center of Gravity",
+          "latex": "CG = \\frac{\\sum M}{\\sum W}",
+          "explanation": "CG location is total moment divided by total weight. It gives the aircraft's balance point relative to datum.",
+          "useCase": "After adding all stations, compare calculated CG with POH forward and aft limits.",
+          "variations": [
+            {
+              "name": "Solve for Total Moment",
+              "latex": "\\sum M = CG \\cdot \\sum W",
+              "explanation": "Use when target CG and total weight are known."
+            },
+            {
+              "name": "Solve for Total Weight",
+              "latex": "\\sum W = \\frac{\\sum M}{CG}",
+              "explanation": "Useful for reverse checks around loading limits."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "Small Change Approximation",
+              "latex": "\\Delta CG \\approx \\frac{\\Delta M}{\\sum W}",
+              "explanation": "Quick estimate of CG shift after a small moment change."
+            },
+            {
+              "name": "Unit Consistency",
+              "latex": "(\\text{lb-in})/(\\text{lb})=\\text{in}",
+              "explanation": "Moment and weight units must match the POH table system."
+            }
+          ],
+          "variables": [
+            { "symbol": "\\sum M", "meaning": "sum of all moments" },
+            { "symbol": "\\sum W", "meaning": "sum of all weights" }
+          ]
+        },
+        {
+          "name": "CG Shift from Moved/Burned Weight",
+          "latex": "A_{new} = \\frac{M_{old} \\pm (W_{moved} \\cdot d)}{W_{total}}",
+          "explanation": "When weight moves or fuel burns, total moment changes by moved weight times distance moved. Divide by current total weight for new arm.",
+          "useCase": "Use this for quick what-if checks, such as passenger seat changes or fuel burn over flight time.",
+          "variations": [
+            {
+              "name": "Moment Change First",
+              "latex": "\\Delta M = W_{moved} \\cdot d",
+              "explanation": "Compute delta moment first, then add/subtract from old total moment."
+            },
+            {
+              "name": "CG Shift Form",
+              "latex": "\\Delta A = \\frac{W_{moved}}{W_{total}}\\cdot d",
+              "explanation": "Direct CG movement expression often taught for quick load moves."
+            },
+            {
+              "name": "Old to New Arm",
+              "latex": "A_{new}=A_{old}\\pm\\Delta A",
+              "explanation": "Alternative to recomputing full total moments each time."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "Direction Rule",
+              "latex": "\\text{Move aft} \\Rightarrow CG\\ \\text{aft},\\ \\text{move forward} \\Rightarrow CG\\ \\text{forward}",
+              "explanation": "Good sanity check before finalizing numbers."
+            },
+            {
+              "name": "Fuel Burn Note",
+              "latex": "\\text{Fuel burn acts like removing weight at fuel arm}",
+              "explanation": "Apply the same equations with the fuel-tank arm and burned fuel weight."
+            }
+          ],
+          "variables": [
+            { "symbol": "A_{new}", "meaning": "new CG arm" },
+            { "symbol": "M_{old}", "meaning": "old total moment" },
+            { "symbol": "W_{moved}", "meaning": "weight moved or burned" },
+            { "symbol": "d", "meaning": "distance moved" },
+            { "symbol": "W_{total}", "meaning": "current total weight" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "performance-atmosphere",
+      "title": "Performance and Atmosphere",
+      "formulas": [
+        {
+          "name": "Pressure Altitude",
+          "latex": "PA = Elev_{field} + [(29.92 - Altimeter) \\cdot 1000]",
+          "explanation": "Pressure altitude converts local pressure setting into a standard reference altitude for performance calculations.",
+          "useCase": "First step for density altitude and many performance chart lookups.",
+          "variations": [
+            {
+              "name": "Pressure Difference Term",
+              "latex": "\\Delta PA=(29.92-Altimeter)\\cdot1000",
+              "explanation": "Altitude correction from local setting to standard pressure."
+            },
+            {
+              "name": "Solve for Altimeter Setting",
+              "latex": "Altimeter=29.92-\\frac{PA-Elev_{field}}{1000}",
+              "explanation": "Reverse form for checking setup/worksheet values."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "Per 0.01 inHg Rule",
+              "latex": "0.01\\ \\text{inHg} \\approx 10\\ \\text{ft}",
+              "explanation": "Fast conversion for rough pressure-altitude corrections."
+            },
+            {
+              "name": "Direction Check",
+              "latex": "Altimeter<29.92 \\Rightarrow PA>Elev_{field}",
+              "explanation": "Lower pressure means higher pressure altitude."
+            }
+          ],
+          "variables": [
+            { "symbol": "PA", "meaning": "pressure altitude (ft)" },
+            { "symbol": "Elev_{field}", "meaning": "field elevation (ft)" },
+            { "symbol": "Altimeter", "meaning": "altimeter setting (inHg)" }
+          ]
+        },
+        {
+          "name": "ISA Temperature at Altitude",
+          "latex": "T_{ISA} = 15^\\circ C - \\left(2^\\circ C \\cdot \\frac{Alt_{ft}}{1000}\\right)",
+          "explanation": "Standard atmosphere assumes about 2 degrees C cooling per 1000 ft from sea-level ISA of 15 degrees C.",
+          "useCase": "Use this as the reference temperature when computing density altitude correction.",
+          "variations": [
+            {
+              "name": "Using Thousands of Feet",
+              "latex": "T_{ISA}=15-2\\cdot Alt_{kft}",
+              "explanation": "Equivalent shorthand when altitude is in thousands of feet."
+            },
+            {
+              "name": "Solve for Altitude from ISA Temp",
+              "latex": "Alt_{kft}=\\frac{15-T_{ISA}}{2}",
+              "explanation": "Useful in reverse problems where standard temp is given."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "Common Checkpoints",
+              "latex": "5000\\ \\text{ft}\\Rightarrow5^\\circ C,\\ 10000\\ \\text{ft}\\Rightarrow-5^\\circ C",
+              "explanation": "Quick memory values for weather/performance briefing."
+            },
+            {
+              "name": "Lapse Rate Approximation",
+              "latex": "-2^\\circ C/1000\\ \\text{ft}",
+              "explanation": "Use this gradient for fast ISA deltas in PPL-level planning."
+            }
+          ],
+          "variables": [
+            { "symbol": "T_{ISA}", "meaning": "ISA temperature at altitude" },
+            { "symbol": "Alt_{ft}", "meaning": "altitude in feet" }
+          ]
+        },
+        {
+          "name": "Density Altitude (Rule of Thumb)",
+          "latex": "DA = PA + [120 \\cdot (OAT - T_{ISA})]",
+          "explanation": "Density altitude rises when outside air temperature is above ISA and falls when cooler than ISA.",
+          "useCase": "High DA means lower climb performance, longer takeoff roll, and poorer prop/wing efficiency.",
+          "variations": [
+            {
+              "name": "DA Offset Form",
+              "latex": "DA-PA=120\\cdot(OAT-T_{ISA})",
+              "explanation": "Shows DA correction directly as a temperature-delta term."
+            },
+            {
+              "name": "Solve for OAT",
+              "latex": "OAT=T_{ISA}+\\frac{DA-PA}{120}",
+              "explanation": "Reverse form when DA and PA are known."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "Per Degree Rule",
+              "latex": "+1^\\circ C\\ \\text{above ISA} \\Rightarrow +120\\ \\text{ft DA}",
+              "explanation": "Most-used head math for DA impact."
+            },
+            {
+              "name": "10 Degree Rule",
+              "latex": "\\Delta T=+10^\\circ C \\Rightarrow DA\\uparrow\\approx1200\\ \\text{ft}",
+              "explanation": "Good quick check for hot-day performance degradation."
+            }
+          ],
+          "variables": [
+            { "symbol": "DA", "meaning": "density altitude (ft)" },
+            { "symbol": "PA", "meaning": "pressure altitude (ft)" },
+            { "symbol": "OAT", "meaning": "outside air temperature" },
+            { "symbol": "T_{ISA}", "meaning": "ISA temperature at same altitude" }
+          ]
+        },
+        {
+          "name": "True Airspeed Approximation",
+          "latex": "TAS \\approx CAS \\cdot \\left(1 + 0.02 \\cdot \\frac{Alt_{ft}}{1000}\\right)",
+          "explanation": "A quick correction: TAS is roughly 2 percent higher than CAS for each 1000 ft of altitude.",
+          "useCase": "Good for fast mental estimates, but use POH/E6B/CX-2 for precise exam or performance questions.",
+          "variations": [
+            {
+              "name": "Additive Form",
+              "latex": "TAS \\approx CAS + CAS\\cdot0.02\\cdot\\frac{Alt_{ft}}{1000}",
+              "explanation": "Same formula written as base speed plus altitude correction."
+            },
+            {
+              "name": "Solve for CAS Approximation",
+              "latex": "CAS \\approx \\frac{TAS}{1+0.02\\cdot\\frac{Alt_{ft}}{1000}}",
+              "explanation": "Reverse mental estimate if TAS is known."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "3000 ft Rule",
+              "latex": "TAS\\approx CAS\\times1.06",
+              "explanation": "About 6 percent increase around 3000 ft."
+            },
+            {
+              "name": "6000 ft Rule",
+              "latex": "TAS\\approx CAS\\times1.12",
+              "explanation": "About 12 percent increase around 6000 ft."
+            }
+          ],
+          "variables": [
+            { "symbol": "TAS", "meaning": "true airspeed" },
+            { "symbol": "CAS", "meaning": "calibrated airspeed" },
+            { "symbol": "Alt_{ft}", "meaning": "altitude in feet" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "navigation-flight-planning",
+      "title": "Navigation and Flight Planning",
+      "formulas": [
+        {
+          "name": "Groundspeed / Time / Distance",
+          "latex": "GS = \\frac{Distance}{Time}",
+          "explanation": "This is the base triangle relation for all navigation timing problems. Rearranging gives time or distance.",
+          "useCase": "Use as Time = Distance/GS and Distance = GS x Time for enroute calculations and ETA planning.",
+          "variations": [
+            {
+              "name": "Solve for Time",
+              "latex": "Time=\\frac{Distance}{GS}",
+              "explanation": "Primary form for ETA calculation."
+            },
+            {
+              "name": "Solve for Distance",
+              "latex": "Distance=GS\\cdot Time",
+              "explanation": "Use to estimate progress or leg distance covered."
+            },
+            {
+              "name": "Minutes Form",
+              "latex": "GS=\\frac{Distance}{Time_{min}/60}",
+              "explanation": "Convenient when stopwatch time is in minutes."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "NM per Minute",
+              "latex": "NM/min = \\frac{GS}{60}",
+              "explanation": "Convert knots to per-minute pace for checkpoint planning."
+            },
+            {
+              "name": "Quick Example",
+              "latex": "GS=90\\Rightarrow1.5\\ \\text{NM/min}",
+              "explanation": "Useful benchmark for rough timing."
+            }
+          ],
+          "variables": [
+            { "symbol": "GS", "meaning": "groundspeed" },
+            { "symbol": "Distance", "meaning": "distance traveled" },
+            { "symbol": "Time", "meaning": "travel time" }
+          ]
+        },
+        {
+          "name": "60-to-1 Time Rule",
+          "latex": "Time_{min} = \\left(\\frac{Dist}{GS}\\right) \\cdot 60",
+          "explanation": "Converts distance and speed directly into minutes and is one of the most-used mental math tools in PPL nav questions.",
+          "useCase": "Very useful for checkpoint ETAs and quick replans after unexpected winds.",
+          "variations": [
+            {
+              "name": "Solve for Distance",
+              "latex": "Dist=\\frac{Time_{min}\\cdot GS}{60}",
+              "explanation": "Useful when you have elapsed minutes and groundspeed."
+            },
+            {
+              "name": "Solve for Groundspeed",
+              "latex": "GS=\\frac{Dist\\cdot60}{Time_{min}}",
+              "explanation": "Good for back-solving actual GS from observed progress."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "120 kt Shortcut",
+              "latex": "GS=120\\Rightarrow2\\ \\text{NM/min}",
+              "explanation": "Easy benchmark for quick enroute calculations."
+            },
+            {
+              "name": "90 kt Shortcut",
+              "latex": "GS=90\\Rightarrow1.5\\ \\text{NM/min}",
+              "explanation": "Common GA cruise benchmark."
+            }
+          ],
+          "variables": [
+            { "symbol": "Time_{min}", "meaning": "time in minutes" },
+            { "symbol": "Dist", "meaning": "distance in NM" },
+            { "symbol": "GS", "meaning": "groundspeed in knots" }
+          ]
+        },
+        {
+          "name": "Off-Course Distance (60-to-1)",
+          "latex": "Off\\ Course\\ (NM) \\approx \\frac{Distance\\ Flown\\ (NM) \\cdot Track\\ Error\\ (deg)}{60}",
+          "explanation": "Equivalent to the rule that 1 degree error causes about 1 NM offset after 60 NM flown.",
+          "useCase": "Estimate how far off track you are, then determine correction/closing angles.",
+          "variations": [
+            {
+              "name": "Solve for Track Error",
+              "latex": "Track\\ Error\\ (deg)\\approx\\frac{Off\\ Course\\cdot60}{Distance\\ Flown}",
+              "explanation": "Useful when offset is observed and you need heading correction logic."
+            },
+            {
+              "name": "Closing Angle",
+              "latex": "Closing\\ Angle\\ (deg)\\approx\\frac{Off\\ Course\\cdot60}{Distance\\ To\\ Go}",
+              "explanation": "Classic second step after computing current off-track distance."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "Core Memory Rule",
+              "latex": "1^\\circ\\ \\text{error} \\Rightarrow 1\\ \\text{NM off after 60 NM}",
+              "explanation": "Baseline mental anchor for all 60-to-1 drift questions."
+            },
+            {
+              "name": "Half-Distance Rule",
+              "latex": "1^\\circ\\ \\text{error} \\Rightarrow 0.5\\ \\text{NM off after 30 NM}",
+              "explanation": "Quick interpolation without full formula."
+            }
+          ],
+          "variables": [
+            { "symbol": "Distance\\ Flown", "meaning": "distance already flown in NM" },
+            { "symbol": "Track\\ Error", "meaning": "heading/track error in degrees" }
+          ]
+        },
+        {
+          "name": "Endurance",
+          "latex": "Endurance = \\frac{Usable\\ Fuel}{Fuel\\ Burn\\ Rate}",
+          "explanation": "Endurance is how long you can keep flying at a given fuel consumption rate.",
+          "useCase": "Use this for reserve checks and to compare planned leg time against safe usable endurance.",
+          "variations": [
+            {
+              "name": "Solve for Usable Fuel",
+              "latex": "Usable\\ Fuel=Endurance\\cdotFuel\\ Burn\\ Rate",
+              "explanation": "Useful when planning fuel required for a target block time."
+            },
+            {
+              "name": "Solve for Burn Rate",
+              "latex": "Fuel\\ Burn\\ Rate=\\frac{Usable\\ Fuel}{Endurance}",
+              "explanation": "Back-calculate fuel flow from observed endurance."
+            },
+            {
+              "name": "Range Link",
+              "latex": "Range\\approx Endurance\\cdot GS",
+              "explanation": "Connects endurance directly to distance capability."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "Reserve-Aware Fuel",
+              "latex": "Usable_{trip}=Usable_{total}-Reserve\\ Fuel",
+              "explanation": "Always remove legal/safety reserve before endurance planning."
+            },
+            {
+              "name": "Reserve Time Margin",
+              "latex": "Margin=Endurance-Trip\\ Time",
+              "explanation": "Quick check for whether the leg keeps required reserve intact."
+            }
+          ],
+          "variables": [
+            { "symbol": "Usable\\ Fuel", "meaning": "fuel available for flight" },
+            { "symbol": "Fuel\\ Burn\\ Rate", "meaning": "fuel flow (per hour)" }
+          ]
+        },
+        {
+          "name": "3 Degree Descent Rate Approximation",
+          "latex": "ROD_{fpm} \\approx GS_{kt} \\cdot 5",
+          "explanation": "A standard 3 degree path needs roughly five times groundspeed as feet-per-minute descent.",
+          "useCase": "Example: 90 kt groundspeed needs about 450 fpm descent for a stable 3 degree path.",
+          "variations": [
+            {
+              "name": "Solve for Groundspeed",
+              "latex": "GS_{kt}\\approx\\frac{ROD_{fpm}}{5}",
+              "explanation": "Reverse check if desired descent rate is constrained."
+            },
+            {
+              "name": "More Exact 3 Deg Form",
+              "latex": "ROD_{fpm}\\approx GS_{kt}\\cdot5.3",
+              "explanation": "5.3 is closer to geometric 3 degree slope; 5 is easier mental math."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "Common Values",
+              "latex": "GS\\ 90\\Rightarrow450\\ fpm,\\ GS\\ 120\\Rightarrow600\\ fpm",
+              "explanation": "Fast target settings for stable visual/instrument-style descents."
+            },
+            {
+              "name": "Mental Range",
+              "latex": "GS\\times(5\\ \\text{to}\\ 5.3)",
+              "explanation": "Use 5 for speed, 5.3 for tighter precision."
+            }
+          ],
+          "variables": [
+            { "symbol": "ROD_{fpm}", "meaning": "rate of descent in feet per minute" },
+            { "symbol": "GS_{kt}", "meaning": "groundspeed in knots" }
+          ]
+        },
+        {
+          "name": "Top of Descent Approximation",
+          "latex": "TOD_{NM} \\approx \\frac{Altitude\\ to\\ Lose\\ (ft)}{300}",
+          "explanation": "At a 3 degree descent, every 300 ft of altitude loss needs about 1 NM of distance.",
+          "useCase": "Plan when to begin descent without rushing the approach setup.",
+          "variations": [
+            {
+              "name": "Solve for Altitude to Lose",
+              "latex": "Altitude\\ to\\ Lose\\ (ft)\\approx300\\cdot TOD_{NM}",
+              "explanation": "Useful when TOD distance is fixed and you need descent target."
+            },
+            {
+              "name": "Thousands-of-Feet Form",
+              "latex": "TOD_{NM}\\approx3\\cdot Altitude\\ to\\ Lose\\ (kft)",
+              "explanation": "Very common pilot shorthand for quick setup."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "Easy Example",
+              "latex": "3000\\ ft\\ to\\ lose\\Rightarrow TOD\\approx10\\ NM",
+              "explanation": "Simple benchmark for arrival briefing."
+            },
+            {
+              "name": "6000 ft Example",
+              "latex": "6000\\ ft\\ to\\ lose\\Rightarrow TOD\\approx20\\ NM",
+              "explanation": "Another common practical reference point."
+            }
+          ],
+          "variables": [
+            { "symbol": "TOD_{NM}", "meaning": "top-of-descent distance from target" },
+            { "symbol": "Altitude\\ to\\ Lose", "meaning": "height to lose in feet" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turn-performance",
+      "title": "Turn Performance",
+      "formulas": [
+        {
+          "name": "Turn Radius",
+          "latex": "R = \\frac{V^2}{g \\cdot \\tan\\theta}",
+          "explanation": "Turn radius increases with the square of speed and decreases with steeper bank angle.",
+          "useCase": "Explains why high-speed turns need a lot of space and why slow, steeper turns can tighten radius.",
+          "variations": [
+            {
+              "name": "Solve for Airspeed",
+              "latex": "V=\\sqrt{R\\cdot g\\cdot\\tan\\theta}",
+              "explanation": "Find speed for a desired radius at a chosen bank angle."
+            },
+            {
+              "name": "Solve for Bank Angle",
+              "latex": "\\theta=\\arctan\\left(\\frac{V^2}{gR}\\right)",
+              "explanation": "Estimate required bank to achieve a target radius at current speed."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "Speed-Squared Effect",
+              "latex": "V\\times2\\Rightarrow R\\times4\\quad (\\theta\\ \\text{constant})",
+              "explanation": "Shows why fast aircraft need much larger turn space."
+            },
+            {
+              "name": "Bank Effect",
+              "latex": "\\tan\\theta\\uparrow\\Rightarrow R\\downarrow",
+              "explanation": "Steeper bank reduces radius, but increases load factor and stall speed."
+            }
+          ],
+          "variables": [
+            { "symbol": "R", "meaning": "turn radius" },
+            { "symbol": "V", "meaning": "true airspeed" },
+            { "symbol": "g", "meaning": "gravity acceleration" },
+            { "symbol": "\\theta", "meaning": "bank angle" }
+          ]
+        },
+        {
+          "name": "Standard-Rate Turn Bank Approximation",
+          "latex": "Bank^\\circ \\approx \\left(\\frac{TAS}{10}\\right) + 7",
+          "explanation": "Quick estimate for bank angle needed to achieve about 3 degrees per second turn rate.",
+          "useCase": "Helpful in instrument-style timed turns and oral questions about standard-rate technique.",
+          "variations": [
+            {
+              "name": "Solve for TAS",
+              "latex": "TAS\\approx10\\cdot(Bank^\\circ-7)",
+              "explanation": "Reverse form for rough speed estimate from known standard-rate bank."
+            },
+            {
+              "name": "Exact Turn-Rate Relation",
+              "latex": "\\omega_{deg/s}\\approx\\frac{1091\\tan\\theta}{TAS_{kt}}",
+              "explanation": "Use when a question asks beyond the rule-of-thumb approximation."
+            }
+          ],
+          "simplifications": [
+            {
+              "name": "Common Approximations",
+              "latex": "TAS\\ 90\\Rightarrow16^\\circ,\\ TAS\\ 120\\Rightarrow19^\\circ",
+              "explanation": "Practical values to check whether your turn setup is reasonable."
+            },
+            {
+              "name": "Rule Scope",
+              "latex": "\\text{Valid as quick mental math, not a POH replacement}",
+              "explanation": "Use exact methods/E6B when exam or procedure precision is required."
+            }
+          ],
+          "variables": [
+            { "symbol": "Bank^\\circ", "meaning": "bank angle in degrees" },
+            { "symbol": "TAS", "meaning": "true airspeed in knots" }
+          ]
+        }
+      ]
+    }
+  ]
+}

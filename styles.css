@@ -358,6 +358,248 @@ input[type="file"] {
   letter-spacing: 0.03em;
 }
 
+.formulas-section {
+  border-top: 1px solid #dfe3eb;
+  background: #fff;
+  padding: 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.formulas-header h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+.formulas-content {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.formula-category-card {
+  border: 1px solid #d2d8e4;
+  border-radius: 10px;
+  background: #fdfefe;
+  padding: 0.85rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.formula-category-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.formula-category-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.formula-item {
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.formula-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.65rem 0.75rem;
+  display: grid;
+  gap: 0.3rem;
+  background: #f8fafc;
+}
+
+.formula-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.formula-item-title {
+  font-weight: 600;
+}
+
+.formula-item-inline {
+  color: #0f172a;
+  font-size: 0.92rem;
+}
+
+.formula-item-body {
+  padding: 0.7rem 0.75rem 0.8rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.formula-item-body p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.formula-item-math {
+  border: 1px solid #dbeafe;
+  background: #eff6ff;
+  border-radius: 8px;
+  padding: 0.45rem 0.65rem;
+  overflow-x: auto;
+}
+
+.formula-variables h4 {
+  margin: 0 0 0.35rem;
+  font-size: 0.88rem;
+  color: #475569;
+}
+
+.formula-variations h4,
+.formula-simplifications h4 {
+  margin: 0 0 0.35rem;
+  font-size: 0.88rem;
+  color: #475569;
+}
+
+.formula-expression-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.formula-expression-item {
+  line-height: 1.35;
+}
+
+.formula-expression-name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.formula-expression-math {
+  margin-top: 0.1rem;
+  color: #0f172a;
+}
+
+.formula-expression-note {
+  margin-top: 0.1rem;
+  color: #334155;
+}
+
+.formula-variable-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.formula-variable-list li {
+  line-height: 1.35;
+}
+
+.formula-var-symbol {
+  display: inline-block;
+  min-width: 58px;
+  font-weight: 600;
+}
+
+.audio-section {
+  border-top: 1px solid #dfe3eb;
+  background: #fff;
+  padding: 1rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.audio-header h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+.audio-controls {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.audio-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+  color: #334155;
+}
+
+.audio-toggle input {
+  margin: 0;
+}
+
+#audio-player {
+  width: 100%;
+  max-width: 860px;
+}
+
+.audio-playlist-wrap {
+  border: 1px solid #d2d8e4;
+  border-radius: 10px;
+  background: #fdfefe;
+  padding: 0.9rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.audio-playlist-wrap h3 {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.audio-playlist {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.audio-track-row {
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+  background: #fff;
+  padding: 0.45rem 0.55rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.audio-track-row.active {
+  border-color: #0284c7;
+  background: #f0f9ff;
+}
+
+.audio-track-main {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex: 1 1 360px;
+  min-width: 0;
+}
+
+.audio-track-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.audio-track-index {
+  color: #64748b;
+  font-size: 0.88rem;
+  min-width: 1.35rem;
+}
+
+.audio-track-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.audio-track-actions button {
+  padding: 0.25rem 0.55rem;
+  font-size: 0.85rem;
+}
+
 .wb-section {
   border-top: 1px solid #dfe3eb;
   background: #fff;
